@@ -1,0 +1,105 @@
+﻿:root {
+    /*Our dark grey*/
+    --liquido: #23272B;
+    /*Our light grey*/
+    --aactive: #9999;
+}
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: var(--liquido);
+}
+::selection {
+    background-color: white;
+    color: black;
+}
+nav {
+    /*Make tha navbar be on top of the contents*/
+    z-index: 10 !important;
+}
+.dead-center {
+    /*Use this class for the home page only*/
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1 !important;
+}
+.center {
+    /*Use this class for all the centering*/
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    z-index: 1 !important;
+}
+.center input[type=number] {
+    width: 40%;
+}
+@media screen and (max-width: 1000px) {
+    /*make the inputs bigger for smaller screens*/
+    .center input[type=number] {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 915px) {
+    /*make the inputs bigger for phones*/
+    .center input[type=number] {
+        width: 90%;
+    }
+}
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inline-flex {
+    /*for the button in the home page to alling*/
+    display: inline-flex;
+}
+@media screen and (max-width: 915px) {
+    /*make the buttons stack on top of each other for phones*/
+    .inline-flex {
+        display: unset;
+    }
+}
+.tos {
+    /*Use this class for the paragraphs in the Terms of Service only*/
+    margin: 25px !important;
+}
+.homebutton {
+    /*Use this class for the buttons in the homepage only*/
+    margin: 5px !important;
+}
+.title {
+    /*Use this class for the title in the homepage only*/
+    font-size: 45px;
+}
+.aactive {
+    /*Custom active state for dropdown link navbar elements cause the bootstrap one sucks*/
+    background-color: var(--aactive) !important;
+    color: black !important;
+}
+hr {
+    border: 2px solid #C6303E;
+    border-radius: 3px;
+}
+.formulas {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+@media screen and (max-width: 915px) {
+    /*make the table 95% width for phones*/
+    .formulas {
+        width: 95%;
+    }
+}
+.show-formula:hover {
+    cursor: pointer;
+    user-select: none;
+}
+#formula {
+    display: none;
+}
