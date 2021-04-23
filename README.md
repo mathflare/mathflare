@@ -19,6 +19,9 @@
 #### Can I contribute to the project?
 - Sure! We welcome all contributors.
 
+#### Do I have to log in with Google?
+- No. We will eventually impliment a "bookmark" feature
+
 #### When did the project started?
 - June 2020
 
