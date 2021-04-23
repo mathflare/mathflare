@@ -37,6 +37,10 @@ nav {
 .center input[type=number] {
     width: 40%;
 }
+.center input[type=number] ::selection {
+    background-color: black;
+    color: white;
+}
 @media screen and (max-width: 1000px) {
     /*make the inputs bigger for smaller screens*/
     .center input[type=number] {
