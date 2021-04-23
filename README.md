@@ -37,3 +37,7 @@ A list of all the active domains for Liquid Geometry
 
 1. [api.liquidgeometry.tk (Cloudflare Pages)](https://api.liquidgeometry.tk)
 2. [developers.liquidgeometry.tk (Cloudflare Pages)](https://developers.liquidgeometry.tk)
+
+# Security Vulnurabilities
+
+See steps and way to report any vulnerability [here](https://github.com/liquid-geometry/liquidgeometry/blob/main/SECURITY.md "SECURITY.md file")
