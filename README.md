@@ -25,6 +25,9 @@
 #### When did the project started?
 - June 2020
 
+#### Will the old design die?
+- We were thinking of keeping it in a different subdomain.
+
 # Domains
 
 A list of all the active domains for Liquid Geometry
