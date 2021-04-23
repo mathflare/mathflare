@@ -14,7 +14,7 @@
 - We use Bootstrap for the most part. All the custom CSS is in the `Site.css` file.
 
 #### Where is the project hosted?
-- Cloudflare Pages
+- Cloudflare Pages, Vercel, GitHub Pages, 000webhost
 
 #### Can I contribute to the project?
 - Sure! We welcome all contributors.
