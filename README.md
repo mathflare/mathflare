@@ -1,12 +1,10 @@
 <h1 align='center'>Liquid Geometry</h1>
 <h4 align='center'>the go-to website for geometry and algebra📚🍎</h1>
 
-<div aling='center'>
-  
-  **🚧🚦README.md UNDER CONSTRUCTION🚦🚧**
-  
-</div>
+---
 
+<h4 align='center'>🚧🚦README.md UNDER CONSTRUCTION🚦🚧</h4>
+ 
 # FAQ
 
 #### Why .tk?
