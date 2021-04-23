@@ -58,7 +58,7 @@ nav {
     /*for the button in the home page to alling*/
     display: inline-flex;
 }
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 1280px) {
     /*make the buttons stack on top of each other for phones*/
     .inline-flex {
         display: unset;
