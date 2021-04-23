@@ -1,7 +1,11 @@
 <h1 align='center'>Liquid Geometry</h1>
 <h4 align='center'>the go-to website for geometry and algebra📚🍎</h1>
 
-<b align='center'>🚧🚦README.md UNDER CONSTRUCTION🚦🚧</b>
+<div aling='center'>
+  
+  **🚧🚦README.md UNDER CONSTRUCTION🚦🚧**
+  
+</div>
 
 # FAQ
 
