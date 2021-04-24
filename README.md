@@ -42,6 +42,12 @@ A list of all the active domains for Liquid Geometry
 3. [www2.liquidgeometry.tk (GitHub Pages)](https://www2.liquidgeometry.tk)
 4. [www3.liquidgeometry.tk (000webhost)](http://www3.liquidgeometry.tk)
 
+## Older Versions
+
+- [former.liquidgeometry.tk (Second Version)](https://former.liquidgeometry.tk)
+
+_unfortunately, we have permanently deleted the very first version of the site_
+
 ## Other
 
 1. [api.liquidgeometry.tk (Cloudflare Pages)](https://api.liquidgeometry.tk)
