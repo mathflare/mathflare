@@ -44,15 +44,18 @@ A list of all the active domains for Liquid Geometry
 
 ## Older Versions
 
-- [former.liquidgeometry.tk (Second Version)](https://former.liquidgeometry.tk)
-
-_unfortunately, we have permanently deleted the very first version of the site_
+- [former.liquidgeometry.tk (Version 2.0)](https://former.liquidgeometry.tk)
+- [grey-haired.liquidgeometry.tk (Version 1.0)](https://gray-haired.liquidgeometry.tk)
 
 ## Other
 
 1. [api.liquidgeometry.tk (Cloudflare Pages)](https://api.liquidgeometry.tk)
 2. [developers.liquidgeometry.tk (Cloudflare Pages)](https://developers.liquidgeometry.tk)
 
+# Contributing
+
+See steps and ways to contribute [here](https://github.com/liquid-geometry/liquidgeometry/blob/main/CONTRIBUITNG.md "CONTRIBUTING.md file")
+
 # Security Vulnurabilities
 
-See steps and way to report any vulnerability [here](https://github.com/liquid-geometry/liquidgeometry/blob/main/SECURITY.md "SECURITY.md file")
+See steps and ways to report any vulnerability [here](https://github.com/liquid-geometry/liquidgeometry/blob/main/SECURITY.md "SECURITY.md file")
