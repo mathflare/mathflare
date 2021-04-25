@@ -146,7 +146,7 @@
         <div>
             <h2 class="text-white error">Error 404</h2>
         </div>
-        <h4 class="text-white">we were not able to find that page...</h4>
+        <h4 class="text-white">it seems that the page <span id="url"></span> does not exist on this server...</h4>
         <div class="inline-flex">
             <form action="index.html">
                 <button class="btn btn-primary homebutton btn-lg">
@@ -164,8 +164,10 @@
     <script src="../OAuth/OnSignOut.js"></script>
     <script>
         $(document).ready(function () {
+            var url = window.location.pathname;
+            $("#url").text(url.replace('/', ''));
             console.error('ERROR 404 LIQUID GEOMETRY');
-            console.error('the page ' + window.location.href + ' does not exists. It may have been moved edited or deleted.')
+            console.error('the page ' + window.location.pathname + ' does not exists. It may have been moved, edited or deleted.')
         });
     </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
