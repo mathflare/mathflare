@@ -58,6 +58,11 @@ nav {
     justify-content: center;
     align-items: center;
 }
+.center-form ::selection {
+        /*make the selctor different in the input elements*/
+        background-color: black;
+        color: white;
+    }
 .inline-flex {
     /*for the button in the home page to alling*/
     display: inline-flex;
