@@ -1,4 +1,11 @@
 <h1 align='center'>Liquid Geometry</h1>
+
+<div align='center'>
+
+![logo)](https://user-images.githubusercontent.com/68110106/115993058-974fae80-a5d9-11eb-98d8-a3cdff241ce5.png)
+
+</div>
+
 <h4 align='center'>the go-to website for geometry and algebra📚🍎</h1>
 
 ---
