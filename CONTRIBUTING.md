@@ -121,12 +121,12 @@ As an open-source project we welcome every developer to contribute and imporve o
 ```JS
 
 $(document).ready(function () {
-    $("#button").click(function (e) {
+    $("#button").click(calculation = (e) => {
         e.preventDefault();
-        var lside = $("#lside").val();
-        var sside = $("#sside").val();
-        var height = $("#height").val();
-        var result = ((parseFloat(lside) + parseFloat(sside)) * parseFloat(height)) / 2;
+        const lside = $("#lside").val();
+        const sside = $("#sside").val();
+        const height = $("#height").val();
+        const result = ((parseFloat(lside) + parseFloat(sside)) * parseFloat(height)) / 2;
         if (lside <= 0 || sside <= 0 || height <= 0) {
             $("#output").text("Please enter a valid value");
             $("#lside").val(1);
@@ -141,7 +141,7 @@ $(document).ready(function () {
         }
     });
     $(".show-formula").click(function () {
-        $("#formula").toggle(500);
+        $("#formula").fadeToggle(500);
     });
 });
 
