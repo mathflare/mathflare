@@ -9,8 +9,8 @@ body {
     background-color: var(--liquido);
 }
 ::selection {
-    background-color: white;
-    color: black;
+    background-color: var(--white);
+    color: var(--black);
 }
 nav {
     /*Make tha navbar be on top of the contents*/
@@ -38,8 +38,9 @@ nav {
     width: 40%;
 }
 .center input[type=number] ::selection {
-    background-color: black;
-    color: white;
+    /*make the selctor different in the input elements*/
+    background-color: var(--black);
+    color: var(--white)
 }
 @media screen and (max-width: 1000px) {
     /*make the inputs bigger for smaller screens*/
@@ -60,8 +61,8 @@ nav {
 }
 .center-form ::selection {
         /*make the selctor different in the input elements*/
-        background-color: black;
-        color: white;
+        background-color: var(--black);
+        color: var(--white);
     }
 .inline-flex {
     /*for the button in the home page to alling*/
@@ -88,13 +89,14 @@ nav {
 .aactive {
     /*Custom active state for dropdown link navbar elements cause the bootstrap one sucks*/
     background-color: var(--aactive) !important;
-    color: black !important;
+    color: var(--black) !important;
 }
 hr {
-    border: 2px solid #C6303E;
+    border: 2px solid var(--danger);
     border-radius: 3px;
 }
 .formulas {
+    /*position the table*/
     margin-left: auto;
     margin-right: auto;
     width: 60%;
@@ -107,11 +109,16 @@ hr {
 }
 .show-formula:hover {
     cursor: pointer;
+    /*make "show formula" text non-selectable*/
     user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 #formula {
+    /*make the formula hidden by default*/
     display: none;
 }
 .unit-con {
+    /*leave a margin under the unit converter form*/
     margin-bottom: 40px !important;
 }
