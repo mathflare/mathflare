@@ -15,6 +15,6 @@
 
 ### Steps
 
-- **Describe what the vulnerability is and what it affects the website/users**
-- **Specify the excact file and line of the vulnerability**
+- **Describe what the vulnerability is and hoe it affects the website/users**
+- **Specify the excact file and line of code of the vulnerability**
 - **Recommend fixes(optional)**

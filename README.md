@@ -36,7 +36,7 @@
 - June 2020
 
 #### Will the old design die?
-- We were thinking of keeping it in a different subdomain.
+- `former.liquidgeometry.tk`
 
 # Domains
 
