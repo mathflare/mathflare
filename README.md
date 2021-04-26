@@ -53,7 +53,6 @@ A list of all the active domains for Liquid Geometry
 ## Older Versions
 
 - [former.liquidgeometry.tk (Version 2.0)](https://former.liquidgeometry.tk)
-- [grey-haired.liquidgeometry.tk (Version 1.0)](https://gray-haired.liquidgeometry.tk)
 
 ## Other
 
