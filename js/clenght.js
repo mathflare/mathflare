@@ -8,7 +8,7 @@
     const inputKilometers = document.getElementById("inputKilometers");
     const inputMiles = document.getElementById("inputMiles");
     if (source == "inputFeet") {
-        inputMeters.value = (valNum / 3.2808).toFixed(2);
+        inputMeters.value = (valNum / 3.2808).toFixed(2); 
         inputInches.value = (valNum * 12).toFixed(2);
         inputcm.value = (valNum / 0.032808).toFixed();
         inputYards.value = (valNum * 0.33333).toFixed(2);
