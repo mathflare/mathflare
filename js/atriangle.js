@@ -1,9 +1,9 @@
 ﻿$(document).ready(function () {
-    $("#button").click(function (e) {
+    $("#button").click(calculation = (e) => {
         e.preventDefault();
-        var fside = $("#fside").val();
-        var height = $("#height").val();
-        var result = (fside * height) / 2;
+        const fside = $("#fside").val();
+        const height = $("#height").val();
+        const result = (fside * height) / 2;
         if (fside <= 0 || height <= 0 || fside == null || height == null) {
             $("#output").text("Please enter a valid value");
             $("#fside").val(1);

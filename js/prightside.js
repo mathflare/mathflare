@@ -1,8 +1,8 @@
 ﻿$(document).ready(function () {
-    $("#button").click(function (e) {
+    $("#button").click(calculation = (e) => {
         e.preventDefault();
-        var hypo = $("#hypo").val();
-        var side = $("#side").val();
+        const hypo = $("#hypo").val();
+        const side = $("#side").val();
         var result = Math.sqrt((hypo * hypo) - (side * side));
         if (hypo <= 0 || side <= 0) {
             $("#output").text("Please enter a valid value");

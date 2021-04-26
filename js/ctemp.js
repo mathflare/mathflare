@@ -1,8 +1,8 @@
-﻿function temperatureConverter(source, valNum) {
+﻿const temperatureConverter = (source, valNum) => {
     valNum = parseFloat(valNum);
-    var inputFahrenheit = document.getElementById("inputFahrenheit");
-    var inputCelsius = document.getElementById("inputCelsius");
-    var inputKelvin = document.getElementById("inputKelvin");
+    const inputFahrenheit = document.getElementById("inputFahrenheit");
+    const inputCelsius = document.getElementById("inputCelsius");
+    const inputKelvin = document.getElementById("inputKelvin");
     if (source == "inputFahrenheit") {
         inputCelsius.value = ((valNum - 32) / 1.8).toFixed(2);
         inputKelvin.value = (((valNum - 32) / 1.8) + 273.15).toFixed(2);

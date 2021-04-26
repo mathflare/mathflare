@@ -1,9 +1,9 @@
 ﻿$(document).ready(function () {
-    $("#button").click(function (e) {
+    $("#button").click(calculation = (e) => {
         e.preventDefault();
-        var fside = $("#fside").val();
-        var sside = $("#sside").val();
-        var result = Math.sqrt((fside * fside) + (sside * sside));
+        const fside = $("#fside").val();
+        const sside = $("#sside").val();
+        const result = Math.sqrt((fside * fside) + (sside * sside));
         if (fside <= 0 || sside <= 0) {
             $("#output").text("Please enter a valid value");
             $("#fside").val(1);

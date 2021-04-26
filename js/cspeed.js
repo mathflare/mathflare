@@ -1,9 +1,9 @@
-﻿function speedConverter(source, valNum) {
+﻿const speedConverter = (source, valNum) => {
     valNum = parseFloat(valNum);
-    var inputMPH = document.getElementById("inputMPH");
-    var inputKPH = document.getElementById("inputKPH");
-    var inputKnots = document.getElementById("inputKnots");
-    var inputMach = document.getElementById("inputMach");
+    const inputMPH = document.getElementById("inputMPH");
+    const inputKPH = document.getElementById("inputKPH");
+    const inputKnots = document.getElementById("inputKnots");
+    const inputMach = document.getElementById("inputMach");
     if (source == "inputMPH") {
         inputKPH.value = (valNum * 1.609344).toFixed(2);
         inputKnots.value = (valNum / 1.150779).toFixed(2);

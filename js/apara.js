@@ -1,9 +1,9 @@
 ﻿$(document).ready(function () {
-    $("#button").click(function (e) {
+    $("#button").click(calculation = (e) => {
         e.preventDefault();
-        var width = $("#width").val();
-        var height = $("#height").val();
-        var result = width * height;
+        const width = $("#width").val();
+        const height = $("#height").val();
+        const result = width * height;
         if (width <= 0 || height <= 0) {
             $("#output").text("Please enter a valid value");
             $("#width").val(1);

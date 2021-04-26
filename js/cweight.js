@@ -1,10 +1,10 @@
-﻿function weightConverter(source, valNum) {
+﻿const weightConverter = (source, valNum) => {
     valNum = parseFloat(valNum);
-    var inputPounds = document.getElementById("inputPounds");
-    var inputKilograms = document.getElementById("inputKilograms");
-    var inputOunces = document.getElementById("inputOunces");
-    var inputGrams = document.getElementById("inputGrams");
-    var inputStones = document.getElementById("inputStones");
+    const inputPounds = document.getElementById("inputPounds");
+    const inputKilograms = document.getElementById("inputKilograms");
+    const inputOunces = document.getElementById("inputOunces");
+    const inputGrams = document.getElementById("inputGrams");
+    const inputStones = document.getElementById("inputStones");
     if (source == "inputPounds") {
         inputKilograms.value = (valNum / 2.2046).toFixed(2);
         inputOunces.value = (valNum * 16).toFixed(2);

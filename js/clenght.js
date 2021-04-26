@@ -1,12 +1,12 @@
-﻿function lengthConverter(source, valNum) {
+﻿const lengthConverter = (source, valNum) => {
     valNum = parseFloat(valNum);
-    var inputFeet = document.getElementById("inputFeet");
-    var inputMeters = document.getElementById("inputMeters");
-    var inputInches = document.getElementById("inputInches");
-    var inputcm = document.getElementById("inputcm");
-    var inputYards = document.getElementById("inputYards");
-    var inputKilometers = document.getElementById("inputKilometers");
-    var inputMiles = document.getElementById("inputMiles");
+    const inputFeet = document.getElementById("inputFeet");
+    const inputMeters = document.getElementById("inputMeters");
+    const inputInches = document.getElementById("inputInches");
+    const inputcm = document.getElementById("inputcm");
+    const inputYards = document.getElementById("inputYards");
+    const inputKilometers = document.getElementById("inputKilometers");
+    const inputMiles = document.getElementById("inputMiles");
     if (source == "inputFeet") {
         inputMeters.value = (valNum / 3.2808).toFixed(2);
         inputInches.value = (valNum * 12).toFixed(2);

@@ -1,8 +1,8 @@
 ﻿$(document).ready(function () {
-    $("#button").click(function (e) {
+    $("#button").click(calculation = (e) => {
         e.preventDefault();
-        var fside = $("#fside").val();
-        var result = fside * fside;
+        const fside = $("#fside").val();
+        const result = fside * fside;
         if (fside <= 0 || fside == null) {
             $("#output").text("Please enter a valid value");
             $("#fside").val(1);
