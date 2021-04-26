@@ -61,7 +61,7 @@ A list of all the active domains for Liquid Geometry
 
 # Contributing
 
-See steps and ways to contribute [here](https://github.com/liquid-geometry/liquidgeometry/blob/main/CONTRIBUITNG.md "CONTRIBUTING.md file")
+See steps and ways to contribute [here](https://github.com/liquid-geometry/liquidgeometry/blob/main/CONTRIBUTING.md "CONTRIBUTING.md file")
 
 # Security Vulnurabilities
 
