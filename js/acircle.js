@@ -13,7 +13,6 @@
         }
     });
     $(".show-formula").click(function () {
-        //$("#formula").toggle(500);
         $("#formula").fadeToggle(500);
     });
 });
