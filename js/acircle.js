@@ -6,6 +6,7 @@
         if (radius <= 0) {
             $("#output").text("Please enter a valid value");
             $("#radius").val(1);
+            console.log('the application encountered an error')
         }
         else {
             $("#output").text("The area of the circle is ~" + result + " cm^2");
