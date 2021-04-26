@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("#button").click(function (e) {
+    $("#button").click(calculation = (e) => {
         e.preventDefault();
         var radius = $("#radius").val();
         var result = (radius * radius) * 3.14;
