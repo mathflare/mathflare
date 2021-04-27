@@ -9,8 +9,8 @@ body {
     background-color: var(--liquido);
 }
 ::selection {
-    background-color: var(--white);
-    color: var(--black);
+    background-color: white;
+    color: black;
 }
 nav {
     /*Make tha navbar be on top of the contents*/
@@ -56,8 +56,8 @@ nav {
 }
 input ::selection {
         /*make the selctor different in the input elements*/
-        background-color: var(--black) !important;
-        color: var(--white) im !important;
+        background-color: black !important;
+        color: white !important;
     }
 .inline-flex {
     /*for the button in the home page to alling*/
