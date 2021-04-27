@@ -4,7 +4,7 @@ $.ajax({
     dataType: "json",
     success: function (response) {
         const latest = response.tag_name;
-        console.log('the latest release is ' + latest)
+        console.warn('the latest release is ' + latest)
         $("#latest").text('v' +latest);
     }
 });
