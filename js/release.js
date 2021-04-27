@@ -5,6 +5,6 @@ $.ajax({
     success: function (response) {
         const latest = response.tag_name;
         console.log('the latest release is ' + latest)
-        $("#latest").text(latest);
+        $("#latest").text('v' +latest);
     }
 });
