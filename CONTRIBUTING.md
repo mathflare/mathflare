@@ -13,11 +13,15 @@ As an open-source project we welcome every developer to contribute and imporve o
 ## Rules
 
 - All the CSS(colors, displays, positions etc.) must use Bootstrap classes
+- Write all custom CSS with comments in the `Site.css` file
 - Use jQuery all the time for DOM operations
 - Use the excact same navigation bar for all the pages(see example below)
+- Use Bootstrap Icons for all the icons
+- Ask us first if you want to use any external library
 - Write clean and formatted code
 - Use opening and closing comment tags to organize the code(see `NAVBAR START`/`NAVBAR END` example)
 - Do not leave empty lines or a ton of comments in the code(Include all extra info on the PR message)
+- Make sure everything still works by running it locally before opening a PR
 
 ## Examples
 
@@ -94,6 +98,7 @@ As an open-source project we welcome every developer to contribute and imporve o
                         <a href="cpower.html" class="dropdown-item"><i class="bi bi-battery-half"></i> Power</a>
                     </div>
                 </li>
+                <!-- Leave this dropdown as it is -->
                 <li class="nav-item dropdown">
                     <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Account
@@ -123,25 +128,25 @@ As an open-source project we welcome every developer to contribute and imporve o
 $(document).ready(function () {
     $("#button").click(calculation = (e) => {
         e.preventDefault();
-        const lside = $("#lside").val();
+        const lside = $("#lside").val(); //stores the current value of each input
         const sside = $("#sside").val();
         const height = $("#height").val();
-        const result = ((parseFloat(lside) + parseFloat(sside)) * parseFloat(height)) / 2;
-        if (lside <= 0 || sside <= 0 || height <= 0) {
-            $("#output").text("Please enter a valid value");
-            $("#lside").val(1);
+        const result = ((parseFloat(lside) + parseFloat(sside)) * parseFloat(height)) / 2; //calculates the result
+        if (lside <= 0 || sside <= 0 || height <= 0) { //checks for non valid values
+            $("#output").text("Please enter a valid value"); //dispalys error message
+            $("#lside").val(1); //sets all the values to 1
             $("#sside").val(1);
             $("#height").val(1);
         }
         else {
-            $("#output").text("The area of the trapezoid is " + result + " cm^2");
-            $("#lside").val(1);
+            $("#output").text("The area of the trapezoid is " + result + " cm^2"); //displays the result
+            $("#lside").val(1); //sets all the values to 1
             $("#sside").val(1);
             $("#height").val(1);
         }
     });
     $(".show-formula").click(function () {
-        $("#formula").fadeToggle(500);
+        $("#formula").fadeToggle(500); //makes the formula visible on click
     });
 });
 
