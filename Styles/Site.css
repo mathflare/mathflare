@@ -126,6 +126,7 @@ hr {
   background-color: var(--danger);
   font-size: larger;
   display: inline-flex;
+  margin: 50px;
   padding: 5px;
   border-radius: 5px;
 }
