@@ -30,13 +30,13 @@
 - Sure! We welcome all contributors.
 
 #### Do I have to log in with Google?
-- No. We will eventually impliment a "bookmark" feature
+- No. We will eventually impliment a bookmarking feature
 
 #### When did the project started?
 - June 2020
 
 #### Will the old design die?
-- `former.liquidgeometry.tk`
+- [former.liquidgeometry.tk](https://former.liquidgeometry.tk)
 
 # Domains
 
@@ -56,8 +56,8 @@ A list of all the active domains for Liquid Geometry
 
 ## Other
 
-1. [api.liquidgeometry.tk (Cloudflare Pages)](https://api.liquidgeometry.tk)
-2. [developers.liquidgeometry.tk (Cloudflare Pages)](https://developers.liquidgeometry.tk)
+1. [api.liquidgeometry.tk (GitHub Pages)](https://api.liquidgeometry.tk)
+2. [developers.liquidgeometry.tk (GitHub Pages)](https://developers.liquidgeometry.tk)
 
 # Contributing
 
