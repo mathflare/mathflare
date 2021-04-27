@@ -54,7 +54,7 @@ nav {
     justify-content: center;
     align-items: center;
 }
-input ::selection {
+.center-form ::selection {
         /*make the selctor different in the input elements*/
         background-color: black !important;
         color: white !important;
