@@ -15,6 +15,7 @@ As an open-source project we welcome every developer to contribute and imporve o
 - All the CSS(colors, displays, positions etc.) must use Bootstrap classes
 - Write all custom CSS with comments in the `Site.css` file
 - Use jQuery all the time for DOM operations
+- Use Ajax for all API requests(see example below)
 - Use the excact same navigation bar for all the pages(see example below)
 - Use Bootstrap Icons for all the icons
 - Ask us first if you want to use any external library
@@ -148,6 +149,23 @@ $(document).ready(function () {
     $(".show-formula").click(function () {
         $("#formula").fadeToggle(500); //makes the formula visible on click
     });
+});
+
+```
+
+### Ajax GET request
+
+```JS
+
+$.ajax({
+    type: "GET",
+    url: "https://api.github.com/repos/liquid-geometry/liquidgeometry/releases/latest",
+    dataType: "json",
+    success: function (response) {
+        const latest = response.tag_name;
+        console.log('the latest release is ' + latest)
+        $("#latest").text(latest);
+    }
 });
 
 ```
