@@ -117,3 +117,7 @@ hr {
     /*leave a margin under the unit converter form*/
     margin-bottom: 40px !important;
 }
+.formula {
+    /*leave a margin in the bottom of the "sho formula button"*/
+    margin-bottom: 20px;
+}
