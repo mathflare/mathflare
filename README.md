@@ -23,8 +23,11 @@
 #### Do you write your own CSS?
 - We use Bootstrap for the most part. All the custom CSS is in the `Site.css` file.
 
+#### Are the icons custom?
+- Bootstrap Icons
+
 #### Where is the project hosted?
-- Cloudflare Pages, Vercel, GitHub Pages, 000webhost
+- Cloudflare, Vercel, GitHub Pages
 
 #### Can I contribute to the project?
 - Sure! We welcome all contributors.
@@ -47,8 +50,7 @@ A list of all the active domains for Liquid Geometry
 1. [www.liquidgeometry.tk (Cloudflare Pages)](https://www.liquidgeometry.tk)
 2. [www1.liquidgeometry.tk (Vercel)](https://www1.liquidgeometry.tk)
 3. [www2.liquidgeometry.tk (GitHub Pages)](https://www2.liquidgeometry.tk)
-4. [www3.liquidgeometry.tk (000webhost)](http://www3.liquidgeometry.tk)
-5. [liquidgeometry.ml (redirect)](http://liquidgeometry.ml)
+4. [liquidgeometry.ml (redirect)](http://liquidgeometry.ml)
 
 ## Older Versions
 
@@ -61,8 +63,13 @@ A list of all the active domains for Liquid Geometry
 
 # Contributing
 
-See steps and ways to contribute [here](https://github.com/liquid-geometry/liquidgeometry/blob/main/CONTRIBUTING.md "CONTRIBUTING.md file")
+See steps and ways on how to contribute [here](https://github.com/liquid-geometry/liquidgeometry/blob/main/CONTRIBUTING.md "CONTRIBUTING.md file")
 
 # Security Vulnurabilities
 
 See steps and ways to report any vulnerability [here](https://github.com/liquid-geometry/liquidgeometry/blob/main/SECURITY.md "SECURITY.md file")
+
+# Terms Of Service
+
+- Temporary ToS
+    - [./tos.html](https://www.liquidgeometry.tk/tos)
