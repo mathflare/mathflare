@@ -122,6 +122,7 @@ hr {
   margin-bottom: 20px;
 }
 .noscript {
+  /*use only for the noscript tag*/
   color: white;
   background-color: var(--danger);
   font-size: larger;
