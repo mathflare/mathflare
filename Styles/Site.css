@@ -3,14 +3,17 @@
   --liquido: #23272b;
   /*Our light grey*/
   --aactive: #9999;
+  /*black and white*/
+  --black: #000000;
+  --white: #FFFFFF;
 }
 body {
   font-family: "Poppins", sans-serif !important;
   background-color: var(--liquido);
 }
 ::selection {
-  background-color: white;
-  color: black;
+  background-color: var(--white);
+  color: var(--black);
 }
 nav {
   /*Make tha navbar be on top of the contents*/
@@ -56,8 +59,8 @@ nav {
 }
 .center-form ::selection {
   /*make the selctor different in the input elements*/
-  background-color: black !important;
-  color: white !important;
+  background-color: var(--black) !important;
+  color: var(--white) !important;
 }
 .inline-flex {
   /*for the button in the home page to alling*/
@@ -123,7 +126,7 @@ hr {
 }
 .noscript {
   /*use only for the noscript tag*/
-  color: white;
+  color: var(--white);
   background-color: var(--danger);
   font-size: larger;
   display: inline-flex;
