@@ -8,4 +8,5 @@
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); 
     $("#display").text('Signed In As ' + profile.getName());
+    $("#user-image").attr("src", profile.getImageUrl); 
 }
