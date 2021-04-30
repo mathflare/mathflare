@@ -40,15 +40,33 @@ nav {
 .center input[type="number"] {
   width: 40%;
 }
+.center input[type="text"] {
+  width: 40%;
+}
+.message {
+  width: 40%;
+}
 @media screen and (max-width: 1000px) {
   /*make the inputs bigger for smaller screens*/
   .center input[type="number"] {
+    width: 50%;
+  }
+  .center input[type="text"] {
+    width: 50%;
+  }
+  .message {
     width: 50%;
   }
 }
 @media screen and (max-width: 915px) {
   /*make the inputs bigger for phones*/
   .center input[type="number"] {
+    width: 90%;
+  }
+  .center input[type="text"] {
+    width: 90%;
+  }
+  .message {
     width: 90%;
   }
 }
