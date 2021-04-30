@@ -2,6 +2,6 @@
     $("#signout").click(function (e) {
         e.preventDefault();
         $("#display").text("Not Signed In");
-        $("#user-image").attr("src", "Assets/profile.jpg"); 
+        $("#profile-photo").html(`<i class="bi bi-person-circle"></i>`);
     });
 });
