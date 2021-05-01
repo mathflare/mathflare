@@ -8,6 +8,8 @@
     console.log('ID: ' + profile.getId());
     console.log('Image URL: ' + PhotoUrl);
     console.log('Email: ' + profile.getEmail()); 
+    //change the text of the navbar element
     $("#display").text('Signed In As ' + profile.getName());
-    $("#profile-photo").html(`<img src="${PhotoUrl}" style="border-radius: 50%; height: 1em; width: auto;"/>`);
+    //display the profile picture
+    $("#profile-photo").html(`<img src="${PhotoUrl}" class="profile-pic"/>`);
 }
