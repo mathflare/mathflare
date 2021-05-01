@@ -1,20 +1,19 @@
 <h1 align='center'>Liquid Geometry</h1>
-
 <div align='center'>
 
 ![logo)](https://user-images.githubusercontent.com/68110106/115993058-974fae80-a5d9-11eb-98d8-a3cdff241ce5.png)
 
-</div>
-
 <h4 align='center'>the go-to website for geometry and algebra📚🍎</h1>
 
----
+____
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b43907f2-5e50-4457-85ce-42c395322564/deploy-status)](https://app.netlify.com/sites/liquidgeometry/deploys)
+![Netlify Status](https://api.netlify.com/api/v1/badges/b43907f2-5e50-4457-85ce-42c395322564/deploy-status)
 ![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=liquidgeometry)
 
-<h4 align='center'>🚧🚦README.md UNDER CONSTRUCTION🚦🚧</h4>
- 
+____
+
+</div>
+
 # FAQ
 
 #### Why .tk?
