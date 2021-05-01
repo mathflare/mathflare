@@ -6,18 +6,18 @@
         var result = Math.sqrt((hypo * hypo) - (side * side));
         if (hypo <= 0 || side <= 0) {
             $("#output").text("Please enter a valid value");
-            $("#hypo").val(1);
-            $("#side").val(1);
+            $("#hypo").val(null);
+            $("#side").val(null);
         }
         else if (side >= hypo) {
             $("#output").text("The hypotenuse cannot be smaller than or equal to the right side");
-            $("#hypo").val(1);
-            $("#side").val(1);
+            $("#hypo").val(null);
+            $("#side").val(null);
         }
         else {
             $("#output").text("The other side of the right triangle is " + result + " cm");
-            $("#hypo").val(1);
-            $("#side").val(1);
+            $("#hypo").val(null);
+            $("#side").val(null);
         }
     });
     $(".show-formula").click(function () {

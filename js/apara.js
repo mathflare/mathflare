@@ -6,13 +6,13 @@
         const result = width * height;
         if (width <= 0 || height <= 0) {
             $("#output").text("Please enter a valid value");
-            $("#width").val(1);
-            $("#height").val(1);
+            $("#width").val(null);
+            $("#height").val(null);
         }
         else {
             $("#output").text("The area of the triangle is " + result + " cm^2");
-            $("#width").val(1);
-            $("#height").val(1);
+            $("#width").val(null);
+            $("#height").val(null);
         }
     });
     $(".show-formula").click(function () {

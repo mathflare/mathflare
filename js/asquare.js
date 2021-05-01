@@ -5,11 +5,11 @@
         const result = fside * fside;
         if (fside <= 0 || fside == null) {
             $("#output").text("Please enter a valid value");
-            $("#fside").val(1);
+            $("#fside").val(null);
         }
         else {
             $("#output").text("The area of the square is " + result + " cm^2");
-            $("#fside").val(1);
+            $("#fside").val(null);
         }
     });
     $(".show-formula").click(function () {

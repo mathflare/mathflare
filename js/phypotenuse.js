@@ -6,13 +6,13 @@
         const result = Math.sqrt((fside * fside) + (sside * sside));
         if (fside <= 0 || sside <= 0) {
             $("#output").text("Please enter a valid value");
-            $("#fside").val(1);
-            $("#sside").val(1);
+            $("#fside").val(null);
+            $("#sside").val(null);
         }
         else {
             $("#output").text("The hypotenuse of the right triangle is " + result + " cm");
-            $("#fside").val(1);
-            $("#sside").val(1);
+            $("#fside").val(null);
+            $("#sside").val(null);
         }
     });
     $(".show-formula").click(function () {
