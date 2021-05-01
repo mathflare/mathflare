@@ -47,6 +47,7 @@ nav {
 .message {
   /*textarea for contact page*/
   width: 40%;
+  height: 100px;
 }
 @media screen and (max-width: 1000px) {
   /*make the inputs bigger for smaller screens*/
