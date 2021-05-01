@@ -10,6 +10,8 @@
 
 ---
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b43907f2-5e50-4457-85ce-42c395322564/deploy-status)](https://app.netlify.com/sites/liquidgeometry/deploys)
+
 <h4 align='center'>🚧🚦README.md UNDER CONSTRUCTION🚦🚧</h4>
  
 # FAQ
