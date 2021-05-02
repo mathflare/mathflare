@@ -156,6 +156,7 @@ hr {
   margin: 50px;
   padding: 5px;
   border-radius: 5px;
+  z-index: 999999;
 }
 .profile-pic {
   /*style the profile pic*/
@@ -163,4 +164,8 @@ hr {
   border-radius: 50%; 
   height: 1em; 
   width: auto;
+}
+.send-mail {
+  /*leave a margin below the send button in the contact page*/
+  margin-bottom: 20px;
 }
