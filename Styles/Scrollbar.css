@@ -1,5 +1,7 @@
-﻿:root {
+﻿/*for Chromium based browsers*/
+:root {
     --liquido: #23272b;
+    --grey: #888888;
   }
 ::-webkit-scrollbar {
     width: 10px;
@@ -14,3 +16,8 @@
     ::-webkit-scrollbar-thumb:hover {
         background: #555;
     }
+/*for Firefox based browsers*/
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey) var(--liquido);
+  }
