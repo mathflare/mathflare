@@ -2,9 +2,11 @@
 
 As an open-source project we welcome every developer to contribute and imporve our project.
 
+Make sure that you have read the [Code of Conduct](https://github.com/liquid-geometry/liquidgeometry/blob/main/CODE_OF_CONDUCT.md) before contributing
+
 ## How to Contribute
 
-1. Fork the `to-test` branch
+1. Fork the `main` branch
 2. Clone the Repository
 3. Make the changes
 4. Make a PR on the `to-test` branch
