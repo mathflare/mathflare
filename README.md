@@ -27,26 +27,26 @@ ____
 - We use Bootstrap for the most part. All the custom CSS is in the `Site.css` file.
 
 #### Are the icons custom?
-- Bootstrap Icons
+- Bootstrap Icons.
 
 #### Where is the project hosted?
-- Cloudflare, Vercel, GitHub Pages
+- Cloudflare, Vercel, GitHub Pages, Netlify(testing only).
 
 #### Can I contribute to the project?
 - Sure! We welcome all contributors.
 
 #### Do I have to log in with Google?
-- No. We will eventually impliment a bookmarking feature
+- No. We will eventually impliment a bookmarking feature.
 
 #### When did the project started?
 - June 2020
 
-#### Will the old design die?
-- we have moved it to this subdomain [former.liquidgeometry.tk](https://former.liquidgeometry.tk)
+#### Where are the older versions?
+- We haven't kept any older version of the website online.
 
 # Domains
 
-A list of all the active domains for Liquid Geometry
+A list of all the active domains for Liquid Geometry:
 
 ## Main Site
 
@@ -54,10 +54,6 @@ A list of all the active domains for Liquid Geometry
 2. [www1.liquidgeometry.tk (Vercel)](https://www1.liquidgeometry.tk)
 3. [www2.liquidgeometry.tk (GitHub Pages)](https://www2.liquidgeometry.tk)
 4. [liquidgeometry.ml (redirect)](http://liquidgeometry.ml)
-
-## Older Versions
-
-- [former.liquidgeometry.tk (Version 2.0)](https://former.liquidgeometry.tk)
 
 ## Other
 
