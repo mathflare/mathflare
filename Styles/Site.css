@@ -121,6 +121,16 @@ hr {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
+  cursor: crosshair;
+}
+.formulas-body tr:hover {
+  background-color: var(--white) !important;
+  color: var(--black) !important;
+  transition: 0.2s;
+}
+.formulas-body tr:hover ::selection{
+  background-color: var(--black) !important;
+  color: var(--white) !important;
 }
 @media screen and (max-width: 915px) {
   /*make the table 95% width for phones*/

@@ -8,7 +8,7 @@
             $("#radius").val(null);
         }
         else {
-            $("#output").text("The area of the circle is ~" + result + " cm^2 (π = 3.14)");
+            $("#output").html("The area of the circle is &#8764;" + result + " cm^2 (&#8719; = 3.14)");
             $("#radius").val(null);
         }
     });
