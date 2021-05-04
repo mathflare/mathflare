@@ -40,37 +40,46 @@ nav {
 }
 .center input[type="number"] {
   width: 40%;
+  transition: 0.2s;
 }
 .center input[type="text"] {
   width: 40%;
+  transition: 0.2s;
 }
 .message {
   /*textarea for contact page*/
   width: 40%;
   height: 100px;
+  transition: 0.2s;
 }
 @media screen and (max-width: 1000px) {
   /*make the inputs bigger for smaller screens*/
   .center input[type="number"] {
     width: 50%;
+    transition: 0.2s;
   }
   .center input[type="text"] {
     width: 50%;
+    transition: 0.2s;
   }
   .message {
     width: 50%;
+    transition: 0.2s;
   }
 }
 @media screen and (max-width: 915px) {
   /*make the inputs bigger for phones*/
   .center input[type="number"] {
     width: 90%;
+    transition: 0.2s;
   }
   .center input[type="text"] {
     width: 90%;
+    transition: 0.2s;
   }
   .message {
     width: 90%;
+    transition: 0.2s;
   }
 }
 .center-form {
@@ -84,14 +93,10 @@ nav {
   background-color: var(--black) !important;
   color: var(--white) !important;
 }
-.inline-flex {
-  /*for the button in the home page to alling*/
-  display: inline-flex;
-}
 @media screen and (max-width: 1280px) {
   /*make the buttons stack on top of each other for phones*/
-  .inline-flex {
-    display: unset;
+  .d-inline-flex {
+    display: unset !important;
   }
 }
 .tos {
@@ -141,6 +146,7 @@ tr {
   /*make the table 95% width for phones*/
   .formulas-table {
     width: 95%;
+    transition: 0.2s;
   }
 }
 /*SHOW FORMULA BUTTON*/
@@ -163,6 +169,10 @@ tr {
 .unit-con {
   /*leave a margin under the unit converter form*/
   margin-bottom: 40px !important;
+}
+.unit-label {
+  /*leave marign around the labels for each unit*/
+  margin: 8px;
 }
 .noscript {
   /*use only for the noscript tag*/
