@@ -139,7 +139,7 @@ tr {
 }
 @media screen and (max-width: 915px) {
   /*make the table 95% width for phones*/
-  .formulas {
+  .formulas-table {
     width: 95%;
   }
 }
