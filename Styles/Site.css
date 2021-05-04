@@ -172,3 +172,7 @@ hr {
   /*leave a margin below the send button in the contact page*/
   margin-bottom: 20px;
 }
+.featured {
+  /*leave a margin around the "featured" heading in the home page*/
+  margin: 8px;
+}
