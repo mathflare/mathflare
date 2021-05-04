@@ -14,6 +14,13 @@ ____
 
 </div>
 
+# Features
+
+- Area Calculator for basic geometric shapes
+- Pythagorian Theorem solver
+- Unit Converter
+- Math Cheat Sheet(for basic formulas)
+- 1st degree equation solver
 
 # FAQ
 
