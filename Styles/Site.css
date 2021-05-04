@@ -116,12 +116,17 @@ hr {
   border: 2px solid var(--danger);
   border-radius: 3px;
 }
-.formulas {
+/*CHEAT SHEET TABLE*/
+.formulas-table {
   /*position the table*/
   margin-left: auto;
   margin-right: auto;
   width: 60%;
   cursor: crosshair;
+  transition: 0.2s;
+}
+tr {
+  transition: 0.2s;
 }
 .formulas-body tr:hover {
   background-color: var(--white) !important;
@@ -138,6 +143,7 @@ hr {
     width: 95%;
   }
 }
+/*SHOW FORMULA BUTTON*/
 .show-formula:hover {
   cursor: pointer;
   /*make "show formula" text non-selectable*/
@@ -149,13 +155,14 @@ hr {
   /*make the formula hidden by default*/
   display: none;
 }
+.formula {
+  /*SHOW FORMULA BUTTON*/
+  /*leave a margin in the bottom of the "show formula button"*/
+  margin-bottom: 20px;
+}
 .unit-con {
   /*leave a margin under the unit converter form*/
   margin-bottom: 40px !important;
-}
-.formula {
-  /*leave a margin in the bottom of the "show formula button"*/
-  margin-bottom: 20px;
 }
 .noscript {
   /*use only for the noscript tag*/
@@ -172,7 +179,8 @@ hr {
   /*leave a margin below the send button in the contact page*/
   margin-bottom: 20px;
 }
-.featured {
+.home-featured {
   /*leave a margin around the "featured" heading in the home page*/
+  /*only use this class in the home page*/
   margin: 8px;
 }
