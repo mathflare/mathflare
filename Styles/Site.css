@@ -18,7 +18,7 @@ body {
 }
 nav {
   /*Make tha navbar be on top of the contents*/
-  z-index: 10 !important;
+  z-index: 100000 !important;
 }
 .dead-center {
   /*Use this class for the home page only*/
@@ -189,8 +189,8 @@ tr {
   /*leave a margin below the send button in the contact page*/
   margin-bottom: 20px;
 }
-.home-featured {
-  /*leave a margin around the "featured" heading in the home page*/
-  /*only use this class in the home page*/
-  margin: 8px;
+#latest {
+  font-size: medium; 
+  font-weight: 300;
+  vertical-align: middle;
 }
