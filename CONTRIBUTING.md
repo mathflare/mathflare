@@ -9,8 +9,8 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
 1. Fork the `main` branch
 2. Clone the Repository
 3. Make the changes
-4. Make a PR on the `to-test` branch
-5. Wait for aprooval (you may be asked to make changes on your code)
+4. Make a PR on the `main` branch
+5. Wait for aprooval (you may be asked to make changes on your code!)
 
 ## Rules
 
