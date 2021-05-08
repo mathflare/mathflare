@@ -162,10 +162,27 @@
     <script src="js/contact.mail.js"></script>
     <script>
         $(document).ready(function () {
-            $("#clear").click(function (e) { 
+            $("#clear").click(clear = (e) => { 
                 e.preventDefault();
-                $("#subj").val(null);
-                $("#msg").val(null);
+                const subj = $("#subj").val();
+                const msg = $("#msg").val();
+                if(subj == "" && msg == "") {
+                    $("#contact-form").append(`
+                    <div class="center alert alert-warning alert-dismissible fade show" role="alert" margin-top: 10px !important">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>Warning!</strong> There is nothing to clear.
+                    </div>
+                    `);
+                    
+                    setTimeout(function(){
+                    $("#warn").remove();
+                    }, 3000);
+                } else {
+                    $("#subj").val(null);
+                    $("#msg").val(null);
+                }
             });
         });
     </script>
