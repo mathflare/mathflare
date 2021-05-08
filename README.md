@@ -37,7 +37,7 @@ ____
 - Bootstrap Icons.
 
 #### Where is the project hosted?
-- Cloudflare, Vercel, GitHub Pages, Netlify(testing only).
+- Cloudflare, GitHub Pages, Netlify(testing only).
 
 #### Can I contribute to the project?
 - Sure! We welcome all contributors.
@@ -58,9 +58,8 @@ A list of all the active domains for Liquid Geometry:
 ## Main Site
 
 1. [www.liquidgeometry.tk (Cloudflare Pages)](https://www.liquidgeometry.tk)
-2. [www1.liquidgeometry.tk (Vercel)](https://www1.liquidgeometry.tk)
-3. [www2.liquidgeometry.tk (GitHub Pages)](https://www2.liquidgeometry.tk)
-4. [liquidgeometry.ml (redirect)](http://liquidgeometry.ml)
+2. [www2.liquidgeometry.tk (GitHub Pages)](https://www2.liquidgeometry.tk)
+3. [liquidgeometry.ml (redirect)](http://liquidgeometry.ml)
 
 ## Other
 

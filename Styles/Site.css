@@ -50,6 +50,7 @@ nav {
   /*textarea for contact page*/
   width: 40%;
   height: 100px;
+  min-height: 20px;
   transition: 0.2s;
 }
 @media screen and (max-width: 1000px) {
@@ -103,8 +104,12 @@ nav {
   /*Use this class for the paragraphs in the Terms of Service only*/
   margin: 25px !important;
 }
-.homebutton {
-  /*Use this class for the buttons in the homepage only*/
+.button-group button {
+  /*Use this class for the buttons in the homepage and in the contact page only*/
+  margin: 5px !important;
+}
+.sponsor-button {
+  /*style the "Buy DogeCoin button"*/
   margin: 5px !important;
 }
 .title {
@@ -186,8 +191,8 @@ tr {
   z-index: 999999;
 }
 .send-mail {
-  /*leave a margin below the send button in the contact page*/
-  margin-bottom: 20px;
+  /*leave a margin around the send and clear button in the contact page*/
+  margin: 20px;
 }
 #latest {
   font-size: medium; 

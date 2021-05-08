@@ -139,19 +139,19 @@
     <div class="center">
         <h1 class="text-white title">Contact Liquid Geometry</h1>
         <hr class="bg-danger" style="width: 60%;" />
-             <form id="contact-form" autocomplete="off">
+            <form id="contact-form" autocomplete="off">
                 <div class="center-form">
-                    <input type="text" name="subject" placeholder="Subject" class="form-control mb-0"/>
+                    <input type="text" id="subj" name="subject" placeholder="Subject" class="form-control mb-0"/>
                 </div>
                 <br>
                 <div class="center-form">
-                    <textarea name="text" placeholder="Message" class="form-control message"></textarea>
+                    <textarea id="msg" name="text" placeholder="Message" class="form-control message"></textarea>
                 </div>
-                <br>
-                <div class="center-form">
+                <div class="button-group center-form">
                     <input type="submit" name="send" value="Send" class="btn btn-success send-mail"/>
+                    <input type="submit" id="clear" value="Clear" class="btn btn-danger"/>
                 </div>
-             </form>
+            </form>
     </div>
     <!-- SCRIPTS START -->
     <script src="Scripts/jquery-3.0.0.js"></script>
@@ -160,6 +160,15 @@
     <script src="OAuth/SignOut.js"></script>
     <script src="OAuth/OnSignOut.js"></script>
     <script src="js/contact.mail.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#clear").click(function (e) { 
+                e.preventDefault();
+                $("#subj").val(null);
+                $("#msg").val(null);
+            });
+        });
+    </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>
