@@ -205,6 +205,10 @@ tr {
   margin-bottom: 20px !important;
   transition: 0.2s;
 }
+.alert ::selection {
+  color: var(--white);
+  background-color: var(--black);
+}
 @media screen and (max-width: 1000px) {
   /*make the table 95% width for phones*/
   .alert {
