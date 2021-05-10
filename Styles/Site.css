@@ -229,3 +229,11 @@ tr {
     transition: 0.2s;
   }
 }
+#refresh {
+  /*change the cirsor of the "refresh page" button in the send mail error*/
+  cursor: pointer;
+}
+.user-message-mail {
+  /*leave margin outside the user message in the contact page*/
+  margin: 10px;
+}

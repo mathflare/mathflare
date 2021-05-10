@@ -168,16 +168,13 @@
                 const msg = $("#msg").val();
                 if(subj == "" && msg == "") {
                     $("#contact-form").append(`
-                    <div class="center alert alert-warning alert-dismissible fade show" role="alert" margin-top: 10px !important">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <strong>Warning!</strong> There is nothing to clear.
-                    </div>
-                    `);
+                    <p class="text-warning user-message-mail" id="warn">
+                        there is nothing to clear
+                    </p>
+                `);
                     setTimeout(function(){
                     $("#warn").remove();
-                    }, 3000);
+                    }, 4000);
                 } else {
                     $("#subj").val(null);
                     $("#msg").val(null);
