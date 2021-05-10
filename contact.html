@@ -147,10 +147,10 @@
                 <div class="center-form">
                     <textarea id="msg" name="text" placeholder="Message" class="form-control message"></textarea>
                 </div>
-                <div class="button-group center-form">
-                    <input type="submit" name="send" value="Send" class="btn btn-success send-mail"/>
-                    <input type="submit" id="clear" value="Clear" class="btn btn-danger"/>
-                </div>
+                    <div class="button-group" style="margin-top:10px;">
+                        <input type="submit" name="send" value="Send" class="btn btn-success send-mail"/>
+                        <input type="submit" id="clear" value="Clear" class="btn btn-danger d-inline-block"/>
+                    </div>
             </form>
     </div>
     <!-- SCRIPTS START -->
@@ -175,7 +175,6 @@
                         <strong>Warning!</strong> There is nothing to clear.
                     </div>
                     `);
-                    
                     setTimeout(function(){
                     $("#warn").remove();
                     }, 3000);

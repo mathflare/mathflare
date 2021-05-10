@@ -4,6 +4,10 @@
     };
     const onSuccess = () => {
         console.log('email sent successfully')
+        sendButton.val('Send');
+        sendButton.prop('disabled',false);
+        $("#subj").val(null);
+        $("#msg").val(null);
     }
     const onError = (error) => {
         console.log('email was not sent successfully. ' + error)

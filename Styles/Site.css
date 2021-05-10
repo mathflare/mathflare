@@ -29,6 +29,12 @@ nav {
   transform: translate(-50%, -50%);
   z-index: 1 !important;
 }
+.test {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%);
+}
 .center {
   /*Use this class for all the centering*/
   text-align: center;
@@ -105,6 +111,10 @@ nav {
   margin: 25px !important;
 }
 .button-group button {
+  /*Use this class for the buttons in the homepage and in the contact page only*/
+  margin: 5px !important;
+}
+.button-group input[type="submit"] {
   /*Use this class for the buttons in the homepage and in the contact page only*/
   margin: 5px !important;
 }
@@ -189,10 +199,6 @@ tr {
   padding: 5px;
   border-radius: 5px;
   z-index: 999999;
-}
-.send-mail {
-  /*leave a margin around the send and clear button in the contact page*/
-  margin: 20px;
 }
 #latest {
   font-size: medium; 
