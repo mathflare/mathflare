@@ -4,6 +4,14 @@
     };
     const onSuccess = () => {
         console.log('email sent successfully')
+        $("#contact-form").append(`
+                    <div class="center alert alert-success alert-dismissible fade show" role="alert" margin-top: 10px !important">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>Success!</strong> The email was sent successfully.
+                    </div>
+                    `);
         sendButton.val('Send');
         sendButton.prop('disabled',false);
         $("#subj").val(null);
