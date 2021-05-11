@@ -1,4 +1,5 @@
-﻿:root {
+﻿@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+:root {
   /*Our dark grey*/
   --liquido: #23272b;
   /*Our light grey*/
