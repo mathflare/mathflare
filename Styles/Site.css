@@ -38,10 +38,10 @@ nav {
 }
 .center {
   /*Use this class for all the centering*/
-  text-align: center;
+  text-align: center !important;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
   margin-top: 100px;
   z-index: 1 !important;
 }
