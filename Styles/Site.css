@@ -134,8 +134,9 @@ nav {
 }
 hr {
   /*style the line element*/
-  border: 2px solid var(--danger);
+  border: 2px solid var(--bs-danger);
   border-radius: 3px;
+  margin: auto;
 }
 /*CHEAT SHEET TABLE*/
 .formulas-table {
