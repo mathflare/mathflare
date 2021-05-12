@@ -127,6 +127,9 @@ nav {
   /*Use this class for the title in the homepage only*/
   font-size: 45px;
 }
+.active .nav-link {
+  color: #FFFFFF !important;
+}
 .aactive {
   /*Custom active state for dropdown link navbar elements cause the bootstrap one sucks*/
   background-color: var(--aactive) !important;
@@ -137,6 +140,8 @@ hr {
   border: 2px solid var(--bs-danger);
   border-radius: 3px;
   margin: auto;
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
 }
 /*CHEAT SHEET TABLE*/
 .formulas-table {
