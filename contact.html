@@ -163,8 +163,13 @@
     <script src="js/contact.mail.js"></script>
     <script>
         $(document).ready(function () {
+            var counter = 0;
             $("#clear").click(clear = (e) => { 
                 e.preventDefault();
+                counter ++;
+                if(counter > 20) {
+                  console.warn('Holy guacamole! you are pressing too many buttons!')
+                }
                 const subj = $("#subj").val();
                 const msg = $("#msg").val();
                 if(subj == "" && msg == "") {

@@ -20,7 +20,7 @@
         $("#contact-form").append(`
                 <p class="text-warning user-message-mail">
                     the application encountered an error. 
-                    Please try again later or <u id="refresh">refresh the page</u>. If the problem presists, please <a href="https://github.com/liquid-geometry/liquidgeometry/issues" class="text-white"><u>report a bug</u></a>.
+                    Please try again later or <u id="refresh" class="text-white">refresh the page</u>. If the problem presists, please <a href="https://github.com/liquid-geometry/liquidgeometry/issues" class="text-white"><u>open a github issue</u></a>.
                 </p>
         `);
         sendButton.val('Error! Refresh the Page');
