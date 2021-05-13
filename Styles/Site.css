@@ -122,6 +122,7 @@ nav {
 .sponsor-button {
   /*style the "Buy DogeCoin button"*/
   margin: 5px !important;
+  color: var(--white) !important;
 }
 .title {
   /*Use this class for the title in the homepage only*/
