@@ -245,3 +245,98 @@ tr {
   /*leave margin outside the user message in the contact page*/
   margin: 10px;
 }
+.mapboxgl-ctrl-attrib-inner {
+  /*remove the mapbox watermark*/
+  /*possibly violates mapbox ToS*/
+  display: none !important;
+}
+.mapboxgl-ctrl-bottom-right {
+  display: none !important;
+}
+#map {
+  width: 1300px; 
+  height: 700px;
+  border: 3px solid var(--bs-danger);
+  -webkit-user-drag: none;
+  transition: 0.2s;
+}
+@media screen and (max-width: 1350px) {
+  /*make the table 95% width for phones*/
+  #map {
+    width: 1200px; 
+    height: 700px;
+    transition: 0.2s;
+  }
+}
+@media screen and (max-width: 1250px) {
+  /*make the table 95% width for phones*/
+  #map {
+    width: 1100px; 
+    height: 700px;
+    transition: 0.2s;
+  }
+}
+@media screen and (max-width: 1150px) {
+  /*make the table 95% width for phones*/
+  #map {
+    width: 1000px; 
+    height: 700px;
+    transition: 0.2s;
+  }
+}
+@media screen and (max-width: 1050px) {
+  /*make the table 95% width for phones*/
+  #map {
+    width: 900px; 
+    height: 700px;
+    transition: 0.2s;
+  }
+}
+@media screen and (max-width: 950px) {
+  /*make the table 95% width for phones*/
+  #map {
+    width: 800px; 
+    height: 700px;
+    transition: 0.2s;
+  }
+}
+@media screen and (max-width: 850px) {
+  /*make the table 95% width for phones*/
+  #map {
+    width: 700px; 
+    height: 700px;
+    transition: 0.2s;
+  }
+}
+@media screen and (max-width: 750px) {
+  /*make the table 95% width for phones*/
+  #map {
+    width: 600px; 
+    height: 700px;
+    transition: 0.2s;
+  }
+}
+@media screen and (max-width: 650px) {
+  /*make the table 95% width for phones*/
+  #map {
+    width: 500px; 
+    height: 700px;
+    transition: 0.2s;
+  }
+}
+@media screen and (max-width: 550px) {
+  /*make the table 95% width for phones*/
+  #map {
+    width: 400px; 
+    height: 700px;
+    transition: 0.2s;
+  }
+}
+@media screen and (max-width: 450px) {
+  /*make the table 95% width for phones*/
+  #map {
+    width: 350px; 
+    height: 600px;
+    transition: 0.2s;
+  }
+}
