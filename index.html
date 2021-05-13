@@ -170,6 +170,10 @@
                 </button>
             </form>
     </div>
+    <div class="alert alert-info alert-dismissible fade show center" id="map-alert" role="alert">
+        Try out our brand new <a href="map.html" class="alert-link">world map</a>
+        <button type="button" class="btn-close" aria-label="Close" id="close-alert"></button>
+      </div>
     <!-- SCRIPTS START -->
     <script src="Scripts/jquery-3.0.0.js"></script>
     <script src="Scripts/bootstrap.js"></script>
@@ -177,6 +181,12 @@
     <script src="OAuth/SignOut.js"></script>
     <script src="OAuth/OnSignOut.js"></script>
     <script src="js/release.js"></script>
+    <script>
+        $("#close-alert").click(function (e) { 
+            e.preventDefault();
+            $("#map-alert").fadeOut();
+        });
+    </script>
     <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()

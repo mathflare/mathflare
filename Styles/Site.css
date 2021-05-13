@@ -214,7 +214,8 @@ tr {
   vertical-align: middle;
 }
 .alert {
-  width: 60%;
+  width: 30%;
+  margin: 0;
   margin-top: 20px !important;
   margin-bottom: 20px !important;
   transition: 0.2s;
