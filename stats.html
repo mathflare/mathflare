@@ -6,20 +6,20 @@
     <!-- SEO -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Liquid Geometry - Equations</title>
+    <title>Liquid Geometry - Stats</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Liquid Geometry - Equations">
-    <meta name="keywords" content="liquidgeometry,liquid geometry,geometry,mathematics,algebra,unit converter,converter,calculator,area calculator,shapes,pyhtagoras,pythagorian theorem,theorem">
+    <meta name="title" content="Liquid Geometry">
+    <meta name="keywords" content="liquidgeometry,liquid geometry,liquid-geometry,geometry,mathematics,math,algebra,unitconverter,unit converter,converter,calculator,area calculator,shapes,geometry,geometrical,highschool,math cheat sheet,pyhtagoras,pythagorian theorem,theorem,cheat sheet,math,equations,equation,solver,equation solver">
     <meta name="description" content="The go-to site for geometry and mathematics. Area calculator, Pythagorean theorem solver, unit converter and many more!" />
     <meta name="author" content="Liquid Inc." />
-    <meta name="og:url" content="https://www.liquidgeometry.tk/equations.html" />
-    <meta name="og:title" content="Liquid Geometry - Equations" />
+    <meta name="og:url" content="https://www.liquidgeometry.tk" />
+    <meta name="og:title" content="Liquid Geometry" />
     <meta name="og:description" content="The go-to site for geometry and mathematics. Area calculator, Pythagorean theorem solver, unit converter and many more!" />
     <meta name="og:image" content="Assets/logo.png" />
     <meta name="og:locale" content="en_US" />
     <meta name="og:locale" content="website" />
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Liquid Geometry - Equations" />
+    <meta name="twitter:title" content="Liquid Geometry" />
     <meta name="twitter:description" content="The go-to site for geometry and mathematics. Area calculator, Pythagorean theorem solver, unit converter and many more!" />
     <!-- OAuth -->
     <meta name="google-signin-client_id" content="574643928295-tftr9maiaoejhtngs28jhdga6v3eueah.apps.googleusercontent.com">
@@ -29,12 +29,14 @@
     <link href="Styles/Profile.css" rel="stylesheet" />
     <link href="Styles/Scrollbar.css" rel="stylesheet" />
     <link href="Styles/Site.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="Assets/logo.png">
     <!-- SCRIPTS -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- POPPER.JS ONLY FOR TOOLPITS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <!-- GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7W2S8VV31F"></script>
     <script>
@@ -115,24 +117,24 @@
                         <a href="cpower.html" class="dropdown-item"><i class="bi bi-battery-half"></i> Power</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                     <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Account
                         <i class="bi bi-caret-down-fill"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a href="" class="dropdown-item"><div class="g-signin2" data-onsuccess="onSignIn"></div></a>
-                        <a href="" class="dropdown-item"><i class="bi bi-person-circle"></i> <span id="display">Not Signed In</span> <img src="Assets/profile.jpg" id="user-image" style="border-radius: 50%; height: 1em; width: auto;"></a>
+                        <a href="" class="dropdown-item"><span id="profile-photo"><i class="bi bi-person-circle"></i></span> <span id="display">Not Signed In</span></a>
                         <a href="" class="dropdown-item" onclick="signOut();" id="signout"><i class="bi bi-door-closed"></i> Sign out</a>
                         <div class="dropdown-divider"></div>
                         <a href="tos.html" class="dropdown-item"><i class="bi bi-card-checklist"></i> Terms of Use</a>
-                        <a href="stats.html" class="dropdown-item"><i class="bi bi-graph-up"></i> Stats</a>
+                        <a href="stats.html" class="dropdown-item aactive"><i class="bi bi-graph-up"></i> Stats</a>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="formulas.html"><i class="bi bi-book"></i> Formulas</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="equations.html"><i class="bi bi-x"></i> Equations</a>
                 </li>
             </ul>
@@ -140,68 +142,15 @@
     </div>
     </nav>
     <!-- NAVBAR END -->
-    <div class="center">
-        <h1 class="text-white title">Liquid Equations</h1>
-        <hr class="bg-danger" style="width: 60%;" />
-        <!-- X + Y = Z START -->
-        <h4 class="text-white">X &#43; Y &#61; Z</h4>
-        <div class="center-form">
-            <input type="number" id="y" placeholder="Y" class="form-control mb-0" step="0.01" />
-        </div>
-        <br>
-        <div class="center-form">
-            <input type="number" id="z" placeholder="Z" class="form-control mb-0" step="0.01" />
-        </div>
-        <br>
-        <div class="center-form">
-            <button class="btn btn-primary btn-lg equation" id="button">Solve for x</button>
-        </div>
-        <br />
-        <div style="max-height: 1em;">
-            <p class="text-success" id="output"></p>
-        </div>
-        <br>
-        <!-- X + Y = Z END -->
-        <!-- X - Y = Z START -->
-        <hr class="bg-danger" style="width: 50%;" />
-        <h4 class="text-white">X &#8722; Y &#61; Z</h4>
-        <div class="center-form">
-            <input type="number" id="y2" placeholder="Y" class="form-control mb-0" step="0.01" />
-        </div>
-        <br>
-        <div class="center-form">
-            <input type="number" id="z2" placeholder="Z" class="form-control mb-0" step="0.01" />
-        </div>
-        <br>
-        <div class="center-form">
-            <button class="btn btn-primary btn-lg equation" id="button2">Solve for x</button>
-        </div>
-        <br />
-        <div style="max-height: 1em;">
-            <p class="text-success" id="output2"></p>
-        </div>
-        <br>
-        <!-- X - Y = Z END -->
-        <!-- YX = Z START -->
-        <hr class="bg-danger" style="width: 50%;" />
-        <h4 class="text-white">Y &#8727; X &#61; Z</h4>
-        <div class="center-form">
-            <input type="number" id="y3" placeholder="Y" class="form-control mb-0" step="0.01" />
-        </div>
-        <br>
-        <div class="center-form">
-            <input type="number" id="z3" placeholder="Z" class="form-control mb-0" step="0.01" />
-        </div>
-        <br>
-        <div class="center-form">
-            <button class="btn btn-primary btn-lg equation" id="button3">Solve for x</button>
-        </div>
-        <br />
-        <div style="max-height: 1em;">
-            <p class="text-success" id="output3"></p>
-        </div>
-        <br>
-        <!-- YX = Z END -->
+    <div class="stats">
+        <h1 class="text-white title">Liquid Stats</h1>
+        <hr class="bg-danger" />
+        <button class="btn btn-success" style="margin-right: 20px; margin-bottom: 20px; margin-bottom: 20px;">Refresh Stats <i class="bi bi-arrow-clockwise"></i></button>
+        <button class="btn btn-danger" style="margin-right: 20px; margin-bottom: 20px; margin-bottom: 20px;">Reset Stats <i class="bi bi-trash-fill"></i></button>
+        <p class="text-white">Total Visits: <span id="page-views"></span></p>
+        <p class="text-white">Total Statistic Page Views: <span id="stat-views"></span></p>
+        <p class="text-white">Total Equations Solved: <span id="equations-solved"></span></p>
+        <p class="text-white">Total Formulas Page Views: <span id="formulas-views"></span></p>
     </div>
     <!-- SCRIPTS START -->
     <script src="Scripts/jquery-3.0.0.js"></script>
@@ -209,19 +158,32 @@
     <script src="OAuth/SignIn.js"></script>
     <script src="OAuth/SignOut.js"></script>
     <script src="OAuth/OnSignOut.js"></script>
-    <script src="js/equations.js"></script>
+    <script src="js/release.js"></script>
     <script>
-        var myStorage = window.localStorage, equation;
-        $(".equation").click(function (e) { 
-            e.preventDefault();
-            if(!myStorage.getItem("equation")){
-                myStorage.setItem('equation', 1);
-            } else {
-                equation = myStorage.getItem("equation");
-                equation = parseFloat(equation) + parseFloat(1);
-                myStorage.setItem('equation',equation );
-            }
+        var myStorage = window.localStorage, pageCount;
+        $(document).ready(function () {
+            const pageviews  = myStorage.getItem("pageCount");
+            const equations = myStorage.getItem("equation");
+            const formulas = myStorage.getItem("formulas");
+            $("#page-views").text(pageviews);
+            $("#equations-solved").text(equations);
+            $("#formulas-views").text(formulas);
         });
+        window.addEventListener('load', function(){
+            if(!myStorage.getItem("statCount")){
+                myStorage.setItem('statCount', 1);
+            } else {
+                statCount = myStorage.getItem("statCount");
+                statCount = parseFloat(statCount) + parseFloat(1);
+                myStorage.setItem('statCount', statCount );
+            }
+            $("#stat-views").text(myStorage.getItem("statCount"));
+        });
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->

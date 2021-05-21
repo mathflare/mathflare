@@ -341,3 +341,6 @@ tr {
     transition: 0.2s;
   }
 }
+.stats {
+  margin: 100px;
+}

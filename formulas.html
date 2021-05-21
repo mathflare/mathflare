@@ -122,7 +122,9 @@
                         <a href="" class="dropdown-item"><div class="g-signin2" data-onsuccess="onSignIn"></div></a>
                         <a href="" class="dropdown-item"><i class="bi bi-person-circle"></i> <span id="display">Not Signed In</span></a>
                         <a href="" class="dropdown-item" onclick="signOut();" id="signout"><i class="bi bi-door-closed"></i> Sign out</a>
+                        <div class="dropdown-divider"></div>
                         <a href="tos.html" class="dropdown-item"><i class="bi bi-card-checklist"></i> Terms of Use</a>
+                        <a href="stats.html" class="dropdown-item"><i class="bi bi-graph-up"></i> Stats</a>
                     </div>
                 </li>
                 <li class="nav-item active">
@@ -186,6 +188,18 @@
     <script src="OAuth/SignIn.js"></script>
     <script src="OAuth/SignOut.js"></script>
     <script src="OAuth/OnSignOut.js"></script>
+    <script>
+        var myStorage = window.localStorage, formulas;
+        $(document).ready(function () {
+            if(!myStorage.getItem("formulas")){
+                myStorage.setItem('formulas', 1);
+            } else {
+                formulas = myStorage.getItem("formulas");
+                formulas = parseFloat(formulas) + parseFloat(1);
+                myStorage.setItem('formulas', formulas );
+            }
+        });
+    </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>
