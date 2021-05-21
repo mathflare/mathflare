@@ -146,11 +146,11 @@
             <form id="contact-form" autocomplete="off">
                 <p class=" text-white"><i class="bi bi-lightbulb"></i> Tip: Include your name in the subject of the email</p>
                 <div class="center-form">
-                    <input type="text" id="subj" name="subject" placeholder="Subject (Include First and Last Name)" class="form-control mb-0"/>
+                    <input type="text" id="subj" name="subject" placeholder="Subject (Include First and Last Name)" class="form-control mb-0" required/>
                 </div>
                 <br>
                 <div class="center-form">
-                    <textarea id="msg" name="text" placeholder="Message" class="form-control message"></textarea>
+                    <textarea id="msg" name="text" placeholder="Message" class="form-control message" required></textarea>
                 </div>
                     <div class="button-group" style="margin-top:10px;">
                         <input type="submit" name="send" value="Send" class="btn btn-success send-mail"/>
@@ -173,6 +173,12 @@
                 counter ++;
                 if(counter > 20) {
                   console.warn('Holy guacamole! you are pressing too many buttons!')
+                    $("#clear").val('Slow Down!');
+                    $("#clear").prop('disabled',true);
+                    setTimeout(iamspeed = () => {
+                        $("#clear").val('Clear');
+                        $("#clear").prop('disabled',false);
+                        }, 6500);
                 }
                 const subj = $("#subj").val();
                 const msg = $("#msg").val();
