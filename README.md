@@ -37,7 +37,7 @@ ____
 - Bootstrap Icons.
 
 #### Where is the project hosted?
-- Cloudflare, GitHub Pages, Netlify(testing only).
+- Cloudflare, GitHub Pages, Netlify(for PR previewing only).
 
 #### Can I contribute to the project?
 - Sure! We welcome all contributors.
@@ -50,6 +50,9 @@ ____
 
 #### Where are the older versions?
 - We haven't kept any older version of the website online.
+
+#### How do you store the statistics?
+- Everything is stored in your browser in the form of cookies. We do not have access to this piece of information.
 
 # Domains
 
@@ -76,5 +79,4 @@ See steps and ways to report any vulnerability [here](https://github.com/liquid-
 
 # Terms Of Service
 
-- Temporary ToS
-    - [./tos.html](https://www.liquidgeometry.tk/tos)
+[www.liquidgeometry.tk/tos](https://www.liquidgeometry.tk/tos)
