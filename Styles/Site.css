@@ -10,6 +10,7 @@
 }
 body {
   font-family: "Poppins", sans-serif !important;
+  color: var(--white);
   background-color: var(--liquido);
 }
 ::selection {
