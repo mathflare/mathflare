@@ -5,7 +5,7 @@
         const height = $("#height").val();
         const result = (fside * height) / 2;
         if (fside <= 0 || height <= 0 || fside == null || height == null) {
-            $("#output").text("Please enter a valid value");
+            $("#output").html(`<p class="text-warning">Please enter a valid value</p>`);
             $("#fside").val(null);
             $("#height").val(null);
         }

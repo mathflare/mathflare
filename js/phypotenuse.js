@@ -5,7 +5,7 @@
         const sside = $("#sside").val();
         const result = Math.sqrt((fside * fside) + (sside * sside));
         if (fside <= 0 || sside <= 0) {
-            $("#output").text("Please enter a valid value");
+            $("#output").html(`<p class="text-warning">Please enter a valid value</p>`);
             $("#fside").val(null);
             $("#sside").val(null);
         }

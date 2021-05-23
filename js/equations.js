@@ -5,7 +5,7 @@ $(document).ready(function () {
         const z = $("#z").val();
         const result = parseFloat(z) - parseFloat(y);
         if (isNaN(result)) {
-            $("#output").text("Please enter a valid value");
+            $("#output").html(`<p class="text-warning">Please enter a valid value</p>`);
             $("#y").val(null);
             $("#z").val(null);
         }
@@ -21,7 +21,7 @@ $(document).ready(function () {
         const z = $("#z2").val();
         const result = parseFloat(z) + parseFloat(y);
         if (isNaN(result)) {
-            $("#output2").text("Please enter a valid value");
+            $("#output2").html(`<p class="text-warning">Please enter a valid value</p>`);
             $("#y2").val(null);
             $("#z2").val(null);
         }
@@ -37,7 +37,7 @@ $(document).ready(function () {
         const z = $("#z3").val();
         const result = parseFloat(z) / parseFloat(y);
         if (isNaN(result)) {
-            $("#output3").text("Please enter a valid value");
+            $("#output3").html(`<p class="text-warning">Please enter a valid value</p>`);
             $("#y3").val(null);
             $("#z3").val(null);
         }

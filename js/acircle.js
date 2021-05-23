@@ -4,7 +4,7 @@
         const radius = $("#radius").val();
         const result = (radius * radius) * 3.14;
         if (radius <= 0) {
-            $("#output").text("Please enter a valid value");
+            $("#output").html(`<p class="text-warning">Please enter a valid value</p>`);
             $("#radius").val(null);
         }
         else {

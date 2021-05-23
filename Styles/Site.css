@@ -112,6 +112,12 @@ nav {
   /*Use this class for the paragraphs in the Terms of Service only*/
   margin: 25px !important;
 }
+a {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
 .button-group button {
   /*Use this class for the buttons in the homepage and in the contact page only*/
   margin: 5px !important;

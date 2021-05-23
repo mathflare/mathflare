@@ -8,7 +8,7 @@
       const result =
         ((parseFloat(lside) + parseFloat(sside)) * parseFloat(height)) / 2;
       if (lside <= 0 || sside <= 0 || height <= 0) {
-        $("#output").text("Please enter a valid value");
+        $("#output").html(`<p class="text-warning">Please enter a valid value</p>`);
         $("#lside").val(null);
         $("#sside").val(null);
         $("#height").val(null);
