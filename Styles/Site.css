@@ -194,6 +194,7 @@ tr {
 .formula {
   /*SHOW FORMULA BUTTON*/
   /*leave a margin in the bottom of the "show formula button"*/
+  margin-top: 16px !important;
   margin-bottom: 20px;
 }
 .unit-con {
@@ -226,4 +227,48 @@ tr {
 .container-sm {
   /*leave a margin in the top of the small container in the stats page*/
   margin-top: 30px !important;
+}
+.dynamic-shape-para {
+    /*style the shape which is dynamically created based on the input*/
+    margin: 0 auto;
+    display: none;
+    border: 2px solid white;
+}
+.dynamic-shape-square {
+    margin: 0 auto;
+    display: none;
+    border: 2px solid white;
+}
+.dynamic-shape-triang {
+    display: none;
+    margin: 0 auto;
+    width: 0; 
+    height: 0; 
+    /*these are for the base*/
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    /*this is for the height*/
+    border-bottom: 80px solid white;
+}
+.dynamic-shape-circle {
+    display: none;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: white;
+}
+.dynamic-shape-trap {
+    display: none;
+    margin: 0 auto;
+    /*height*/
+    border-bottom: 200px solid red;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    /*base width*/
+    width: 200px;
+}
+#copy:hover {
+    cursor: pointer;
 }
