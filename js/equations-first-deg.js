@@ -53,7 +53,7 @@ $(document).ready(function () {
                 $("#y3").val(null);
                 $("#z3").val(null);
             }
-            else if (y == Number.POSITIVE_INFINITY || z == Number.POSITIVE_INFINITY) {
+            else if (result == Number.POSITIVE_INFINITY || result == Number.POSITIVE_INFINITY) {
                 $("#output3").html(`<p class="text-warning">The equation is a contradiction: it has no solutions </p>`);
                 $("#y3").val(null);
                 $("#z3").val(null);
