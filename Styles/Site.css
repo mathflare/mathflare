@@ -280,3 +280,6 @@ tr {
 #copy:hover {
     cursor: pointer;
 }
+.text-success {
+    color: #28A745 !important;
+}
