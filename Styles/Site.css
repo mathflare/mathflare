@@ -233,11 +233,19 @@ tr {
     margin: 0 auto;
     display: none;
     border: 2px solid white;
+    min-height: 40px !important;
+    min-width: 60px !important;
+    max-width: 900px !important;
+    max-height: 600px !important;
 }
 .dynamic-shape-square {
     margin: 0 auto;
     display: none;
     border: 2px solid white;
+    min-height: 40px !important;
+    min-width: 40px !important;
+    max-width: 600px !important;
+    max-height: 600px !important;
 }
 .dynamic-shape-triang {
     display: none;
