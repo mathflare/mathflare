@@ -17,10 +17,14 @@ ____
 # Features
 
 - Area Calculator for basic geometric shapes
+- Shape Visualizer
 - Pythagorian Theorem solver
 - Unit Converter
 - Math Cheat Sheet(for basic formulas)
 - 1st degree equation solver
+- 2nd degree equation solver
+- Linear System Solver
+- Equal/Similar Triangle Finder
 
 # FAQ
 
