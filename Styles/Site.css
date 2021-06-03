@@ -102,7 +102,7 @@ nav {
   background-color: var(--black) !important;
   color: var(--white) !important;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 715px) {
   /*make the buttons stack on top of each other for phones*/
   .d-inline-flex {
     display: unset !important;
@@ -244,8 +244,8 @@ tr {
     border: 2px solid white;
     min-height: 40px !important;
     min-width: 40px !important;
-    max-width: 600px !important;
-    max-height: 600px !important;
+    max-width: 200px !important;
+    max-height: 200px !important;
 }
 .dynamic-shape-triang {
     display: none;
@@ -282,4 +282,7 @@ tr {
 }
 .text-success {
     color: #28A745 !important;
+}
+#output, #output1, #output2, #output3 {
+  font-size: 20px !important;
 }

@@ -21,7 +21,7 @@
                 }
                 else {
                     $("#shape").attr({
-                        "style": `height: 600px; width: 600px; display: flex`
+                        "style": `height: 300px; width: 300px; display: block`
                     });
                 }
             }

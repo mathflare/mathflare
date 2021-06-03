@@ -183,7 +183,7 @@
     <script src="js/release.js"></script>
     <script>
         var myStorage = window.localStorage, pageCount;
-        window.addEventListener('load', function(){
+        $(document).ready(function () {
             if(!myStorage.getItem("pageCount")){
                 myStorage.setItem('pageCount', 1);
             } else {
@@ -197,6 +197,14 @@
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
+    </script>
+    <script>
+        $(document).ready(function () {
+            console.log("%cLiquid Geometry","color: DodgerBlue; font-weight: 600; font-family:consolas; font-size: 40px");
+            console.log("%cthe go-to open-source website for geometry and mathematics","color: OrangeRed; font-weight: 500; font-family:consolas; font-size: 25px");
+            console.log("%cby the way, the curiosity killed the cat you know...","color: PaleGreen; font-weight: 600; font-family:consolas; font-size: 20px");
+            console.log("%ccourtesy of Liquid Geometry LLC.","color: DodgerBlue; font-weight: 400; font-family:consolas");
+        });
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
