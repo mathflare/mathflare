@@ -285,4 +285,5 @@ tr {
 }
 #output, #output1, #output2, #output3 {
   font-size: 20px !important;
+  margin: 16px !important;
 }

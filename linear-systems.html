@@ -6,7 +6,7 @@
     <!-- SEO -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Liquid Geometry - Stats</title>
+    <title>Liquid Geometry - Linear Systems</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="Liquid Geometry">
     <meta name="keywords" content="liquidgeometry,liquid geometry,liquid-geometry,geometry,mathematics,math,algebra,unitconverter,unit converter,converter,calculator,area calculator,shapes,geometry,geometrical,highschool,math cheat sheet,pyhtagoras,pythagorian theorem,theorem,cheat sheet,math,equations,equation,solver,equation solver">
@@ -35,6 +35,7 @@
     <link rel="icon" type="image/png" href="Assets/logo.png">
     <!-- SCRIPTS -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script data-ad-client="ca-pub-1524024547471266" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- POPPER.JS ONLY FOR TOOLPITS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <!-- GOOGLE ANALYTICS -->
@@ -56,7 +57,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -121,7 +122,7 @@
                         <a href="cpower.html" class="dropdown-item"><i class="bi bi-battery-half"></i> Power</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown active">
+                <li class="nav-item dropdown">
                     <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Account
                         <i class="bi bi-caret-down-fill"></i>
@@ -132,10 +133,10 @@
                         <a href="" class="dropdown-item" onclick="signOut();" id="signout"><i class="bi bi-door-closed"></i> Sign out</a>
                         <div class="dropdown-divider"></div>
                         <a href="tos.html" class="dropdown-item"><i class="bi bi-card-checklist"></i> Terms of Use</a>
-                        <a href="stats.html" class="dropdown-item aactive"><i class="bi bi-graph-up"></i> Stats</a>
+                        <a href="stats.html" class="dropdown-item"><i class="bi bi-graph-up"></i> Stats</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                     <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Algebra
                         <i class="bi bi-caret-down-fill"></i>
@@ -144,7 +145,7 @@
                         <a href="equations.html" class="dropdown-item"><i class="bi bi-percent"></i> 1st Degree Equations</a>
                         <a href="equations-second.html" class="dropdown-item"><i class="bi bi-percent"></i> 2st Degree Equations</a>
                         <div class="dropdown-divider"></div>
-                        <a href="linear-systems.html" class="dropdown-item"><i class="bi bi-border-width"></i> Linear Systems</a>
+                        <a href="linear-systems.html" class="dropdown-item aactive"><i class="bi bi-border-width"></i> Linear Systems</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -155,15 +156,50 @@
     </div>
     </nav>
     <!-- NAVBAR END -->
-    <div class="container-sm">
-        <h1 class="text-white title">Liquid Stats</h1>
-        <hr class="bg-danger" />
-        <button class="btn btn-success" onclick="loadStats()" style="margin-right: 20px; margin-bottom: 20px; margin-bottom: 20px;">Refresh Stats <i class="bi bi-arrow-clockwise"></i></button>
-        <button class="btn btn-danger" onclick="clearStats()" style="margin-right: 20px; margin-bottom: 20px; margin-bottom: 20px;">Reset Stats <i class="bi bi-trash-fill"></i></button>
-        <p class="text-white">Total Visits: <span id="page-views"></span></p>
-        <p class="text-white">Total Statistics Page Views: <span id="stat-views"></span></p>
-        <p class="text-white">Total Equations Solved: <span id="equations-solved"></span></p>
-        <p class="text-white">Total Formulas Page Views: <span id="formulas-views"></span></p>
+    <div class="center">
+        <h1 class="text-white title">Liquid Systems; ax + by = c</h1>
+        <hr class="bg-danger" style="width: 60%;" />
+        <h3 class="text-white">First Equation:</h3>
+        <hr class="bg-danger" style="width: 40%;" />
+        <h4 class="text-white">Enter the value of <i>a</i></h4>
+        <div class="center-form">
+            <input type="number" id="a1" placeholder="a" name="a1" class="form-control mb-0" step="0.01" />
+        </div>
+        <br />
+        <h4 class="text-white">Enter the value of <i>b</i></h4>
+        <div class="center-form">
+            <input type="number" id="b1" placeholder="b" name="b1" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <h4 class="text-white">Enter the value of <i>c</i></h4>
+        <div class="center-form">
+            <input type="number" id="c1" placeholder="c" name="c1" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <h3 class="text-white">Second Equation:</h3>
+        <hr class="bg-danger" style="width: 40%;" />
+        <h4 class="text-white">Enter the value of <i>a</i></h4>
+        <div class="center-form">
+            <input type="number" id="a2" placeholder="a" name="a2" class="form-control mb-0" step="0.01" />
+        </div>
+        <br />
+        <h4 class="text-white">Enter the value of <i>b</i></h4>
+        <div class="center-form">
+            <input type="number" id="b2" placeholder="b" name="b2" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <h4 class="text-white">Enter the value of <i>c</i></h4>
+        <div class="center-form">
+            <input type="number" id="c2" placeholder="c" name="c2" class="form-control mb-0" step="0.01" />
+        </div>
+        <br />
+        <div class="center-form">
+            <button class="btn btn-success btn-lg" id="button">Calculate</button>
+        </div>
+        <br />
+        <div style="max-height: 1em; margin-bottom: 16px !important;">
+            <p class="text-success" style="margin-bottom: 16px !important;" id="output"></p>
+        </div>
     </div>
     <!-- SCRIPTS START -->
     <script src="Scripts/jquery-3.0.0.js"></script>
@@ -171,7 +207,7 @@
     <script src="OAuth/SignIn.js"></script>
     <script src="OAuth/SignOut.js"></script>
     <script src="OAuth/OnSignOut.js"></script>
-    <script src="js/stats.js"></script>
+    <script src="js/linear-systems.js"></script>
     <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
