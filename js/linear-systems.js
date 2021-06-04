@@ -1,3 +1,4 @@
+//utilizing determinants (D, Dx, Dy - det(a))
 $(document).ready(function () {
     $("#button").click(function (e) {
         e.preventDefault();
@@ -7,6 +8,9 @@ $(document).ready(function () {
         const a2 = $("#a2").val();
         const b2 = $("#b2").val();
         const c2 = $("#c2").val();
+        D = a1 * b2 - a2 * b1;
+        Dx = c1 * b2 - c2 * b1;
+        Dy = a1 * c2 - a2 * c1;
         if (
             a1 == "" ||
             a2 == "" ||
@@ -24,30 +28,24 @@ $(document).ready(function () {
             $("#a2").val(null);
             $("#b2").val(null);
             $("#c2").val(null);
-        } else if (c1 == 0 && c2 == 0) {
-            if (a1 / a2 == b1 / b2) {
-                //unlimited solutions
-                $("#output").html(
-                    `<p class="text-warning">The system has unlimited solutions</p>`
-                );
-                $("#a1").val(null);
-                $("#b1").val(null);
-                $("#c1").val(null);
-                $("#a2").val(null);
-                $("#b2").val(null);
-                $("#c2").val(null);
-            } else {
-                $("#output").html(
-                    `<p class="text-warning">The system has a single solution (x,y) = (0,0)</p>`
-                );
-                $("#a1").val(null);
-                $("#b1").val(null);
-                $("#c1").val(null);
-                $("#a2").val(null);
-                $("#b2").val(null);
-                $("#c2").val(null);
-            }
-        } else if (a1 / a2 == b1 / b2 && b1 / b2 != c1 / c2 || a1 == 0 && a2 == 0 && b1 / b2 != c1 / c2 || b1 == 0 && b2 == 0 && a1 / a2 != c1 / c2) {
+        } 
+        else if (a1 == 0 && b1 == 0 && c1 == 0 && a2 == 0 && b2 == 0 && c2 == 0) {
+            //aristi
+            $("#output").html(
+                `<p class="text-warning">aoristi</p>`
+            );
+            $("#a1").val(null);
+            $("#b1").val(null);
+            $("#c1").val(null);
+            $("#a2").val(null);
+            $("#b2").val(null);
+            $("#c2").val(null);
+        }
+        else if (
+            (a1 == 0 && b1 == 0 && c1 == 0 && a2 == 0 && b2 == 0 && c2 != 0) ||
+            (a1 == 0 && b1 == 0 && c1 != 0 && a2 == 0 && b2 == 0 && c2 == 0)
+        ) {
+            //contradiction
             $("#output").html(
                 `<p class="text-warning">The system is a contradiction: it has no solutions</p>`
             );
@@ -57,7 +55,18 @@ $(document).ready(function () {
             $("#a2").val(null);
             $("#b2").val(null);
             $("#c2").val(null);
-        } else if (a1 / a2 == b1 / b2 && b1 / b2 == c1 / c2 || a1 == 0 && a2 == 0 && b1 / b2 == c1 / c2 || b1 == 0 && b2 == 0 && a1 / a2 == c1 / c2) {
+        } else if ((D == 0 && Dx != 0) || (D == 0 && Dy != 0)) {
+            //contradiction
+            $("#output").html(
+                `<p class="text-warning">The system is a contradiction: it has no solutions</p>`
+            );
+            $("#a1").val(null);
+            $("#b1").val(null);
+            $("#c1").val(null);
+            $("#a2").val(null);
+            $("#b2").val(null);
+            $("#c2").val(null);
+        } else if (D == 0 && Dx == 0 && Dy == 0) {
             //unlimited solutions
             $("#output").html(
                 `<p class="text-warning">The system has unlimited solutions</p>`
@@ -68,71 +77,19 @@ $(document).ready(function () {
             $("#a2").val(null);
             $("#b2").val(null);
             $("#c2").val(null);
-        } else {
-            if (a1 == 0 && b1 != 0) {
-                y = c1 / b1;
-                x = (c2 - b2 * y) / a2;
-                $("#output").html(
-                    `<p class="text-success">The system has a single solution (x,y) = (${x},${y})</p>`
-                );
-                $("#a1").val(null);
-                $("#b1").val(null);
-                $("#c1").val(null);
-                $("#a2").val(null);
-                $("#b2").val(null);
-                $("#c2").val(null);
-            } else if (a1 != 0 && b1 == 0) {
-                x = c1 / a1;
-                y = (c2 - a2 * x) / b2;
-                $("#output").html(
-                    `<p class="text-success">The system has a single solution (x,y) = (${x},${y})</p>`
-                );
-                $("#a1").val(null);
-                $("#b1").val(null);
-                $("#c1").val(null);
-                $("#a2").val(null);
-                $("#b2").val(null);
-                $("#c2").val(null);
-            } else if (a2 == 0 && b2 != 0) {
-                y = c2 / b2;
-                x = (c1 - b1 * y) / a1;
-                $("#output").html(
-                    `<p class="text-success">The system has a single solution (x,y) = (${x},${y})</p>`
-                );
-                $("#a1").val(null);
-                $("#b1").val(null);
-                $("#c1").val(null);
-                $("#a2").val(null);
-                $("#b2").val(null);
-                $("#c2").val(null);
-            } 
-            else if ( a2 != 0 && b2 == 0) {
-                x = c2 / a2;
-                y = (c1 - a1 * x) / b1;
-                $("#output").html(
-                    `<p class="text-success">The system has a single solution (x,y) = (${x},${y})</p>`
-                );
-                $("#a1").val(null);
-                $("#b1").val(null);
-                $("#c1").val(null);
-                $("#a2").val(null);
-                $("#b2").val(null);
-                $("#c2").val(null);
-            }
-            else {
-                E1 = b1 * -a2 + b2 * a1;
-                y = (c1 * -a2 + c2 * a1) / E1;
-                x = (c1 - b1 * y) / a1;
-                $("#output").html(
-                    `<p class="text-success">The system has a single solution (x,y) = (${x},${y})</p>`
-                );
-                $("#a1").val(null);
-                $("#b1").val(null);
-                $("#c1").val(null);
-                $("#a2").val(null);
-                $("#b2").val(null);
-                $("#c2").val(null);
-            }
+        } else if (D != 0) {
+            //single solution
+            x = Dx / D;
+            y = Dy / D;
+            $("#output").html(
+                `<p class="text-success">The system has a single solution (x , y) = (${x} , ${y})</p>`
+            );
+            $("#a1").val(null);
+            $("#b1").val(null);
+            $("#c1").val(null);
+            $("#a2").val(null);
+            $("#b2").val(null);
+            $("#c2").val(null);
         }
     });
 });
