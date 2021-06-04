@@ -1,3 +1,7 @@
+//IGNORE THIS FILE. IT IS JUST FOR TAKING NOTES
+
+
+
 //first way of solving linear systems (proccess of elimination)
 $(document).ready(function () {
     $("#button").click(function (e) {
