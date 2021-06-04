@@ -285,5 +285,10 @@ tr {
 }
 #output, #output1, #output2, #output3 {
   font-size: 20px !important;
-  margin: 16px !important;
+  line-height: 24px !important;
+}
+.output-container {
+    height: 1em !important;
+    max-height: 1em !important;
+    min-height: 1em !important;
 }
