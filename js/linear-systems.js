@@ -1,4 +1,6 @@
 //utilizing determinants (D, Dx, Dy - det(a))
+//copyright (c) 2021 Damian Katsios and Sarantis Moutsatsos - All rights reserved.
+//Patent pending
 $(document).ready(function () {
     $("#button").click(function (e) {
         e.preventDefault();
@@ -135,3 +137,4 @@ $(document).ready(function () {
         }
     });
 });
+//Patent pending
