@@ -24,7 +24,7 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
 - Write clean and formatted code
 - Use opening and closing comment tags to organize the code(see `NAVBAR START`/`NAVBAR END` example)
 - Do not leave empty lines or a ton of comments in the code(Include all extra info on the PR message)
-- Make sure everything still works by running it locally before opening a PR
+- Make sure everything still works by running it locally before opening a PR (we reccomend installing [`reload`](https://github.com/alallier/reload#installation))
 
 ## Examples
 
@@ -34,14 +34,15 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
 
 <!-- NAVBAR START -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Liquid Geometry</a>
+        <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.liquidgeometry.tk">Liquid Geometry</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,11 +50,12 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
                         <i class="bi bi-caret-down-fill"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a href="contact.html" class="dropdown-item"><i class="bi bi-telephone-fill"></i> Contact Form</a>
                         <a href="https://github.com/liquid-geometry" target="_blank" class="dropdown-item"><i class="bi bi-github"></i> GitHub</a>
                         <a href="mailto:liquid-geometry@dkatsios.tk" target="_blank" class="dropdown-item"><i class="bi bi-envelope-fill"></i> Email</a>
                         <a href="https://discord.com/invite/VwvQNYzU5M" target="_blank" class="dropdown-item"><i class="bi bi-discord"></i> Discord</a>
                         <a href="https://twitter.com/damik_raw" target="_blank" class="dropdown-item"><i class="bi bi-twitter"></i> Twitter</a>
-                        <a href="#" class="dropdown-item" title="coming soon"><i class="bi bi-instagram"></i> Instagram</a>
+                        <a href="https://www.instagram.com/liquid_geometry/" class="dropdown-item"><i class="bi bi-instagram"></i> Instagram</a>
                         <a href="https://api.liquidgeometry.tk" target="_blank" class="dropdown-item"><i class="bi bi-hdd-stack-fill"></i> REST API</a>
                         <a href="https://developers.liquidgeometry.tk" target="_blank" class="dropdown-item"><i class="bi bi-code-slash"></i> For Developers</a>
                         <a href="https://github.com/liquid-geometry/liquidgeometry" target="_blank" class="dropdown-item"><i class="bi bi-terminal-fill"></i> Clone the Repo</a>
@@ -76,12 +78,15 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
                 </li>
                 <li class="nav-item dropdown">
                     <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Pythagorian
+                        Trigognometry
                         <i class="bi bi-caret-down-fill"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a href="phypotenuse.html" class="dropdown-item"><i class="bi bi-symmetry-vertical"></i> Hypotenuse</a>
-                        <a href="prightside.html" class="dropdown-item"><i class="bi bi-symmetry-vertical"></i> Right side</a>
+                        <h5 class="dropdown-header">Pythagorean Theorem</h5>
+                        <a href="phypotenuse.html" class="dropdown-item"><i class="bi bi-symmetry-vertical"></i> Hypotenuse Calculator</a>
+                        <a href="prightside.html" class="dropdown-item"><i class="bi bi-symmetry-vertical"></i> Leg Calculator</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="equaltri.html" class="dropdown-item"><i class="bi bi-symmetry-vertical"></i> Equal Triangles</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -101,7 +106,6 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
                         <a href="cpower.html" class="dropdown-item"><i class="bi bi-battery-half"></i> Power</a>
                     </div>
                 </li>
-                <!-- Leave this dropdown as it is -->
                 <li class="nav-item dropdown">
                     <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Account
@@ -111,7 +115,26 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
                         <a href="" class="dropdown-item"><div class="g-signin2" data-onsuccess="onSignIn"></div></a>
                         <a href="" class="dropdown-item"><i class="bi bi-person-circle"></i> <span id="display">Not Signed In</span></a>
                         <a href="" class="dropdown-item" onclick="signOut();" id="signout"><i class="bi bi-door-closed"></i> Sign out</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="stats.html" class="dropdown-item"><i class="bi bi-graph-up"></i> Stats</a>
+                        <div class="dropdown-divider"></div>
+                        <h5 class="dropdown-header">Legal</h5>
                         <a href="tos.html" class="dropdown-item"><i class="bi bi-card-checklist"></i> Terms of Use</a>
+                        <a href="license.html" class="dropdown-item"><i class="bi bi-credit-card-2-front"></i> Software License</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Algebra
+                        <i class="bi bi-caret-down-fill"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <h5 class="dropdown-header">Equations</h5>
+                        <a href="equations.html" class="dropdown-item"><i class="bi bi-percent"></i> 1st Degree</a>
+                        <a href="equations-second.html" class="dropdown-item"><i class="bi bi-percent"></i> 2nd Degree</a>
+                        <div class="dropdown-divider"></div>
+                        <h5 class="dropdown-header">Systems of Equations</h5>
+                        <a href="linear-systems.html" class="dropdown-item"><i class="bi bi-border-width"></i> Linear Systems</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -119,6 +142,7 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
                 </li>
             </ul>
         </div>
+    </div>
     </nav>
     <!-- NAVBAR END -->
 

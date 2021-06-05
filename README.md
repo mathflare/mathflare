@@ -38,7 +38,7 @@ ____
 - We use Bootstrap for the most part. All the custom CSS is in the `Site.css` file.
 
 #### Are the icons custom?
-- Bootstrap Icons.
+- We use Bootstrap Icons.
 
 #### Where is the project hosted?
 - Cloudflare, GitHub Pages, Netlify(for PR previewing only).
@@ -84,3 +84,7 @@ See steps and ways to report any vulnerability [here](https://github.com/liquid-
 # Terms Of Service
 
 [www.liquidgeometry.tk/tos](https://www.liquidgeometry.tk/tos)
+
+# License
+
+[www.liquidgeometry.tk/license](www.liquidgeometry.tk/license)
