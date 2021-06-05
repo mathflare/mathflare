@@ -13,6 +13,12 @@ ____
 
 </div>
 
+#### Note:
+
+On the 5th of June 2021 we officially changed our company's name from `Liquid Geometry LLC.` => `MathFlare LLC.`
+
+____
+
 # Features
 
 - Area Calculator for basic geometric shapes
