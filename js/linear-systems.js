@@ -74,11 +74,30 @@ $(document).ready(function () {
             $("#c2").val(null);
         } else if (D == 0 && Dx == 0 && Dy == 0) {
             //unlimited solutions
-            if (c1 == 0 && c2 == 0 && a1 / a2 == b1 / b2) {
+            if (
+                a1 == 0 &&
+                b1 == 0 &&
+                c1 == 0 &&
+                a2 != 0 &&
+                b2 != 0 &&
+                c2 != 0
+            ) {
+                $("#output").html(
+                    `<p class="text-warning">The system has unlimited solutions (x,y) = (k , ${
+                        c2 / b2
+                    } ${-a2 / b2}k) k &#8714; R</p>`
+                );
+                $("#a1").val(null);
+                $("#b1").val(null);
+                $("#c1").val(null);
+                $("#a2").val(null);
+                $("#b2").val(null);
+                $("#c2").val(null);
+            } else if (c1 == 0 && c2 == 0 && a1 / a2 == b1 / b2) {
                 $("#output").html(
                     `<p class="text-warning">The system has unlimited solutions (x,y) = (k , ${
                         -a1 / b1
-                    }k)</p>`
+                    }k) k &#8714; R</p>`
                 );
                 $("#a1").val(null);
                 $("#b1").val(null);
@@ -86,10 +105,11 @@ $(document).ready(function () {
                 $("#a2").val(null);
                 $("#b2").val(null);
                 $("#c2").val(null);
-            }
-            else if (a1 == 0 && a2 == 0 && b1 / b2 == c1 / c2) {
+            } else if (a1 == 0 && a2 == 0 && b1 / b2 == c1 / c2) {
                 $("#output").html(
-                    `<p class="text-warning">The system has unlimited solutions (x,y) = (k , ${c1 / b1}) k &#8714; R</p>`
+                    `<p class="text-warning">The system has unlimited solutions (x,y) = (k , ${
+                        c1 / b1
+                    }) k &#8714; R</p>`
                 );
                 $("#a1").val(null);
                 $("#b1").val(null);
@@ -97,10 +117,11 @@ $(document).ready(function () {
                 $("#a2").val(null);
                 $("#b2").val(null);
                 $("#c2").val(null);
-            }
-            else if (b1 == 0 && b2 == 0 && a1 / a2 == c1 / c2) {
+            } else if (b1 == 0 && b2 == 0 && a1 / a2 == c1 / c2) {
                 $("#output").html(
-                    `<p class="text-warning">The system has unlimited solutions (x,y) = (${c1 / a1} , k) k &#8714; R</p>`
+                    `<p class="text-warning">The system has unlimited solutions (x,y) = (${
+                        c1 / a1
+                    } , k) k &#8714; R</p>`
                 );
                 $("#a1").val(null);
                 $("#b1").val(null);
@@ -108,10 +129,11 @@ $(document).ready(function () {
                 $("#a2").val(null);
                 $("#b2").val(null);
                 $("#c2").val(null);
-            }
-            else {
+            } else {
                 $("#output").html(
-                    `<p class="text-warning">The system has unlimited solutions (x,y) = (k , ${c1 / b1} ${-a1 / b1}k) k &#8714; R</p>`
+                    `<p class="text-warning">The system has unlimited solutions (x,y) = (k , ${
+                        c1 / b1
+                    } ${-a1 / b1}k) k &#8714; R</p>`
                 );
                 $("#a1").val(null);
                 $("#b1").val(null);
