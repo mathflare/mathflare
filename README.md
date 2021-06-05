@@ -1,8 +1,8 @@
 <h1 align='center'>MathFlare</h1>
 <div align='center'>
 
-![image](https://user-images.githubusercontent.com/68110106/120902620-05ac7580-c64a-11eb-990d-4fb6ccdd8f76.png)
-
+<img src="https://user-images.githubusercontent.com/68110106/120902620-05ac7580-c64a-11eb-990d-4fb6ccdd8f76.png" alt="mathflare logo" width="400" height="400"/>
+    
 <h4 align='center'>the go-to website for geometry and algebra📚🍎</h1>
 
 ____
