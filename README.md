@@ -1,7 +1,7 @@
 <h1 align='center'>MathFlare</h1>
 <div align='center'>
 
-![logo)](https://user-images.githubusercontent.com/68110106/115993058-974fae80-a5d9-11eb-98d8-a3cdff241ce5.png)
+![image](https://user-images.githubusercontent.com/68110106/120902620-05ac7580-c64a-11eb-990d-4fb6ccdd8f76.png)
 
 <h4 align='center'>the go-to website for geometry and algebra📚🍎</h1>
 
