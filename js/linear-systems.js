@@ -1,6 +1,5 @@
 //utilizing determinants (D, Dx, Dy - det(a))
-//copyright (c) 2021 Damian Katsios and Sarantis Moutsatsos - All rights reserved.
-//Patent pending
+//copyright (c) 2021 MathFlare LLC. - All rights reserved.
 $(document).ready(function () {
     $("#button").click(function (e) {
         e.preventDefault();
@@ -137,4 +136,4 @@ $(document).ready(function () {
         }
     });
 });
-//Patent pending
+//copyright (c) 2021 MathFlare LLC. - All rights reserved.

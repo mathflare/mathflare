@@ -3,10 +3,9 @@
   var current = new Date();
   var PhotoUrl = profile.getImageUrl();
   var UserAgent = navigator.userAgent;
-  //change the text of the navbar element
   $("#display").text("Signed In As " + profile.getName());
-  //display the profile picture
-  $("#profile-photo").html(`<img src="${PhotoUrl}" class="profile-pic"/>`);
+  //(not yet implimented)
+  //$("#profile-photo").html(`<img src="${PhotoUrl}" class="profile-pic"/>`);
   console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
   console.log("User signed in at " + current);
   console.log("Name: " + profile.getName());

@@ -1,3 +1,4 @@
+//copyright (c) 2021 MathFlare LLC. - All rights reserved.
 const form_id = "contact-form";
 const data = {
   access_token: "477a54dwsqid4kqzmjj6dwx0",
@@ -50,3 +51,4 @@ var $form = $("#" + form_id);
 $form.submit(function (event) {
   event.preventDefault();
 });
+//copyright (c) 2021 MathFlare LLC. - All rights reserved.

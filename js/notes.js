@@ -1,8 +1,7 @@
 //IGNORE THIS FILE. IT IS JUST FOR TAKING NOTES
 
-
-
 //first way of solving linear systems (proccess of elimination)
+//copyright (c) 2021 MathFlare LLC. - All rights reserved.
 $(document).ready(function () {
     $("#button").click(function (e) {
         e.preventDefault();
@@ -142,3 +141,4 @@ $(document).ready(function () {
         }
     });
 });
+//copyright (c) 2021 MathFlare LLC. - All rights reserved.
