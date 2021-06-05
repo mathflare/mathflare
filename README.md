@@ -1,4 +1,4 @@
-<h1 align='center'>Liquid Geometry</h1>
+<h1 align='center'>MathFlare</h1>
 <div align='center'>
 
 ![logo)](https://user-images.githubusercontent.com/68110106/115993058-974fae80-a5d9-11eb-98d8-a3cdff241ce5.png)
@@ -8,7 +8,6 @@
 ____
 
 ![Netlify Status](https://api.netlify.com/api/v1/badges/b43907f2-5e50-4457-85ce-42c395322564/deploy-status)
-![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=liquidgeometry)
 
 ____
 
@@ -60,18 +59,18 @@ ____
 
 # Domains
 
-A list of all the active domains for Liquid Geometry:
+A list of all the active domains for MathFlare:
 
 ## Main Site
 
-1. [www.liquidgeometry.tk (Cloudflare Pages)](https://www.liquidgeometry.tk)
-2. [www2.liquidgeometry.tk (GitHub Pages)](https://www2.liquidgeometry.tk)
+1. [www.mathflare.tk (Cloudflare Pages)](https://www.mathflare.tk)
+2. [www1.mathflare.tk (GitHub Pages)](https://www2.mathflare.tk)
 3. [liquidgeometry.ml (redirect)](http://liquidgeometry.ml)
 
 ## Other
 
-1. [api.liquidgeometry.tk (GitHub Pages)](https://api.liquidgeometry.tk)
-2. [developers.liquidgeometry.tk (GitHub Pages)](https://developers.liquidgeometry.tk)
+1. [api.mathflare.tk (GitHub Pages)](https://api.mathflare.tk)
+2. [developers.mathflare.tk (GitHub Pages)](https://developers.mathflare.tk)
 
 # Contributing
 
@@ -83,8 +82,8 @@ See steps and ways to report any vulnerability [here](https://github.com/liquid-
 
 # Terms Of Service
 
-[www.liquidgeometry.tk/tos](https://www.liquidgeometry.tk/tos)
+[www.mathflare.tk/tos](https://www.mathflare.tk/tos)
 
 # License
 
-[www.liquidgeometry.tk/license](www.liquidgeometry.tk/license)
+[www.mathflare.tk/license](www.mathflare.tk/license)
