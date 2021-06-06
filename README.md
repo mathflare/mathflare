@@ -70,7 +70,7 @@ A list of all the active domains for MathFlare:
 ## Main Site
 
 1. [www.mathflare.tk (Cloudflare Pages)](https://www.mathflare.tk)
-2. [www1.mathflare.tk (GitHub Pages)](https://www2.mathflare.tk)
+2. [www1.mathflare.tk (GitHub Pages)](https://www1.mathflare.tk)
 3. [liquidgeometry.ml (redirect)](http://liquidgeometry.ml)
 4. [liquidgeometry.tk (redirect)](http://liquidgeometry.tk)
 

@@ -161,6 +161,10 @@
     </div>
     </nav>
     <!-- NAVBAR END -->
+    <div class="alert alert-dark alert-dismissible " role="alert">
+        Hello Stranger! We recently changed our name from "Liquid Geometry" to "MathFlare". Hope you like it!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
     <div class="dead-center">
         <h1 class="text-white title">MathFlare</span></h1>
         <h3 class="text-danger">the go-to site for geometry and algebra</h3>
@@ -217,10 +221,25 @@
     </script>
     <script>
         $(document).ready(function () {
+            console.log("%cHello Sir looking around in the console, we recently changed our website's name from Liquid Geometry to MathFlare. Anyways, happy hacking!","font-family:consolas; font-size: 20px");
             console.log("%cMathFlare","color: DodgerBlue; font-weight: 600; font-family:consolas; font-size: 40px");
-            console.log("%cthe go-to open-source website for geometry and mathematics","color: OrangeRed; font-weight: 500; font-family:consolas; font-size: 25px");
+            console.log("%csame site, same functionality, different name!","color: OrangeRed; font-weight: 500; font-family:consolas; font-size: 25px");
             console.log("%cby the way, the curiosity killed the cat you know...","color: PaleGreen; font-weight: 600; font-family:consolas; font-size: 20px");
             console.log("%ccourtesy of MathFlare LLC.","color: DodgerBlue; font-weight: 400; font-family:consolas");
+        });
+    </script>
+    <script>
+        $(document).ready(() => {
+            var myStorage = window.localStorage, hasSeenIt;
+            $(".btn-close").click((e) => { 
+                e.preventDefault();
+                $(".alert").fadeOut(500);
+                if(!myStorage.getItem("hasSeenIt")){
+                myStorage.setItem('hasSeenIt', true);
+            } else {
+                myStorage.setItem('hasSeenIt', true);
+            }
+            });
         });
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>

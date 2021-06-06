@@ -12,11 +12,12 @@ body {
   font-family: "Poppins", sans-serif !important;
   color: var(--white);
   background-color: var(--liquido);
+  background-color: #23272b;
 }
 ::selection {
   /*custom selection*/
-  background-color: var(--white);
-  color: var(--black);
+  background-color: white;
+  color: black;
 }
 nav {
   /*Make tha navbar be on top of the contents*/
@@ -300,4 +301,12 @@ tr {
     color: white;
     font-family: Consolas, monospace;
     background-color: #1E1E1E;
+}
+.alert {
+    margin: 10px !important;
+    z-index: 99999;
+}
+.alert ::selection {
+    background-color: black !important;
+    color: white !important;
 }
