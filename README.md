@@ -15,7 +15,7 @@ ____
 
 #### Note:
 
-On the 5th of June 2021 we officially changed our company's name from `Liquid Geometry LLC.` => `MathFlare LLC.`
+On the 5th of June 2021 we changed our company's name from `Liquid Geometry LLC.` to `MathFlare LLC.`
 
 ____
 
@@ -72,6 +72,7 @@ A list of all the active domains for MathFlare:
 1. [www.mathflare.tk (Cloudflare Pages)](https://www.mathflare.tk)
 2. [www1.mathflare.tk (GitHub Pages)](https://www2.mathflare.tk)
 3. [liquidgeometry.ml (redirect)](http://liquidgeometry.ml)
+4. [liquidgeometry.tk (redirect)](http://liquidgeometry.tk)
 
 ## Other
 
@@ -80,11 +81,11 @@ A list of all the active domains for MathFlare:
 
 # Contributing
 
-See steps and ways on how to contribute [here](https://github.com/liquid-geometry/liquidgeometry/blob/main/CONTRIBUTING.md "CONTRIBUTING.md file")
+See steps and ways on how to contribute [here](https://github.com/mathflare/mathflare/blob/main/CONTRIBUTING.md "CONTRIBUTING.md file")
 
 # Security Vulnurabilities
 
-See steps and ways to report any vulnerability [here](https://github.com/liquid-geometry/liquidgeometry/blob/main/SECURITY.md "SECURITY.md file")
+See steps and ways to report any vulnerability [here](https://github.com/mathflare/mathflare/blob/main/SECURITY.md "SECURITY.md file")
 
 # Terms Of Service
 
