@@ -277,18 +277,27 @@ tr {
     /*base width*/
     width: 200px;
 }
-#copy:hover {
-    cursor: pointer;
-}
 .text-success {
+    /*make the bootstrap success color lighter*/
     color: #28A745 !important;
 }
 #output, #output1, #output2, #output3 {
+    /*make the output text bigger along with the line height*/
   font-size: 20px !important;
   line-height: 24px !important;
 }
 .output-container {
+    /*make the output div a stamdar height*/
     height: 1em !important;
     max-height: 1em !important;
     min-height: 1em !important;
+}
+.codeblock {
+    /*make the span/code element look like codeblock*/
+    display: inline-flex; 
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-family: Consolas, monospace;
+    background-color: #1E1E1E;
 }
