@@ -2,7 +2,7 @@ $(document).ready(() => {
     $("#button").click((event) => { 
         event.preventDefault();
         const number = $("#number").val();
-        if (number == "") {
+        if (number == "" || number <= 0) {
             $("#output").html(`<p class="text-warning">Please enter a valid value</p>`);
             $("#number").val(null);
         }
