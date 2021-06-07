@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- MAIL -->
-    <meta name="yandex-verification" content="f86171133514f762" />
     <!-- SEO -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MathFlare - Contact</title>
+    <title>MathFlare - Square Root</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="MathFlare">
     <meta name="keywords" content="liquidgeometry,liquid geometry,liquid-geometry,geometry,mathematics,math,algebra,unitconverter,unit converter,converter,calculator,area calculator,shapes,geometry,geometrical,highschool,math cheat sheet,pyhtagoras,pythagorian theorem,theorem,cheat sheet,math,equations,equation,solver,equation solver,linear-systems,linear system, system, equal triangle,similar triangle, mathflare, math-flare, math flare">
@@ -57,13 +55,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
                 </li>
-                <li class="nav-item dropdown active">
+                <li class="nav-item dropdown">
                     <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Contact
                         <i class="bi bi-caret-down-fill"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a href="#" class="dropdown-item aactive"><i class="bi bi-telephone-fill"></i> Contact Form</a>
+                        <a href="contact.html" class="dropdown-item"><i class="bi bi-telephone-fill"></i> Contact Form</a>
                         <a href="https://github.com/mathflare" target="_blank" class="dropdown-item"><i class="bi bi-github"></i> GitHub</a>
                         <a href="mailto:liquid-geometry@dkatsios.tk" target="_blank" class="dropdown-item"><i class="bi bi-envelope-fill"></i> Email</a>
                         <a href="https://discord.com/invite/VwvQNYzU5M" target="_blank" class="dropdown-item"><i class="bi bi-discord"></i> Discord</a>
@@ -136,7 +134,7 @@
                         <a href="license.html" class="dropdown-item"><i class="bi bi-credit-card-2-front"></i> Software License</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                     <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Algebra
                         <i class="bi bi-caret-down-fill"></i>
@@ -159,30 +157,21 @@
     </nav>
     <!-- NAVBAR END -->
     <div class="center">
-        <h1 class="text-white title">Contact MathFlare</h1>
-        <hr class="bg-danger" style="width: 60%; margin: auto;" />
-            <form id="contact-form" autocomplete="off">
-                <p class=" text-white"><i class="bi bi-lightbulb"></i> Tip: Include your name in the subject of the email</p>
-                <div class="center-form">
-                    <input type="text" id="subj" name="subject" placeholder="Subject (Include First and Last Name)" class="form-control mb-0" required/>
-                </div>
-                <br>
-                <div class="center-form">
-                    <textarea id="msg" name="text" placeholder="Message" class="form-control message" required></textarea>
-                </div>
-                    <div class="button-group" style="margin-top:10px; margin-bottom:10px;">
-                        <input type="submit" name="send" value="Send" class="btn btn-success send-mail"/>
-                        <input type="submit" id="clear" value="Clear" class="btn btn-danger"/>
-                    </div>
-            </form>
-            <div class="container-sm">
-                <p>While you are writing us an email, let us tell you a little bit about our website, MathFlare (previously known as "Liquid Geometry")!
-                 So the pro`ject started as a desktop application using 
-                 <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank">C#</a> and it later 
-                 evolved to a <a href="https://en.wikipedia.org/wiki/Front-end_web_development" target="_blank">front-end web app</a> (like a pokemon) using <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>, <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a> and <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a>. The website went 
-                 through many redesigns and <a href="https://en.wikipedia.org/wiki/Code_refactoring" target="_blank">refactorings</a> but is has finally came up to this <a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a> and <a href="https://en.wikipedia.org/wiki/JQuery" target="_blank">JQuery</a> masterpiece!</p>
-                 <p>Spoiler Alert! We are eventually going to recreate the site using the <a href="https://en.wikipedia.org/wiki/ASP.NET_MVC" target="_blank">ASP.NET MVC Framework</a></p>
-            </div>
+        <h1 class="text-white title">Square Root</h1>
+        <hr class="bg-danger" style="width: 60%;" />
+        <h4 class="text-white">Enter the number</h4>
+        <div class="center-form">
+            <input type="number" id="number" placeholder="number" name="side" class="form-control mb-0" step="0.01" min="0" />
+        </div>
+        <br />
+        <div class="center-form">
+            <button class="btn btn-success btn-lg" id="button">Calculate</button>
+        </div>
+        <br>
+        <div style="max-height: 1em;">
+            <p class="text-success" id="output"></p>
+        </div>
+        <br>
     </div>
     <!-- SCRIPTS START -->
     <script src="Scripts/jquery-3.0.0.js"></script>
@@ -190,41 +179,7 @@
     <script src="OAuth/SignIn.js"></script>
     <script src="OAuth/SignOut.js"></script>
     <script src="OAuth/OnSignOut.js"></script>
-    <script src="js/contact.mail.js"></script>
-    <script>
-        $(document).ready(function () {
-            var counter = 0;
-            $("#clear").click(clear = (e) => { 
-                e.preventDefault();
-                counter ++;
-                if(counter > 20) {
-                  console.warn('Holy guacamole! you are pressing too many buttons!')
-                    $("#clear").val('Slow Down!');
-                    $("#clear").prop('disabled',true);
-                    setTimeout(iamspeed = () => {
-                        $("#clear").val('Clear');
-                        $("#clear").prop('disabled',false);
-                        counter = 0;
-                        }, 8000);
-                }
-                const subj = $("#subj").val();
-                const msg = $("#msg").val();
-                if(subj == "" && msg == "") {
-                    $("#contact-form").append(`
-                    <p class="text-warning user-message-mail" id="warn">
-                        there is nothing to clear
-                    </p>
-                `);
-                    setTimeout(function(){
-                    $("#warn").remove();
-                    }, 4000);
-                } else {
-                    $("#subj").val(null);
-                    $("#msg").val(null);
-                }
-            });
-        });
-    </script>
+    <script src="js/sqrt.js	"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>
