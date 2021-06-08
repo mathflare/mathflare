@@ -165,6 +165,7 @@
         <h1 class="text-white title">Right Side</h1>
         <p class="text-warning"><i class="bi bi-exclamation-triangle"></i> JavaScript has been acting up a bit. Proceed at your own risk!</p>
         <hr class="bg-danger" style="width: 60%;" />
+        <form autocomplete="off">
         <h4 class="text-white">Enter the triangle's hypotenuse</h4>
         <div class="center-form">
             <input type="number" id="hypo" placeholder="hypotenuse" name="hypotenuse" class="form-control mb-0" step="0.01" min="0" />
@@ -176,8 +177,9 @@
         </div>
         <br />
         <div class="center-form">
-            <button class="btn btn-success btn-lg" id="button">Calculate</button>
+            <input type="submit" id="button" class="btn btn-success btn-lg" value="Calculate">
         </div>
+        </form>
         <br />
         <div style="max-height: 1em;">
             <p class="text-success" id="output"></p>

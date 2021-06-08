@@ -164,14 +164,16 @@
     <div class="center">
         <h1 class="text-white title">Circle</h1>
         <hr class="bg-danger" style="width: 60%;" />
+        <form autocomplete="off">
         <h4 class="text-white">Enter the circle's radius</h4>
         <div class="center-form">
             <input type="number" id="radius" placeholder="radius" name="side" class="form-control mb-0" step="0.01" min="0" />
         </div>
         <br />
         <div class="center-form">
-            <button class="btn btn-success btn-lg" id="button">Calculate</button>
+            <input type="submit" id="button" class="btn btn-success btn-lg" value="Calculate">
         </div>
+        </form>
         <br>
         <div style="max-height: 1em;">
             <p class="text-success" id="output"></p>
