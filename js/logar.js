@@ -9,7 +9,7 @@ $(document).ready(() => {
             $("#base").val(10);
         }
         else {
-            $("#output").html(`<p class="text-success">log<sub>${base}</sub>(${number}) = ${Math.log(number) / Math.log(base)}</p>`);
+            $("#output").html(`<p class="text-success">log<sub>${base}</sub>(${number}) = ${(Math.log(number) / Math.log(base)).toFixed()}</p>`);
             $("#number").val(null);
             $("#base").val(10);
         }
