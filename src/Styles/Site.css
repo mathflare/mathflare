@@ -109,32 +109,11 @@ nav {
     display: unset !important;
   }
 }
-.tos {
-  /*Use this class for the paragraphs in the Terms of Service only*/
-  margin: 25px !important;
-}
 a {
   color: inherit;
 }
 a:hover {
   color: inherit;
-}
-.button-group button {
-  /*Use this class for the buttons in the homepage and in the contact page only*/
-  margin: 5px !important;
-}
-.button-group input[type="submit"] {
-  /*Use this class for the buttons in the homepage and in the contact page only*/
-  margin: 5px !important;
-}
-.sponsor-button {
-  /*style the "Buy DogeCoin button"*/
-  margin: 5px !important;
-  color: var(--white) !important;
-}
-.title {
-  /*Use this class for the title in the homepage only*/
-  font-size: 45px;
 }
 .active .nav-link {
   color: #FFFFFF !important;
@@ -198,14 +177,6 @@ tr {
   margin-top: 16px !important;
   margin-bottom: 20px;
 }
-.unit-con {
-  /*leave a margin under the unit converter form*/
-  margin-bottom: 40px !important;
-}
-.unit-label {
-  /*leave marign around the labels for each unit*/
-  margin: 8px;
-}
 .noscript {
   /*use only for the noscript tag*/
   color: var(--white);
@@ -220,10 +191,6 @@ tr {
 #refresh {
   /*change the cirsor of the "refresh page" button in the send mail error*/
   cursor: pointer;
-}
-.user-message-mail {
-  /*leave margin outside the user message in the contact page*/
-  margin: 10px;
 }
 .container-sm {
   /*leave a margin in the top of the small container in the stats page*/
@@ -284,8 +251,8 @@ tr {
 }
 #output, #output1, #output2, #output3 {
     /*make the output text bigger along with the line height*/
-  font-size: 20px !important;
-  line-height: 24px !important;
+    font-size: 20px !important;
+    line-height: 24px !important;
 }
 .output-container {
     /*make the output div a stamdar height*/
@@ -301,12 +268,4 @@ tr {
     color: white;
     font-family: Consolas, monospace;
     background-color: #1E1E1E;
-}
-.alert {
-    margin: 10px !important;
-    z-index: 99999;
-}
-.alert ::selection {
-    background-color: black !important;
-    color: white !important;
 }

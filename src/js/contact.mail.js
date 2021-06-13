@@ -6,7 +6,7 @@ const data = {
 const onSuccess = () => {
     console.log("email sent successfully");
     $("#contact-form").append(`
-            <p class="text-success user-message-mail" id="success"><strong>Success!</strong> The email was sent successfully</p>
+            <p class="text-success m-2" id="success"><strong>Success!</strong> The email was sent successfully</p>
         `);
     sendButton.val("Send");
     sendButton.prop("disabled", false);
@@ -19,7 +19,7 @@ const onSuccess = () => {
 const onError = (error) => {
     console.error("email was not sent successfully. " + error.error);
     $("#contact-form").append(`
-                <p class="text-warning user-message-mail">
+                <p class="text-warning m-2">
                     the application encountered an error. 
                     Please try again later or <u id="refresh" class="text-white">refresh the page</u>. If the problem presists, please <a href="https://github.com/liquid-geometry/liquidgeometry/issues" class="text-white"><u>open a github issue</u></a>.
                 </p>
