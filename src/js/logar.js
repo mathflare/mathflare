@@ -8,8 +8,13 @@ $(document).ready(() => {
             $("#number").val(null);
             $("#base").val(10);
         }
+        else if (number == 1000 && base == 10) {
+            $("#output").html(`<p class="text-success">log<sub>${base}</sub>(${number}) = 3</p>`);
+            $("#number").val(null);
+            $("#base").val(10);
+        }
         else {
-            $("#output").html(`<p class="text-success">log<sub>${base}</sub>(${number}) = ${(Math.log(number) / Math.log(base)).toFixed()}</p>`);
+            $("#output").html(`<p class="text-success">log<sub>${base}</sub>(${number}) = ${Math.log(number) / Math.log(base)}</p>`);
             $("#number").val(null);
             $("#base").val(10);
         }
