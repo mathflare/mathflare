@@ -6,10 +6,10 @@
     <!-- SEO -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MathFlare</title>
+    <title>MathFlare - 2st Degree Equations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="MathFlare">
-    <meta name="keywords" content="mathflare, math-flare, math flare,liquidgeometry,geometry,mathematics,math,algebra,unitconverter,unit converter,converter,calculator,area calculator,logarithm,systems of equations solver,logarithm solver,square root,cude root,shapes,geometry,geometrical,highschool,math cheat sheet,pyhtagoras,pythagorian theorem,theorem,cheat sheet,math,equations,equation,solver,equation solver,linear-systems,linear system, system, equal triangle,similar triangle">
+    <meta name="keywords" content="liquidgeometry,liquid geometry,liquid-geometry,geometry,mathematics,math,algebra,unitconverter,unit converter,converter,calculator,area calculator,shapes,geometry,geometrical,highschool,math cheat sheet,pyhtagoras,pythagorian theorem,theorem,cheat sheet,math,equations,equation,solver,equation solver,linear-systems,linear system, system, equal triangle,similar triangle, mathflare, math-flare, math flare">
     <meta name="description" content="The go-to site for geometry and mathematics. Area calculator, Pythagorean theorem solver, unit converter and many more!" />
     <meta name="author" content="MathFlare LLC." />
     <meta name="og:url" content="https://www.mathflare.tk" />
@@ -29,15 +29,12 @@
     <link href="Styles/Profile.css" rel="stylesheet" />
     <link href="Styles/Scrollbar.css" rel="stylesheet" />
     <link href="Styles/Site.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="Assets/logo.png">
     <!-- SCRIPTS -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script data-ad-client="ca-pub-1524024547471266" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- POPPER.JS ONLY FOR TOOLPITS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <!-- GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7W2S8VV31F"></script>
     <script>
@@ -57,7 +54,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -139,7 +136,7 @@
                         <a href="license.html" class="dropdown-item"><i class="bi bi-credit-card-2-front"></i> Software License</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                     <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Algebra
                         <i class="bi bi-caret-down-fill"></i>
@@ -152,7 +149,7 @@
                         <div class="dropdown-divider"></div>
                         <h5 class="dropdown-header">Equations</h5>
                         <a href="equations.html" class="dropdown-item"><i class="bi bi-percent"></i> 1st Degree</a>
-                        <a href="equations-second.html" class="dropdown-item"><i class="bi bi-percent"></i> 2nd Degree</a>
+                        <a href="equations-second.html" class="dropdown-item aactive"><i class="bi bi-percent"></i> 2nd Degree</a>
                         <div class="dropdown-divider"></div>
                         <h5 class="dropdown-header">Systems of Equations</h5>
                         <a href="linear-systems.html" class="dropdown-item"><i class="bi bi-border-width"></i> Linear Systems</a>
@@ -166,39 +163,78 @@
     </div>
     </nav>
     <!-- NAVBAR END -->
-    <div class="alert alert-light alert-dismissible fade show m-2 text-center" style="z-index: 9999999;" role="alert">
-        Long time no see stanger... Check out our <a href="equations-second.html" class="alert-link">2nd degree equation solver</a>!
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-    <div class="dead-center">
-        <h1 class="text-white fs-1">MathFlare</span></h1>
-        <h3 class="text-danger fs-3">the go-to site for geometry and algebra</h3>
-        <div class="d-inline-flex">
-            <form action="https://github.com/mathflare" target="_blank">
-                <button class="btn btn-dark m-1">
-                    <i class="bi bi-github"></i>
-                    GitHub
-                </button>
-            </form>
-            <form action="https://github.com/mathflare/mathflare/issues" target="_blank">
-                <button class="btn btn-warning m-1">
-                    <i class="bi bi-bug-fill"></i>
-                    Report a Bug
-                </button>
-            </form>
-            <form action="https://github.com/mathflare/mathflare/issues" target="_blank">
-                <button class="btn btn-success m-1">
-                    <i class="bi bi-lightbulb"></i>
-                    Suggest an Idea
-                </button>
-            </form>
-            </div>
-            <form action="https://www.lqgm.cf/doge" target="_blank">
-                <button class="btn btn-info m-1 text-white" id="lol"  data-toggle="tooltip" data-placement="bottom" title="Sponsored">
-                    <i class="bi bi-currency-bitcoin"></i>
-                    Buy DogeCoin
-                </button>
-            </form>
+    <div class="center">
+        <h1 class="text-white">Second Degree Equations</h1>
+        <hr class="bg-danger" style="width: 60%;" />
+        <!-- ax^2=c START -->
+        <form autocomplete="off">
+        <h4 class="text-white">AX&#178;+C=0</h4>
+        <div class="center-form">
+            <input type="number" id="a" placeholder="A" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="number" id="c" placeholder="C" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="submit" id="button" class="btn btn-success btn-lg" value="Solve for X">
+        </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="output"></p>
+        </div>
+        <br>
+        <!-- ax^2=c END -->
+        <!-- X - Y = Z START -->
+        <hr class="bg-danger" style="width: 50%;" />
+        <form autocomplete="off">
+        <h4 class="text-white">AX&#178;+BX=0</h4>
+        <div class="center-form">
+            <input type="number" id="a2" placeholder="A" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="number" id="b2" placeholder="B" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="submit" id="button2" class="btn btn-success btn-lg" value="Solve for X">
+        </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="output2"></p>
+        </div>
+        <br>
+        <!-- X - Y = Z END -->
+        <!-- YX = Z START -->
+        <hr class="bg-danger" style="width: 50%;" />
+        <form autocomplete="off">
+        <h4 class="text-white">AX&#178;+BX+C=0</h4>
+        <div class="center-form">
+            <input type="number" id="a3" placeholder="A" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="number" id="b3" placeholder="B" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="number" id="c3" placeholder="C" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="submit" id="button3" class="btn btn-success btn-lg" value="Solve for X">
+        </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="output3"></p>
+        </div>
+        <br>
+        <!-- YX = Z END  -->
     </div>
     <!-- SCRIPTS START -->
     <script src="Scripts/jquery-3.0.0.js"></script>
@@ -206,45 +242,18 @@
     <script src="OAuth/SignIn.js"></script>
     <script src="OAuth/SignOut.js"></script>
     <script src="OAuth/OnSignOut.js"></script>
-    <script src="js/release.js"></script>
+    <script src="js/equations-second-deg.js"></script>
     <script>
-        var myStorage = window.localStorage, pageCount;
-        $(document).ready(function () {
-            if(!myStorage.getItem("pageCount")){
-                myStorage.setItem('pageCount', 1);
+        var myStorage = window.localStorage, equation;
+        $(".equation").click(function (e) { 
+            e.preventDefault();
+            if(!myStorage.getItem("equation")){
+                myStorage.setItem('equation', 1);
             } else {
-                pageCount = myStorage.getItem("pageCount");
-                pageCount = parseFloat(pageCount) + parseFloat(1);
-                myStorage.setItem('pageCount', pageCount );
+                equation = myStorage.getItem("equation");
+                equation = parseFloat(equation) + parseFloat(1);
+                myStorage.setItem('equation',equation );
             }
-        });
-    </script>
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-    <script>
-        $(document).ready(function () {
-            console.log("%cHello Sir looking around in the console, we recently changed our website's name from Liquid Geometry to MathFlare. Anyways, happy hacking!","font-family:consolas; font-size: 20px");
-            console.log("%cMathFlare","color: DodgerBlue; font-weight: 600; font-family:consolas; font-size: 40px");
-            console.log("%csame site, same functionality, different name!","color: OrangeRed; font-weight: 500; font-family:consolas; font-size: 25px");
-            console.log("%cby the way, the curiosity killed the cat you know...","color: PaleGreen; font-weight: 600; font-family:consolas; font-size: 20px");
-            console.log("%ccourtesy of MathFlare LLC.","color: DodgerBlue; font-weight: 400; font-family:consolas");
-        });
-    </script>
-    <script>
-        $(document).ready(() => {
-            var myStorage = window.localStorage, hasSeenIt;
-            $(".btn-close").click((e) => { 
-                e.preventDefault();
-                $(".alert").fadeOut(500);
-                if(!myStorage.getItem("hasSeenIt")){
-                myStorage.setItem('hasSeenIt', true);
-            } else {
-                myStorage.setItem('hasSeenIt', true);
-            }
-            });
         });
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
