@@ -85,12 +85,47 @@ $(document).ready(() => {
             $("#a3").val(null);
             $("#b3").val(null);
             $("#c3").val(null);
-        } else if (D < 0) {
+        } else if (a == 0 && b == 0 && c == 0) {
+            $("#output3").html(
+                `<p class="text-warning">The equation is an identity: it is true for all values</p>`
+            );
+            $("#a3").val(null);
+            $("#b3").val(null);
+            $("#c3").val(null);
+        } else if (a == 0 && (b == 0) & (c != 0)) {
+            $("#output3").html(
+                `<p class="text-warning">The equation is a contradiction in R: it has no solutions</p>`
+            );
+            $("#a3").val(null);
+            $("#b3").val(null);
+            $("#c3").val(null);
+        } else if (
+            (a == 0 && b != 0 && c == 0) ||
+            (a == 0 && b != 0 && c != 0)
+        ) {
+            x = c / b;
+            $("#output3").html(
+                `<p class="text-success">X = ${x}</p>`
+            );
+            $("#a3").val(null);
+            $("#b3").val(null);
+            $("#c3").val(null);
+        } 
+        else if (a != 0 && b == 0) {
+            x = Math.sqrt(c / a);
+            $("#output3").html(
+                `<p class="text-success">X = &#177;${x}</p>`
+            );
+            $("#a3").val(null);
+            $("#b3").val(null);
+            $("#c3").val(null);
+        }
+        else if (D < 0) {
             x1 = (-b - Math.sqrt(-D)) / (2 * a);
             x2 = (-b + Math.sqrt(-D)) / (2 * a);
             $("#output3").html(
                 `<p class="text-warning">The Discriminant = ${D} < 0, The equation is a contradiction in R: it has no solutions</p>
-                <p class="text-warning mb-2">X = ${x1} or X = ${x2} in C</p>
+                <p class="text-warning" style="margin-bottom: 10px !important">X = ${x1} or X = ${x2} in C</p>
                 `
             );
             $("#a3").val(null);
