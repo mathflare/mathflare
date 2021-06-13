@@ -3,6 +3,7 @@
  * Bootstrap v5.0.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
+ * Lightly modified to fit our website's needs
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
@@ -3023,18 +3024,18 @@ textarea.form-control-lg {
 .btn-info:hover {
   color: #000;
   background-color: #138496;
-  border-color: #17A2B8;
+  border-color: #138496;
 }
 .btn-check:focus + .btn-info, .btn-info:focus {
   color: #000;
   background-color: #138496;
-  border-color: #17A2B8;
+  border-color: #138496;
   box-shadow: 0 0 0 0.25rem rgba(11, 172, 204, 0.5);
 }
 .btn-check:checked + .btn-info, .btn-check:active + .btn-info, .btn-info:active, .btn-info.active, .show > .btn-info.dropdown-toggle {
   color: #000;
   background-color: #138496;
-  border-color: #17A2B8;
+  border-color: #138496;
 }
 .btn-check:checked + .btn-info:focus, .btn-check:active + .btn-info:focus, .btn-info:active:focus, .btn-info.active:focus, .show > .btn-info.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgba(11, 172, 204, 0.5);
