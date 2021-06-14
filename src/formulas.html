@@ -165,7 +165,7 @@
         <h1 class="text-white title">MathFlare Cheat Sheet</h1>
         <hr class="bg-danger" style="width: 70%;" />
         <section id="trigonometry">
-        <h3 class="text-white" id="title"></h3>
+        <h3 class="text-white" id="title">Trigonometric Numbers</h3>
         <table class="table table-bordered text-white formulas-table" id="trig-nums">
             <thead class="bg-primary head">
                 <tr>
@@ -225,16 +225,6 @@
         });
     </script>
     <script>
-        //our "API" in the wild
-        $.ajax({
-            type: "GET",
-            url: "https://mathflare-api.herokuapp.com/trignums",
-            dataType: "json",
-            cache: true,
-            success: (response) => {
-                console.log(response.thirtydeg.Deg)
-            }
-        });
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
