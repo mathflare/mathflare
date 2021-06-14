@@ -166,7 +166,7 @@
     </div>
     </nav>
     <!-- NAVBAR END -->
-    <div class="alert alert-light alert-dismissible fade show m-2 text-center user-select-none" style="z-index: 99999;" role="alert">
+    <div class="alert alert-dismissible fade show m-2 text-center user-select-none" style="z-index: 99999;" role="alert">
         Long time no see stanger... Check out our <a href="equations-second.html" class=" text-dark">2nd degree equation solver</a>!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
@@ -228,6 +228,28 @@
                 myStorage.setItem('hasSeenIt', true);
             }
             });
+        });
+    </script>
+    <script>
+        $(document).ready(() => {
+            const rdn = Math.floor(Math.random() * 9);
+            if (rdn == 1) {
+                $(".alert").addClass("alert-primary");
+            } else if (rdn == 2) {
+                $(".alert").addClass("alert-secondary");
+            } else if (rdn == 3) {
+                $(".alert").addClass("alert-success");
+            } else if (rdn == 4) {
+                $(".alert").addClass("alert-danger");
+            } else if (rdn == 5) {
+                $(".alert").addClass("alert-warning");
+            } else if (rdn == 6) {
+                $(".alert").addClass("alert-info");
+            } else if (rdn == 7) {
+                $(".alert").addClass("alert-dark");
+            } else {
+                $(".alert").addClass("alert-light");
+            }
         });
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
