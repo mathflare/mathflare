@@ -4,7 +4,7 @@
     <!-- SEO -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MathFlare - Square Root</title>
+    <title>MathFlare - Powers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="MathFlare">
     <meta name="keywords" content="liquidgeometry,liquid geometry,liquid-geometry,geometry,mathematics,math,algebra,unitconverter,unit converter,converter,calculator,area calculator,shapes,geometry,geometrical,highschool,math cheat sheet,pyhtagoras,pythagorian theorem,theorem,cheat sheet,math,equations,equation,solver,equation solver,linear-systems,linear system, system, equal triangle,similar triangle, mathflare, math-flare, math flare">
@@ -142,8 +142,9 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <h5 class="dropdown-header">Basic Algebra</h5>
                         <a href="logar.html" class="dropdown-item"><i class="bi bi-percent"></i> Logarithms</a>
-                        <a href="sqrt.html" class="dropdown-item aactive"><i class="bi bi-calculator"></i> Square Root Calculator</a>
+                        <a href="sqrt.html" class="dropdown-item"><i class="bi bi-calculator"></i> Square Root Calculator</a>
                         <a href="cbrt.html" class="dropdown-item"><i class="bi bi-calculator"></i> Cube Root Calculator</a>
+                        <a href="pow.html" class="dropdown-item aactive"><i class="bi bi-power"></i> Powers</a>
                         <div class="dropdown-divider"></div>
                         <h5 class="dropdown-header">Equations</h5>
                         <a href="equations.html" class="dropdown-item"><i class="bi bi-percent"></i> 1st Degree</a>
@@ -162,12 +163,17 @@
     </nav>
     <!-- NAVBAR END -->
     <div class="center">
-        <h1 class="text-white">Square Root</h1>
+        <h1 class="text-white">Exponents</h1>
         <hr class="bg-danger" style="width: 60%;" />
         <form autocomplete="off">
-        <h4 class="text-white">Enter the number</h4>
+        <h4 class="text-white">Enter the base</h4>
         <div class="center-form">
-            <input type="number" id="number" placeholder="number" name="side" class="form-control mb-0" step="0.01" min="0" />
+            <input type="number" id="base" placeholder="base" name="side" class="form-control mb-0" step="0.01" min="0" />
+        </div>
+        <br />
+        <h4 class="text-white">Enter the exponent</h4>
+        <div class="center-form">
+            <input type="number" id="exp" placeholder="exponent" name="side" class="form-control mb-0" step="0.01" min="0" />
         </div>
         <br />
         <div class="center-form">
@@ -189,7 +195,7 @@
     <script src="OAuth/SignIn.js"></script>
     <script src="OAuth/SignOut.js"></script>
     <script src="OAuth/OnSignOut.js"></script>
-    <script src="js/sqrt.js	"></script>
+    <script src="js/pow.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>
