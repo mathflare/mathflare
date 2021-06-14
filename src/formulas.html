@@ -228,11 +228,11 @@
         //our "API" in the wild
         $.ajax({
             type: "GET",
-            url: "https://api.mathflare.tk/trignums",
+            url: "https://mathflare-api.herokuapp.com/trignums",
             dataType: "json",
             cache: true,
             success: (response) => {
-                $("#title").text(response.title);
+                console.log(response)
             }
         });
     </script>
