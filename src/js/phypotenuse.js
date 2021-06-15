@@ -10,7 +10,7 @@
             $("#sside").val(null);
         }
         else {
-            $("#output").text("The hypotenuse of the right triangle is " + result + " cm");
+            $("#output").text(`The hypotenuse of the right triangle is ${result}cm`);
             $("#fside").val(null);
             $("#sside").val(null);
         }
