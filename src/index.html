@@ -21,6 +21,8 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="MathFlare" />
     <meta name="twitter:description" content="The go-to site for geometry and mathematics. Area calculator, Pythagorean theorem solver, unit converter and many more!" />
+    <link rel="canonical" href="https://www.mathflare.tk">
+    <link rel="home" href="https://www.mathflare.tk">
     <!-- OAuth -->
     <meta name="google-signin-client_id" content="574643928295-tftr9maiaoejhtngs28jhdga6v3eueah.apps.googleusercontent.com">
     <!-- STYLES -->
@@ -192,7 +194,7 @@
     <script src="js/release.js"></script>
     <script>
         var myStorage = window.localStorage, pageCount;
-        $(document).ready(function () {
+        $(document).ready(() => {
             if(!myStorage.getItem("pageCount")){
                 myStorage.setItem('pageCount', 1);
             } else {
@@ -203,12 +205,12 @@
         });
     </script>
     <script>
-        $(function () {
+        $(() => {
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(() => {
             console.log("%cHello Sir looking around in the console, we recently changed our website's name from Liquid Geometry to MathFlare. Anyways, happy hacking!","font-family:consolas; font-size: 20px");
             console.log("%cMathFlare","color: DodgerBlue; font-weight: 600; font-family:consolas; font-size: 40px");
             console.log("%csame site, same functionality, different name!","color: OrangeRed; font-weight: 500; font-family:consolas; font-size: 25px");
@@ -217,6 +219,7 @@
         }); 
     </script>
     <script>
+        //dk why we store it but apparently we do!
         $(document).ready(() => {
             var myStorage = window.localStorage, hasSeenIt;
             $(".btn-close").click((e) => { 
@@ -252,7 +255,6 @@
             }
         });
     </script>
-    <script src="js/avg.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>

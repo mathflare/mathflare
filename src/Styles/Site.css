@@ -1,200 +1,212 @@
 ﻿@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 :root {
-  /*Our dark grey*/
-  --liquido: #23272b;
-  /*Our light grey*/
-  --aactive: #9999;
-  /*black and white*/
-  --black: #000000;
-  --white: #FFFFFF;
+    /*Our dark grey*/
+    --liquido: #23272b;
+    /*Our light grey*/
+    --aactive: #9999;
+    /*black and white*/
+    --black: #000000;
+    --white: #ffffff;
 }
 body {
-  font-family: "Poppins", sans-serif !important;
-  color: var(--white);
-  background-color: var(--liquido);
-  background-color: #23272b;
+    font-family: "Poppins", sans-serif !important;
+    color: var(--white);
+    background-color: var(--liquido);
+    background-color: #23272b;
 }
 ::selection {
-  /*custom selection*/
-  background-color: white;
-  color: black;
+    /*custom selection*/
+    background-color: white;
+    color: black;
 }
 nav {
-  /*Make tha navbar be on top of the contents*/
-  z-index: 100000 !important;
+    /*Make tha navbar be on top of the contents*/
+    z-index: 100000 !important;
 }
 .dead-center {
-  /*Use this class for the home page only*/
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1 !important;
+    /*Use this class for the home page only*/
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1 !important;
 }
 .test {
-  position: absolute;
-  text-align: center;
-  left: 50%;
-  transform: translate(-50%);
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
 }
 .center {
-  /*Use this class for all the centering*/
-  text-align: center !important;
-  display: block;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  margin-top: 100px;
-  z-index: 1 !important;
+    /*Use this class for all the centering*/
+    text-align: center !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 100px;
+    z-index: 1 !important;
 }
 .center input[type="number"] {
-  width: 40%;
-  transition: 0.2s;
+    width: 40%;
+    transition: 0.2s;
 }
 .center input[type="text"] {
-  width: 40%;
-  transition: 0.2s;
+    width: 40%;
+    transition: 0.2s;
+}
+.center textarea {
+    width: 40%;
+    transition: 0.2s;
 }
 .message {
-  /*textarea for contact page*/
-  width: 40%;
-  height: 100px;
-  min-height: 20px;
-  transition: 0.2s;
+    /*textarea for contact page*/
+    width: 40%;
+    height: 100px;
+    min-height: 20px;
+    transition: 0.2s;
 }
 @media screen and (max-width: 1000px) {
-  /*make the inputs bigger for smaller screens*/
-  .center input[type="number"] {
-    width: 50%;
-    transition: 0.2s;
-  }
-  .center input[type="text"] {
-    width: 50%;
-    transition: 0.2s;
-  }
-  .message {
-    width: 50%;
-    transition: 0.2s;
-  }
+    /*make the inputs bigger for smaller screens*/
+    .center input[type="number"] {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .center input[type="text"] {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .center textarea {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .message {
+        width: 50%;
+        transition: 0.2s;
+    }
 }
 @media screen and (max-width: 915px) {
-  /*make the inputs bigger for phones*/
-  .center input[type="number"] {
-    width: 90%;
-    transition: 0.2s;
-  }
-  .center input[type="text"] {
-    width: 90%;
-    transition: 0.2s;
-  }
-  .message {
-    width: 90%;
-    transition: 0.2s;
-  }
+    /*make the inputs bigger for phones*/
+    .center input[type="number"] {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .center input[type="text"] {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .center textarea {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .message {
+        width: 90%;
+        transition: 0.2s;
+    }
 }
 .center-form {
-  /*use this class to center inputs and buttons*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    /*use this class to center inputs and buttons*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .center-form ::selection {
-  /*make the selctor different in the input elements*/
-  background-color: var(--black) !important;
-  color: var(--white) !important;
+    /*make the selctor different in the input elements*/
+    background-color: var(--black) !important;
+    color: var(--white) !important;
 }
 @media screen and (max-width: 715px) {
-  /*make the buttons stack on top of each other for phones*/
-  .d-inline-flex {
-    display: unset !important;
-  }
+    /*make the buttons stack on top of each other for phones*/
+    .d-inline-flex {
+        display: unset !important;
+    }
 }
 a {
-  color: inherit;
+    color: inherit;
 }
 a:hover {
-  color: inherit;
+    color: inherit;
 }
 .active .nav-link {
-  color: #FFFFFF !important;
+    color: #ffffff !important;
 }
 .aactive {
-  /*Custom active state for dropdown link navbar elements cause the bootstrap one sucks*/
-  background-color: var(--aactive) !important;
-  color: var(--black) !important;
+    /*Custom active state for dropdown link navbar elements cause the bootstrap one sucks*/
+    background-color: var(--aactive) !important;
+    color: var(--black) !important;
 }
 hr {
-  /*style the line element*/
-  border: 2px solid var(--bs-danger);
-  border-radius: 3px;
-  margin: auto;
-  margin-top: 16px !important;
-  margin-bottom: 16px !important;
+    /*style the line element*/
+    border: 2px solid var(--bs-danger);
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
 }
 /*CHEAT SHEET TABLE*/
 .formulas-table {
-  /*position the table*/
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-  cursor: crosshair;
-  transition: 0.2s;
+    /*position the table*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    cursor: crosshair;
+    transition: 0.2s;
 }
 tr {
-  transition: 0.2s;
+    transition: 0.2s;
 }
 .formulas-body tr:hover {
-  background-color: var(--white) !important;
-  color: var(--black) !important;
-  transition: 0.2s;
+    background-color: var(--white) !important;
+    color: var(--black) !important;
+    transition: 0.2s;
 }
-.formulas-body tr:hover ::selection{
-  background-color: var(--black) !important;
-  color: var(--white) !important;
+.formulas-body tr:hover ::selection {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
 }
 @media screen and (max-width: 915px) {
-  /*make the table 95% width for phones*/
-  .formulas-table {
-    width: 95%;
-    transition: 0.2s;
-  }
+    /*make the table 95% width for phones*/
+    .formulas-table {
+        width: 95%;
+        transition: 0.2s;
+    }
 }
 /*SHOW FORMULA BUTTON*/
 .show-formula:hover {
-  cursor: pointer;
-  /*make "show formula" text non-selectable*/
-  user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
+    cursor: pointer;
+    /*make "show formula" text non-selectable*/
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 #formula {
-  /*make the formula hidden by default*/
-  display: none;
+    /*make the formula hidden by default*/
+    display: none;
 }
 .formula {
-  /*SHOW FORMULA BUTTON*/
-  /*leave a margin in the bottom of the "show formula button"*/
-  margin-top: 16px !important;
-  margin-bottom: 20px;
+    /*SHOW FORMULA BUTTON*/
+    /*leave a margin in the bottom of the "show formula button"*/
+    margin-top: 16px !important;
+    margin-bottom: 20px;
 }
 .noscript {
-  /*use only for the noscript tag*/
-  color: var(--white);
-  background-color: var(--danger);
-  font-size: larger;
-  display: inline-flex;
-  margin: 50px;
-  padding: 5px;
-  border-radius: 5px;
-  z-index: 999999;
+    /*use only for the noscript tag*/
+    color: var(--white);
+    background-color: var(--danger);
+    font-size: larger;
+    display: inline-flex;
+    margin: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 999999;
 }
 #refresh {
-  /*change the cirsor of the "refresh page" button in the send mail error*/
-  cursor: pointer;
+    /*change the cirsor of the "refresh page" button in the send mail error*/
+    cursor: pointer;
 }
 .container-sm {
-  /*leave a margin in the top of the small container in the stats page*/
-  margin-top: 30px !important;
+    /*leave a margin in the top of the small container in the stats page*/
+    margin-top: 30px !important;
 }
 .dynamic-shape-para {
     /*style the shape which is dynamically created based on the input*/
@@ -218,8 +230,8 @@ tr {
 .dynamic-shape-triang {
     display: none;
     margin: 0 auto;
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     /*these are for the base*/
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
@@ -247,9 +259,12 @@ tr {
 }
 .text-success {
     /*make the bootstrap success color lighter*/
-    color: #28A745 !important;
+    color: #28a745 !important;
 }
-#output, #output1, #output2, #output3 {
+#output,
+#output1,
+#output2,
+#output3 {
     /*make the output text bigger along with the line height*/
     font-size: 20px !important;
     line-height: 24px !important;
@@ -263,10 +278,10 @@ tr {
 }
 .codeblock {
     /*make the span/code element look like codeblock*/
-    display: inline-flex; 
+    display: inline-flex;
     padding: 5px;
     border-radius: 5px;
     color: white;
     font-family: Consolas, monospace;
-    background-color: #1E1E1E;
+    background-color: #1e1e1e;
 }
