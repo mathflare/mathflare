@@ -1,5 +1,5 @@
-﻿$(document).ready(function () {
-    $("#button").click(calculation = (e) => {
+﻿$(document).ready(() => {
+    $("#button").click((e) => {
         e.preventDefault();
         const radius = $("#radius").val();
         const result = (radius * radius) * 3.14;
@@ -11,7 +11,7 @@
             $("#radius").val(null);
         }
         else {
-            $("#output").html("The area of the circle is &#8764;" + result + " cm^2 (&#8719; = 3.14)");
+            $("#output").html(`The area of the circle is &#8764; ${result}cm^2 (&#8719; = 3.14)`);
             $("#radius").val(null);
             if (!(radius <= 40)) {
                 if (!(radius >= 600)) {
@@ -26,7 +26,7 @@
                 }
             }
             else {
-                $("#output").html("The area of the circle is &#8764;" + result + " cm^2 (&#8719; = 3.14)");
+                $("#output").html("The area of the circle is &#8764;" + result + " cm<sup>2</sup> (&#8719; = 3.14)");
                 $("#radius").val(null);
                 $("#shape").attr({
                     "style": `height: 40px; width: 40px; display: flex`
@@ -34,7 +34,7 @@
             }
         }
     });
-    $(".show-formula").click(function () {
+    $(".show-formula").click(() => {
         $("#formula").fadeToggle(500);
     });
 });

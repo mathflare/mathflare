@@ -1,7 +1,7 @@
 //utilizing determinants (D, Dx, Dy - det(a))
 //copyright (c) 2021 MathFlare LLC. - All rights reserved.
-$(document).ready(function () {
-    $("#button").click(function (e) {
+$(document).ready(() => {
+    $("#button").click((e) => {
         e.preventDefault();
         const a1 = $("#a1").val();
         const b1 = $("#b1").val();

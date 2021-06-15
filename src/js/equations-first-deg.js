@@ -1,6 +1,6 @@
-$(document).ready(function () {
+$(document).ready(() => {
     $("#button").click(
-        (calculation = (e) => {
+        ((e) => {
             e.preventDefault();
             const y = $("#y").val();
             const z = $("#z").val();
@@ -19,7 +19,7 @@ $(document).ready(function () {
         })
     );
     $("#button2").click(
-        (calculation = (e) => {
+        ((e) => {
             e.preventDefault();
             const y = $("#y2").val();
             const z = $("#z2").val();
@@ -38,7 +38,7 @@ $(document).ready(function () {
         })
     );
     $("#button3").click(
-        (calculation = (e) => {
+        ((e) => {
             e.preventDefault();
             const y = $("#y3").val();
             const z = $("#z3").val();

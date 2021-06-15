@@ -1,5 +1,5 @@
-﻿$(document).ready(function () {
-    $("#button").click(calculation = (e) => {
+﻿$(document).ready(() => {
+    $("#button").click((e) => {
         e.preventDefault();
         const fside = $("#fside").val();
         const sside = $("#sside").val();
@@ -15,7 +15,7 @@
             $("#sside").val(null);
         }
     });
-    $(".show-formula").click(function () {
+    $(".show-formula").click(() => {
         $("#formula").fadeToggle(500);
     });
 });

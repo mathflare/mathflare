@@ -1,5 +1,5 @@
-﻿$(document).ready(function () {
-    $("#button").click(calculation = (e) => {
+﻿$(document).ready(() => {
+    $("#button").click((e) => {
         e.preventDefault();
         const width = $("#width").val();
         const height = $("#height").val();
@@ -13,7 +13,7 @@
             $("#height").val(null);
         }
         else {
-            $("#output").text("The area of the triangle is " + result + " cm^2");
+            $("#output").text("The area of the triangle is " + result + " cm<sup>2</sup>");
             $("#shape").attr({
                 "style": `width: ${width}px; height: ${height}px; display: flex`
             });
@@ -21,7 +21,7 @@
             $("#height").val(null);
         }
     });
-    $(".show-formula").click(function () {
+    $(".show-formula").click(() => {
         $("#formula").fadeToggle(500);
     });
 });

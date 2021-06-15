@@ -1,6 +1,6 @@
-﻿$(document).ready(function () {
+﻿$(document).ready(() => {
     $("#button").click(
-        (calculation = (e) => {
+        ((e) => {
             e.preventDefault();
             const hypo = $("#hypo").val();
             const side = $("#side").val();
@@ -27,7 +27,7 @@
             }
         })
     );
-    $(".show-formula").click(function () {
+    $(".show-formula").click(() => {
         $("#formula").fadeToggle(500);
     });
 });

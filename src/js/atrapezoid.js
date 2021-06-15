@@ -1,6 +1,6 @@
-﻿$(document).ready(function () {
+﻿$(document).ready(() => {
   $("#button").click(
-    (calculation = (e) => {
+    ((e) => {
       e.preventDefault();
       const lside = $("#lside").val();
       const sside = $("#sside").val();
@@ -26,7 +26,7 @@
       }
     })
   );
-  $(".show-formula").click(function () {
+  $(".show-formula").click(() => {
     $("#formula").fadeToggle(500);
   });
 });

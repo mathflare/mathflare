@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    $("#button").click(function (e) { 
+    $("#button").click((e) => { 
         e.preventDefault();
         const base = $("#base").val();
         const exponent = $("#exp").val();

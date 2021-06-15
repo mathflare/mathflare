@@ -1,5 +1,5 @@
-﻿$(document).ready(function () {
-    $("#button").click(calculation = (e) => {
+﻿$(document).ready(() => {
+    $("#button").click((e) => {
         e.preventDefault();
         const fside = $("#fside").val();
         const result = fside * fside;
@@ -11,14 +11,14 @@
             $("#fside").val(null);
         }
         else {
-            $("#output").text("The area of the square is " + result + " cm^2");
+            $("#output").text("The area of the square is " + result + " cm<sup>2</sup>");
             $("#shape").attr({
                 "style": `height: ${fside}px; width: ${fside}px; display: flex`
             });
             $("#fside").val(null);
         }
     });
-    $(".show-formula").click(function () {
+    $(".show-formula").click(() => {
         $("#formula").fadeToggle(500);
     });
 });

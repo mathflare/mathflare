@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("#button").click(calculation = (e) => {
+    $("#button").click((e) => {
         e.preventDefault();
         const fside = $("#fside").val();
         const height = $("#height").val();
@@ -21,7 +21,7 @@
             $("#height").val(null);
         }
     });
-    $(".show-formula").click(function () {
+    $(".show-formula").click(() => {
         $("#formula").fadeToggle(500);
     });
 });
