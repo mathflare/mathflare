@@ -1,3 +1,4 @@
+//copyright (c) 2021 MathFlare LLC. - All rights reserved.
 $(document).ready(() => {
     $("#button").click(
         ((e) => {
@@ -66,3 +67,4 @@ $(document).ready(() => {
         })
     );
 });
+//copyright (c) 2021 MathFlare LLC. - All rights reserved.
