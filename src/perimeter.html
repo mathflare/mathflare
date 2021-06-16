@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- MAIL -->
+    <meta name="yandex-verification" content="f86171133514f762" />
     <!-- SEO -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MathFlare - Cube Root</title>
+    <title>MathFlare - Perimeter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="MathFlare">
     <meta name="keywords" content="liquidgeometry,liquid geometry,liquid-geometry,geometry,mathematics,math,algebra,unitconverter,unit converter,converter,calculator,area calculator,shapes,geometry,geometrical,highschool,math cheat sheet,pyhtagoras,pythagorian theorem,theorem,cheat sheet,math,equations,equation,solver,equation solver,linear-systems,linear system, system, equal triangle,similar triangle, mathflare, math-flare, math flare">
@@ -74,14 +76,14 @@
                         <a href="https://github.com/mathflare/mathflare/issues" target="_blank" class="dropdown-item"><i class="bi bi-lightbulb-fill"></i> Suggest an Edit</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                     <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Geometry
                         <i class="bi bi-caret-down-fill"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <h5 class="dropdown-header">Basic Geometry</h5>
-                        <a href="perimeter.html" class="dropdown-item"><i class="bi bi-bounding-box"></i> Perimeter Calculator</a>
+                        <a href="perimeter.html" class="dropdown-item aactive"><i class="bi bi-bounding-box"></i> Perimeter Calculator</a>
                         <a href="diagpolyg.html" class="dropdown-item"><i class="bi bi-slash-square"></i> Diagonal Calculator</a>
                         <div class="dropdown-divider"></div>
                         <h5 class="dropdown-header">Area Calculator</h5>
@@ -140,7 +142,7 @@
                         <a href="license.html" class="dropdown-item"><i class="bi bi-credit-card-2-front"></i> Software License</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown active">
+                <li class="nav-item dropdown">
                     <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Algebra
                         <i class="bi bi-caret-down-fill"></i>
@@ -149,7 +151,7 @@
                         <h5 class="dropdown-header">Basic Algebra</h5>
                         <a href="logar.html" class="dropdown-item"><i class="bi bi-percent"></i> Logarithms</a>
                         <a href="sqrt.html" class="dropdown-item"><i class="bi bi-calculator"></i> Square Root Calculator</a>
-                        <a href="cbrt.html" class="dropdown-item aactive"><i class="bi bi-calculator"></i> Cube Root Calculator</a>
+                        <a href="cbrt.html" class="dropdown-item"><i class="bi bi-calculator"></i> Cube Root Calculator</a>
                         <a href="pow.html" class="dropdown-item"><i class="bi bi-power"></i> Exponents(powers)</a>
                         <a href="avg.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Average Calculator</a>
                         <a href="percent.html" class="dropdown-item"><i class="bi bi-percent"></i> Percentage Calculator</a>
@@ -171,25 +173,113 @@
     </nav>
     <!-- NAVBAR END -->
     <div class="center">
-        <h1 class="text-white">Cube Root</h1>
+        <h1 class="text-white">Perimeter Calculator</h1>
         <hr class="bg-danger" style="width: 60%;" />
         <form autocomplete="off">
-        <h4 class="text-white">Enter the number</h4>
+        <h4 class="text-white">Square</h4>
         <div class="center-form">
-            <input type="number" id="number" placeholder="radicand" class="form-control mb-0" step="0.01" min="0" />
+            <input type="number" id="squaren" placeholder="side" class="form-control mb-0" step="0.01" />
         </div>
-        <br />
+        <br>
         <div class="center-form">
-            <input type="submit" id="button" class="btn btn-success btn-lg" value="Calculate">
+            <input type="submit" id="square" class="btn btn-success btn-lg equation" value="Solve for X">
         </div>
         </form>
-        <br>
+        <br />
         <div style="max-height: 1em;">
-            <p class="text-success" id="output"></p>
+            <p class="text-success" id="output1"></p>
         </div>
         <br>
         <div class="my-4">
-            <a href="https://www.google.com/search?q=calculate+cube+root" target="_blank" rel="noopener" class="btn btn-outline-light">Find information on the web</a>
+            <a href="https://www.google.com/search?q=square+perimeter" target="_blank" rel="noopener" class="btn btn-outline-light">Find information on the web</a>
+        </div>
+        <hr class="bg-danger" style="width: 50%;" />
+        <form autocomplete="off">
+        <h4 class="text-white">Parallelogram</h4>
+        <div class="center-form">
+            <input type="number" id="paraw" placeholder="width" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="number" id="parah" placeholder="height" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="submit" id="para" class="btn btn-success btn-lg equation" value="Solve for X">
+        </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="output2"></p>
+        </div>
+        <br>
+        <div class="my-4">
+            <a href="https://www.google.com/search?q=parallelogram+perimeter" target="_blank" rel="noopener" class="btn btn-outline-light">Find information on the web</a>
+        </div>
+        <hr class="bg-danger" style="width: 50%;" />
+        <form autocomplete="off">
+        <h4 class="text-white">Triangle</h4>
+        <div class="center-form">
+            <input type="number" id="tria" placeholder="first side" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="number" id="trib" placeholder="second side" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="number" id="tric" placeholder="third side" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="submit" id="tri" class="btn btn-success btn-lg equation" value="Solve for X">
+        </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="output3"></p>
+        </div>
+        <br>
+        <div class="my-4">
+            <a href="https://www.google.com/search?q=triangle+perimeter" target="_blank" rel="noopener" class="btn btn-outline-light">Find information on the web</a>
+        </div>
+        <hr class="bg-danger" style="width: 50%;" />
+        <form autocomplete="off">
+        <h4 class="text-white">Equilateral Triangle</h4>
+        <div class="center-form">
+            <input type="number" id="trin" placeholder="side" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="submit" id="eqtri" class="btn btn-success btn-lg equation" value="Solve for X">
+        </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="output4"></p>
+        </div>
+        <br>
+        <div class="my-4">
+            <a href="https://www.google.com/search?q=equilateral+triangle+perimeter" target="_blank" rel="noopener" class="btn btn-outline-light">Find information on the web</a>
+        </div>
+        <hr class="bg-danger" style="width: 50%;" />
+        <form autocomplete="off">
+        <h4 class="text-white">Circle</h4>
+        <div class="center-form">
+            <input type="number" id="circler" placeholder="radius" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="submit" id="circle" class="btn btn-success btn-lg equation" value="Solve for X">
+        </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="output5"></p>
+        </div>
+        <br>
+        <div class="my-4">
+            <a href="https://www.google.com/search?q=circle+perimeter" target="_blank" rel="noopener" class="btn btn-outline-light">Find information on the web</a>
         </div>
     </div>
     <!-- SCRIPTS START -->
@@ -198,7 +288,7 @@
     <script src="OAuth/SignIn.js"></script>
     <script src="OAuth/SignOut.js"></script>
     <script src="OAuth/OnSignOut.js"></script>
-    <script src="js/cbrt.js	"></script>
+    <script src="js/perimeter.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>

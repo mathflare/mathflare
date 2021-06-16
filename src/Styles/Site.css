@@ -1,4 +1,5 @@
 ﻿@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 :root {
     /*Our dark grey*/
     --liquido: #23272b;
@@ -215,10 +216,13 @@ tr {
 #output,
 #output1,
 #output2,
-#output3 {
+#output3,
+#output4,
+#output5 {
     /*make the output text bigger along with the line height*/
     font-size: 20px !important;
     line-height: 24px !important;
+    /*font-family: 'Merriweather', serif !important;*/
 }
 .output-container {
     /*make the output div a stamdar height*/
