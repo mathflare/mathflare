@@ -124,8 +124,8 @@ $(document).ready(() => {
             x1 = (-b - Math.sqrt(-D)) / (2 * a);
             x2 = (-b + Math.sqrt(-D)) / (2 * a);
             $("#output3").html(
-                `<p class="text-warning">The Discriminant = ${D} < 0, The equation is a contradiction in R: it has no solutions</p>
-                <p class="text-warning" style="margin-bottom: 10px !important">X = ${x1} or X = ${x2} in C</p>
+                `<p class="text-warning">Discriminant(Δ) = ${D} < 0, The equation is a contradiction in R: it has no solutions</p>
+                <p class="text-warning" style="margin-bottom: 10px !important">X = ${x1} or X = ${x2} in C</p> <br>
                 `
             );
             $("#a3").val(null);
@@ -135,7 +135,7 @@ $(document).ready(() => {
             x1 = (-b - Math.sqrt(D)) / (2 * a);
             x2 = (-b + Math.sqrt(D)) / (2 * a);
             $("#output3").html(
-                `<p class="text-success">The Discriminant = 0,  X = ${x1} (double solution)</p>`
+                `<p class="text-success">Discriminant(Δ) = 0,  X = ${x1} (double solution)</p>`
             );
             $("#a3").val(null);
             $("#b3").val(null);
@@ -144,7 +144,7 @@ $(document).ready(() => {
             x1 = (-b - Math.sqrt(D)) / (2 * a);
             x2 = (-b + Math.sqrt(D)) / (2 * a);
             $("#output3").html(
-                `<p class="text-success">The Discriminant = ${D} > 0,  X = ${x1} or X = ${x2}</p>`
+                `<p class="text-success">Discriminant(Δ) = ${D} > 0,  X = ${x1} or X = ${x2}</p>`
             );
             $("#a3").val(null);
             $("#b3").val(null);

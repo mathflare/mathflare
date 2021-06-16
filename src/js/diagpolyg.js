@@ -9,7 +9,7 @@ $(document).ready(() => {
             $("#vertex").val(null);
         } else {
             $("#output").html(
-                `<p class=" text-success">The number of diagonals in this convex polygon(${n} vertices) is ${(n * (n - 3)) / 2}</p>`
+                `<p class=" text-success">The number of diagonals in this convex ${n}-gon is ${(n * (n - 3)) / 2}</p>`
             );
             $("#vertex").val(null);
         }

@@ -218,7 +218,8 @@ tr {
 #output2,
 #output3,
 #output4,
-#output5 {
+#output5,
+#output6 {
     /*make the output text bigger along with the line height*/
     font-size: 20px !important;
     line-height: 24px !important;
