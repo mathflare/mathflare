@@ -1,9 +1,8 @@
 $(document).ready(() => {
-    e.preventDefault();
     $("#button").click((e) => {
         e.preventDefault();
         const n = $("#vertex").val();
-        if (a == "" || a <= 3) {
+        if (n == "" || n <= 3) {
             $("#output").html(
                 `<p class=" text-warning">Please enter a valid value</p>`
             );
