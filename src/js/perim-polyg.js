@@ -14,7 +14,19 @@ $(document).ready(() => {
             $("#sides").val(null);
         } else {
             var array = JSON.parse("[" + input + "]");
-            if (array.length < 3) {
+            var hasNegative = false;
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] <= 0) {
+                    hasNegative = true;
+                    break;
+                }
+            }
+            if (hasNegative) {
+                $("#output6").html(
+                    `<p class="text-warning">Please enter a valid value</p>`
+                );
+                $("#sides").val(null);
+            } else if (array.length < 3) {
                 $("#output6").html(
                     `<p class="text-warning">There is no polygon with less than 3 segments</p>`
                 );

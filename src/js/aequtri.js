@@ -9,9 +9,9 @@ $(document).ready(() => {
             $("#side").val(null);
         } else {
             $("#output").html(
-                `<p class=" text-success">The are of the equilateral triangle is &#8776;${Math.floor(
+                `<p class=" text-success">The area of the equilateral triangle is &#8776;${Math.floor(
                     (a * a * Math.sqrt(3)) / 4
-                )}cm<sup>2</sup> (${a}<sup>2</sup> * &#8730;3) &#247; 4</p>`
+                )}cm<sup>2</sup> A = (${a}<sup>2</sup> * &#8730;3) &#247; 4 = (${a * a} * &#8730;3) &#247; 4</p>`
             );
             $("#side").val(null);
         }
