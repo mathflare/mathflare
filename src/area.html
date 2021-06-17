@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- MAIL -->
+    <meta name="yandex-verification" content="f86171133514f762" />
     <!-- SEO -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MathFlare - Equilateral Triangle</title>
+    <title>MathFlare - Area Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="MathFlare">
     <meta name="keywords" content="liquidgeometry,liquid geometry,liquid-geometry,geometry,mathematics,math,algebra,unitconverter,unit converter,converter,calculator,area calculator,shapes,geometry,geometrical,highschool,math cheat sheet,pyhtagoras,pythagorian theorem,theorem,cheat sheet,math,equations,equation,solver,equation solver,linear-systems,linear system, system, equal triangle,similar triangle, mathflare, math-flare, math flare">
@@ -82,15 +84,8 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <h5 class="dropdown-header">Basic Geometry</h5>
                         <a href="perimeter.html" class="dropdown-item"><i class="bi bi-bounding-box"></i> Perimeter Calculator</a>
+                        <a href="area.html" class="dropdown-item aactive"><i class="bi bi-grid-3x3"></i> Area Calculator</a>
                         <a href="diagpolyg.html" class="dropdown-item"><i class="bi bi-slash-square"></i> Diagonal Calculator</a>
-                        <div class="dropdown-divider"></div>
-                        <h5 class="dropdown-header">Area Calculator</h5>
-                        <a href="atriangle.html" class="dropdown-item"><i class="bi bi-triangle"></i> Triangle</a>
-                        <a href="aequtri.html" class="dropdown-item aactive"><i class="bi bi-triangle"></i> Equilateral Triangle</a>
-                        <a href="acircle.html" class="dropdown-item"><i class="bi bi-circle"></i> Circle</a>
-                        <a href="apara.html" class="dropdown-item"><i class="bi bi-file"></i> Parallelogram</a>
-                        <a href="asquare.html" class="dropdown-item"><i class="bi bi-square"></i> Square</a>
-                        <a href="atrapezoid.html" class="dropdown-item"><i class="bi bi-pentagon"></i> Trapezoid</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -171,23 +166,137 @@
     </nav>
     <!-- NAVBAR END -->
     <div class="center">
-        <h1 class="text-white">Equilateral Triangle</h1>
+        <h1 class="text-white">Area Calculator</h1>
         <hr class="bg-danger" style="width: 60%;" />
         <form autocomplete="off">
-        <h4 class="text-white">Enter the equilateral triangle's side</h4>
+        <h4 class="text-white"><i class="bi bi-square"></i> Square</h4>
         <div class="center-form">
-            <input type="number" id="side" placeholder="side" class="form-control mb-0" step="0.01" min="0" />
+            <input type="number" id="squareside" placeholder="side" class="form-control mb-0" step="0.01" />
         </div>
-        <br />
+        <br>
         <div class="center-form">
-            <input type="submit" id="button" class="btn btn-success btn-lg" value="Calculate">
+            <input type="submit" id="squarecalc" class="btn btn-success btn-lg equation" value="Calculate">
         </div>
         </form>
         <br />
         <div style="max-height: 1em;">
-            <p class="text-success" id="output"></p>
+            <p class="text-success" id="squareout"></p>
         </div>
         <br>
+        <div class="my-4">
+            <a href="https://www.google.com/search?q=square+perimeter" target="_blank" rel="noopener" class="btn btn-outline-light">Find information on the web</a>
+        </div>
+        <hr class="bg-danger" style="width: 50%;" />
+        <form autocomplete="off">
+        <h4 class="text-white"><i class="bi bi-file"></i> Parallelogram</h4>
+        <div class="center-form">
+            <input type="number" id="paraw" placeholder="width" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="number" id="parah" placeholder="height" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="submit" id="paracalc" class="btn btn-success btn-lg equation" value="Calculate">
+        </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="paraout"></p>
+        </div>
+        <br>
+        <div class="my-4">
+            <a href="https://www.google.com/search?q=parallelogram+perimeter" target="_blank" rel="noopener" class="btn btn-outline-light">Find information on the web</a>
+        </div>
+        <hr class="bg-danger" style="width: 50%;" />
+        <form autocomplete="off">
+        <h4 class="text-white"><i class="bi bi-triangle"></i> Triangle</h4>
+        <div class="center-form">
+            <input type="number" id="tria" placeholder="segment" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="number" id="trib" placeholder="corresponding height" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="submit" id="tricalc" class="btn btn-success btn-lg equation" value="Calculate">
+        </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="triout"></p>
+        </div>
+        <br>
+        <div class="my-4">
+            <a href="https://www.google.com/search?q=triangle+perimeter" target="_blank" rel="noopener" class="btn btn-outline-light">Find information on the web</a>
+        </div>
+        <hr class="bg-danger" style="width: 50%;" />
+        <form autocomplete="off">
+        <h4 class="text-white"><i class="bi bi-triangle"></i> Equilateral Triangle</h4>
+        <div class="center-form">
+            <input type="number" id="etris" placeholder="side" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="submit" id="etricalc" class="btn btn-success btn-lg equation" value="Calculate">
+        </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="etriout"></p>
+        </div>
+        <br>
+        <div class="my-4">
+            <a href="https://www.google.com/search?q=equilateral+triangle+perimeter" target="_blank" rel="noopener" class="btn btn-outline-light">Find information on the web</a>
+        </div>
+        <hr class="bg-danger" style="width: 50%;" />
+        <form autocomplete="off">
+        <h4 class="text-white"><i class="bi bi-circle"></i> Circle</h4>
+        <div class="center-form">
+            <input type="number" id="circler" placeholder="radius" class="form-control mb-0" step="0.01" />
+        </div>
+        <br>
+        <div class="center-form">
+            <input type="submit" id="circlecalc" class="btn btn-success btn-lg equation" value="Calculate">
+        </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="circleout"></p>
+        </div>
+        <br>
+        <div class="my-4">
+            <a href="https://www.google.com/search?q=circle+perimeter" target="_blank" rel="noopener" class="btn btn-outline-light">Find information on the web</a>
+        </div>
+        <hr class="bg-danger" style="width: 50%;" />
+        <form autocomplete="off">
+            <h4 class="text-white"><i class="bi bi-pentagon"></i> Trapezoid</h4>
+            <div class="center-form">
+                <input type="number" id="trapa" placeholder="small segment" class="form-control mb-0" step="0.01" />
+            </div>
+            <br>
+            <div class="center-form">
+                <input type="number" id="trapb" placeholder="large segment" class="form-control mb-0" step="0.01" />
+            </div>
+            <br>
+            <div class="center-form">
+                <input type="number" id="trapc" placeholder="height" class="form-control mb-0" step="0.01" />
+            </div>
+            <br>
+            <div class="center-form">
+                <input type="submit" id="trapcalc" class="btn btn-success btn-lg equation" value="Calculate">
+            </div>
+            </form>
+            <br />
+            <div style="max-height: 1em;">
+                <p class="text-success" id="trapout"></p>
+            </div>
+            <br>
+            <div class="my-4">
+                <a href="https://www.google.com/search?q=circle+perimeter" target="_blank" rel="noopener" class="btn btn-outline-light">Find information on the web</a>
+            </div>
     </div>
     <!-- SCRIPTS START -->
     <script src="Scripts/jquery-3.0.0.js"></script>
@@ -195,7 +304,8 @@
     <script src="OAuth/SignIn.js"></script>
     <script src="OAuth/SignOut.js"></script>
     <script src="OAuth/OnSignOut.js"></script>
-    <script src="js/aequtri.js"></script>
+    <script src="js/perimeter.js"></script>
+    <script src="js/area.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>

@@ -13,7 +13,6 @@ $(document).ready(() => {
                 `<p class=" text-success">The number of diagonals in this convex ${n}-gon is ${(n * (n - 3)) / 2}</p>`
             );
             $("#vertex").val(null);
-            console.log(Number.isSafeInteger(n))
         }
     });
     $("#button2").click((e) => { 

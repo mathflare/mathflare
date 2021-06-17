@@ -219,7 +219,13 @@ tr {
 #output3,
 #output4,
 #output5,
-#output6 {
+#output6,
+#squareout,
+#paraout,
+#triout,
+#etriout,
+#circleout,
+#trapout {
     /*make the output text bigger along with the line height*/
     font-size: 20px !important;
     line-height: 24px !important;
