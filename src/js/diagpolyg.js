@@ -18,14 +18,21 @@ $(document).ready(() => {
     $("#button2").click((e) => { 
         e.preventDefault();
         const n = $("#sside").val();
-        if (n == "" || n <= 0) {
+        if (n == "") {
             $("#output2").html(
                 `<p class=" text-warning">Please enter a valid value</p>`
             );
             $("#sside").val(null);
-        } else {
+        } 
+        else if (n <= 0) {
             $("#output2").html(
-                `<p class=" text-success">The lenght of the diagonal is &#8764;${n * Math.sqrt(2)}cm (${n} * &#8730;2)</p>`
+                `<p class=" text-warning">The side must be a positive number</p>`
+            );
+            $("#sside").val(null);
+        }
+        else {
+            $("#output2").html(
+                `<p class=" text-success">The lenght of the diagonal is D = ${n * Math.sqrt(2)}cm (${n} * &#8730;2)</p>`
             );
             $("#sside").val(null);
         }
