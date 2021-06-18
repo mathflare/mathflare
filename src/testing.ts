@@ -1,1 +1,2 @@
-const username:string = 'JohnVass90'
+type JohnVass90 = string;
+const username:JohnVass90 = 'JohnVass90'
