@@ -9,7 +9,7 @@ $(document).ready(() => {
             input.charAt(input.length - 1) == ","
         ) {
             $("#output").html(
-                `<p class="text-warning">Please enter a valid value and use the correct format shown in the example</p>`
+                `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`
             );
             $("#input").val(null);
         } else {

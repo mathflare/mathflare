@@ -90,7 +90,7 @@ $(document).ready(() => {
             $("#trapb").val(null);
             $("#trapc").val(null);
         } else if (a <= 0 || b <= 0) {
-            $("#trapout").html(`<p class="text-warning">The small/large segment and the height must be a positive number</p>`);
+            $("#trapout").html(`<p class="text-warning">Both the small/large segment and the height must be a positive number</p>`);
             $("#trapa").val(null);
             $("#trapb").val(null);
             $("#trapc").val(null);

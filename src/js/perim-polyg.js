@@ -9,7 +9,7 @@ $(document).ready(() => {
             input.charAt(input.length - 1) == ","
         ) {
             $("#output6").html(
-                `<p class="text-warning">Please enter a valid value and use the correct format shown in the example</p>`
+                `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`
             );
             $("#sides").val(null);
         } else {
@@ -23,7 +23,7 @@ $(document).ready(() => {
             }
             if (hasNegative) {
                 $("#output6").html(
-                    `<p class="text-warning">Please enter a valid value</p>`
+                    `<p class="text-warning">All of the segments must be a positive number</p>`
                 );
                 $("#sides").val(null);
             } else if (array.length < 3) {
