@@ -141,4 +141,75 @@ $(document).ready(function () {
         }
     });
 });
+
+
+//PRIGHTSIDE FIRST WAY
+
+$(document).ready(() => {
+    $("#button").click((e) => {
+        e.preventDefault();
+        const hypo = $("#hypo").val();
+        const side = $("#side").val();
+        console.log(hypo);
+        console.log(side);
+
+        if (side === "" && hypo === "") {
+            $("#output").html(
+                `<p class="text-warning">Leg and Hypo cannot be empty</p>`
+            );
+            $("#hypo").val(null);
+            $("#side").val(null);
+        } else if (side < 0 && hypo < 0) {
+            $("#output").html(
+                `<p class="text-warning">Leg and Hypo Must be Greater Than Zero</p>`
+            );
+            $("#hypo").val(null);
+            $("#side").val(null);
+        } else if (side === "") {
+            $("#output").html(
+                `<p class="text-warning">Leg cannot be empty</p>`
+            );
+            $("#hypo").val(null);
+            $("#side").val(null);
+        } else if (hypo === "") {
+            $("#output").html(
+                `<p class="text-warning">Hypo cannot be empty</p>`
+            );
+            $("#hypo").val(null);
+            $("#side").val(null);
+        } else if (side < 0) {
+            $("#output").html(
+                `<p class="text-warning">Leg Must be Greater Than Zero</p>`
+            );
+            $("#hypo").val(null);
+            $("#side").val(null);
+        } else if (hypo < 0) {
+            $("#output").html(
+                `<p class="text-warning">Hypo Must be Greater Than Zero</p>`
+            );
+            $("#hypo").val(null);
+            $("#side").val(null);
+        } else if (side > hypo) {
+            $("#output").html(
+                `<p class="text-warning">The leg cannot be larger than or equal to the hypotenuse</p>`
+            );
+            $("#hypo").val(null);
+            $("#side").val(null);
+        } else {
+            $("#output").html(
+                `<p class="text-success">The other leg is ${Math.sqrt(
+                    hypo ** 2 - side ** 2
+                )}cm</p>`
+            );
+        }
+        $("#hypo").val(null);
+        $("#side").val(null);
+    });
+    $(".show-formula").click(() => {
+        $("#formula").fadeToggle(500);
+    });
+});
+
+
+
 //copyright (c) 2021 MathFlare LLC. - All rights reserved.
