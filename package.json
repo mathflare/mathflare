@@ -1,0 +1,23 @@
+{
+  "name": "mathflare",
+  "version": "3.0.0",
+  "description": "the go-to website for algebra and geometry",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathflare/mathflare.git"
+  },
+  "author": "MathFlare LLC.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mathflare/mathflare/issues"
+  },
+  "homepage": "https://www.mathflare.tk",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

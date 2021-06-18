@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SEO -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MathFlare - Temperature Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="MathFlare">
+    <meta name="keywords" content="liquidgeometry,liquid geometry,liquid-geometry,geometry,mathematics,math,algebra,unitconverter,unit converter,converter,calculator,area calculator,shapes,geometry,geometrical,highschool,math cheat sheet,pyhtagoras,pythagorian theorem,theorem,cheat sheet,math,equations,equation,solver,equation solver,linear-systems,linear system, system, equal triangle,similar triangle, mathflare, math-flare, math flare">
+    <meta name="description" content="The go-to site for geometry and mathematics. Area calculator, Pythagorean theorem solver, unit converter and many more!" />
+    <meta name="author" content="MathFlare LLC." />
+    <meta name="og:url" content="https://www.mathflare.tk" />
+    <meta name="og:title" content="MathFlare" />
+    <meta name="og:description" content="The go-to site for geometry and mathematics. Area calculator, Pythagorean theorem solver, unit converter and many more!" />
+    <meta name="og:image" content="Assets/logo.png" />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:locale" content="website" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="MathFlare" />
+    <meta name="twitter:description" content="The go-to site for geometry and mathematics. Area calculator, Pythagorean theorem solver, unit converter and many more!" />
+    <!-- OAuth -->
+    <meta name="google-signin-client_id" content="574643928295-tftr9maiaoejhtngs28jhdga6v3eueah.apps.googleusercontent.com">
+    <!-- STYLES -->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Styles/Footer.css" rel="stylesheet" />
+    <link href="Styles/Profile.css" rel="stylesheet" />
+    <link href="Styles/Scrollbar.css" rel="stylesheet" />
+    <link href="Styles/Site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="Assets/favicon.ico">
+    <!-- SCRIPTS -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- GOOGLE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7W2S8VV31F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7W2S8VV31F');
+    </script>
+</head>
+<body>
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.mathflare.tk">MathFlare</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contact
+                        <i class="bi bi-caret-down-fill"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a href="contact.html" class="dropdown-item"><i class="bi bi-telephone-fill"></i> Contact Form</a>
+                        <a href="https://github.com/mathflare" target="_blank" class="dropdown-item"><i class="bi bi-github"></i> GitHub</a>
+                        <a href="mailto:liquid-geometry@dkatsios.tk" target="_blank" class="dropdown-item"><i class="bi bi-envelope-fill"></i> Email</a>
+                        <a href="https://discord.com/invite/VwvQNYzU5M" target="_blank" class="dropdown-item"><i class="bi bi-discord"></i> Discord</a>
+                        <a href="https://twitter.com/damik_raw" target="_blank" class="dropdown-item"><i class="bi bi-twitter"></i> Twitter</a>
+                        <a href="https://www.instagram.com/mathflare/" class="dropdown-item"><i class="bi bi-instagram"></i> Instagram</a>
+                        <a href="https://api.mathflare.tk" target="_blank" class="dropdown-item"><i class="bi bi-hdd-stack-fill"></i> REST API</a>
+                        <a href="https://developers.mathflare.tk" target="_blank" class="dropdown-item"><i class="bi bi-code-slash"></i> For Developers</a>
+                        <a href="https://github.com/mathflare/mathflare" target="_blank" class="dropdown-item"><i class="bi bi-terminal-fill"></i> Clone the Repo</a>
+                        <a href="https://github.com/mathflare/mathflare/issues" target="_blank" class="dropdown-item"><i class="bi bi-bug-fill"></i> Report a Bug</a>
+                        <a href="https://github.com/mathflare/mathflare/issues" target="_blank" class="dropdown-item"><i class="bi bi-lightbulb-fill"></i> Suggest an Edit</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Geometry
+                        <i class="bi bi-caret-down-fill"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <h5 class="dropdown-header">Basic Geometry</h5>
+                        <a href="perimeter.html" class="dropdown-item"><i class="bi bi-bounding-box"></i> Perimeter Calculator</a>
+                        <a href="area.html" class="dropdown-item"><i class="bi bi-grid-3x3"></i> Area Calculator</a>
+                        <a href="diagpolyg.html" class="dropdown-item"><i class="bi bi-slash-square"></i> Diagonal Calculator</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Trigognometry
+                        <i class="bi bi-caret-down-fill"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <h5 class="dropdown-header">Pythagorean Theorem</h5>
+                        <a href="phypotenuse.html" class="dropdown-item"><i class="bi bi-symmetry-vertical"></i> Hypotenuse Calculator</a>
+                        <a href="prightside.html" class="dropdown-item"><i class="bi bi-symmetry-vertical"></i> Leg Calculator</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="equaltri.html" class="dropdown-item"><i class="bi bi-symmetry-vertical"></i> Equal Triangles</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Unit Converter
+                        <i class="bi bi-caret-down-fill"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a href="clenght.html" class="dropdown-item"><i class="bi bi-rulers"></i> Lenght</a>
+                        <a href="cdata.html" class="dropdown-item"><i class="bi bi-server"></i> Data</a>
+                        <a href="cvolume.html" class="dropdown-item"><i class="bi bi-box"></i> Volume</a>
+                        <a href="ctime.html" class="dropdown-item"><i class="bi bi-clock-fill"></i> Time</a>
+                        <a href="ctemp.html" class="dropdown-item aactive"><i class="bi bi-thermometer"></i> Temperature</a>
+                        <a href="cspeed.html" class="dropdown-item"><i class="bi bi-speedometer"></i> Speed</a>
+                        <a href="cweight.html" class="dropdown-item"><i class="bi bi-minecart-loaded"></i> Weight</a>
+                        <a href="cenergy.html" class="dropdown-item"><i class="bi bi-lightning-fill"></i> Energy</a>
+                        <a href="cpower.html" class="dropdown-item"><i class="bi bi-battery-half"></i> Power</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Account
+                        <i class="bi bi-caret-down-fill"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a href="" class="dropdown-item"><div class="g-signin2" data-onsuccess="onSignIn"></div></a>
+                        <a href="" class="dropdown-item"><i class="bi bi-person-circle"></i> <span id="display">Not Signed In</span></a>
+                        <a href="" class="dropdown-item" onclick="signOut();" id="signout"><i class="bi bi-door-closed"></i> Sign out</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="stats.html" class="dropdown-item"><i class="bi bi-graph-up"></i> Stats</a>
+                        <div class="dropdown-divider"></div>
+                        <h5 class="dropdown-header">Legal</h5>
+                        <a href="tos.html" class="dropdown-item"><i class="bi bi-card-checklist"></i> Terms of Use</a>
+                        <a href="license.html" class="dropdown-item"><i class="bi bi-credit-card-2-front"></i> Software License</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Algebra
+                        <i class="bi bi-caret-down-fill"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <h5 class="dropdown-header">Basic Algebra</h5>
+                        <a href="logar.html" class="dropdown-item"><i class="bi bi-percent"></i> Logarithms</a>
+                        <a href="sqrt.html" class="dropdown-item"><i class="bi bi-calculator"></i> Square Root Calculator</a>
+                        <a href="cbrt.html" class="dropdown-item"><i class="bi bi-calculator"></i> Cube Root Calculator</a>
+                        <a href="pow.html" class="dropdown-item"><i class="bi bi-power"></i> Exponents(powers)</a>
+                        <a href="avg.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Average Calculator</a>
+                        <a href="percent.html" class="dropdown-item"><i class="bi bi-percent"></i> Percentage Calculator</a>
+                        <div class="dropdown-divider"></div>
+                        <h5 class="dropdown-header">Equations</h5>
+                        <a href="equations.html" class="dropdown-item"><i class="bi bi-percent"></i> 1st Degree</a>
+                        <a href="equations-second.html" class="dropdown-item"><i class="bi bi-percent"></i> 2nd Degree</a>
+                        <div class="dropdown-divider"></div>
+                        <h5 class="dropdown-header">Systems of Equations</h5>
+                        <a href="linear-systems.html" class="dropdown-item"><i class="bi bi-border-width"></i> Linear Systems</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="formulas.html"><i class="bi bi-book"></i> Formulas</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <!-- NAVBAR END -->
+    <div class="center mb-5">
+        <h1 class="text-white title">Temperature Converter</h1>
+        <hr class="bg-danger" style="width: 60%;" />
+        <h4 class="text-white m-2">Fahrenheit</h4>
+        <div class="center-form">
+            <input id="inputFahrenheit" class="form-control mb-0" type="number" min="-459.66999999999996" placeholder="Fahrenheit" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
+        </div>
+        <h4 class="text-white m-2">Celcius</h4>
+        <div class="center-form">
+            <input id="inputCelsius" class="form-control mb-0" type="number" min="-273.15" placeholder="Celsius" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
+        </div>
+        <h4 class="text-white m-2">Kelvin</h4>
+        <div class="center-form">
+            <input id="inputKelvin" class="form-control mb-0" type="number" min="0" placeholder="Kelvin" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
+        </div>
+    </div>
+    <!-- SCRIPTS START -->
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="dist/SignIn.js"></script>
+    <script src="dist/SignOut.js"></script>
+    <script src="dist/OnSignOut.js"></script>
+    <script src="dist/ctemp.js"></script>
+    <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
+    <!-- SCRIPT END -->
+</body>
+</html>
