@@ -1,16 +1,21 @@
-$(document).ready(() => {
-    $("#button").click((e) => { 
-        e.preventDefault();
-        const base = $("#base").val();
-        const exponent = $("#exp").val();
-        if (base == "" || exponent == "") {
-            $("#output").html(`<p class="text-warning">Please enter a valid value</p>`);
-            $("#base").val(null);
-            $("#exp").val(null);
-        } else {
-            $("#output").html(`<p class="text-success">${base}<sup>${exponent}</sup> = ${Math.pow(base, exponent)}</p>`);
-            $("#base").val(null);
-            $("#exp").val(null);
-        }   
-    });
+"use strict";
+document.getElementById('button').addEventListener('click', (event) => {
+    event.preventDefault();
+    const base = parseFloat(document.getElementById('base').value);
+    const exp = parseFloat(document.getElementById('exp').value);
+    if (isNaN(base) || isNaN(exp)) {
+        document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        document.getElementById('base').value = "";
+        document.getElementById('exp').value = "";
+    }
+    else if (base == 0 && exp < 0) {
+        document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        document.getElementById('base').value = "";
+        document.getElementById('exp').value = "";
+    }
+    else {
+        document.getElementById('output').innerHTML = `<p class="text-success">${base}<sup>${exp}</sup> = ${Math.pow(base, exp)}</p>`;
+        document.getElementById('base').value = "";
+        document.getElementById('exp').value = "";
+    }
 });
