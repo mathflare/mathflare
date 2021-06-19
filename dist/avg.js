@@ -1,30 +1,38 @@
-//copyright (c) 2021 MathFlare LLC. - All rights reserved.
-$(document).ready(() => {
-    $("#button").click((e) => {
-        e.preventDefault();
-        var input = $("#input").val();
-        if (
-            input == "" ||
-            input.charAt(0) == "," ||
-            input.charAt(input.length - 1) == ","
-        ) {
-            $("#output").html(
-                `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`
-            );
-            $("#input").val(null);
-        } else {
+"use strict";
+document.getElementById('button').addEventListener('click', (event) => {
+    event.preventDefault();
+    var input = document.getElementById('input').value;
+    if (input == "" || input.charAt(0) == "," || input.charAt(input.length - 1) == ",") {
+        document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
+        document.getElementById('input').value = "";
+    }
+    else {
+        var isInvalid = false;
+        for (let i = 0; i < input.length; i++) {
+            if (isNaN(parseFloat(input[i])) && input[i] != ',' && input[i] != ' ') {
+                isInvalid = true;
+                break;
+            }
+        }
+        if (isInvalid) {
+            document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
+            document.getElementById('input').value = "";
+        }
+        else {
             var array = JSON.parse("[" + input + "]");
             var total = 0;
             for (var i = 0; i < array.length; i++) {
                 total += array[i];
             }
-            $("#output").html(
-                `<p class="text-success">The average of all these numbers is ${
-                    total / array.length
-                }</p>`
-            );
-            $("#input").val(null);
+            const avg = total / array.length;
+            if (isNaN(avg)) {
+                document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
+                document.getElementById('input').value = "";
+            }
+            else {
+                document.getElementById('output').innerHTML = `<p class="text-success">The average of all these numbers is ${avg}</p>`;
+                document.getElementById('input').value = "";
+            }
         }
-    });
+    }
 });
-//copyright (c) 2021 MathFlare LLC. - All rights reserved.
