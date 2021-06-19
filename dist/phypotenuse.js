@@ -1,21 +1,21 @@
-﻿$(document).ready(() => {
-    $("#button").click((e) => {
-        e.preventDefault();
-        const fside = $("#fside").val();
-        const sside = $("#sside").val();
-        const result = Math.sqrt((fside * fside) + (sside * sside));
-        if (fside <= 0 || sside <= 0) {
-            $("#output").html(`<p class="text-warning">Please enter a valid value</p>`);
-            $("#fside").val(null);
-            $("#sside").val(null);
-        }
-        else {
-            $("#output").text(`The hypotenuse of the right triangle is ${result}cm`);
-            $("#fside").val(null);
-            $("#sside").val(null);
-        }
-    });
-    $(".show-formula").click(() => {
-        $("#formula").fadeToggle(500);
-    });
+"use strict";
+document.getElementById('button').addEventListener('click', (event) => {
+    event.preventDefault();
+    const firstLeg = parseFloat(document.getElementById('fside').value);
+    const secLeg = parseFloat(document.getElementById('sside').value);
+    if (isNaN(firstLeg) || isNaN(secLeg)) {
+        document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        document.getElementById('fside').value = "";
+        document.getElementById('sside').value = "";
+    }
+    else if (firstLeg <= 0 || secLeg <= 0) {
+        document.getElementById('output').innerHTML = `<p class="text-warning">Both of the legs must be a positive number</p>`;
+        document.getElementById('fside').value = "";
+        document.getElementById('sside').value = "";
+    }
+    else {
+        document.getElementById('output').innerHTML = `<p class="text-success">The hypotenuse of the right triangle is ${Math.sqrt((firstLeg * firstLeg) + (secLeg * secLeg))}cm (&#8764; ${(Math.sqrt((firstLeg * firstLeg) + (secLeg * secLeg))).toFixed(3)})</p>`;
+        document.getElementById('fside').value = "";
+        document.getElementById('sside').value = "";
+    }
 });
