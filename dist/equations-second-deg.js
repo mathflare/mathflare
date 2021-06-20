@@ -89,14 +89,14 @@ document.getElementById('button3').addEventListener('click', (event) => {
         document.getElementById('c3').value = "";
     }
     else if ((a == 0 && b != 0 && c == 0) || (a == 0 && b != 0 && c != 0)) {
-        const x = c / b;
+        const x = -c / b;
         document.getElementById('output3').innerHTML = `<p class="text-success">X = ${x}</p>`;
         document.getElementById('a3').value = "";
         document.getElementById('b3').value = "";
         document.getElementById('c3').value = "";
     }
     else if (a != 0 && b == 0) {
-        const x = Math.sqrt(c / a);
+        const x = Math.sqrt(-c / a);
         document.getElementById('output3').innerHTML = `<p class="text-success">X = &#177;${x}</p>`;
         document.getElementById('a3').value = "";
         document.getElementById('b3').value = "";

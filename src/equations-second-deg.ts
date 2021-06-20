@@ -80,13 +80,13 @@
         (< HTMLInputElement > document.getElementById('b3')).value = "";
         (< HTMLInputElement > document.getElementById('c3')).value = "";
     } else if ((a == 0 && b != 0 && c == 0) || (a == 0 && b != 0 && c != 0)) {
-        const x: number = c / b;
+        const x: number = -c / b;
         (document.getElementById('output3')as HTMLElement).innerHTML = `<p class="text-success">X = ${x}</p>`;
         (< HTMLInputElement > document.getElementById('a3')).value = "";
         (< HTMLInputElement > document.getElementById('b3')).value = "";
         (< HTMLInputElement > document.getElementById('c3')).value = "";
     } else if (a != 0 && b == 0) {
-        const x: number = Math.sqrt(c / a);
+        const x: number = Math.sqrt(-c / a);
         (document.getElementById('output3')as HTMLElement).innerHTML = `<p class="text-success">X = &#177;${x}</p>`;
         (< HTMLInputElement > document.getElementById('a3')).value = "";
         (< HTMLInputElement > document.getElementById('b3')).value = "";
