@@ -7,8 +7,8 @@
         (< HTMLInputElement > document.getElementById('num')).value = "";
     } else {
         if (userSelect == "tofixed") {
-            if (Number.isInteger(num)) {
-                (document.getElementById('output')as HTMLElement).innerHTML = `<p class="text-warning">The number is already rounded</p>`;
+            if (num.toFixed(3) == num) {
+                (< HTMLParagraphElement > document.getElementById('output')).innerHTML = `<p class="text-warning">The number is already rounded</p>`;
                 (< HTMLInputElement > document.getElementById('num')).value = "";
             } else {
                 (document.getElementById('output')as HTMLElement).innerHTML = `<p class="text-success">${num} rounded to the 3<sup>rd</sup> decimal digit is ${
