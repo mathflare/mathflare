@@ -220,43 +220,6 @@
             console.log("%ccourtesy of MathFlare LLC.","color: DodgerBlue; font-weight: 400; font-family:consolas");
         }); 
     </script>
-    <script>
-        //dk why we store it but apparently we do!
-        $(document).ready(() => {
-            var myStorage = window.localStorage, hasSeenIt;
-            $(".btn-close").click((e) => { 
-                e.preventDefault();
-                $(".alert").fadeOut(500);
-                if(!myStorage.getItem("hasSeenIt")){
-                myStorage.setItem('hasSeenIt', true);
-            } else {
-                myStorage.setItem('hasSeenIt', true);
-            }
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(() => {
-            const rdn = Math.floor(Math.random() * 9);
-            if (rdn == 1) {
-                $(".alert").addClass("alert-primary");
-            } else if (rdn == 2) {
-                $(".alert").addClass("alert-secondary");
-            } else if (rdn == 3) {
-                $(".alert").addClass("alert-success");
-            } else if (rdn == 4) {
-                $(".alert").addClass("alert-danger");
-            } else if (rdn == 5) {
-                $(".alert").addClass("alert-warning");
-            } else if (rdn == 6) {
-                $(".alert").addClass("alert-info");
-            } else if (rdn == 7) {
-                $(".alert").addClass("alert-dark");
-            } else {
-                $(".alert").addClass("alert-light");
-            }
-        });
-    </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>
