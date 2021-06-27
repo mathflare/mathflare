@@ -3,7 +3,7 @@ const ctx: any = canvas.getContext("2d")!;
 ctx.translate(canvas.width/2,canvas.height/2);
 ctx.strokeStyle = '#FFFFFF';
 
-//Vertical Referance Line
+//Vertical Reference Line
 ctx.beginPath(); 
 ctx.strokeStyle = '#DC3545';
 ctx.lineWidth = 5;
@@ -11,7 +11,7 @@ ctx.moveTo(0, 300);
 ctx.lineTo(0, -300);
 ctx.stroke();
 
-//Vertical Referance Line
+//Horizontal Reference Line
 ctx.beginPath(); 
 ctx.strokeStyle = '#DC3545';
 ctx.lineWidth = 5;
@@ -19,16 +19,16 @@ ctx.moveTo(300, 0);
 ctx.lineTo(-300, 0);
 ctx.stroke();
 
-//First User Line
+//First Graph Line
 ctx.beginPath();   
 ctx.strokeStyle = '#FFC107';
 ctx.lineWidth = 7;
 ctx.lineCap = "round";
 ctx.moveTo(0, 0);
-ctx.lineTo(245, -365);
+ctx.lineTo(-245, -365);
 ctx.stroke();
 
-//Second User Line
+//Second Graph Line
 ctx.beginPath();   
 ctx.strokeStyle = '#0D6EFD';
 ctx.lineWidth = 7;

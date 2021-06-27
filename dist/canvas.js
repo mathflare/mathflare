@@ -20,7 +20,7 @@ ctx.strokeStyle = '#FFC107';
 ctx.lineWidth = 7;
 ctx.lineCap = "round";
 ctx.moveTo(0, 0);
-ctx.lineTo(245, -365);
+ctx.lineTo(-245, -365);
 ctx.stroke();
 ctx.beginPath();
 ctx.strokeStyle = '#0D6EFD';
