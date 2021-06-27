@@ -14,9 +14,10 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
 
 ## Rules
 
-- All the CSS(colors, displays, positions etc.) must use Bootstrap classes
+- All the CSS(colors, displays, positions, paddings, margins etc.) must be Bootstrap 5 classes
 - Write all custom CSS with comments in the `Site.css` file
-- Use jQuery all the time for DOM operations
+- Use TypeScript all the time.
+- Place TypeScript files in the `src` folder. All the JavaScript files will automagically be compiled in the `dist` folder
 - Use Ajax for all API requests(see example below)
 - Use the excact same navigation bar for all the pages(see example below)
 - Use Bootstrap Icons for all the icons
@@ -24,7 +25,7 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
 - Write clean and formatted code
 - Use opening and closing comment tags to organize the code(see `NAVBAR START`/`NAVBAR END` example)
 - Do not leave empty lines or a ton of comments in the code(Include all extra info on the PR message)
-- Make sure everything still works by running it locally before opening a PR (we reccomend installing [`reload`](https://github.com/alallier/reload#installation))
+- Make sure everything still works by running it locally before opening a PR (to run locally just hit `npm start`)
 
 ## Examples
 
@@ -35,8 +36,8 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
 <!-- NAVBAR START -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-        <a class="navbar-brand" href="https://www.liquidgeometry.tk">Liquid Geometry</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="https://www.mathflare.tk">MathFlare</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -45,39 +46,36 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
                     <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Contact
                         <i class="bi bi-caret-down-fill"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a href="contact.html" class="dropdown-item"><i class="bi bi-telephone-fill"></i> Contact Form</a>
-                        <a href="https://github.com/liquid-geometry" target="_blank" class="dropdown-item"><i class="bi bi-github"></i> GitHub</a>
-                        <a href="mailto:liquid-geometry@dkatsios.tk" target="_blank" class="dropdown-item"><i class="bi bi-envelope-fill"></i> Email</a>
-                        <a href="https://discord.com/invite/VwvQNYzU5M" target="_blank" class="dropdown-item"><i class="bi bi-discord"></i> Discord</a>
-                        <a href="https://twitter.com/damik_raw" target="_blank" class="dropdown-item"><i class="bi bi-twitter"></i> Twitter</a>
-                        <a href="https://www.instagram.com/liquid_geometry/" class="dropdown-item"><i class="bi bi-instagram"></i> Instagram</a>
-                        <a href="https://api.liquidgeometry.tk" target="_blank" class="dropdown-item"><i class="bi bi-hdd-stack-fill"></i> REST API</a>
-                        <a href="https://developers.liquidgeometry.tk" target="_blank" class="dropdown-item"><i class="bi bi-code-slash"></i> For Developers</a>
-                        <a href="https://github.com/liquid-geometry/liquidgeometry" target="_blank" class="dropdown-item"><i class="bi bi-terminal-fill"></i> Clone the Repo</a>
-                        <a href="https://github.com/liquid-geometry/liquidgeometry/issues" target="_blank" class="dropdown-item"><i class="bi bi-bug-fill"></i> Report a Bug</a>
-                        <a href="https://github.com/liquid-geometry/liquidgeometry/issues" target="_blank" class="dropdown-item"><i class="bi bi-lightbulb-fill"></i> Suggest an Edit</a>
+                        <a href="https://github.com/mathflare" target="_blank" class="dropdown-item"><i class="bi bi-github"></i> GitHub</a>
+                        <a href="/cdn-cgi/l/email-protection#1b77726a6e727f367c7e74767e6f69625b7f707a6f68727468356f70" target="_blank" class="dropdown-item"><i class="bi bi-envelope-fill"></i> Email</a>
+                        <a href="https://www.instagram.com/mathflare/" class="dropdown-item"><i class="bi bi-instagram"></i> Instagram</a>
+                        <a href="https://api.mathflare.tk" target="_blank" class="dropdown-item"><i class="bi bi-hdd-stack-fill"></i> REST API</a>
+                        <a href="https://developers.mathflare.tk" target="_blank" class="dropdown-item"><i class="bi bi-code-slash"></i> For Developers</a>
+                        <a href="https://github.com/mathflare/mathflare" target="_blank" class="dropdown-item"><i class="bi bi-terminal-fill"></i> Clone the Repo</a>
+                        <a href="https://github.com/mathflare/mathflare/issues" target="_blank" class="dropdown-item"><i class="bi bi-bug-fill"></i> Report a Bug</a>
+                        <a href="https://github.com/mathflare/mathflare/issues" target="_blank" class="dropdown-item"><i class="bi bi-lightbulb-fill"></i> Suggest an Edit</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Area Calculator
+                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Geometry
                         <i class="bi bi-caret-down-fill"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a href="atriangle.html" class="dropdown-item"><i class="bi bi-triangle"></i> Triangle</a>
-                        <a href="acircle.html" class="dropdown-item"><i class="bi bi-circle"></i> Circle</a>
-                        <a href="apara.html" class="dropdown-item"><i class="bi bi-file"></i> Parallelogram</a>
-                        <a href="asquare.html" class="dropdown-item"><i class="bi bi-square"></i> Square</a>
-                        <a href="atrapezoid.html" class="dropdown-item"><i class="bi bi-pentagon"></i> Trapezoid</a>
+                        <h5 class="dropdown-header">Basic Geometry</h5>
+                        <a href="perimeter.html" class="dropdown-item"><i class="bi bi-bounding-box"></i> Perimeter Calculator</a>
+                        <a href="area.html" class="dropdown-item"><i class="bi bi-grid-3x3"></i> Area Calculator</a>
+                        <a href="diagpolyg.html" class="dropdown-item"><i class="bi bi-slash-square"></i> Diagonal Calculator</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Trigognometry
                         <i class="bi bi-caret-down-fill"></i>
                     </a>
@@ -90,7 +88,7 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Unit Converter
                         <i class="bi bi-caret-down-fill"></i>
                     </a>
@@ -107,7 +105,7 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Account
                         <i class="bi bi-caret-down-fill"></i>
                     </a>
@@ -124,11 +122,19 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Algebra
                         <i class="bi bi-caret-down-fill"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <h5 class="dropdown-header">Basic Algebra</h5>
+                        <a href="logar.html" class="dropdown-item"><i class="bi bi-percent"></i> Logarithms</a>
+                        <a href="sqrt.html" class="dropdown-item"><i class="bi bi-calculator"></i> Square Root Calculator</a>
+                        <a href="cbrt.html" class="dropdown-item"><i class="bi bi-calculator"></i> Cube Root Calculator</a>
+                        <a href="pow.html" class="dropdown-item"><i class="bi bi-power"></i> Exponents(powers)</a>
+                        <a href="avg.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Average Calculator</a>
+                        <a href="percent.html" class="dropdown-item"><i class="bi bi-percent"></i> Percentage Calculator</a>
+                        <div class="dropdown-divider"></div>
                         <h5 class="dropdown-header">Equations</h5>
                         <a href="equations.html" class="dropdown-item"><i class="bi bi-percent"></i> 1st Degree</a>
                         <a href="equations-second.html" class="dropdown-item"><i class="bi bi-percent"></i> 2nd Degree</a>
@@ -148,49 +154,16 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
 
 ```
 
-### jQuery DOM operation
-
-```JS
-
-$(document).ready(function () {
-    $("#button").click(calculation = (e) => {
-        e.preventDefault();
-        const lside = $("#lside").val(); //stores the current value of each input
-        const sside = $("#sside").val();
-        const height = $("#height").val();
-        const result = ((parseFloat(lside) + parseFloat(sside)) * parseFloat(height)) / 2; //calculates the result
-        if (lside <= 0 || sside <= 0 || height <= 0) { //checks for non valid values
-            $("#output").text("Please enter a valid value"); //dispalys error message
-            $("#lside").val(1); //sets all the values to 1
-            $("#sside").val(1);
-            $("#height").val(1);
-        }
-        else {
-            $("#output").text("The area of the trapezoid is " + result + " cm^2"); //displays the result
-            $("#lside").val(1); //sets all the values to 1
-            $("#sside").val(1);
-            $("#height").val(1);
-        }
-    });
-    $(".show-formula").click(function () {
-        $("#formula").fadeToggle(500); //makes the formula visible on click
-    });
-});
-
-```
-
-### Ajax GET request
+### Ajax `GET` request(jQuery)
 
 ```JS
 
 $.ajax({
     type: "GET",
-    url: "https://api.github.com/repos/liquid-geometry/liquidgeometry/releases/latest",
+    url: "https://api.github.com/repos/mathflare/mathflare/releases/latest",
     dataType: "json",
     success: function (response) {
-        const latest = response.tag_name;
-        console.log('the latest release is ' + latest)
-        $("#latest").text(latest);
+        console.log('the latest release is ' + response.tag_name)
     }
 });
 
