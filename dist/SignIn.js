@@ -1,4 +1,4 @@
-﻿const onSignIn = (googleUser) => {
+﻿function onSignIn (googleUser) {
   var profile = googleUser.getBasicProfile();
   var current = new Date();
   var PhotoUrl = profile.getImageUrl();
@@ -8,7 +8,6 @@
   console.log("User signed in at " + current);
   console.log("Name: " + profile.getName());
   console.log("ID: " + profile.getId());
-  console.log("Image URL: " + PhotoUrl);
   console.log("Email: " + profile.getEmail());
   console.log("User Agent: " + UserAgent);
 };
