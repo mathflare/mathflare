@@ -6,7 +6,6 @@ $(document).ready(() => {
         success: function (response) {
             const latest = response.tag_name;
             console.log('the latest release is ' + latest)
-            //$("#latest").text('v' +latest); removed it on version 3.1 maybe we should add it again? who knows....
         }
     }); 
 });
