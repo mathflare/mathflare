@@ -24,7 +24,7 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
 - Ask us first if you want to use any external library
 - Write clean and formatted code
 - Use opening and closing comment tags to organize the code(see `NAVBAR START`/`NAVBAR END` example)
-- Do not leave empty lines or a ton of comments in the code(Include all extra info on the PR message)
+- Files get minified and comments removed on both TypeScript, CSS and HTML in the production build. Don't be afraid to leave empty lines or comments in the code(as long as it is not the entire bee movie script)
 - Make sure everything still works by running it locally before opening a PR (to run locally just hit `npm start`)
 
 ## Examples
