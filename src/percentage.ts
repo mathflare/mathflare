@@ -61,3 +61,75 @@
         }
     }
 });
+
+(document.getElementById('button4')as HTMLButtonElement).addEventListener('click', (event) => {
+    event.preventDefault();
+    const userSelect: string = (< HTMLSelectElement > document.getElementById('select')).value !;
+    const init: number = parseFloat((< HTMLInputElement > document.getElementById('init4')).value)!;
+    const disc: number = parseFloat((< HTMLInputElement > document.getElementById('disc4')).value)!;
+    if (userSelect == "inc") {
+        if (isNaN(init) || isNaN(disc)) {
+            (document.getElementById('output4')as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+            (< HTMLInputElement > document.getElementById('init4')).value = "";
+            (< HTMLInputElement > document.getElementById('disc4')).value = "";
+        } else if (disc == 0) {
+            (document.getElementById('output4')as HTMLElement).innerHTML = `<p class="text-warning">There is no increse between ${init} and ${init}</p>`;
+            (< HTMLInputElement > document.getElementById('init4')).value = "";
+            (< HTMLInputElement > document.getElementById('disc4')).value = "";
+        } else {
+            (document.getElementById('output4')as HTMLElement).innerHTML = `<p class="text-success">The final value is ${(init * disc / 100) + init}</p>`;
+            (< HTMLInputElement > document.getElementById('init4')).value = "";
+            (< HTMLInputElement > document.getElementById('disc4')).value = "";
+        }
+    } else if (userSelect == "dec") {
+        if (isNaN(init) || isNaN(disc)) {
+            (document.getElementById('output4')as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+            (< HTMLInputElement > document.getElementById('init4')).value = "";
+            (< HTMLInputElement > document.getElementById('disc4')).value = "";
+        } else if (disc == 0) {
+            (document.getElementById('output4')as HTMLElement).innerHTML = `<p class="text-warning">There is no decrease between ${init} and ${init}</p>`;
+            (< HTMLInputElement > document.getElementById('init4')).value = "";
+            (< HTMLInputElement > document.getElementById('disc4')).value = "";
+        } else {
+            (document.getElementById('output4')as HTMLElement).innerHTML = `<p class="text-success">The final value is ${init - (init * disc / 100)}</p>`;
+            (< HTMLInputElement > document.getElementById('init4')).value = "";
+            (< HTMLInputElement > document.getElementById('disc4')).value = "";
+        }
+    }
+});
+
+(document.getElementById('button5')as HTMLButtonElement).addEventListener('click', (event) => {
+    event.preventDefault();
+    const userSelect: string = (< HTMLSelectElement > document.getElementById('select2')).value !;
+    const fin: number = parseFloat((< HTMLInputElement > document.getElementById('fin5')).value)!;
+    const disc: number = parseFloat((< HTMLInputElement > document.getElementById('disc5')).value)!;
+    if (userSelect == "inc") {
+        if (isNaN(fin) || isNaN(disc)) {
+            (document.getElementById('output5')as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+            (< HTMLInputElement > document.getElementById('fin5')).value = "";
+            (< HTMLInputElement > document.getElementById('disc5')).value = "";
+        } else if (disc == 0) {
+            (document.getElementById('output5')as HTMLElement).innerHTML = `<p class="text-warning">There is no increse between ${fin} and ${fin}</p>`;
+            (< HTMLInputElement > document.getElementById('fin5')).value = "";
+            (< HTMLInputElement > document.getElementById('disc5')).value = "";
+        } else {
+            (document.getElementById('output5')as HTMLElement).innerHTML = `<p class="text-success">The initial value is ${fin / (1 + disc / 100)}</p>`;
+            (< HTMLInputElement > document.getElementById('fin5')).value = "";
+            (< HTMLInputElement > document.getElementById('disc5')).value = "";
+        }
+    } else if (userSelect == "dec") {
+        if (isNaN(fin) || isNaN(disc)) {
+            (document.getElementById('output5')as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+            (< HTMLInputElement > document.getElementById('fin5')).value = "";
+            (< HTMLInputElement > document.getElementById('disc5')).value = "";
+        } else if (disc == 0) {
+            (document.getElementById('output5')as HTMLElement).innerHTML = `<p class="text-warning">There is no decrease between ${fin} and ${fin}</p>`;
+            (< HTMLInputElement > document.getElementById('fin5')).value = "";
+            (< HTMLInputElement > document.getElementById('disc5')).value = "";
+        } else {
+            (document.getElementById('output5')as HTMLElement).innerHTML = `<p class="text-success">The initial value is ${fin / (1 - disc / 100)}</p>`;
+            (< HTMLInputElement > document.getElementById('fin5')).value = "";
+            (< HTMLInputElement > document.getElementById('disc5')).value = "";
+        }
+    }
+});

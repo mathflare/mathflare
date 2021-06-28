@@ -26,33 +26,69 @@ document.getElementById('button').addEventListener('click', (event) => {
         document.getElementById('output').innerHTML = `<p class="text-warning">The system is indefinite: x &#8714; R , y &#8714; R</p>`;
         clearValues();
     }
-    else if ((a1 == 0 && b1 == 0 && c1 == 0 && a2 == 0 && b2 == 0 && c2 != 0) || (a1 == 0 && b1 == 0 && c1 != 0 && a2 == 0 && b2 == 0 && c2 == 0)) {
+    else if (a1 == 0 && b1 == 0 && c1 != 0 || a2 == 0 && b2 == 0 && c2 != 0) {
         document.getElementById('output').innerHTML = `<p class="text-warning">The system is a contradiction: it has no solutions</p>`;
         clearValues();
     }
-    else if ((D == 0 && Dx != 0) || (D == 0 && Dy != 0)) {
+    else if (D == 0 && Dx != 0 || D == 0 && Dy != 0) {
         document.getElementById('output').innerHTML = `<p class="text-warning">The system is a contradiction: it has no solutions</p>`;
         clearValues();
     }
     else if (D == 0 && Dx == 0 && Dy == 0) {
-        if (a1 == 0 && b1 == 0 && c1 == 0 && a2 != 0 && b2 != 0 && c2 != 0) {
-            document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions (x,y) = (k , ${c2 / b2} ${-a2 / b2}k) k &#8714; R</p>`;
-            clearValues();
+        if (a1 == 0 && b1 == 0 && c1 == 0) {
+            if (a2 != 0 && b2 == 0) {
+                document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (${c2 / a2} , k) k &#8714; R</p>`;
+                clearValues();
+            }
+            else if (a2 == 0 && b2 != 0) {
+                document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${c2 / b2}) k &#8714; R</p>`;
+                clearValues();
+            }
+            else if (a2 != 0 && b2 != 0) {
+                if (c2 == 0) {
+                    document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${-b2 / a2}k) k &#8714; R</p>`;
+                    clearValues();
+                }
+                else {
+                    document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${c2 / a2}${-b2 / a2}k) k &#8714; R</p>`;
+                    clearValues();
+                }
+            }
         }
-        else if (c1 == 0 && c2 == 0 && a1 / a2 == b1 / b2) {
-            document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${-a1 / b1}k) k &#8714; R</p>`;
-            clearValues();
+        else if (a2 == 0 && b2 == 0 && c2 == 0) {
+            if (a1 != 0 && b1 == 0) {
+                document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (${c1 / a1} , k) k &#8714; R</p>`;
+                clearValues();
+            }
+            else if (a1 == 0 && b1 != 0) {
+                document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${c1 / b1}) k &#8714; R</p>`;
+                clearValues();
+            }
+            else if (a1 != 0 && b1 != 0) {
+                if (c1 == 0) {
+                    document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${-b1 / a1}k) k &#8714; R</p>`;
+                    clearValues();
+                }
+                else {
+                    document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${c1 / a1}${-b1 / a1}k) k &#8714; R</p>`;
+                    clearValues();
+                }
+            }
         }
-        else if (a1 == 0 && a2 == 0 && b1 / b2 == c1 / c2) {
+        else if (a1 == 0 && b1 != 0 && a2 == 0 && b2 != 0) {
             document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${c1 / b1}) k &#8714; R</p>`;
             clearValues();
         }
-        else if (b1 == 0 && b2 == 0 && a1 / a2 == c1 / c2) {
-            document.getElementById('output').innerHTML = `<p class="text-warning">The system is a contradiction: it has no solutions</p>`;
+        else if (a1 != 0 && b1 == 0 && a2 != 0 && b2 == 0) {
+            document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (${c1 / a1} , k) k &#8714; R</p>`;
+            clearValues();
+        }
+        else if (a1 != 0 && b1 != 0 && c1 == 0) {
+            document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${-b1 / a1}k) k &#8714; R</p>`;
             clearValues();
         }
         else {
-            document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions (x,y) = (k , ${c1 / b1} ${-a1 / b1}k) k &#8714; R</p>`;
+            document.getElementById('output').innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${c1 / a1}${-b1 / a1}k) k &#8714; R</p>`;
             clearValues();
         }
     }
