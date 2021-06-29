@@ -7,7 +7,7 @@
     } else {
         let isInvalid: boolean = false;
         for (let i : number = 0; i < input.length; i++) {
-            if (isNaN(parseFloat(input[i])) && input[i] != ',' && input[i] != ' ') {
+            if (isNaN(parseFloat(input[i])) && input[i] != ',' && input[i] != ' ' || (input[i] == ',' && input[i + 1] == ',')) {
                 isInvalid = true;
                 break;
             }

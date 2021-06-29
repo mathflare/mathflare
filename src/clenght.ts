@@ -1,15 +1,14 @@
-"use strict";
-const lengthConverter = (source, valNum) => {
-    valNum = parseFloat(valNum);
-    const inputFeet = document.getElementById("inputFeet");
-    const inputMeters = document.getElementById("inputMeters");
-    const inputInches = document.getElementById("inputInches");
-    const inputcm = document.getElementById("inputcm");
-    const inputYards = document.getElementById("inputYards");
-    const inputKilometers = document.getElementById("inputKilometers");
-    const inputMiles = document.getElementById("inputMiles");
+const lengthConverter = (source: string, valNum: any) => {
+    valNum = parseFloat(valNum) !;
+    const inputFeet: any = <HTMLInputElement> document.getElementById("inputFeet") !;
+    const inputMeters: any = <HTMLInputElement> document.getElementById("inputMeters") !;
+    const inputInches: any = <HTMLInputElement> document.getElementById("inputInches") !;
+    const inputcm: any = <HTMLInputElement> document.getElementById("inputcm") !;
+    const inputYards: any = <HTMLInputElement> document.getElementById("inputYards") !;
+    const inputKilometers: any = <HTMLInputElement> document.getElementById("inputKilometers") !;
+    const inputMiles: any = <HTMLInputElement> document.getElementById("inputMiles") !;
     if (source == "inputFeet") {
-        inputMeters.value = (valNum / 3.2808).toFixed(2);
+        inputMeters.value = (valNum / 3.2808).toFixed(2); 
         inputInches.value = (valNum * 12).toFixed(2);
         inputcm.value = (valNum / 0.032808).toFixed();
         inputYards.value = (valNum * 0.33333).toFixed(2);
@@ -64,4 +63,4 @@ const lengthConverter = (source, valNum) => {
         inputYards.value = (valNum * 1760).toFixed();
         inputKilometers.value = (valNum / 0.62137).toFixed(2);
     }
-};
+}

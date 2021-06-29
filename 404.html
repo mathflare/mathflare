@@ -31,14 +31,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="Assets/favicon.ico">
-    <style>
-        .error {
-            display: inline-flex; 
-            padding: 5px;
-            border-radius: 5px;
-            background-color: var(--bs-danger);
-        }
-    </style>
     <!-- SCRIPTS -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <!-- GOOGLE ANALYTICS -->
@@ -174,24 +166,14 @@
     <!-- NAVBAR END -->
     <div class="dead-center">
         <h1 class="text-white">Oops!</h1>
-        <img src="Assets/oops.png" alt="Hmmm...." style="width: 15rem; height: auto" />
+        <img src="Assets/oops.png" alt="Hmmm...." style="width: 34%; height: auto" />
         <div>
             <h2 class="text-white d-inline-flex bg-danger p-1 rounded mb-3">Error 404</h2>
         </div>
         <h4 class="text-white">it seems that the page <i id="url"></i> does not exist on this server...</h4>
-        <div class="d-inline-flex">
-            <form action="index.html">
-                <button class="btn btn-primary m-1">
-                    <i class="bi bi-house"></i>
-                    Go to the Home Page
-                </button>
-            </form>
-            <form action="https://github.com/liquid-geometry/liquidgeometry/issues" target="_blank">
-                <button class="btn btn-warning m-1">
-                    <i class="bi bi-bug-fill"></i>
-                    Report a Bug
-                </button>
-            </form>
+        <div class="d-inline-flex mb-2">
+            <a href="./index.html" class="btn btn-primary m-1"><i class="bi bi-house"></i> Go to the Home Page</a>
+            <a href="https://github.com/liquid-geometry/liquidgeometry/issues" target="_blank" rel="noopener" class="btn btn-warning m-1"><i class="bi bi-bug-fill"></i> Report a Bug</a>
         </div>
     </div>
     <!-- SCRIPTS START -->

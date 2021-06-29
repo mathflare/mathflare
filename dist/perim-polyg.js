@@ -9,7 +9,7 @@ document.getElementById('polyg').addEventListener('click', (event) => {
     else {
         let isInvalid = false;
         for (let i = 0; i < input.length; i++) {
-            if (isNaN(parseFloat(input[i])) && input[i] != ',' && input[i] != ' ') {
+            if (isNaN(parseFloat(input[i])) && input[i] != ',' && input[i] != ' ' || (input[i] == ',' && input[i + 1] == ',')) {
                 isInvalid = true;
                 break;
             }

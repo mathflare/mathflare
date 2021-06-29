@@ -1,11 +1,10 @@
-"use strict";
-const weightConverter = (source, valNum) => {
+const weightConverter = (source: string, valNum: any) => {
     valNum = parseFloat(valNum);
-    const inputPounds = document.getElementById("inputPounds");
-    const inputKilograms = document.getElementById("inputKilograms");
-    const inputOunces = document.getElementById("inputOunces");
-    const inputGrams = document.getElementById("inputGrams");
-    const inputStones = document.getElementById("inputStones");
+    const inputPounds = <HTMLInputElement> document.getElementById("inputPounds") !;
+    const inputKilograms = <HTMLInputElement> document.getElementById("inputKilograms") !;
+    const inputOunces = <HTMLInputElement> document.getElementById("inputOunces") !;
+    const inputGrams = <HTMLInputElement> document.getElementById("inputGrams") !;
+    const inputStones = <HTMLInputElement> document.getElementById("inputStones") !;
     if (source == "inputPounds") {
         inputKilograms.value = (valNum / 2.2046).toFixed(2);
         inputOunces.value = (valNum * 16).toFixed(2);
@@ -36,4 +35,4 @@ const weightConverter = (source, valNum) => {
         inputOunces.value = (valNum * 224).toFixed();
         inputGrams.value = (valNum / 0.00015747).toFixed();
     }
-};
+}

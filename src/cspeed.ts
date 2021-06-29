@@ -1,10 +1,9 @@
-"use strict";
-const speedConverter = (source, valNum) => {
+const speedConverter = (source: string, valNum: any) => {
     valNum = parseFloat(valNum);
-    const inputMPH = document.getElementById("inputMPH");
-    const inputKPH = document.getElementById("inputKPH");
-    const inputKnots = document.getElementById("inputKnots");
-    const inputMach = document.getElementById("inputMach");
+    const inputMPH: any = <HTMLInputElement> document.getElementById("inputMPH") !;
+    const inputKPH: any = <HTMLInputElement> document.getElementById("inputKPH") !;
+    const inputKnots: any = <HTMLInputElement> document.getElementById("inputKnots") !;
+    const inputMach: any = <HTMLInputElement> document.getElementById("inputMach") !;
     if (source == "inputMPH") {
         inputKPH.value = (valNum * 1.609344).toFixed(2);
         inputKnots.value = (valNum / 1.150779).toFixed(2);
@@ -25,4 +24,4 @@ const speedConverter = (source, valNum) => {
         inputKPH.value = (valNum * 1225.044).toFixed();
         inputKnots.value = (valNum * 661.4708).toFixed();
     }
-};
+}
