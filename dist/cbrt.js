@@ -6,10 +6,6 @@ document.getElementById('button').addEventListener('click', (event) => {
         document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         document.getElementById('number').value = "";
     }
-    else if (num <= 0) {
-        document.getElementById('output').innerHTML = `<p class="text-warning">The radicand must be a postive number</p>`;
-        document.getElementById('number').value = "";
-    }
     else {
         document.getElementById('output').innerHTML = `<p class="text-success">&#8731;${num} = ${Math.cbrt(num)} (&#8764; ${Math.cbrt(num).toFixed(3)})</p>`;
         document.getElementById('number').value = "";

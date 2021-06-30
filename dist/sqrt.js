@@ -6,7 +6,7 @@ document.getElementById('button').addEventListener('click', (event) => {
         document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         document.getElementById('number').value = "";
     }
-    else if (num <= 0) {
+    else if (num < 0) {
         document.getElementById('output').innerHTML = `<p class="text-warning">The radicand must be a postive number</p>`;
         document.getElementById('number').value = "";
     }

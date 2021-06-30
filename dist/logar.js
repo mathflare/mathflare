@@ -24,3 +24,23 @@ document.getElementById('button').addEventListener('click', (event) => {
         document.getElementById('base').value = "10";
     }
 });
+document.getElementById('button2').addEventListener('click', (event) => {
+    event.preventDefault();
+    const num = parseFloat(document.getElementById('natnum').value);
+    if (isNaN(num)) {
+        document.getElementById('output2').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        document.getElementById('natnum').value = "";
+    }
+    else if (num <= 0) {
+        document.getElementById('output2').innerHTML = `<p class="text-warning">The logarithm is an indeterminate</p>`;
+        document.getElementById('natnum').value = "";
+    }
+    else if (num == 1) {
+        document.getElementById('output2').innerHTML = `<p class="text-success">log<sub>e</sub>(${num}) = ${Math.log(num)} (e &#8776; ${Math.E.toFixed(4)})</p>`;
+        document.getElementById('natnum').value = "";
+    }
+    else {
+        document.getElementById('output2').innerHTML = `<p class="text-success">log<sub>e</sub>(${num}) = ${Math.log(num).toFixed(4)} (e &#8776; ${Math.E.toFixed(4)})</p>`;
+        document.getElementById('natnum').value = "";
+    }
+});

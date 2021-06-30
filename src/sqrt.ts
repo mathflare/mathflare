@@ -4,7 +4,7 @@
     if (isNaN(num)) {
         (document.getElementById('output')as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (< HTMLInputElement > document.getElementById('number')).value = "";
-    } else if (num <= 0) {
+    } else if (num < 0) {
         (document.getElementById('output')as HTMLElement).innerHTML = `<p class="text-warning">The radicand must be a postive number</p>`;
         (< HTMLInputElement > document.getElementById('number')).value = "";
     } else {
