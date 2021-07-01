@@ -8,33 +8,28 @@ document.getElementById('button').addEventListener('click', (event) => {
         console.error('empty or not correct format');
     }
     else {
-        var isInvalid = false;
-        for (let i = 0; i < input.length; i++) {
-            if (isNaN(parseFloat(input[i])) && input[i] != ',' && input[i] != ' ') {
+        const array = input.split(',');
+        let isInvalid = false;
+        for (let i = 0; i < array.length; i++) {
+            if (isNaN(parseFloat(array[i]))) {
                 isInvalid = true;
+                break;
             }
         }
         if (isInvalid) {
             document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
-            console.error('invalid ' + isNaN(parseFloat("-4.4")));
             document.getElementById('input').value = "";
+            console.error('NaN');
         }
         else {
-            var array = JSON.parse("[" + input + "]");
-            var total = 0;
+            const array = input.split(',').map(Number);
+            let total = 0;
             for (var i = 0; i < array.length; i++) {
-                total += parseFloat(array[i]);
+                total += array[i];
             }
             const avg = total / array.length;
-            if (isNaN(avg)) {
-                document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
-                document.getElementById('input').value = "";
-                console.error('nan avg');
-            }
-            else {
-                document.getElementById('output').innerHTML = `<p class="text-success">The average of all these numbers is ${avg}</p>`;
-                document.getElementById('input').value = "";
-            }
+            document.getElementById('output').innerHTML = `<p class="text-success">The average of all these numbers is ${avg}</p>`;
+            document.getElementById('input').value = "";
         }
     }
 });

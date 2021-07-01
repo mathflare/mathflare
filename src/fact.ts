@@ -13,7 +13,7 @@
             f = f * i;
         }
         if (f === Number.POSITIVE_INFINITY) {
-            (document.getElementById('output') as HTMLElement).innerHTML = `<p class="text-warning">The number is too large</p>`;
+            (document.getElementById('output') as HTMLElement).innerHTML = `<p class="text-warning">The number is too large!</p>`;
             (<HTMLInputElement>document.getElementById('number')).value = "";
         } else {
             (document.getElementById('output') as HTMLElement).innerHTML = `<p class="text-success">${num}! = ${f}</p>`;

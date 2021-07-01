@@ -7,9 +7,10 @@ document.getElementById('polyg').addEventListener('click', (event) => {
         document.getElementById('sides').value = "";
     }
     else {
+        const array = input.split(',');
         let isInvalid = false;
-        for (let i = 0; i < input.length; i++) {
-            if (isNaN(parseFloat(input[i])) && input[i] != ',' && input[i] != ' ' || (input[i] == ',' && input[i + 1] == ',')) {
+        for (let i = 0; i < array.length; i++) {
+            if (isNaN(parseFloat(array[i]))) {
                 isInvalid = true;
                 break;
             }
@@ -19,7 +20,7 @@ document.getElementById('polyg').addEventListener('click', (event) => {
             document.getElementById('sides').value = "";
         }
         else {
-            var array = JSON.parse("[" + input + "]");
+            const array = input.split(',').map(Number);
             var hasNegative = false;
             for (let i = 0; i < array.length; i++) {
                 if (array[i] <= 0) {

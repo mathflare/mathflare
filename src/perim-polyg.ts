@@ -1,3 +1,4 @@
+//copyright (c) 2021 MathFlare LLC.
 (document.getElementById('polyg')as HTMLButtonElement).addEventListener('click', (event) => {
     event.preventDefault();
     var input: string = (< HTMLInputElement > document.getElementById('sides')).value !;
@@ -5,9 +6,10 @@
         (document.getElementById('output6')as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
         (< HTMLInputElement > document.getElementById('sides')).value = "";
     } else {
+        const array = input.split(',');
         let isInvalid: boolean = false;
-        for (let i : number = 0; i < input.length; i++) {
-            if (isNaN(parseFloat(input[i])) && input[i] != ',' && input[i] != ' ' || (input[i] == ',' && input[i + 1] == ',')) {
+        for (let i = 0; i < array.length; i++) {
+            if (isNaN(parseFloat(array[i]))) {
                 isInvalid = true;
                 break;
             }
@@ -16,7 +18,7 @@
             (document.getElementById('output6')as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
             (< HTMLInputElement > document.getElementById('sides')).value = "";
         } else {
-            var array: any = JSON.parse("[" + input + "]");
+            const array = input.split(',').map(Number);
             var hasNegative: boolean = false;
             for (let i : number = 0; i < array.length; i++) {
                 if (array[i] <= 0) {
@@ -41,3 +43,4 @@
 
     }
 });
+//copyright (c) 2021 MathFlare LLC.

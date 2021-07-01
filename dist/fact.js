@@ -16,7 +16,7 @@ document.getElementById('button').addEventListener('click', (event) => {
             f = f * i;
         }
         if (f === Number.POSITIVE_INFINITY) {
-            document.getElementById('output').innerHTML = `<p class="text-warning">The number is too large</p>`;
+            document.getElementById('output').innerHTML = `<p class="text-warning">The number is too large!</p>`;
             document.getElementById('number').value = "";
         }
         else {
