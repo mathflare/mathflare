@@ -14,7 +14,7 @@
     } else {
         let f: number = 1;
         for (let i = 1; i <= num; i++) {
-            f = f * i;
+            f *= i;
         }
         (document.getElementById('output') as HTMLElement).innerHTML = `<p class="text-success text-break">${num}! = ${f.toLocaleString('en')}</p>`;
         (<HTMLInputElement>document.getElementById('number')).value = "";

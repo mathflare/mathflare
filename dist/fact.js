@@ -17,7 +17,7 @@ document.getElementById('button').addEventListener('click', (event) => {
     else {
         let f = 1;
         for (let i = 1; i <= num; i++) {
-            f = f * i;
+            f *= i;
         }
         document.getElementById('output').innerHTML = `<p class="text-success text-break">${num}! = ${f.toLocaleString('en')}</p>`;
         document.getElementById('number').value = "";
