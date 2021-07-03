@@ -19,7 +19,7 @@ document.getElementById('button').addEventListener('click', (event) => {
         for (let i = 1; i <= num; i++) {
             f = f * i;
         }
-        document.getElementById('output').innerHTML = `<p class="text-success">${num}! = ${f}</p>`;
+        document.getElementById('output').innerHTML = `<p class="text-success text-break">${num}! = ${f.toLocaleString('en')}</p>`;
         document.getElementById('number').value = "";
     }
 });
