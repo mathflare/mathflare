@@ -8,8 +8,13 @@
     else if (n <= 2) {
         (document.getElementById('output')as HTMLElement).innerHTML = `<p class="text-warning">There is no polygon with less than 3 segments</p>`;
         (< HTMLInputElement > document.getElementById('vertex')).value = "";
-    }
-    else {
+    } else if (n == 3) {
+        (document.getElementById('output')as HTMLElement).innerHTML = `<p class="text-success">The number of diagonals in this triangle is ${(n * (n - 3)) / 2}</p>`;
+        (< HTMLInputElement > document.getElementById('vertex')).value = "";
+    } else if (n == 4) {
+        (document.getElementById('output')as HTMLElement).innerHTML = `<p class="text-success">The number of diagonals in this parallelogram is ${(n * (n - 3)) / 2}</p>`;
+        (< HTMLInputElement > document.getElementById('vertex')).value = "";
+    } else {
         (document.getElementById('output')as HTMLElement).innerHTML = `<p class="text-success">The number of diagonals in this convex ${n}-gon is ${(n * (n - 3)) / 2}</p>`;
         (< HTMLInputElement > document.getElementById('vertex')).value = "";
     }
