@@ -16,7 +16,8 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
 
 - All the CSS(colors, displays, positions, paddings, margins etc.) must be Bootstrap 5 classes
 - Write all custom CSS with comments in the `Site.css` file
-- Use TypeScript all the time.
+- Use TypeScript all the time (hit `tsc -w` to compile the code).
+- Use Ajax requests(from jQuery) fro all API calls
 - Place TypeScript files in the `src` folder. All the JavaScript files will automagically be compiled in the `dist` folder
 - Use Ajax for all API requests(see example below)
 - Use the excact same navigation bar for all the pages(see example below)
@@ -26,6 +27,19 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
 - Use opening and closing comment tags to organize the code(see `NAVBAR START`/`NAVBAR END` example)
 - Files get minified and comments removed on both TypeScript, CSS and HTML in the production build. Don't be afraid to leave empty lines or comments in the code(as long as it is not the entire bee movie script)
 - Make sure everything still works by running it locally before opening a PR (to run locally just hit `npm start`)
+
+## Commit Messages
+
+Please use proper commit messages as shown below:
+- **Directly to production:** `prod: added kangaroo hop calc`
+- **Refactoring:** `refactor: fixed armadillo lenght calc`
+- **Beta testing:** `beta: squared the circle`
+- **Alpha testing:** `alpha: added Riemann hypothesis solver`
+- **Other testing:** `test: equation factoring`
+- **Documentation:** `docs: added docs for killing the ender dragon with a bed`
+- **Other:** `other: pet my cat for 3 hours`
+
+If your commit messages do not follow the guidelines, you will be asked to ammend them.
 
 ## Examples
 
