@@ -146,7 +146,7 @@
         (<HTMLParagraphElement>document.getElementById('output4')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.getElementById('a4')).value = "";
         (<HTMLInputElement>document.getElementById('c4')).value = "";
-    } if (a == 0 && -c == 0) {
+    } else if (a == 0 && -c == 0) {
         (<HTMLParagraphElement>document.getElementById('output4')).innerHTML = `<p class="text-warning">The inequality 0x < 0 is a contradiction. The equation 0x = 0 is an identity x &#8714; R</p>`;
         (<HTMLInputElement>document.getElementById('a4')).value = "";
         (<HTMLInputElement>document.getElementById('c4')).value = "";
