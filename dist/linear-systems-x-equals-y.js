@@ -25,19 +25,19 @@ document.getElementById('button2').addEventListener('click', (event) => {
         document.getElementById('c3').value = "";
     }
     else if (D == 0 && c != 0) {
-        document.getElementById('output2').innerHTML = `<p class="text-warning">In this equation X can never equal to Y</p>`;
+        document.getElementById('output2').innerHTML = `<p class="text-warning">In this equation x can never equal to Y</p>`;
         document.getElementById('a3').value = "";
         document.getElementById('b3').value = "";
         document.getElementById('c3').value = "";
     }
     else if (D == 0 && c == 0) {
-        document.getElementById('output2').innerHTML = `<p class="text-warning">In this equation(x=y) X is always equal to Y</p>`;
+        document.getElementById('output2').innerHTML = `<p class="text-warning">In this equation(x=y) x is always equal to Y</p>`;
         document.getElementById('a3').value = "";
         document.getElementById('b3').value = "";
         document.getElementById('c3').value = "";
     }
     else {
-        document.getElementById('output2').innerHTML = `<p class="text-success">In this equation, X=Y at (x , y) = (${x} , ${x})</p>`;
+        document.getElementById('output2').innerHTML = `<p class="text-success">In this equation, x=y at (x , y) = (${x} , ${x})</p>`;
         document.getElementById('a3').value = "";
         document.getElementById('b3').value = "";
         document.getElementById('c3').value = "";

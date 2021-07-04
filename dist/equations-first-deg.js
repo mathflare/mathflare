@@ -9,7 +9,7 @@ document.getElementById('button').addEventListener('click', (event) => {
         document.getElementById('z').value = "";
     }
     else {
-        document.getElementById('output').innerHTML = `<p class="text-success">X = ${z - y}</p>`;
+        document.getElementById('output').innerHTML = `<p class="text-success">x = ${z - y}</p>`;
         document.getElementById('y').value = "";
         document.getElementById('z').value = "";
     }
@@ -24,7 +24,7 @@ document.getElementById('button2').addEventListener('click', (event) => {
         document.getElementById('z2').value = "";
     }
     else {
-        document.getElementById('output2').innerHTML = `<p class="text-success">X = ${z + y}</p>`;
+        document.getElementById('output2').innerHTML = `<p class="text-success">x = ${z + y}</p>`;
         document.getElementById('y2').value = "";
         document.getElementById('z2').value = "";
     }
@@ -49,7 +49,7 @@ document.getElementById('button3').addEventListener('click', (event) => {
         document.getElementById('z3').value = "";
     }
     else {
-        document.getElementById('output3').innerHTML = `<p class="text-success">X = ${z / y}</p>`;
+        document.getElementById('output3').innerHTML = `<p class="text-success">x = ${z / y}</p>`;
         document.getElementById('y3').value = "";
         document.getElementById('z3').value = "";
     }

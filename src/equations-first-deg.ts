@@ -8,7 +8,7 @@
         (< HTMLInputElement > document.getElementById('y')).value = "";
         (< HTMLInputElement > document.getElementById('z')).value = "";
     } else {
-        (document.getElementById('output')as HTMLElement).innerHTML = `<p class="text-success">X = ${
+        (document.getElementById('output')as HTMLElement).innerHTML = `<p class="text-success">x = ${
             z - y
         }</p>`;
         (< HTMLInputElement > document.getElementById('y')).value = "";
@@ -25,7 +25,7 @@
         (< HTMLInputElement > document.getElementById('y2')).value = "";
         (< HTMLInputElement > document.getElementById('z2')).value = "";
     } else {
-        (document.getElementById('output2')as HTMLElement).innerHTML = `<p class="text-success">X = ${
+        (document.getElementById('output2')as HTMLElement).innerHTML = `<p class="text-success">x = ${
             z + y
         }</p>`;
         (< HTMLInputElement > document.getElementById('y2')).value = "";
@@ -50,7 +50,7 @@
         (< HTMLInputElement > document.getElementById('y3')).value = "";
         (< HTMLInputElement > document.getElementById('z3')).value = "";
     } else {
-        (document.getElementById('output3')as HTMLElement).innerHTML = `<p class="text-success">X = ${
+        (document.getElementById('output3')as HTMLElement).innerHTML = `<p class="text-success">x = ${
             z / y
         }</p>`;
         (< HTMLInputElement > document.getElementById('y3')).value = "";
