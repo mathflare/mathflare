@@ -270,3 +270,6 @@ tr {
         display: none;
     }
 }
+.ad-unit {
+    border: 2px solid #ffffff;
+}
