@@ -313,14 +313,14 @@
     <script src="dist/SignOut.js"></script>
     <script src="dist/OnSignOut.js"></script>
     <script>
-        var myStorage = window.localStorage, formulas;
-        $(document).ready(function () {
-            if(!myStorage.getItem("formulas")){
-                myStorage.setItem('formulas', 1);
+        var storage = window.localStorage, formulas;
+        window.addEventListener('load', () => {
+            if(!storage.getItem("formulas")){
+                storage.setItem('formulas', 1);
             } else {
-                formulas = myStorage.getItem("formulas");
+                formulas = storage.getItem("formulas");
                 formulas = parseFloat(formulas) + parseFloat(1);
-                myStorage.setItem('formulas', formulas );
+                storage.setItem('formulas',formulas );
             }
         });
     </script>

@@ -204,14 +204,14 @@
     <script src="dist/SignOut.js"></script>
     <script src="dist/OnSignOut.js"></script>
     <script>
-        var myStorage = window.localStorage, pageCount;
-        $(document).ready(() => {
-            if(!myStorage.getItem("pageCount")){
-                myStorage.setItem('pageCount', 1);
+        var storage = window.localStorage, pageCount;
+        window.addEventListener('load', () => {
+            if(!storage.getItem("pageCount")){
+                storage.setItem('pageCount', 1);
             } else {
-                pageCount = myStorage.getItem("pageCount");
+                pageCount = storage.getItem("pageCount");
                 pageCount = parseFloat(pageCount) + parseFloat(1);
-                myStorage.setItem('pageCount', pageCount );
+                storage.setItem('pageCount',pageCount );
             }
         });
     </script>
@@ -224,7 +224,6 @@
     <script>
             console.log("%cHello Sir looking around in the console! Insted of hacking, what about you contribute to MathFlare on GitHub?","font-family:consolas; font-size: 20px");
             console.log("%cMathFlare","color: DodgerBlue; font-weight: 600; font-family:consolas; font-size: 40px");
-            console.log("%csame site, same functionality, different name!","color: OrangeRed; font-weight: 500; font-family:consolas; font-size: 25px");
             console.log("%cby the way, the curiosity killed the cat you know...","color: PaleGreen; font-weight: 600; font-family:consolas; font-size: 20px");
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
