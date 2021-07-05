@@ -45,8 +45,14 @@ nav {
     display: block;
     margin-left: auto !important;
     margin-right: auto !important;
-    margin-top: 100px;
+    margin-top: 4em;
     z-index: 1 !important;
+}
+@media screen and (max-width: 915px) {
+    /*make the table 95% width for phones*/
+    .center {
+        margin-top: 6em;
+    }
 }
 .center input[type="number"] {
     width: 40%;
