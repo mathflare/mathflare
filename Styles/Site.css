@@ -243,7 +243,8 @@ tr {
 #triout,
 #etriout,
 #circleout,
-#trapout {
+#trapout,
+#dxout {
     /*make the output text bigger along with the line height*/
     font-size: 20px !important;
     line-height: 24px !important;
