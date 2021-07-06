@@ -219,10 +219,6 @@ tr {
     border-radius: 5px;
     z-index: 999999;
 }
-#refresh {
-    /*change the cirsor of the "refresh page" button in the send mail error*/
-    cursor: pointer;
-}
 .container-sm {
     /*leave a margin in the top of the small container in the stats page*/
     margin-top: 30px !important;
