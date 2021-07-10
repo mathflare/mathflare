@@ -5106,12 +5106,13 @@ textarea.form-control-lg {
 }
 
 .list-group-item-dark {
-  color: #141619;
-  background-color: #d3d3d4;
+  color: hsl(210, 3%, 65%);
+  background-color: hsl(210, 10%, 23%);
+  transition: background-color 0.15s ease-in-out;
 }
 .list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
-  color: #141619;
-  background-color: #bebebf;
+  color: hsl(200, 3%, 81%);
+  background-color: hsl(210, 10%, 29%);
 }
 .list-group-item-dark.list-group-item-action.active {
   color: #fff;

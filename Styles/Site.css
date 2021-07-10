@@ -49,7 +49,7 @@ nav {
     z-index: 1 !important;
 }
 @media screen and (max-width: 915px) {
-    /*make the table 95% width for phones*/
+    /*leave more margin in the content for phones*/
     .center {
         margin-top: 6em;
     }
@@ -163,32 +163,14 @@ hr {
     margin-bottom: 16px !important;
 }
 /*CHEAT SHEET TABLE*/
-.formulas-table {
-    /*position the table*/
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    cursor: crosshair;
-    transition: 0.2s;
-}
-tr {
-    transition: 0.2s;
-}
 .formulas-body tr:hover {
     background-color: var(--white) !important;
     color: var(--black) !important;
-    transition: 0.2s;
+    transition: background-color 0.2s ease-in-out;
 }
 .formulas-body tr:hover ::selection {
     background-color: var(--black) !important;
     color: var(--white) !important;
-}
-@media screen and (max-width: 915px) {
-    /*make the table 95% width for phones*/
-    .formulas-table {
-        width: 95%;
-        transition: 0.2s;
-    }
 }
 /*SHOW FORMULA BUTTON*/
 .show-formula:hover {

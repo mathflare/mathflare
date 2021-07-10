@@ -158,147 +158,155 @@
     </div>
     </nav>
     <!-- NAVBAR END -->
-    <div class="center">
-        <h1 class="text-white title">MathFlare Cheat Sheet</h1>
-        <hr class="bg-danger" style="width: 70%;" />
-        <section id="trigonometry">
-        <h3 class="text-white" id="title">Trigonometric Numbers</h3>
-        <table class="table table-bordered text-white formulas-table" id="trig-nums">
-            <thead class="bg-primary head">
-                <tr>
-                    <th>Angle</th>
-                    <th>Sin</th>
-                    <th>Cos</th>
-                    <th>Tan</th>
-                </tr>
-            </thead>
-            <tbody class="formulas-body">
-                <tr>
-                    <td>30&#176;</td>
-                    <td><sup>1</sup>&frasl;<sub>2</sub></td>
-                    <td>&#8730;3 &#247; 2</td>
-                    <td>&#8730;3 &#247; 3</td>
-                </tr>
-                <tr>
-                    <td>45&#176;</td>
-                    <td>&#8730;2 &#247; 2</td>
-                    <td>&#8730;2 &#247; 2</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>60&#176;</td>
-                    <td>&#8730;3 &#247; 2</td>
-                    <td><sup>1</sup>&frasl;<sub>2</sub></td>
-                    <td>&#8730;3</td>
-                </tr>
-                <tr>
-                    <td>90&#176;</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>-</td>
-                </tr>
-            </tbody>
-        </table>
-        </section>
-        <section id="factorials" >
-            <h3 class="text-white" id="title">Popular Factorials</h3>
-            <table class="table table-bordered text-white formulas-table" id="trig-nums">
-                <thead class="bg-primary head">
-                    <tr>
-                        <th>Number n</th>
-                        <th>Factorial n!</th>
-                    </tr>
-                </thead>
-                <tbody class="formulas-body">
-                    <tr>
-                        <td>0!</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1!</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>2!</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>3!</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td>4!</td>
-                        <td>24</td>
-                    </tr>
-                    <tr>
-                        <td>5!</td>
-                        <td>120</td>
-                    </tr>
-                    <tr>
-                        <td>6!</td>
-                        <td>720</td>
-                    </tr>
-                    <tr>
-                        <td>7!</td>
-                        <td>5,040</td>
-                    </tr>
-                    <tr>
-                        <td>8!</td>
-                        <td>40,320</td>
-                    </tr>
-                    <tr>
-                        <td>9!</td>
-                        <td>362,880</td>
-                    </tr>
-                    <tr>
-                        <td>10!</td>
-                        <td>3,628,800</td>
-                    </tr>
-                    <tr>
-                        <td>11!</td>
-                        <td>39,916,800</td>
-                    </tr>
-                    <tr>
-                        <td>12!</td>
-                        <td>479,001,600</td>
-                    </tr>
-                    <tr>
-                        <td>13!</td>
-                        <td>6,227,020,800</td>
-                    </tr>
-                    <tr>
-                        <td>14!</td>
-                        <td>87,178,291,200</td>
-                    </tr>
-                    <tr>
-                        <td>15!</td>
-                        <td>1,307,674,368,000</td>
-                    </tr>
-                    <tr>
-                        <td>16!</td>
-                        <td>20,922,789,888,000</td>
-                    </tr>
-                    <tr>
-                        <td>17!</td>
-                        <td>355,687,428,096,000</td>
-                    </tr>
-                    <tr>
-                        <td>18!</td>
-                        <td>6,402,373,705,728,000</td>
-                    </tr>
-                    <tr>
-                        <td>19!</td>
-                        <td>121,645,100,408,832,000</td>
-                    </tr>
-                    <tr>
-                        <td>20!</td>
-                        <td>2,432,902,008,176,640,000</td>
-                    </tr>
-                </tbody>
-            </table>
-            </section>
-        <p class="text-white">more coming soon!</p>
+    <!-- BACK TO TOP BUTTON -->
+    <button class="btn btn-danger position-fixed" id="btn-back-to-top" style="display: none; bottom: 20px; left: 20px; border-radius: 50%; z-index: 99999;" data-bs-toggle="tooltip" data-bs-placement="right" title="Back to Top"><i class="bi bi-arrow-up"></i></button>
+    <div class="row m-0">
+        <div class="col mt-5">
+            <h3 class="text-center">Contents</h3>
+            <div class="list-group position-sticky">
+                <a href="#trigonometricnums" class="list-group-item list-group-item-dark list-group-item-action">Trigonometric Numbers</a>
+                <a href="#factorials" class="list-group-item list-group-item-dark list-group-item-action">Populas Factorials</a>
+            </div>
         </div>
+        <div class="col-md-9 mt-5 text-center">
+            <section id="trigonometricnums">
+                <h3>Trigonometric Numbers</h3>
+                <table class="table table-bordered text-white w-100" style="cursor: crosshair;">
+                    <thead class="bg-primary head">
+                        <tr>
+                            <th>Angle</th>
+                            <th>Sin</th>
+                            <th>Cos</th>
+                            <th>Tan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="formulas-body">
+                        <tr>
+                            <td>30&#176;</td>
+                            <td><sup>1</sup>&frasl;<sub>2</sub></td>
+                            <td>&#8730;3 &#247; 2</td>
+                            <td>&#8730;3 &#247; 3</td>
+                        </tr>
+                        <tr>
+                            <td>45&#176;</td>
+                            <td>&#8730;2 &#247; 2</td>
+                            <td>&#8730;2 &#247; 2</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>60&#176;</td>
+                            <td>&#8730;3 &#247; 2</td>
+                            <td><sup>1</sup>&frasl;<sub>2</sub></td>
+                            <td>&#8730;3</td>
+                        </tr>
+                        <tr>
+                            <td>90&#176;</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </section>
+                <section id="factorials">
+                    <h3>Popular Factorials</h3>
+                    <table class="table table-bordered text-white w-100" style="cursor: crosshair;">
+                        <thead class="bg-primary head">
+                            <tr>
+                                <th>Number n</th>
+                                <th>Factorial n!</th>
+                            </tr>
+                        </thead>
+                        <tbody class="formulas-body">
+                            <tr>
+                                <td>0!</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1!</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>2!</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3!</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>4!</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>5!</td>
+                                <td>120</td>
+                            </tr>
+                            <tr>
+                                <td>6!</td>
+                                <td>720</td>
+                            </tr>
+                            <tr>
+                                <td>7!</td>
+                                <td>5,040</td>
+                            </tr>
+                            <tr>
+                                <td>8!</td>
+                                <td>40,320</td>
+                            </tr>
+                            <tr>
+                                <td>9!</td>
+                                <td>362,880</td>
+                            </tr>
+                            <tr>
+                                <td>10!</td>
+                                <td>3,628,800</td>
+                            </tr>
+                            <tr>
+                                <td>11!</td>
+                                <td>39,916,800</td>
+                            </tr>
+                            <tr>
+                                <td>12!</td>
+                                <td>479,001,600</td>
+                            </tr>
+                            <tr>
+                                <td>13!</td>
+                                <td>6,227,020,800</td>
+                            </tr>
+                            <tr>
+                                <td>14!</td>
+                                <td>87,178,291,200</td>
+                            </tr>
+                            <tr>
+                                <td>15!</td>
+                                <td>1,307,674,368,000</td>
+                            </tr>
+                            <tr>
+                                <td>16!</td>
+                                <td>20,922,789,888,000</td>
+                            </tr>
+                            <tr>
+                                <td>17!</td>
+                                <td>355,687,428,096,000</td>
+                            </tr>
+                            <tr>
+                                <td>18!</td>
+                                <td>6,402,373,705,728,000</td>
+                            </tr>
+                            <tr>
+                                <td>19!</td>
+                                <td>121,645,100,408,832,000</td>
+                            </tr>
+                            <tr>
+                                <td>20!</td>
+                                <td>2,432,902,008,176,640,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+        </div> 
+    </div>
     <!-- SCRIPTS START -->
     <script src="Scripts/jquery-3.0.0.js"></script>
     <script src="Scripts/bootstrap.js"></script>
@@ -306,18 +314,29 @@
     <script src="dist/SignOut.js"></script>
     <script src="dist/OnSignOut.js"></script>
     <script>
-        var storage = window.localStorage, formulas;
+        let storage = window.localStorage, formulas;
         window.addEventListener('load', () => {
-            if(!storage.getItem("formulas")){
+            if(!storage.getItem('formulas')){
                 storage.setItem('formulas', 1);
             } else {
-                formulas = storage.getItem("formulas");
+                formulas = storage.getItem('formulas');
                 formulas = parseFloat(formulas) + parseFloat(1);
                 storage.setItem('formulas',formulas );
             }
         });
-    </script>
-    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {  
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+        const backToTopBtn = document.getElementById('btn-back-to-top');
+        window.onscroll = () => {
+            if ( document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) backToTopBtn.style.display = 'block';
+            else backToTopBtn.style.display = 'none';
+        };
+        backToTopBtn.addEventListener("click", () => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
