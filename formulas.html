@@ -315,6 +315,7 @@
     <script src="dist/SignOut.js"></script>
     <script src="dist/OnSignOut.js"></script>
     <script>
+        //cockies
         let storage = window.localStorage, formulas;
         window.addEventListener('load', () => {
             if(!storage.getItem('formulas')){
@@ -325,10 +326,12 @@
                 storage.setItem('formulas',formulas );
             }
         });
+        //toolpits
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {  
             return new bootstrap.Tooltip(tooltipTriggerEl)
         });
+        //back to top button
         const backToTopBtn = document.getElementById('btn-back-to-top');
         window.onscroll = () => {
             if ( document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) backToTopBtn.style.display = 'block';
