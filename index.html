@@ -198,10 +198,10 @@
     <script src="dist/SignIn.js"></script>
     <script src="dist/SignOut.js"></script>
     <script src="dist/OnSignOut.js"></script>
-    <script src="dist/diagtrapezoid.js"></script>
     <script>
-        var storage = window.localStorage, pageCount;
-        window.addEventListener('load', () => {
+        if (typeof(Storage) !== 'undefined') {
+            let storage = window.localStorage, pageCount;
+            window.addEventListener('load', () => {
             if(!storage.getItem("pageCount")){
                 storage.setItem('pageCount', 1);
             } else {
@@ -210,6 +210,9 @@
                 storage.setItem('pageCount',pageCount );
             }
         });
+        } else {
+            console.error('no local storage support detected')
+        }
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {  
             return new bootstrap.Tooltip(tooltipTriggerEl)
