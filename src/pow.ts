@@ -12,7 +12,7 @@
         (< HTMLInputElement > document.getElementById('exp')).value = "";
     } else {
         (document.getElementById('output')as HTMLElement).innerHTML = `<p class="text-success">${base}<sup>${exp}</sup> = ${
-            Math.pow(base, exp)
+            Math.pow(base, exp).toLocaleString('us')
         }</p>`;
         (< HTMLInputElement > document.getElementById('base')).value = "";
         (< HTMLInputElement > document.getElementById('exp')).value = "";
