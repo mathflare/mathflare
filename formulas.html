@@ -502,6 +502,7 @@
     <script src="dist/SignIn.js"></script>
     <script src="dist/SignOut.js"></script>
     <script src="dist/OnSignOut.js"></script>
+    <script src="dist/back-to-top.js"></script>
     <script>
         //cockies
         let storage = window.localStorage, formulas;
@@ -518,16 +519,6 @@
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {  
             return new bootstrap.Tooltip(tooltipTriggerEl)
-        });
-        //back to top button
-        const backToTopBtn = document.getElementById('btn-back-to-top');
-        window.onscroll = () => {
-            if ( document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) backToTopBtn.style.display = 'block';
-            else backToTopBtn.style.display = 'none';
-        };
-        backToTopBtn.addEventListener("click", () => {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
         });
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
