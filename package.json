@@ -19,5 +19,8 @@
   "homepage": "https://www.mathflare.tk",
   "devDependencies": {
     "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "hcaptcha": "^0.1.0"
   }
 }

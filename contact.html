@@ -172,10 +172,11 @@
                 <div class="center-form">
                     <textarea id="msg" name="text" placeholder="Message" class="form-control message" required></textarea>
                 </div>
-                    <div class="button-group my-3">
-                        <input type="submit" id="send" name="send" value="Send" class="btn btn-success mx-1"/>
-                        <input type="reset" value="Clear" class="btn btn-danger mx-1"/>
-                    </div>
+                <div class="h-captcha mt-3" data-sitekey="f905f0c2-dacd-408f-b39c-51c7aeace28f"></div>
+                <div class="button-group my-3">
+                    <input type="submit" id="send" name="send" value="Send" class="btn btn-success mx-1"/>
+                    <input type="reset" value="Clear" class="btn btn-danger mx-1"/>
+                </div>
             </form>
             <p id="user-message"></p>
             <div class="container-sm">
@@ -193,6 +194,7 @@
     <script src="dist/SignIn.js"></script>
     <script src="dist/SignOut.js"></script>
     <script src="dist/OnSignOut.js"></script>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
     <script src="dist/contact.mail.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
