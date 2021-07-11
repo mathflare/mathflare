@@ -19,6 +19,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="MathFlare" />
     <meta name="twitter:description" content="The go-to site for geometry and mathematics. Area calculator, Pythagorean theorem solver, unit converter and many more!" />
+    <meta http-equiv="refresh" content="10">
     <!-- OAuth -->
     <meta name="google-signin-client_id" content="574643928295-tftr9maiaoejhtngs28jhdga6v3eueah.apps.googleusercontent.com">
     <!-- STYLES -->
@@ -160,14 +161,14 @@
     <!-- NAVBAR END -->
     <div class="dead-center">
         <h1 class="text-white">Oops!</h1>
-        <img src="Assets/oops.png" alt="Hmmm...." style="width: 34%; height: auto" />
-        <div>
+        <img src="Assets/oops.png" alt="thinking emoji" style="width: 34%; height: auto" />
+        <div class="m-2">
             <h2 class="text-white d-inline-flex bg-danger p-1 rounded mb-3">Error 404</h2>
         </div>
-        <h4 class="text-white">it seems that the page <i id="url"></i> does not exist on this server...</h4>
+        <h4 class="text-white" id="user-error-explanation">it seems that the page <i id="pathname"></i> does not exist on this server...</h4>
         <div class="d-inline-flex mb-2">
             <a href="./index.html" class="btn btn-primary m-1"><i class="bi bi-house"></i> Go to the Home Page</a>
-            <a href="https://github.com/liquid-geometry/liquidgeometry/issues" target="_blank" rel="noopener" class="btn btn-warning m-1"><i class="bi bi-bug-fill"></i> Report a Bug</a>
+            <a href="https://github.com/mathflare/mathflare/issues" target="_blank" rel="noopener" class="btn btn-warning m-1"><i class="bi bi-bug-fill"></i> Report a Bug</a>
         </div>
     </div>
     <!-- SCRIPTS START -->
@@ -176,14 +177,7 @@
     <script src="dist/SignIn.js"></script>
     <script src="dist/SignOut.js"></script>
     <script src="dist/OnSignOut.js"></script>
-    <script>
-        $(document).ready(() => {
-            var url = window.location.pathname;
-            $("#url").text(url.replace('/', ''));
-            console.error('ERROR 404');
-            console.error('the page ' + window.location.pathname + ' does not exists. It may have been moved, edited or deleted.');
-        });
-    </script>
+    <script src="dist/http-404.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>
