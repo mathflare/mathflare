@@ -1,7 +1,8 @@
 //copyright (c) 2021 MathFlare LLC.
 (document.getElementById('button') as HTMLButtonElement).addEventListener('click', (event) => {
     event.preventDefault();
-    var input: string = (<HTMLInputElement>document.getElementById('input')).value!;
+    let input: string = (<HTMLInputElement>document.getElementById('input')).value!;
+    input = input.replace(' ', '');
     if (input == "" || input.charAt(0) == "," || input.charAt(input.length - 1) == ",") {
         (document.getElementById('output') as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
         (<HTMLInputElement>document.getElementById('input')).value = "";
@@ -26,8 +27,13 @@
                 total += array[i];
             }
             const avg: number = total / array.length;
-            (document.getElementById('output') as HTMLElement).innerHTML = `<p class="text-success">The average of all these numbers is ${avg}</p>`;
-            (<HTMLInputElement>document.getElementById('input')).value = "";
+            if (isNaN(avg)) {
+                (document.getElementById('output') as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
+                (<HTMLInputElement>document.getElementById('input')).value = "";
+            } else {
+                (document.getElementById('output') as HTMLElement).innerHTML = `<p class="text-success">The average of all these numbers is ${avg}</p>`;
+                (<HTMLInputElement>document.getElementById('input')).value = "";
+            }
         }
     }
 });
