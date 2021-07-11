@@ -14,7 +14,7 @@ document.getElementById('button').addEventListener('click', (event) => {
         document.getElementById('exp').value = "";
     }
     else {
-        document.getElementById('output').innerHTML = `<p class="text-success">${base}<sup>${exp}</sup> = ${Math.pow(base, exp)}</p>`;
+        document.getElementById('output').innerHTML = `<p class="text-success">${base}<sup>${exp}</sup> = ${new Intl.NumberFormat().format(Math.pow(base, exp))}</p>`;
         document.getElementById('base').value = "";
         document.getElementById('exp').value = "";
     }
