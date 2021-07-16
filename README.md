@@ -7,15 +7,11 @@
 
 ____
 
-![Netlify Status](https://api.netlify.com/api/v1/badges/b43907f2-5e50-4457-85ce-42c395322564/deploy-status)
-
-____
-
 </div>
 
 #### Note:
 
-On the 5th of June 2021 we changed our company's name from `Liquid Geometry LLC.` to `MathFlare LLC.`
+On the 5th of June 2021 we changed our company's name from `Liquid Geometry Co. Ltd.` to `MathFlare Co. Ltd.`
 
 ____
 
@@ -37,7 +33,7 @@ ____
 - We just like it! It's very unique.
 
 #### Are you using vanilla javascript?
-- No, we use jQuery.
+- Yes, we use TypeScript and then compile it into JavaScript
 
 #### Do you write your own CSS?
 - We use Bootstrap for the most part. All the custom CSS is in the `Site.css` file.
@@ -50,9 +46,6 @@ ____
 
 #### Can I contribute to the project?
 - Sure! We welcome all contributors.
-
-#### Do I have to log in with Google?
-- No. We will eventually impliment a bookmarking feature.
 
 #### When did the project started?
 - June 2020

@@ -1,3 +1,4 @@
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.
 (<HTMLButtonElement>document.getElementById('slopecalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const x1: number = parseFloat((<HTMLInputElement>document.getElementById('x1')).value)!;
@@ -24,3 +25,4 @@
         clearValues();
     }
 });
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.

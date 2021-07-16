@@ -1,3 +1,4 @@
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.
 (document.getElementById('button')as HTMLButtonElement).addEventListener('click', (event) => {
     event.preventDefault();
     const n: number = parseFloat((< HTMLInputElement > document.getElementById('vertex')).value)!;
@@ -36,3 +37,4 @@
         (< HTMLInputElement > document.getElementById('sside')).value = "";
     }
 });
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.

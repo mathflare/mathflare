@@ -1,3 +1,4 @@
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.
 (<HTMLButtonElement>document.getElementById('button2')).addEventListener('click', (event) => {
     event.preventDefault();
     const a = parseFloat((<HTMLInputElement>document.getElementById('a3')).value)!;
@@ -37,3 +38,4 @@
         (<HTMLInputElement>document.getElementById('c3')).value = "";
     }
 });
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.

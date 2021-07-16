@@ -1,3 +1,4 @@
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.
 (document.getElementById('button')as HTMLButtonElement).addEventListener('click', (event) => {
     event.preventDefault();
     const num: number = parseFloat((< HTMLInputElement > document.getElementById('num1')).value)!;
@@ -133,3 +134,4 @@
         }
     }
 });
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.

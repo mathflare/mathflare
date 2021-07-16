@@ -1,3 +1,4 @@
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.
 //using sides and angle
 (<HTMLButtonElement>document.getElementById('trapcalc1')).addEventListener('click', (event) => {
     event.preventDefault();
@@ -70,3 +71,4 @@
         clearValues();
     }
 });
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.

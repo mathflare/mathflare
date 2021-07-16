@@ -1,4 +1,4 @@
-//(c) copyrights 2021 MathFlare LLC. All rights reserved.
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.
 // AX²+C=0
 (document.getElementById('button') as HTMLButtonElement).addEventListener('click', (event) => {
     event.preventDefault();
@@ -140,4 +140,4 @@
         (<HTMLInputElement>document.getElementById('c3')).value = "";
     }
 });
-//(c) copyrights 2021 MathFlare LLC. All rights reserved.
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.

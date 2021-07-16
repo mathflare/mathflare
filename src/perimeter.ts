@@ -1,3 +1,4 @@
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.
 // square
 (document.getElementById('square')as HTMLButtonElement).addEventListener('click', (event) => {
     event.preventDefault();
@@ -89,3 +90,4 @@
         (< HTMLInputElement > document.getElementById('circler')).value = "";
     }
 });
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.

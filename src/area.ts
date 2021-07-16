@@ -1,3 +1,4 @@
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.
 // square
 (document.getElementById('squarecalc')as HTMLButtonElement).addEventListener('click', (event) => {
     event.preventDefault();
@@ -122,3 +123,4 @@
         (< HTMLInputElement > document.getElementById('trapc')).value = "";
     }
 });
+//copyrights (c) 2021 MathFlare LLC. All rights reserved.
