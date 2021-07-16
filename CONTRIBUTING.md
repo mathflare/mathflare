@@ -19,6 +19,7 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
 - Use TypeScript all the time (hit `tsc -w` to compile the code).
 - Use Ajax requests(from jQuery) fro all API calls
 - Place TypeScript files in the `src` folder. All the JavaScript files will automagically be compiled in the `dist` folder
+- Use ES6 syntax all the time
 - Use Ajax for all API requests(see example below)
 - Use the excact same navigation bar for all the pages(see example below)
 - Use Bootstrap Icons for all the icons
@@ -44,128 +45,23 @@ If your commit messages do not follow the guidelines, you will be asked to ammen
 
 ## Examples
 
-### Navigation Bar
+### Calculation with TypeScript
 
-```HTML
-
-<!-- NAVBAR START -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-        <a class="navbar-brand" href="https://www.mathflare.tk">MathFlare</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Contact
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a href="contact.html" class="dropdown-item"><i class="bi bi-telephone-fill"></i> Contact Form</a>
-                        <a href="https://github.com/mathflare" target="_blank" class="dropdown-item"><i class="bi bi-github"></i> GitHub</a>
-                        <a href="/cdn-cgi/l/email-protection#1b77726a6e727f367c7e74767e6f69625b7f707a6f68727468356f70" target="_blank" class="dropdown-item"><i class="bi bi-envelope-fill"></i> Email</a>
-                        <a href="https://www.instagram.com/mathflare/" class="dropdown-item"><i class="bi bi-instagram"></i> Instagram</a>
-                        <a href="https://api.mathflare.tk" target="_blank" class="dropdown-item"><i class="bi bi-hdd-stack-fill"></i> REST API</a>
-                        <a href="https://developers.mathflare.tk" target="_blank" class="dropdown-item"><i class="bi bi-code-slash"></i> For Developers</a>
-                        <a href="https://github.com/mathflare/mathflare" target="_blank" class="dropdown-item"><i class="bi bi-terminal-fill"></i> Clone the Repo</a>
-                        <a href="https://github.com/mathflare/mathflare/issues" target="_blank" class="dropdown-item"><i class="bi bi-bug-fill"></i> Report a Bug</a>
-                        <a href="https://github.com/mathflare/mathflare/issues" target="_blank" class="dropdown-item"><i class="bi bi-lightbulb-fill"></i> Suggest an Edit</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Geometry
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <h5 class="dropdown-header">Basic Geometry</h5>
-                        <a href="perimeter.html" class="dropdown-item"><i class="bi bi-bounding-box"></i> Perimeter Calculator</a>
-                        <a href="area.html" class="dropdown-item"><i class="bi bi-grid-3x3"></i> Area Calculator</a>
-                        <a href="diagpolyg.html" class="dropdown-item"><i class="bi bi-slash-square"></i> Diagonal Calculator</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Trigognometry
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <h5 class="dropdown-header">Pythagorean Theorem</h5>
-                        <a href="phypotenuse.html" class="dropdown-item"><i class="bi bi-symmetry-vertical"></i> Hypotenuse Calculator</a>
-                        <a href="prightside.html" class="dropdown-item"><i class="bi bi-symmetry-vertical"></i> Leg Calculator</a>
-                        <div class="dropdown-divider"></div>
-                        <a href="equaltri.html" class="dropdown-item"><i class="bi bi-symmetry-vertical"></i> Equal Triangles</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Unit Converter
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a href="clenght.html" class="dropdown-item"><i class="bi bi-rulers"></i> Lenght</a>
-                        <a href="cdata.html" class="dropdown-item"><i class="bi bi-server"></i> Data</a>
-                        <a href="cvolume.html" class="dropdown-item"><i class="bi bi-box"></i> Volume</a>
-                        <a href="ctime.html" class="dropdown-item"><i class="bi bi-clock-fill"></i> Time</a>
-                        <a href="ctemp.html" class="dropdown-item"><i class="bi bi-thermometer"></i> Temperature</a>
-                        <a href="cspeed.html" class="dropdown-item"><i class="bi bi-speedometer"></i> Speed</a>
-                        <a href="cweight.html" class="dropdown-item"><i class="bi bi-minecart-loaded"></i> Weight</a>
-                        <a href="cenergy.html" class="dropdown-item"><i class="bi bi-lightning-fill"></i> Energy</a>
-                        <a href="cpower.html" class="dropdown-item"><i class="bi bi-battery-half"></i> Power</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Account
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a href="" class="dropdown-item"><div class="g-signin2" data-onsuccess="onSignIn"></div></a>
-                        <a href="" class="dropdown-item"><i class="bi bi-person-circle"></i> <span id="display">Not Signed In</span></a>
-                        <a href="" class="dropdown-item" onclick="signOut();" id="signout"><i class="bi bi-door-closed"></i> Sign out</a>
-                        <div class="dropdown-divider"></div>
-                        <a href="stats.html" class="dropdown-item"><i class="bi bi-graph-up"></i> Stats</a>
-                        <div class="dropdown-divider"></div>
-                        <h5 class="dropdown-header">Legal</h5>
-                        <a href="tos.html" class="dropdown-item"><i class="bi bi-card-checklist"></i> Terms of Use</a>
-                        <a href="license.html" class="dropdown-item"><i class="bi bi-credit-card-2-front"></i> Software License</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Algebra
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <h5 class="dropdown-header">Basic Algebra</h5>
-                        <a href="logar.html" class="dropdown-item"><i class="bi bi-percent"></i> Logarithms</a>
-                        <a href="sqrt.html" class="dropdown-item"><i class="bi bi-calculator"></i> Square Root Calculator</a>
-                        <a href="cbrt.html" class="dropdown-item"><i class="bi bi-calculator"></i> Cube Root Calculator</a>
-                        <a href="pow.html" class="dropdown-item"><i class="bi bi-power"></i> Exponents(powers)</a>
-                        <a href="avg.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Average Calculator</a>
-                        <a href="percent.html" class="dropdown-item"><i class="bi bi-percent"></i> Percentage Calculator</a>
-                        <div class="dropdown-divider"></div>
-                        <h5 class="dropdown-header">Equations</h5>
-                        <a href="equations.html" class="dropdown-item"><i class="bi bi-percent"></i> 1st Degree</a>
-                        <a href="equations-second.html" class="dropdown-item"><i class="bi bi-percent"></i> 2nd Degree</a>
-                        <div class="dropdown-divider"></div>
-                        <h5 class="dropdown-header">Systems of Equations</h5>
-                        <a href="linear-systems.html" class="dropdown-item"><i class="bi bi-border-width"></i> Linear Systems</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="formulas.html"><i class="bi bi-book"></i> Formulas</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    </nav>
-    <!-- NAVBAR END -->
+```TS
+(<HTMLButtonElement> document.getElementById('button')).addEventListener('click', (event) => {
+    event.preventDefault();
+    const num: number = parseFloat((< HTMLInputElement > document.getElementById('number')).value)!;
+    if (isNaN(num)) {
+        (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        (< HTMLInputElement > document.getElementById('number')).value = "";
+    } else if (num < 0) {
+        (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">The radicand must be a postive number</p>`;
+        (< HTMLInputElement > document.getElementById('number')).value = "";
+    } else {
+        (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-success">&#8730;${num} = ${Math.sqrt(num)} (&#8764; ${Math.sqrt(num).toFixed(3)})</p>`;
+        (< HTMLInputElement > document.getElementById('number')).value = "";
+    }
+});
 
 ```
 
