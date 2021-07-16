@@ -149,7 +149,7 @@ a:hover {
 .active .nav-link {
     color: #ffffff !important;
 }
-.aactive {
+.dropdown-menu .aactive {
     /*Custom active state for dropdown link navbar elements cause the bootstrap one sucks*/
     background-color: var(--aactive) !important;
     color: var(--black) !important;
