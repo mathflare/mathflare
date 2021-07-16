@@ -32,7 +32,8 @@ Make sure that you have read the [Code of Conduct](https://github.com/liquid-geo
 
 Please use proper commit messages as shown below:
 - **Directly to production:** `prod: added kangaroo hop calc`
-- **Refactoring:** `refactor: fixed armadillo lenght calc`
+- **Refactoring:** `refactor: translated armadillo lenght calc to es6`
+- **Fix:** `fix: fixed goat milk temperature calc`
 - **Beta testing:** `beta: squared the circle`
 - **Alpha testing:** `alpha: added Riemann hypothesis solver`
 - **Other testing:** `test: equation factoring`
