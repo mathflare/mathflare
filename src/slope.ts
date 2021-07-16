@@ -19,8 +19,7 @@
     } else if (x1 === x2) {
         (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">The slope cannot be calculated between the points (${x1},${y1}) and (${x2},${y2}): they belong to a vertical line</p>`;
         clearValues();
-    }
-    else {
+    } else {
         (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-success">The slope is ${(y2 - y1) / (x2 - x1)}m</p>`;
         clearValues();
     }
