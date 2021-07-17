@@ -10,9 +10,6 @@
     if (isNaN(v) || isNaN(dt)) {
         (<HTMLParagraphElement>document.getElementById('dxout1')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
-    } else if (v <= 0) {
-        (<HTMLParagraphElement>document.getElementById('dxout1')).innerHTML = `<p class="text-warning">The speed must be a positive number</p>`;
-        clearValues();
     } else if (dt <= 0) {
         (<HTMLParagraphElement>document.getElementById('dxout1')).innerHTML = `<p class="text-warning">The Δt must be a positive number</p>`;
         clearValues();
@@ -33,11 +30,11 @@
     if (isNaN(v) || isNaN(dx)) {
         (<HTMLParagraphElement>document.getElementById('dtout2')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
-    } else if (v <= 0) {
-        (<HTMLParagraphElement>document.getElementById('dtout2')).innerHTML = `<p class="text-warning">The speed must be a positive number</p>`;
-        clearValues();
     } else if (dx <= 0) {
         (<HTMLParagraphElement>document.getElementById('dtout2')).innerHTML = `<p class="text-warning">The Δx must be a positive number</p>`;
+        clearValues();
+    } else if (v === 0) {
+        (<HTMLParagraphElement>document.getElementById('dtout2')).innerHTML = `<p class="text-warning">The speed cannot be 0</p>`;
         clearValues();
     } else {
         (<HTMLParagraphElement>document.getElementById('dtout2')).innerHTML = `<p class="text-success">Δt = ${dx / v}</p>`;
@@ -58,9 +55,6 @@
         clearValues();
     } else if (dt <= 0) {
         (<HTMLParagraphElement>document.getElementById('vout3')).innerHTML = `<p class="text-warning">The Δt must be a positive number</p>`;
-        clearValues();
-    } else if (dx <= 0) {
-        (<HTMLParagraphElement>document.getElementById('vout3')).innerHTML = `<p class="text-warning">The Δx must be a positive number</p>`;
         clearValues();
     } else {
         (<HTMLParagraphElement>document.getElementById('vout3')).innerHTML = `<p class="text-success">v = ${dx / dt}</p>`;

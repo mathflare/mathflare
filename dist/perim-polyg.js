@@ -37,8 +37,14 @@ document.getElementById('polyg').addEventListener('click', (event) => {
                 document.getElementById('sides').value = "";
             }
             else {
-                document.getElementById('output6').innerHTML = `<p class="text-success">C = ${array.reduce((a, b) => a + b, 0)}cm</p>`;
-                document.getElementById('sides').value = "";
+                if (isNaN(array.reduce((a, b) => a + b, 0))) {
+                    document.getElementById('output6').innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
+                    document.getElementById('sides').value = "";
+                }
+                else {
+                    document.getElementById('output6').innerHTML = `<p class="text-success">C = ${array.reduce((a, b) => a + b, 0)}cm</p>`;
+                    document.getElementById('sides').value = "";
+                }
             }
         }
     }
