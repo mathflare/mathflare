@@ -133,17 +133,24 @@
     <script src="dist/navbar.js"></script>
     <script src="dist/equations-second-deg.js"></script>
     <script>
-        var myStorage = window.localStorage, equation;
-        $(".equation").click(function (e) { 
-            e.preventDefault();
-            if(!myStorage.getItem("equation")){
-                myStorage.setItem('equation', 1);
-            } else {
-                equation = myStorage.getItem("equation");
-                equation = parseFloat(equation) + parseFloat(1);
-                myStorage.setItem('equation',equation );
+        let storage = window.localStorage, equation;
+        if (typeof (Storage) !== 'undefined') {
+            const ele = document.querySelectorAll('.equation');
+            for (let i = 0; i < ele.length; i++) {
+                ele[i].addEventListener('click', (event) => {
+                    event.preventDefault();
+                    if (!storage.getItem("equation")) {
+                        storage.setItem('equation', 1);
+                    } else {
+                        equation = storage.getItem("equation");
+                        equation = parseFloat(equation) + parseFloat(1);
+                        storage.setItem('equation', equation);
+                    }
+                });
             }
-        });
+        } else {
+            console.error('your browser does not support local storage');
+        }
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
