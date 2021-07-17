@@ -224,7 +224,10 @@ hr {
 #trapout,
 #dxout,
 #trapout1,
-#trapout2 {
+#trapout2,
+#dxout1,
+#dtout2,
+#vout3 {
     /*make the output text bigger along with the line height*/
     font-size: 20px !important;
     line-height: 24px !important;
