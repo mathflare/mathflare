@@ -180,16 +180,6 @@ hr {
     -ms-user-select: none;
     -webkit-user-select: none;
 }
-#formula {
-    /*make the formula hidden by default*/
-    display: none;
-}
-.formula {
-    /*SHOW FORMULA BUTTON*/
-    /*leave a margin in the bottom of the "show formula button"*/
-    margin-top: 16px !important;
-    margin-bottom: 20px;
-}
 .noscript {
     /*use only for the noscript tag*/
     color: var(--white);
@@ -255,8 +245,24 @@ hr {
     user-drag : none;
 }
 @media screen and (max-width: 915px) {
-    /*make the table 95% width for phones*/
+    /*hide the extra buttons for space efficiency*/
     .btn-mobile {
         display: none;
+    }
+}
+.table {
+    width: 40%;
+    transition: 0.2s;
+}
+@media screen and (max-width: 1000px) {
+    .table {
+        width: 50%;
+        transition: 0.2s;
+    }
+}
+@media screen and (max-width: 915px) {
+    .table {
+        width: 90%;
+        transition: 0.2s;
     }
 }

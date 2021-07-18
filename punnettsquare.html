@@ -5,7 +5,7 @@
     <!-- SEO -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MathFlare - Round Numbers</title>
+    <title>MathFlare - Punnett Square</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="MathFlare">
     <meta name="keywords"
@@ -51,33 +51,55 @@
     <div id="nav-container"></div>
     <!-- NAVBAR END -->
     <div class="center">
-        <h1 class="text-white">Round Numbers</h1>
+        <h1 class="text-white">Punnett Square</h1>
         <hr class="bg-danger" style="width: 60%;" />
         <form autocomplete="off">
+            <h4 class="text-white">Father's genotype</h4>
             <div class=" center-form">
-                <select class="form-select center-form" id="select">
-                    <option value="round">Nearest Integer</option>
-                    <option value="ceil">Next Largest Integer</option>
-                    <option value="floor">Largest Integer Less than or Equal to the number</option>
-                    <option value="tofixed">3rd Decimal Digit</option>
+                <select class="form-select center-form" id="fatherselect">
+                    <option value="AA">AA</option>
+                    <option value="Aa">Aa</option>
+                    <option value="aa">aa</option>
                 </select>
             </div>
             <br />
+            <h4 class="text-white">Mother's genotype</h4>
             <div class=" center-form">
-                <input type="number" id="num" class=" form-control" placeholder="number">
+                <select class="form-select center-form" id="motherselect">
+                    <option value="AA">AA</option>
+                    <option value="Aa">Aa</option>
+                    <option value="aa">aa</option>
+                </select>
             </div>
             <br />
             <div class="center-form">
-                <input type="submit" id="button" class="btn btn-success btn-lg" value="Calculate">
+                <input type="submit" id="pscalc" class="btn btn-success btn-lg" value="Calculate">
             </div>
         </form>
         <br>
-        <div style="max-height: 1em;">
-            <p class="text-success" id="output"></p>
-        </div>
-        <br>
+        <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+            <thead>
+                <tr>
+                    <th scope="col"><sup><i class="bi bi-gender-male"></i></sup>&frasl;<sub><i class="bi bi-gender-female"></i></sub></th>
+                    <th id="f1" scope="col">Α</th>
+                    <th id="f2" scope="col">Α</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th id="m1" scope="row">Α</th>
+                    <td id="f1m1">ΑΑ</td>
+                    <td id="f2m1">ΑΑ</td>
+                </tr>
+                <tr>
+                    <th id="m2" scope="row">Α</th>
+                    <td id="f1m2">ΑΑ</td>
+                    <td id="f2m2">ΑΑ</td>
+                </tr>
+            </tbody>
+        </table>
         <div class="my-4">
-            <a href="https://www.google.com/search?q=round+numbers" target="_blank" rel="noopener"
+            <a href="https://www.google.com/search?q=find+punnett+square" target="_blank" rel="noopener"
                 class="btn btn-outline-light">Find information on the web</a>
         </div>
     </div>
@@ -85,7 +107,7 @@
     <script src="Scripts/jquery-3.0.0.js"></script>
     <script src="Scripts/bootstrap.js"></script>
     <script src="dist/navbar.js"></script>
-    <script src="dist/round.js"></script>
+    <script src="dist/punnettsquare.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>
