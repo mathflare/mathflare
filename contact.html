@@ -111,8 +111,14 @@
         });
         //make the button enabled only if both the agree-to-tos and hcaptcha ckeckboxes are checked
         window.addEventListener('load', () => {
+            const iframeRef = (frameRef) => {
+                return frameRef.contentWindow
+                    ? frameRef.contentWindow.document
+                    : frameRef.contentDocument
+            }
+            let inside = iframeRef(document.querySelector('.h-captcha').firstChild);
             document.querySelector('#agree-to-tos').addEventListener('change', () => {
-                if (document.querySelector('#agree-to-tos').checked && document.querySelector('#checkbox').prop('aria-checked') == true) {
+                if (document.querySelector('#agree-to-tos').checked && inside.document.querySelector('#checkbox').prop('aria-checked') == true) {
                     document.querySelector('#send').disabled = false;
                 } else {
                     document.querySelector('#send').disabled = true;
