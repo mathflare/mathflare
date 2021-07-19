@@ -1,3 +1,4 @@
+//copyrights (c) 2021 MathFlare Co. Ltd.
 (<HTMLButtonElement>document.getElementById('combustcalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const c: number = parseFloat((<HTMLInputElement>document.getElementById('carbons')).value)!;
@@ -67,3 +68,4 @@
         }
     }
 });
+//copyrights (c) 2021 MathFlare Co. Ltd.
