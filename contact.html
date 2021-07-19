@@ -109,21 +109,12 @@
         window.addEventListener('load', () => {
             document.querySelector('#send').disabled = true;
         });
-        //make the button enabled only if both the agree-to-tos and hcaptcha ckeckboxes are checked
-        window.addEventListener('load', () => {
-            const iframeRef = (frameRef) => {
-                return frameRef.contentWindow
-                    ? frameRef.contentWindow.document
-                    : frameRef.contentDocument
+        document.querySelector('#agree-to-tos').addEventListener('change', () => {
+            if (document.querySelector('#agree-to-tos').checked && document.querySelector('.h-captcha').firstChild.getAttribute('data-hcaptcha-response')) {
+                document.querySelector('#send').disabled = false;
+            } else {
+                document.querySelector('#send').disabled = true;
             }
-            let inside = iframeRef(document.querySelector('.h-captcha').firstChild);
-            document.querySelector('#agree-to-tos').addEventListener('change', () => {
-                if (document.querySelector('#agree-to-tos').checked && inside.document.querySelector('#checkbox').prop('aria-checked') == true) {
-                    document.querySelector('#send').disabled = false;
-                } else {
-                    document.querySelector('#send').disabled = true;
-                }
-            });
         });
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
