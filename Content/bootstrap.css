@@ -4060,7 +4060,7 @@ textarea.form-control-lg {
     display: none;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1320px) {
   .navbar-expand-lg {
     flex-wrap: nowrap;
     justify-content: flex-start;
