@@ -266,8 +266,10 @@ hr {
         transition: 0.2s;
     }
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 915px) {
     .navbar-brand {
         text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
