@@ -116,6 +116,13 @@
                 document.querySelector('#send').disabled = true;
             }
         });
+        document.querySelector('.h-captcha').addEventListener('change', () => {
+            if (document.querySelector('#agree-to-tos').checked && document.querySelector('.h-captcha').firstChild.getAttribute('data-hcaptcha-response')) {
+                document.querySelector('#send').disabled = false;
+            } else {
+                document.querySelector('#send').disabled = true;
+            }
+        });
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
