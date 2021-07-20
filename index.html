@@ -46,6 +46,12 @@
     <!-- NAVBAR START -->
     <div id="nav-container"></div>
     <!-- NAVBAR END -->
+    <div class="alert alert-dismissible fade show m-2 text-center" role="alert"
+        style="z-index: 99999999; background-color: #343A40;">
+        Schedule and appointment and <a href="" target="_blank" rel="noopener" id="vacc-promo-link">get vaccinated
+            today</a>!
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
     <div class="dead-center">
         <h1 class="text-white fs-1"><img src="Assets/icon.png" class=" user-select-none logo"
                 style="height: 1em; transform: rotate(180deg);" alt="logo"> MathFlare</h1>
@@ -90,6 +96,41 @@
         console.log("%cHello Sir looking around in the console! Insted of hacking, what about you contribute to MathFlare on GitHub?", "font-family:consolas; font-size: 20px");
         console.log("%cMathFlare", "color: DodgerBlue; font-weight: 600; font-family:consolas; font-size: 40px");
         console.log("%cby the way, the curiosity killed the cat you know...", "color: PaleGreen; font-weight: 600; font-family:consolas; font-size: 20px");
+        $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=e3bc23053c584ae2bbf332d89bc66f8d", function (data) {
+            const country = data.country;
+            console.log(country);
+            if (country === 'Greece') {
+                document.querySelector('#vacc-promo-link').href = 'https://emvolio.gov.gr/';
+            } else if (country === 'United States') {
+                document.querySelector('#vacc-promo-link').href = 'https://www.cdc.gov/vaccines/';
+            } else if (country === 'United Kingdom') {
+                document.querySelector('#vacc-promo-link').href = 'https://www.gov.uk/government/publications/vaccines-and-immunisation/';
+            } else if (country === 'Germany') {
+                document.querySelector('#vacc-promo-link').href = 'https://impfterminservice.hessen.de/';
+            } else if (country === 'Canada') {
+                document.querySelector('#vacc-promo-link').href = 'https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/vaccines/how-vaccinated.html#a1';
+            } else if (country === 'France') {
+                document.querySelector('#vacc-promo-link').href = 'https://www.sante.fr/cf/centres-vaccination-covid.html';
+            } else if (country === 'Poland') {
+                document.querySelector('#vacc-promo-link').href = 'https://www.gov.pl/web/szczepimysie';
+            } else if (country === 'Russia') {
+                document.querySelector('#vacc-promo-link').href = 'https://www.gosuslugi.ru/10069/1';
+            } else if (country === 'Ireland') {
+                document.querySelector('#vacc-promo-link').href = 'https://vaccine.hse.ie/';
+            } else if (country === 'Netherlands') {
+                document.querySelector('#vacc-promo-link').href = 'https://www.rijksoverheid.nl/onderwerpen/coronavirus-vaccinatie/vraag-en-antwoord/hoe-maak-ik-een-afspraak-voor-vaccinatie-tegen-corona';
+            } else if (country === 'Belgium') {
+                document.querySelector('#vacc-promo-link').href = 'https://www.sante.fr/cf/centres-vaccination-covid.html';
+            } else if (country === 'India') {
+                document.querySelector('#vacc-promo-link').href = 'https://www.cowin.gov.in/';
+            } else if (country === 'Italy') {
+                document.querySelector('#vacc-promo-link').href = 'https://www.prenotazionevaccinicovid.regione.lombardia.it/';
+            } else if (country === 'China') {
+                document.querySelector('#vacc-promo-link').href = 'https://covid19.ca.gov/zh-hant/vaccines/';
+            } else if (country === 'Switzerland') {
+                document.querySelector('#vacc-promo-link').href = 'https://www.onedoc.ch/de/impfzentrum-nicht-covid/sarzens';
+            }
+        });
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
