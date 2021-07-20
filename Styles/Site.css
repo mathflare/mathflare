@@ -62,6 +62,10 @@ nav {
     width: 40%;
     transition: 0.2s;
 }
+.center input[type="email"] {
+    width: 40%;
+    transition: 0.2s;
+}
 .center select {
     width: 40%;
     transition: 0.2s;
@@ -87,6 +91,10 @@ nav {
         width: 50%;
         transition: 0.2s;
     }
+    .center input[type="email"] {
+        width: 50%;
+        transition: 0.2s;
+    }
     .center textarea {
         width: 50%;
         transition: 0.2s;
@@ -107,6 +115,10 @@ nav {
         transition: 0.2s;
     }
     .center input[type="text"] {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .center input[type="email"] {
         width: 90%;
         transition: 0.2s;
     }

@@ -51,6 +51,11 @@
             <p class=" text-white"><i class="bi bi-lightbulb"></i> Tip: Include your name in the subject of the email
             </p>
             <div class="center-form">
+                <input type="email" id="email" name="email" placeholder="Your email address"
+                    class="form-control mb-0" required />
+            </div>
+            <br>
+            <div class="center-form">
                 <input type="text" id="subj" name="subject" placeholder="Subject (Include First and Last Name)"
                     class="form-control mb-0" required />
             </div>
@@ -62,11 +67,11 @@
             <div class="form-check center-form d-inline-block">
                 <input class="form-check-input" type="checkbox" id="agree-to-tos" required>
                 <label class="form-check-label" for="agree-to-tos">
-                    I have read and agree on the <a href="tos.html">Terms of Service</a> (click this last)
+                    I have read and agree on the <a href="tos.html">Terms of Service</a>
                 </label>
             </div>
             <div class="button-group my-3">
-                <input type="submit" id="send" name="send" value="Send" class="btn btn-success mx-1" disabled />
+                <input type="submit" id="send" name="send" value="Send" class="btn btn-success mx-1" />
                 <input type="reset" value="Clear" class="btn btn-danger mx-1" />
             </div>
         </form>
@@ -97,25 +102,6 @@
     <script src="dist/navbar.js"></script>
     <script src="https://hcaptcha.com/1/api.js?hl=en" async defer></script>
     <script src="dist/contact.mail.js"></script>
-    <script>
-        window.addEventListener('load', () => {
-            document.querySelector('#send').disabled = true;
-        });
-        document.querySelector('#agree-to-tos').addEventListener('change', () => {
-            if (document.querySelector('#agree-to-tos').checked && document.querySelector('.h-captcha').firstChild.getAttribute('data-hcaptcha-response')) {
-                document.querySelector('#send').disabled = false;
-            } else {
-                document.querySelector('#send').disabled = true;
-            }
-        });
-        document.querySelector('.h-captcha').addEventListener('click', () => {
-            if (document.querySelector('#agree-to-tos').checked && document.querySelector('.h-captcha').firstChild.getAttribute('data-hcaptcha-response')) {
-                document.querySelector('#send').disabled = false;
-            } else {
-                document.querySelector('#send').disabled = true;
-            }
-        });
-    </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>
