@@ -7,6 +7,9 @@
         if (isNaN(c)) {
             (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
             (<HTMLInputElement>document.getElementById('carbons')).value = "";
+        } else if (Math.floor(c) !== c) {
+            (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">The number of carbons cannot be a decimal number</p>`;
+            (<HTMLInputElement>document.getElementById('carbons')).value = "";
         } else if (c <= 0) {
             if (c === 0) {
                 (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">There cannot be a combustion with 0 carbons</p>`;
@@ -15,9 +18,6 @@
                 (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
                 (<HTMLInputElement>document.getElementById('carbons')).value = "";
             }
-        } else if (Math.floor(c) !== c) {
-            (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">The number of carbons cannot be a decimal number</p>`;
-            (<HTMLInputElement>document.getElementById('carbons')).value = "";
         } else {
             const h: number = 2 * c + 2;
             const o: number = (h / 2 + 2 * c) / 2;
@@ -28,17 +28,20 @@
         if (isNaN(c)) {
             (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
             (<HTMLInputElement>document.getElementById('carbons')).value = "";
-        } else if (c <= 0) {
+        } else if (Math.floor(c) !== c) {
+            (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">The number of carbons cannot be a decimal number</p>`;
+            (<HTMLInputElement>document.getElementById('carbons')).value = "";
+        } else if (c <= 1) {
             if (c === 0) {
                 (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">There cannot be a combustion with 0 carbons</p>`;
+                (<HTMLInputElement>document.getElementById('carbons')).value = "";
+            } else if (c === 1) {
+                (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">A hydrocarbon with one carbon can only have a single bond</p>`;
                 (<HTMLInputElement>document.getElementById('carbons')).value = "";
             } else if (c < 0) {
                 (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
                 (<HTMLInputElement>document.getElementById('carbons')).value = "";
             }
-        } else if (Math.floor(c) !== c) {
-            (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">The number of carbons cannot be a decimal number</p>`;
-            (<HTMLInputElement>document.getElementById('carbons')).value = "";
         } else {
             const h: number = 2 * c;
             const o: number = (h / 2 + 2 * c) / 2;
@@ -49,17 +52,20 @@
         if (isNaN(c)) {
             (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
             (<HTMLInputElement>document.getElementById('carbons')).value = "";
-        } else if (c <= 0) {
+        } else if (Math.floor(c) !== c) {
+            (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">The number of carbons cannot be a decimal number</p>`;
+            (<HTMLInputElement>document.getElementById('carbons')).value = "";
+        } else if (c <= 1) {
             if (c === 0) {
                 (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">There cannot be a combustion with 0 carbons</p>`;
+                (<HTMLInputElement>document.getElementById('carbons')).value = "";
+            } else if (c === 1) {
+                (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">A hydrocarbon with one carbon can only have a single bond</p>`;
                 (<HTMLInputElement>document.getElementById('carbons')).value = "";
             } else if (c < 0) {
                 (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
                 (<HTMLInputElement>document.getElementById('carbons')).value = "";
             }
-        } else if (Math.floor(c) !== c) {
-            (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-warning">The number of carbons cannot be a decimal number</p>`;
-            (<HTMLInputElement>document.getElementById('carbons')).value = "";
         } else {
             const h: number = 2 * c - 2;
             const o: number = (h / 2 + 2 * c) / 2;

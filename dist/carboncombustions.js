@@ -8,6 +8,10 @@ document.getElementById('combustcalc').addEventListener('click', (event) => {
             document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
             document.getElementById('carbons').value = "";
         }
+        else if (Math.floor(c) !== c) {
+            document.getElementById('output').innerHTML = `<p class="text-warning">The number of carbons cannot be a decimal number</p>`;
+            document.getElementById('carbons').value = "";
+        }
         else if (c <= 0) {
             if (c === 0) {
                 document.getElementById('output').innerHTML = `<p class="text-warning">There cannot be a combustion with 0 carbons</p>`;
@@ -17,10 +21,6 @@ document.getElementById('combustcalc').addEventListener('click', (event) => {
                 document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
                 document.getElementById('carbons').value = "";
             }
-        }
-        else if (Math.floor(c) !== c) {
-            document.getElementById('output').innerHTML = `<p class="text-warning">The number of carbons cannot be a decimal number</p>`;
-            document.getElementById('carbons').value = "";
         }
         else {
             const h = 2 * c + 2;
@@ -34,19 +34,23 @@ document.getElementById('combustcalc').addEventListener('click', (event) => {
             document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
             document.getElementById('carbons').value = "";
         }
-        else if (c <= 0) {
+        else if (Math.floor(c) !== c) {
+            document.getElementById('output').innerHTML = `<p class="text-warning">The number of carbons cannot be a decimal number</p>`;
+            document.getElementById('carbons').value = "";
+        }
+        else if (c <= 1) {
             if (c === 0) {
                 document.getElementById('output').innerHTML = `<p class="text-warning">There cannot be a combustion with 0 carbons</p>`;
+                document.getElementById('carbons').value = "";
+            }
+            else if (c === 1) {
+                document.getElementById('output').innerHTML = `<p class="text-warning">A hydrocarbon with one carbon can only have a single bond</p>`;
                 document.getElementById('carbons').value = "";
             }
             else if (c < 0) {
                 document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
                 document.getElementById('carbons').value = "";
             }
-        }
-        else if (Math.floor(c) !== c) {
-            document.getElementById('output').innerHTML = `<p class="text-warning">The number of carbons cannot be a decimal number</p>`;
-            document.getElementById('carbons').value = "";
         }
         else {
             const h = 2 * c;
@@ -60,19 +64,23 @@ document.getElementById('combustcalc').addEventListener('click', (event) => {
             document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
             document.getElementById('carbons').value = "";
         }
-        else if (c <= 0) {
+        else if (Math.floor(c) !== c) {
+            document.getElementById('output').innerHTML = `<p class="text-warning">The number of carbons cannot be a decimal number</p>`;
+            document.getElementById('carbons').value = "";
+        }
+        else if (c <= 1) {
             if (c === 0) {
                 document.getElementById('output').innerHTML = `<p class="text-warning">There cannot be a combustion with 0 carbons</p>`;
+                document.getElementById('carbons').value = "";
+            }
+            else if (c === 1) {
+                document.getElementById('output').innerHTML = `<p class="text-warning">A hydrocarbon with one carbon can only have a single bond</p>`;
                 document.getElementById('carbons').value = "";
             }
             else if (c < 0) {
                 document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
                 document.getElementById('carbons').value = "";
             }
-        }
-        else if (Math.floor(c) !== c) {
-            document.getElementById('output').innerHTML = `<p class="text-warning">The number of carbons cannot be a decimal number</p>`;
-            document.getElementById('carbons').value = "";
         }
         else {
             const h = 2 * c - 2;
