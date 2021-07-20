@@ -20,7 +20,7 @@ const js_send = () => {
         || (<HTMLInputElement>document.querySelector("#" + form_id_js + " [name='subject']")).value === ''
         || (<HTMLInputElement>document.querySelector("#" + form_id_js + " [name='text']")).value === ''
         || !(<HTMLInputElement>document.querySelector('#agree-to-tos')).checked
-        || (<HTMLDivElement>document.querySelector('.h-captcha')).children[0].getAttribute('data-hcaptcha-response')) {
+        || (<HTMLDivElement>document.querySelector('.h-captcha')).children[0].getAttribute('data-hcaptcha-response') === '') {
         (<HTMLParagraphElement>document.querySelector('#user-message')).innerHTML = `<p class="text-warning">Please fill out all the fields</p>`;
     } else {
         sendButton.value = 'Sending…';
