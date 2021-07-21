@@ -1,33 +1,33 @@
 <h1 align='center'>MathFlare</h1>
 <div align='center'>
 
-<img src="https://user-images.githubusercontent.com/68110106/120902620-05ac7580-c64a-11eb-990d-4fb6ccdd8f76.png" alt="mathflare logo" width="400" height="400"/>
+<img src="https://user-images.githubusercontent.com/68110106/120902620-05ac7580-c64a-11eb-990d-4fb6ccdd8f76.png" alt="mathflare logo" width="300" height="300"/>
     
-<h4 align='center'>the go-to website for geometry and algebra📚🍎</h1>
+<h4 align='center'>the go-to website for algebra and geometry</h1>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/40421144-5482-41c2-83e1-f72c392501bc/deploy-status)](https://app.netlify.com/sites/mathflare/deploys)
 
 ____
 
 </div>
 
-#### Note:
+## MathFlare now offers:
 
-On the 5th of June 2021 we changed our company's name from `Liquid Geometry Co. Ltd.` to `MathFlare Co. Ltd.`
-
-____
-
-# Features
-
-- Area Calculator for basic geometric shapes
-- Shape Visualizer
+- Area Calculator
 - Pythagorian Theorem solver
 - Unit Converter
-- Math Cheat Sheet(for basic formulas)
+- Math Cheat Sheet
 - 1st degree equation solver
-- 2nd degree equation solver
-- Linear System Solver
-- Equal/Similar Triangle Finder
+- Quadratic equation solver
+- Linear 2x2 System Solver
+- 1st degree inequality solver
+- Displacement Calculator
+- Percentage Calculator
+- Trigonometry Calculator
+- Diagonal Calulator
+- Complete and Incomplete Combustion Calulator
 
-# FAQ
+## FAQ
 
 #### Why .tk?
 - We just like it! It's very unique.
@@ -56,21 +56,21 @@ ____
 #### How do you store the statistics?
 - Everything is stored in your browser in the form of cookies. We do not have access to this piece of information.
 
-# Domains
+## Domains
 
-A list of all the active domains for MathFlare:
-
-## Main Site
+### Main Site
 
 1. [www.mathflare.tk (Cloudflare Pages)](https://www.mathflare.tk)
-2. [www1.mathflare.tk (GitHub Pages)](https://www1.mathflare.tk)
 3. [liquidgeometry.ml (redirect)](http://liquidgeometry.ml)
 4. [liquidgeometry.tk (redirect)](http://liquidgeometry.tk)
 
 ## Other
 
-1. [api.mathflare.tk (GitHub Pages)](https://api.mathflare.tk)
-2. [developers.mathflare.tk (GitHub Pages)](https://developers.mathflare.tk)
+1. [api.mathflare.tk (Heroku)](https://api.mathflare.tk)
+2. [developers.mathflare.tk (Netlify)](https://developers.mathflare.tk)
+
+----------------------------------------------------------------
+
 
 # Contributing
 
