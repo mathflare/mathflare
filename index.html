@@ -124,6 +124,8 @@
                 document.querySelector('#vacc-promo-link').href = 'https://covid19.ca.gov/zh-hant/vaccines/';
             } else if (country === 'Switzerland') {
                 document.querySelector('#vacc-promo-link').href = 'https://www.onedoc.ch/de/impfzentrum-nicht-covid/sarzens';
+            } else {
+                document.querySelector('#vacc-promo-link').removeAttribute('href');
             }
         });
     </script>
