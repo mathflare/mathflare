@@ -39,6 +39,10 @@ document.getElementById('tancalc').addEventListener('click', (event) => {
         document.getElementById('tanout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         document.getElementById('tana').value = '';
     }
+    else if (angle === 90) {
+        document.getElementById('tanout').innerHTML = `<p class="text-warning">The angle cannot be 90&#176;</p>`;
+        document.getElementById('tana').value = '';
+    }
     else {
         document.getElementById('tanout').innerHTML = `<p class="text-success">tan(${angle}) = ${Math.tan(degreesToRadians(angle))}</p>`;
         document.getElementById('tana').value = '';

@@ -38,6 +38,9 @@
     if (isNaN(angle)) {
         (<HTMLParagraphElement>document.getElementById('tanout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.getElementById('tana')).value = '';
+    } else if (angle === 90) {
+        (<HTMLParagraphElement>document.getElementById('tanout')).innerHTML = `<p class="text-warning">The angle cannot be 90&#176;</p>`;
+        (<HTMLInputElement>document.getElementById('tana')).value = '';
     } else {
         (<HTMLParagraphElement>document.getElementById('tanout')).innerHTML = `<p class="text-success">tan(${angle}) = ${Math.tan(degreesToRadians(angle))}</p>`;
         (<HTMLInputElement>document.getElementById('tana')).value = '';

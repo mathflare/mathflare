@@ -16,6 +16,34 @@ document.getElementById('pscalc').addEventListener('click', (event) => {
         document.getElementById('f1m2').innerText = `${F1}${M2}`;
         document.getElementById('f2m1').innerText = `${F2}${M1}`;
         document.getElementById('f2m2').innerText = `${F2}${M2}`;
+        if (F1 === M1) {
+            if (F2 === M2) {
+                if (F1 === F2) {
+                    if (F1 === 'A') {
+                        document.getElementById('output').innerText = '100% for AA';
+                    }
+                    else if (F1 === 'a') {
+                        document.getElementById('output').innerText = '100% for aa';
+                    }
+                }
+                else {
+                    document.getElementById('output').innerText = '50% for Aa, 25% for AA, 25% for aa';
+                }
+            }
+            else {
+                document.getElementById('output').innerText = '50% for AA, 50% for Aa';
+            }
+        }
+        else if (F1 !== M1) {
+            if (F2 === M2) {
+                document.getElementById('output').innerText = '50% for Aa, 50% for aa';
+            }
+            else {
+                document.getElementById('output').innerText = '100% for Aa';
+            }
+        }
+    };
+    const calculatePercentage = () => {
     };
     fetchTable(fatherGene, motherGene);
 });
