@@ -28,12 +28,17 @@
         content="The go-to site for geometry and mathematics. Area calculator, Pythagorean theorem solver, unit converter and many more!" />
     <link rel="canonical" href="https://www.mathflare.tk">
     <link rel="home" href="https://www.mathflare.tk">
+    <meta name="theme-color" content="#FFC107">
     <!-- STYLES -->
+    <link rel="manifest" href="manifest.json">
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Styles/Footer.css" rel="stylesheet" />
     <link href="Styles/Profile.css" rel="stylesheet" />
     <link href="Styles/Scrollbar.css" rel="stylesheet" />
     <link href="Styles/Site.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="assets/android-chrome-192x192.png" sizes=192x192>
+    <link rel="icon" type="image/png" href="assets/android-chrome-256x256.png" sizes=256x256>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -74,8 +79,11 @@
                     🍕Donate to MathFlare
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="https://paypal.me/mathflare" target="_blank" rel="noopener"><i class="bi bi-heart-fill" style="color: var(--bs-pink);"></i> PayPal</a></li>
-                    <li><a class="dropdown-item" href="https://buymeacoffee.com/mathflare" target="_blank" rel="noopener"><i class="bi bi-heart-fill" style="color: var(--bs-pink);"></i> Buymeacoffee</a></li>
+                    <li><a class="dropdown-item" href="https://paypal.me/mathflare" target="_blank" rel="noopener"><i
+                                class="bi bi-heart-fill" style="color: var(--bs-pink);"></i> PayPal</a></li>
+                    <li><a class="dropdown-item" href="https://buymeacoffee.com/mathflare" target="_blank"
+                            rel="noopener"><i class="bi bi-heart-fill" style="color: var(--bs-pink);"></i>
+                            Buymeacoffee</a></li>
                 </ul>
             </div>
         </div>
@@ -143,6 +151,17 @@
                 document.querySelector('#vacc-promo-link').removeAttribute('href');
             }
         }); */
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./serviceworker.js')
+                    .then((reg) => console.log('Success: ', reg.scope))
+                    .catch((err) => console.log('Error: ', err));
+            });
+        } else {
+            console.log('Service worker is not supported in this browser');
+        }
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
