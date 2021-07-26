@@ -232,7 +232,10 @@ hr {
 #vout3,
 #sinout,
 #cosout,
-#tanout {
+#tanout,
+#asinout,
+#acosout,
+#atanout {
     /*make the output text bigger along with the line height*/
     font-size: 20px !important;
     line-height: 24px !important;
@@ -257,7 +260,7 @@ hr {
 .logo {
     /*make the logo in the index.html file non-draggable*/
     -webkit-user-drag: none;
-    user-drag : none;
+    user-drag: none;
 }
 @media screen and (max-width: 915px) {
     /*hide the extra buttons for space efficiency*/

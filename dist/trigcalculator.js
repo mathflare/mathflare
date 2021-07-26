@@ -48,3 +48,56 @@ document.getElementById('tancalc').addEventListener('click', (event) => {
         document.getElementById('tana').value = '';
     }
 });
+document.getElementById('asincalc').addEventListener('click', (event) => {
+    event.preventDefault();
+    const angle = parseFloat(document.getElementById('asina').value);
+    const degreesToRadians = (degrees) => {
+        return degrees * (Math.PI / 180);
+    };
+    if (isNaN(angle)) {
+        document.getElementById('asinout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        document.getElementById('asina').value = '';
+    }
+    else if (angle > 1 || angle < -1) {
+        document.getElementById('asinout').innerHTML = `<p class="text-warning">The angle must be between -1 and 1</p>`;
+        document.getElementById('asina').value = '';
+    }
+    else {
+        document.getElementById('asinout').innerHTML = `<p class="text-success">asin(${angle}) = ${Math.asin(degreesToRadians(angle))}</p>`;
+        document.getElementById('asina').value = '';
+    }
+});
+document.getElementById('acoscalc').addEventListener('click', (event) => {
+    event.preventDefault();
+    const angle = parseFloat(document.getElementById('acosa').value);
+    const degreesToRadians = (degrees) => {
+        return degrees * (Math.PI / 180);
+    };
+    if (isNaN(angle)) {
+        document.getElementById('acosout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        document.getElementById('acosa').value = '';
+    }
+    else if (angle > 1 || angle < -1) {
+        document.getElementById('acosout').innerHTML = `<p class="text-warning">The angle must be between -1 and 1</p>`;
+        document.getElementById('acosa').value = '';
+    }
+    else {
+        document.getElementById('acosout').innerHTML = `<p class="text-success">acos(${angle}) = ${Math.acos(degreesToRadians(angle))}</p>`;
+        document.getElementById('acosa').value = '';
+    }
+});
+document.getElementById('atancalc').addEventListener('click', (event) => {
+    event.preventDefault();
+    const angle = parseFloat(document.getElementById('atana').value);
+    const degreesToRadians = (degrees) => {
+        return degrees * (Math.PI / 180);
+    };
+    if (isNaN(angle)) {
+        document.getElementById('atanout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        document.getElementById('atana').value = '';
+    }
+    else {
+        document.getElementById('atanout').innerHTML = `<p class="text-success">atan(${angle}) = ${Math.atan(degreesToRadians(angle))}</p>`;
+        document.getElementById('atana').value = '';
+    }
+});
