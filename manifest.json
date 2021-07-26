@@ -12,19 +12,19 @@
     "homepage_url": "https://www.mathflare.tk",
     "icons": [
         {
-            "src": "/assets/favicon.ico",
+            "src": "/Assets/favicon.ico",
             "sizes": "128x128"
         },
         {
-            "src": "/assets/apple-touch-icon.png",
+            "src": "/Assets/apple-touch-icon.png",
             "sizes": "180x180"
         },
         {
-            "src": "/assets/android-chrome-192x192.png",
+            "src": "/Assets/android-chrome-192x192.png",
             "sizes": "192x192"
         },
         {
-            "src": "/assets/android-chrome-512x512.png",
+            "src": "/Assets/android-chrome-512x512.png",
             "sizes": "512x512"
         }
     ],
