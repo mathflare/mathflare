@@ -17,7 +17,7 @@
         background: #555;
     }
 /*for Firefox based browsers*/
-* {
+* {     
     scrollbar-width: thin;
     scrollbar-color: var(--lg-gray) var(--mathgray);
   }
