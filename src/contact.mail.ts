@@ -1,6 +1,6 @@
 const form_id_js: string = "contact-form";
 const data_js: any = {
-    "access_token": "0j8dsns3r0wo6wcwk89oobvi"
+    "access_token": "cji8to5eyo27kazz0db62sdb"
 };
 const js_onSuccess = () => {
     console.log('message sent successfully');
