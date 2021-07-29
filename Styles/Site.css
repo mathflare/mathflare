@@ -241,7 +241,7 @@ hr {
     -webkit-user-drag: none;
     user-drag: none;
 }
-/*=====915 MEDIA QUERY=====*/
+/*=====1000 MEDIA QUERY=====*/
 @media screen and (max-width: 1000px) {
     .center input[type="number"] {
         width: 50%;
@@ -273,7 +273,7 @@ hr {
     }
 }
 /*=====915 MEDIA QUERY=====*/
-@media screen and (max-wid : 915px) {
+@media screen and (max-width: 915px) {
     .navbar-brand {
         text-align: center !important;
         margin-left: auto !important;
