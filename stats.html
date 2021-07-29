@@ -28,8 +28,6 @@
         content="The go-to site for geometry and mathematics. Area calculator, Pythagorean theorem solver, unit converter and many more!" />
     <!-- STYLES -->
     <link href="Content/bootstrap.css" rel="stylesheet" />
-    <link href="Styles/Footer.css" rel="stylesheet" />
-    <link href="Styles/Profile.css" rel="stylesheet" />
     <link href="Styles/Scrollbar.css" rel="stylesheet" />
     <link href="Styles/Site.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -46,7 +44,7 @@
     <!-- NAVBAR END -->
     <div class="container-sm">
         <h1 class="text-white">Your Statistics</h1>
-        <hr class="bg-danger" />
+        <hr />
         <button class="btn btn-success me-3 mb-3" onclick="loadStats()" data-bs-toggle="tooltip"
             data-bs-placement="bottom" title="Refresh your statistics count">Refresh Stats <i
                 class="bi bi-arrow-clockwise"></i></button>
@@ -57,6 +55,54 @@
         <p class="text-white">Total Equations Solved: <span id="equations-solved"></span></p>
         <p class="text-white">Total Inequalities Solved: <span id="ineq"></span></p>
         <p class="text-white">Total Formulas Page Views: <span id="formulas-views"></span></p>
+        <hr />
+        <h3>More info about you...</h3>
+        <button class="btn btn-success me-3 mb-3" onclick="getClientInfo()" data-bs-toggle="tooltip"
+            data-bs-placement="right" title="Refresh your statistics count">Refresh Info <i
+                class="bi bi-arrow-clockwise"></i></button>
+        <p id="browser-proper-name"></p>
+        <p id="browser-proper-version"></p>
+        <p id="browser-codename"></p>
+        <p id="browser-name"></p>
+        <p id="browser-version"></p>
+        <p id="are-cookies-enabled"></p>
+        <p id="lang"></p>
+        <p id="is-online"></p>
+        <p id="engine-name"></p>
+        <p id="user-agent"></p>
+        <p id="is-java-enabled"></p>
+        <p id="full-height"></p>
+        <p id="full-width"></p>
+        <p id="total-height"></p>
+        <p id="total-width"></p>
+        <p id="color-depth"></p>
+        <p id="color-res"></p>
+        <p id="device-pixel-ratio"></p>
+        <p id="time-zone-name"></p>
+        <p id="time"></p>
+        <p id="date"></p>
+        <p id="history-length"></p>
+        <p id="num-cpu-cores"></p>
+        <p id="os-version"></p>
+        <p id="os-name"></p>
+        <p id="inner-width"></p>
+        <p id="inner-height"></p>
+        <p id="ip"></p>
+        <p id="city"></p>
+        <p id="region"></p>
+        <p id="country"></p>
+        <p id="country-code"></p>
+        <p id="country-is-eu"></p>
+        <p id="continent"></p>
+        <p id="continent-code"></p>
+        <p id="is-vpn"></p>
+        <p id="currency"></p>
+        <p id="asn"></p>
+        <p id="aso"></p>
+        <p id="connection-type"></p>
+        <p id="isp-name"></p>
+        <p id="org-name"></p>
+
     </div>
     <!-- SCRIPTS START -->
     <script src="Scripts/jquery-3.0.0.js"></script>
@@ -64,10 +110,30 @@
     <script src="dist/navbar.js"></script>
     <script src="dist/stats.js"></script>
     <script>
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
-        })
+        });
+        $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=e3bc23053c584ae2bbf332d89bc66f8d", function (data) {
+            const loadMoreClientInfo = (data) => {
+                document.getElementById('ip').innerHTML = "IP: " + data.ip_address;
+                document.getElementById('city').innerHTML = "City: " + data.city;
+                document.getElementById('region').innerHTML = "Region: " + data.region;
+                document.getElementById('country').innerHTML = "Country: " + data.country;
+                document.getElementById('country-code').innerHTML = "Country Code: " + data.country_code;
+                document.getElementById('country-is-eu').innerHTML = "Is in the EU: " + data.country_is_eu;
+                document.getElementById('continent').innerHTML = "Continent: " + data.continent;
+                document.getElementById('continent-code').innerHTML = "Continent Code: " + data.continent_code;
+                document.getElementById('is-vpn').innerHTML = "Are you using a VPN? " + data.security.is_vpn;
+                document.getElementById('currency').innerHTML = "Currency: " + data.currency.currency_name;
+                document.getElementById('asn').innerHTML = "ASN: " + data.connection.autonomous_system_number;
+                document.getElementById('aso').innerHTML = "ASO: " + data.connection.autonomous_system_organization;
+                document.getElementById('connection-type').innerHTML = "Connection Type: " + data.connection.connection_type;
+                document.getElementById('isp-name').innerHTML = "ISP Name: " + data.connection.isp_name;
+                document.getElementById('org-name').innerHTML = "ISP Organization Name: " + data.connection.organization_name;
+            }
+            loadMoreClientInfo(data);
+        });
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
