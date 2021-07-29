@@ -164,6 +164,10 @@ hr {
     min-height: 20px;
     transition: 0.2s;
 }
+.table {
+    width: 40%;
+    transition: 0.2s;
+}
 .center-form {
     display: flex;
     justify-content: center;
@@ -259,6 +263,10 @@ hr {
         transition: 0.2s;
     }
     .message {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .table {
         width: 50%;
         transition: 0.2s;
     }
