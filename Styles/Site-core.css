@@ -1,0 +1,315 @@
+﻿body {
+    font-family: "Poppins", sans-serif !important;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(210, 10%, 15%);
+}
+::selection {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
+}
+.center-form input::selection,
+.center-form textarea::selection {
+    background-color: hsl(0, 0%, 0%) !important;
+    color: hsl(0, 0%, 100%) !important;
+}
+.text-success {
+    color: hsl(134, 61%, 41%) !important;
+}
+.container-sm {
+    margin-top: 7.5em;
+}
+a, a:hover, a:focus {
+    color: inherit;
+}
+hr {
+    border: 2px solid hsl(354, 70%, 54%);
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+}
+/*=====SIDEBAR START=====*/
+.navbar-dark {
+    background-color: hsl(210, 10%, 15%) !important;
+}
+.offcanvas {
+    background-color: hsl(210, 10%, 15%);
+    z-index: 1000000 !important;
+    transition: 0.3s;
+}
+@media screen and (max-width: 600px) {
+    .offcanvas {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        transition: 0.3s;
+    }
+}
+.offcanvas .bi {
+    vertical-align: -0.125em;
+    pointer-events: none;
+    fill: currentColor;
+    margin-right: 0.3em;
+}
+.dropdown-toggle {
+    outline: 0;
+}
+.btn-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    background-color: transparent;
+    border: 0;
+}
+.btn-toggle:hover,
+.btn-toggle:focus,
+.btn-offcanvas-link:hover,
+.btn-offcanvas-link:focus {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(208, 11%, 23%);
+}
+.btn-toggle::before {
+    width: 1.25em;
+    line-height: 0;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+    transition: transform 0.35s ease;
+    transform-origin: 0.5em 50%;
+}
+.btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+}
+.btn-toggle-nav a {
+    display: inline-flex;
+    padding: 0.1875rem 0.5rem;
+    margin-top: 0.125rem;
+    margin-left: 1.25rem;
+    text-decoration: none;
+    font-size: 16px;
+}
+.btn-toggle-nav .active {
+    background-color: hsl(208, 11%, 23%) !important;
+}
+.btn-offcanvas-link.active {
+    background-color: hsl(208, 11%, 23%) !important;
+}
+.btn-toggle-nav .nav-header {
+    display: inline-flex;
+    padding: 0.1875rem 0.5rem;
+    margin-top: 0.125rem;
+    margin-left: 1.25rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: hsl(134, 61%, 41%);
+}
+.btn-offcanvas-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    background-color: transparent;
+    border: 0;
+}
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+    background-color: hsl(208, 11%, 23%);
+}
+.scrollarea {
+    overflow-y: auto;
+}
+/*=====SIDEBAR END=====*/
+.dead-center {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1 !important;
+}
+.center {
+    text-align: center !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 7.5em;
+    z-index: 1 !important;
+}
+.center input[type="number"] {
+    width: 40%;
+    transition: 0.2s;
+}
+.center input[type="text"] {
+    width: 40%;
+    transition: 0.2s;
+}
+.center input[type="email"] {
+    width: 40%;
+    transition: 0.2s;
+}
+.center select {
+    width: 40%;
+    transition: 0.2s;
+}
+.center textarea {
+    width: 40%;
+    transition: 0.2s;
+}
+.message {
+    width: 40%;
+    height: 100px;
+    min-height: 20px;
+    transition: 0.2s;
+}
+.table {
+    width: 40%;
+    transition: 0.2s;
+}
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*=====CHEAT SHEET TABLE START=====*/
+.formulas-body tr:hover {
+    background-color: hsl(0, 0%, 100%) !important;
+    color: hsl(0, 0%, 0%) !important;
+    transition: background-color 0.2s ease-in-out;
+}
+.formulas-body tr:hover ::selection {
+    background-color: hsl(0, 0%, 0%) !important;
+    color: hsl(0, 0%, 100%) !important;
+}
+/*=====CHEAT SHEET TABLE END=====*/
+.noscript {
+    color: hsl(0, 0%, 100%);
+    background-color: var(--danger);
+    font-size: larger;
+    display: inline-flex;
+    margin: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 999999;
+}
+#output,
+#output1,
+#output2,
+#output3,
+#output4,
+#output5,
+#output6,
+#squareout,
+#paraout,
+#triout,
+#etriout,
+#circleout,
+#trapout,
+#dxout,
+#trapout1,
+#trapout2,
+#dxout1,
+#dtout2,
+#vout3,
+#sinout,
+#cosout,
+#tanout,
+#asinout,
+#acosout,
+#atanout {
+    font-size: 20px !important;
+    line-height: 24px !important;
+}
+.output-container {
+    line-height: 24px !important;
+    height: 1em !important;
+    max-height: 1em !important;
+    min-height: 1em !important;
+}
+.codeblock {
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    font-family: Consolas, monospace;
+    background-color: hsl(0, 0%, 12%);
+}
+.logo {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+/*=====915 MEDIA QUERY=====*/
+@media screen and (max-width: 1000px) {
+    .center input[type="number"] {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .center input[type="text"] {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .center input[type="email"] {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .center textarea {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .center select {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .message {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .table {
+        width: 50%;
+        transition: 0.2s;
+    }
+}
+/*=====915 MEDIA QUERY=====*/
+@media screen and (max-width: 915px) {
+    .navbar-brand {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .center {
+        margin-top: 10em;
+    }
+    .table {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .btn-mobile {
+        display: none;
+    }
+    .center input[type="number"] {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .center input[type="text"] {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .center input[type="email"] {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .center select {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .center textarea {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .message {
+        width: 90%;
+        transition: 0.2s;
+    }
+}
