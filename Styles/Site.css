@@ -1,126 +1,100 @@
-﻿@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
-:root {
-    /*Our dark grey*/
-    --liquido: #23272b;
-    /*Our light grey*/
-    --aactive: #9999;
-    /*black and white*/
-    --black: #000000;
-    --white: #ffffff;
-}
-body {
+﻿body {
     font-family: "Poppins", sans-serif !important;
     color: hsl(0, 0%, 100%);
-    background-color: var(--liquido);
-    background-color: #23272b;
+    background-color: hsl(210, 10%, 15%);
 }
 ::selection {
-    /*custom selection*/
-    background-color: white;
-    color: black;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
 }
-.navbar-collapse ::-webkit-scrollbar {
-    display: none;
+.center-form input::selection,
+.center-form textarea::selection {
+    background-color: hsl(0, 0%, 0%) !important;
+    color: hsl(0, 0%, 100%) !important;
 }
-.navbar-collapse ::-webkit-scrollbar-thumb {
-    background: #23272b !important;
-    border-radius: 5px !important;
+.text-success {
+    color: hsl(134, 61%, 41%) !important;
 }
-
+.container-sm {
+    margin-top: 7.5em;
+}
+a, a:hover, a:focus {
+    color: inherit;
+}
+hr {
+    border: 2px solid hsl(354, 70%, 54%);
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+}
 /*=====SIDEBAR START=====*/
-  .navbar-dark {
-      background-color: #23272B;
-  }
-  .offcanvas {
-    background-color: hsl(210, 11%, 15%);
+.navbar-dark {
+    background-color: hsl(210, 10%, 15%) !important;
+}
+.offcanvas {
+    background-color: hsl(210, 10%, 15%);
     z-index: 1000000 !important;
     transition: 0.3s;
-  }
-  
-  @media screen and (max-width: 600px) {
+}
+@media screen and (max-width: 600px) {
     .offcanvas {
-      width: 100%;
-      margin-left: 0;
-      margin-right: 0;
-      transition: 0.3s;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        transition: 0.3s;
     }
-  }
-  
-  .b-example-divider {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: solid rgba(0, 0, 0, 0.15);
-    border-width: 1px 0;
-    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
-      inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
-  }
-  
-  .offcanvas .bi {
+}
+.offcanvas .bi {
     vertical-align: -0.125em;
     pointer-events: none;
     fill: currentColor;
     margin-right: 0.3em;
-  }
-  
-  .dropdown-toggle {
+}
+.dropdown-toggle {
     outline: 0;
-  }
-  
-  .nav-flush .nav-link {
-    border-radius: 0;
-  }
-  
-  .btn-toggle {
+}
+.btn-toggle {
     display: inline-flex;
     align-items: center;
     padding: 0.25rem 0.5rem;
     font-weight: 500;
-    /*here*/
-    color: white;
+    color: hsl(0, 0%, 100%);
     background-color: transparent;
     border: 0;
-  }
-  .btn-toggle:hover,
-  .btn-toggle:focus,
-  .btn-offcanvas-link:hover,
-  .btn-offcanvas-link:focus {
-    /*here*/
-    color: white;
+}
+.btn-toggle:hover,
+.btn-toggle:focus,
+.btn-offcanvas-link:hover,
+.btn-offcanvas-link:focus {
+    color: hsl(0, 0%, 100%);
     background-color: hsl(208, 11%, 23%);
-  }
-  
-  .btn-toggle::before {
+}
+.btn-toggle::before {
     width: 1.25em;
     line-height: 0;
     content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
     transition: transform 0.35s ease;
     transform-origin: 0.5em 50%;
-  }
-  .btn-toggle[aria-expanded="true"]::before {
+}
+.btn-toggle[aria-expanded="true"]::before {
     transform: rotate(90deg);
-  }
-  
-  .btn-toggle-nav a {
+}
+.btn-toggle-nav a {
     display: inline-flex;
     padding: 0.1875rem 0.5rem;
     margin-top: 0.125rem;
     margin-left: 1.25rem;
     text-decoration: none;
     font-size: 16px;
-  }
-  
-  .btn-toggle-nav .active {
+}
+.btn-toggle-nav .active {
     background-color: hsl(208, 11%, 23%) !important;
-  }
-  
-  .btn-offcanvas-link.active {
+}
+.btn-offcanvas-link.active {
     background-color: hsl(208, 11%, 23%) !important;
-  }
-  
-  .btn-toggle-nav .nav-header {
+}
+.btn-toggle-nav .nav-header {
     display: inline-flex;
     padding: 0.1875rem 0.5rem;
     margin-top: 0.125rem;
@@ -129,41 +103,26 @@ body {
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-    background-color: var(--bs-success);
-  }
-  
-  .btn-offcanvas-link {
+    background-color: hsl(134, 61%, 41%);
+}
+.btn-offcanvas-link {
     display: inline-flex;
     align-items: center;
     padding: 0.25rem 0.5rem;
     font-weight: 500;
-    /*here*/
-    color: white;
+    color: hsl(0, 0%, 100%);
     background-color: transparent;
     border: 0;
-  }
-  
-  .btn-toggle-nav a:hover,
-  .btn-toggle-nav a:focus {
-    /*here*/
+}
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
     background-color: hsl(208, 11%, 23%);
-  }
-  
-  .scrollarea {
+}
+.scrollarea {
     overflow-y: auto;
-  }
-  
-  .fw-semibold {
-    font-weight: 500;
-  }
-  .lh-tight {
-    line-height: 1.25;
-  }
-  
-
+}
 /*=====SIDEBAR END=====*/
 .dead-center {
-    /*Use this class for the home page only*/
     position: absolute;
     text-align: center;
     top: 50%;
@@ -171,26 +130,13 @@ body {
     transform: translate(-50%, -50%);
     z-index: 1 !important;
 }
-.test {
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    transform: translate(-50%);
-}
 .center {
-    /*Use this class for all the centering*/
     text-align: center !important;
     display: block;
     margin-left: auto !important;
     margin-right: auto !important;
     margin-top: 7.5em;
     z-index: 1 !important;
-}
-@media screen and (max-width: 915px) {
-    /*leave more margin in the content for phones*/
-    .center {
-        margin-top: 10em;
-    }
 }
 .center input[type="number"] {
     width: 40%;
@@ -213,126 +159,29 @@ body {
     transition: 0.2s;
 }
 .message {
-    /*textarea for contact page*/
     width: 40%;
     height: 100px;
     min-height: 20px;
     transition: 0.2s;
 }
-@media screen and (max-width: 1000px) {
-    /*make the inputs bigger for smaller screens*/
-    .center input[type="number"] {
-        width: 50%;
-        transition: 0.2s;
-    }
-    .center input[type="text"] {
-        width: 50%;
-        transition: 0.2s;
-    }
-    .center input[type="email"] {
-        width: 50%;
-        transition: 0.2s;
-    }
-    .center textarea {
-        width: 50%;
-        transition: 0.2s;
-    }
-    .center select {
-        width: 50%;
-        transition: 0.2s;
-    }
-    .message {
-        width: 50%;
-        transition: 0.2s;
-    }
-}
-@media screen and (max-width: 915px) {
-    /*make the inputs bigger for phones*/
-    .center input[type="number"] {
-        width: 90%;
-        transition: 0.2s;
-    }
-    .center input[type="text"] {
-        width: 90%;
-        transition: 0.2s;
-    }
-    .center input[type="email"] {
-        width: 90%;
-        transition: 0.2s;
-    }
-    .center select {
-        width: 90%;
-        transition: 0.2s;
-    }
-    .center textarea {
-        width: 90%;
-        transition: 0.2s;
-    }
-    .message {
-        width: 90%;
-        transition: 0.2s;
-    }
-}
 .center-form {
-    /*use this class to center inputs and buttons*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.center-form ::selection {
-    /*make the selctor different in the input elements*/
-    background-color: var(--black) !important;
-    color: var(--white) !important;
-}
-@media screen and (max-width: 715px) {
-    /*make the buttons stack on top of each other for phones*/
-    .d-inline-flex {
-        display: unset !important;
-    }
-}
-a {
-    color: inherit;
-}
-a:hover {
-    color: inherit;
-}
-.active .nav-link {
-    color: #ffffff !important;
-}
-.dropdown-menu .aactive {
-    /*Custom active state for dropdown link navbar elements cause the bootstrap one sucks*/
-    background-color: var(--aactive) !important;
-    color: var(--black) !important;
-}
-hr {
-    /*style the line element*/
-    border: 2px solid var(--bs-danger);
-    border-radius: 3px;
-    margin: auto;
-    margin-top: 16px !important;
-    margin-bottom: 16px !important;
-}
-/*CHEAT SHEET TABLE*/
+/*=====CHEAT SHEET TABLE START=====*/
 .formulas-body tr:hover {
-    background-color: var(--white) !important;
-    color: var(--black) !important;
+    background-color: hsl(0, 0%, 100%) !important;
+    color: hsl(0, 0%, 0%) !important;
     transition: background-color 0.2s ease-in-out;
 }
 .formulas-body tr:hover ::selection {
-    background-color: var(--black) !important;
-    color: var(--white) !important;
+    background-color: hsl(0, 0%, 0%) !important;
+    color: hsl(0, 0%, 100%) !important;
 }
-/*SHOW FORMULA BUTTON*/
-.show-formula:hover {
-    cursor: pointer;
-    /*make "show formula" text non-selectable*/
-    user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-}
+/*=====CHEAT SHEET TABLE END=====*/
 .noscript {
-    /*use only for the noscript tag*/
-    color: var(--white);
+    color: hsl(0, 0%, 100%);
     background-color: var(--danger);
     font-size: larger;
     display: inline-flex;
@@ -340,14 +189,6 @@ hr {
     padding: 5px;
     border-radius: 5px;
     z-index: 999999;
-}
-.container-sm {
-    /*leave a margin in the top of the small container in the stats page*/
-    margin-top: 7.5em;
-}
-.text-success {
-    /*make the bootstrap success color lighter*/
-    color: #28a745 !important;
 }
 #output,
 #output1,
@@ -374,58 +215,93 @@ hr {
 #asinout,
 #acosout,
 #atanout {
-    /*make the output text bigger along with the line height*/
     font-size: 20px !important;
     line-height: 24px !important;
-    /*font-family: 'Merriweather', serif !important;*/
 }
 .output-container {
-    /*make the output div a stamdar height*/
     line-height: 24px !important;
     height: 1em !important;
     max-height: 1em !important;
     min-height: 1em !important;
 }
 .codeblock {
-    /*make the span/code element look like codeblock*/
     display: inline-flex;
     padding: 5px;
     border-radius: 5px;
-    color: white;
+    color: hsl(0, 0%, 100%);
     font-family: Consolas, monospace;
-    background-color: #1e1e1e;
+    background-color: hsl(0, 0%, 12%);
 }
 .logo {
-    /*make the logo in the index.html file non-draggable*/
     -webkit-user-drag: none;
     user-drag: none;
 }
-@media screen and (max-width: 915px) {
-    /*hide the extra buttons for space efficiency*/
-    .btn-mobile {
-        display: none;
-    }
-}
-.table {
-    width: 40%;
-    transition: 0.2s;
-}
+/*=====915 MEDIA QUERY=====*/
 @media screen and (max-width: 1000px) {
-    .table {
+    .center input[type="number"] {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .center input[type="text"] {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .center input[type="email"] {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .center textarea {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .center select {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .message {
         width: 50%;
         transition: 0.2s;
     }
 }
-@media screen and (max-width: 915px) {
-    .table {
-        width: 90%;
-        transition: 0.2s;
-    }
-}
+/*=====915 MEDIA QUERY=====*/
 @media screen and (max-width: 915px) {
     .navbar-brand {
         text-align: center !important;
         margin-left: auto !important;
         margin-right: auto !important;
+    }
+    .center {
+        margin-top: 10em;
+    }
+    .table {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .btn-mobile {
+        display: none;
+    }
+    .center input[type="number"] {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .center input[type="text"] {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .center input[type="email"] {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .center select {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .center textarea {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .message {
+        width: 90%;
+        transition: 0.2s;
     }
 }
