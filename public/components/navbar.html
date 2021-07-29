@@ -1,187 +1,277 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" style="border-bottom: 2px solid var(--bs-warning); ">
+<nav class="navbar fixed-top navbar-dark bg-dark" style="border-bottom: 1px solid var(--bs-warning)">
     <div class="container-fluid">
+        <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample"><span class="navbar-toggler-icon"></span></button>
         <a class="navbar-brand" href="https://www.mathflare.tk">
             <img src="Assets/icon.png" class="user-select-none mb-1" style="height: 1em;" alt="logo">
             MathFlare
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav navbar-nav-scroll mt-4 mt-xxl-0" style="--bs-scroll-height: 40em;">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Algebra
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <h5 class="dropdown-header">Basic Algebra</h5>
-                        <a href="logar.html" class="dropdown-item"><i class="bi bi-percent"></i> Logarithms</a>
-                        <a href="sqrt.html" class="dropdown-item"><i class="bi bi-calculator"></i> Square Root
-                            Calculator</a>
-                        <a href="cbrt.html" class="dropdown-item"><i class="bi bi-calculator"></i> Cube Root
-                            Calculator</a>
-                        <a href="pow.html" class="dropdown-item"><i class="bi bi-power"></i> Exponents(powers)</a>
-                        <a href="avg.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Average Calculator</a>
-                        <a href="percent.html" class="dropdown-item"><i class="bi bi-percent"></i> Percentage
-                            Calculator</a>
-                        <a href="round.html" class="dropdown-item"><i class="bi bi-arrows-expand"></i> Round Numbers</a>
-                        <a href="fact.html" class="dropdown-item"><i class="bi bi-exclamation-lg"></i> Factorials</a>
-                        <a href="slope.html" class="dropdown-item"><i class="bi bi-graph-up"></i> Slope Calculator</a>
-                        <a href="pointsdistance.html" class="dropdown-item"><i class="bi bi-rulers"></i> Distance
-                            Between two Points</a>
-                        <div class="dropdown-divider"></div>
-                        <h5 class="dropdown-header">Equations</h5>
-                        <a href="equations.html" class="dropdown-item"><i class="bi bi-percent"></i> 1st Degree</a>
-                        <a href="equations-second.html" class="dropdown-item"><i class="bi bi-percent"></i> Quadratic
-                            Equations</a>
-                        <div class="dropdown-divider"></div>
-                        <h5 class="dropdown-header">Inequalities</h5>
-                        <a href="inequalities.html" class="dropdown-item"><i class="bi bi-code"></i> 1st Degree</a>
-                        <div class="dropdown-divider"></div>
-                        <h5 class="dropdown-header">Systems of Equations</h5>
-                        <a href="linear-systems.html" class="dropdown-item"><i class="bi bi-border-width"></i> Linear
-                            2&#215;2 Systems</a>
-                        <div class="dropdown-divider"></div>
-                        <h5 class="dropdown-header">Popular Problems</h5>
-                        <a href="handshake.html" class="dropdown-item">🤝 Handshakes at Party</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Geometry
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <h5 class="dropdown-header">Basic Geometry</h5>
-                        <a href="perimeter.html" class="dropdown-item"><i class="bi bi-bounding-box"></i> Perimeter
-                            Calculator</a>
-                        <a href="area.html" class="dropdown-item"><i class="bi bi-grid-3x3"></i> Area Calculator</a>
-                        <a href="diagpolyg.html" class="dropdown-item"><i class="bi bi-slash-square"></i> Diagonal
-                            Calculator</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Trigonometry
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <h5 class="dropdown-header">Basic Trigonometry</h5>
-                        <a href="trigcalculator.html" class="dropdown-item"><i class="bi bi-calculator"></i>
-                            Trigonometric Calculator (Sin,Cos,Tan)</a>
-                        <div class="dropdown-divider"></div>
-                        <h5 class="dropdown-header">Pythagorean Theorem</h5>
-                        <a href="phypotenuse.html" class="dropdown-item"><i class="bi bi-symmetry-vertical"></i>
-                            Hypotenuse Calculator</a>
-                        <a href="prightside.html" class="dropdown-item"><i class="bi bi-symmetry-vertical"></i> Leg
-                            Calculator</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Physics
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <h5 class="dropdown-header">Basic Science</h5>
-                        <a href="displacement.html" class="dropdown-item"><i class="bi bi-arrow-left-right"></i>
-                            Displacement Calculator</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Biology
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <h5 class="dropdown-header">Mendel's law</h5>
-                        <a href="punnettsquare.html" class="dropdown-item"><i class="bi bi-gender-ambiguous"></i>
-                            Punnett Square</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Chemistry
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <h5 class="dropdown-header">Carbon Combustions</h5>
-                        <a href="carboncombustions.html" class="dropdown-item"><i class="bi bi-minecart-loaded"></i>
-                            Complete Combustions</a>
-                        <a href="imperfcarboncombust.html" class="dropdown-item"><i class="bi bi-minecart-loaded"></i>
-                            Incomplete Combustions</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Unit Converter
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a href="clenght.html" class="dropdown-item"><i class="bi bi-rulers"></i> Lenght</a>
-                        <a href="ctemp.html" class="dropdown-item"><i class="bi bi-thermometer"></i> Temperature</a>
-                        <a href="cspeed.html" class="dropdown-item"><i class="bi bi-speedometer"></i> Speed</a>
-                        <a href="cweight.html" class="dropdown-item"><i class="bi bi-minecart-loaded"></i> Weight</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Links
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <h5 class="dropdown-header">Donate</h5>
-                        <a href="https://paypal.me/mathflare" target="_blank" rel="noopener" class="dropdown-item"><i
-                                class="bi bi-heart-fill" style="color: var(--bs-pink)"></i>
-                            PayPal Me <span class="badge"
-                                style="background-color: #036BB7;">PayPal.me/mathflare</span></a>
-                        <a href="https://www.buymeacoffee.com/mathflare" target="_blank" rel="noopener"
-                            class="dropdown-item"><i class="bi bi-heart-fill" style="color: var(--bs-pink)"></i>
-                            Buy me a Pizza <span class="badge"
-                                style="background-color: #036BB7;">buymeacoffee/mathflare</span></a>
-                        <div class="dropdown-divider"></div>
-                        <h5 class="dropdown-header">Contact</h5>
-                        <a href="contact.html" class="dropdown-item"><i class="bi bi-telephone-fill"></i> Contact
-                            Form</a>
-                        <a href="stats.html" class="dropdown-item"><i class="bi bi-graph-up"></i> Stats</a>
-                        <a href="https://github.com/mathflare" target="_blank" class="dropdown-item"><i
-                                class="bi bi-github"></i> GitHub</a>
-                        <a href="mailto:mathflare@pm.me" target="_blank" class="dropdown-item"><i
-                                class="bi bi-envelope-fill"></i> Email</a>
-                        <a href="https://www.instagram.com/mathflare/" class="dropdown-item"><i
-                                class="bi bi-instagram"></i> Instagram</a>
-                        <a href="https://api.mathflare.tk" target="_blank" class="dropdown-item"><i
-                                class="bi bi-hdd-stack-fill"></i> REST API</a>
-                        <a href="https://developers.mathflare.tk" target="_blank" class="dropdown-item"><i
-                                class="bi bi-code-slash"></i> For Developers</a>
-                        <a href="https://github.com/mathflare/mathflare/issues" target="_blank" class="dropdown-item"><i
-                                class="bi bi-bug-fill"></i> Report a Bug</a>
-                        <a href="https://github.com/mathflare/mathflare/issues" target="_blank" class="dropdown-item"><i
-                                class="bi bi-lightbulb-fill"></i> Suggest an Edit</a>
-                        <div class="dropdown-divider"></div>
-                        <h5 class="dropdown-header">Legal</h5>
-                        <a href="tos.html" class="dropdown-item"><i class="bi bi-card-checklist"></i> Terms of Use</a>
-                        <a href="license.html" class="dropdown-item"><i class="bi bi-credit-card-2-front"></i> Software
-                            License</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cheatsheet.html"><i class="bi bi-book"></i> Cheat Sheet</a>
-                </li>
-            </ul>
-        </div>
     </div>
 </nav>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+        <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <nav>
+            <ul class="list-unstyled ps-0">
+                <li class="my-2">
+                    <a class="btn btn-offcanvas-link align-items-center rounded" href="index.html">
+                        <i class="bi bi-house"></i>Home
+                    </a>
+                </li>
+                <li class="my-2">
+                    <a class="btn btn-offcanvas-link align-items-center rounded" href="cheatsheet.html">
+                        <i class="bi bi-book"></i>Cheat Sheet
+                    </a>
+                </li>
+                <li class="my-2">
+                    <button class="btn btn-toggle btn-toggle-light align-items-center rounded collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#algebra-collapse" aria-expanded="false">
+                        Algebra
+                    </button>
+                    <div class="collapse" id="algebra-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small my-1">
+                            <li>
+                                <p class="nav-header rounded user-select-none">Basic Algebra</p>
+                            </li>
+                            <li><a href="logar.html" class="link-light rounded"><i class="bi bi-percent"></i>
+                                    Logarithms</a></li>
+                            <li><a href="sqrt.html" class="link-light rounded"><i class="bi bi-calculator"></i> Square
+                                    Root
+                                    Calculator</a></li>
+                            <li><a href="cbrt.html" class="link-light rounded"><i class="bi bi-calculator"></i> Cube
+                                    Root
+                                    Calculator</a></li>
+                            <li><a href="pow.html" class="link-light rounded"><i class="bi bi-power"></i>
+                                    Exponents(powers)</a>
+                            </li>
+                            <li><a href="avg.html" class="link-light rounded"><i class="bi bi-pie-chart"></i> Average
+                                    Calculator</a></li>
+                            <li><a href="percent.html" class="link-light rounded"><i class="bi bi-percent"></i>
+                                    Percentage
+                                    Calculator</a></li>
+                            <li><a href="round.html" class="link-light rounded"><i class="bi bi-arrows-expand"></i>
+                                    Round Numbers</a></li>
+                            <li><a href="fact.html" class="link-light rounded"><i class="bi bi-exclamation-lg"></i>
+                                    Factorials</a></li>
+                            <li><a href="slope.html" class="link-light rounded"><i class="bi bi-graph-up"></i> Slope
+                                    Calculator</a></li>
+                            <li><a href="pointsdistance.html" class="link-light rounded"><i class="bi bi-rulers"></i>
+                                    Distance
+                                    Between two Points</a></li>
+                            <li>
+                                <p class="nav-header rounded user-select-none">Equations</p>
+                            </li>
+                            <li><a href="equations.html" class="link-light rounded"><i class="bi bi-percent"></i> 1st
+                                    Degree</a></li>
+                            <li><a href="quadraticequations.html" class="link-light rounded"><i
+                                        class="bi bi-percent"></i> Quadratic
+                                    Equations</a></li>
+                            <li>
+                                <p class="nav-header rounded user-select-none">Inequalities</p>
+                            </li>
+                            <li><a href="inequalities.html" class="link-light rounded"><i class="bi bi-code"></i> 1st
+                                    Degree</a></li>
+                            <li>
+                                <p class="nav-header rounded user-select-none">Systems of Equations</p>
+                            </li>
+                            <li><a href="linear-systems.html" class="link-light rounded"><i
+                                        class="bi bi-border-width"></i> Linear
+                                    2&#215;2 Systems</a></li>
+                            <li>
+                                <p class="nav-header rounded user-select-none">Popular Problems</p>
+                            </li>
+                            <li><a href="handshake.html" class="link-light rounded">🤝 Handshakes at Party</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="my-2">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#geometry-collapse" aria-expanded="false">
+                        Geometry
+                    </button>
+                    <div class="collapse" id="geometry-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small my-1">
+                            <li>
+                                <p class="nav-header rounded user-select-none">Basic Geometry</p>
+                            </li>
+                            <li><a href="perimeter.html" class="link-light rounded"><i class="bi bi-bounding-box"></i>
+                                    Perimeter
+                                    Calculator</a></li>
+                            <li><a href="area.html" class="link-light rounded"><i class="bi bi-grid-3x3"></i> Area
+                                    Calculator</a>
+                            </li>
+                            <li><a href="diagpolyg.html" class="link-light rounded"><i class="bi bi-slash-square"></i>
+                                    Diagonal
+                                    Calculator</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="my-2">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#trig-collapse" aria-expanded="false">
+                        Trigonometry
+                    </button>
+                    <div class="collapse" id="trig-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small my-1">
+                            <li>
+                                <p class="nav-header rounded user-select-none">Basic Trigonometry</p>
+                            </li>
+                            <li><a href="trigcalculator.html" class="link-light rounded"><i
+                                        class="bi bi-calculator"></i>
+                                    Trigonometric Calculator (Sin,Cos,Tan)</a></li>
+                            <li>
+                                <p class="nav-header rounded user-select-none">Pythagorean Theorem</p>
+                            </li>
+                            <li><a href="phypotenuse.html" class="link-light rounded"><i
+                                        class="bi bi-symmetry-vertical"></i>
+                                    Hypotenuse Calculator</a>
+                            </li>
+                            <li><a href="prightside.html" class="link-light rounded"><i
+                                        class="bi bi-symmetry-vertical"></i> Leg
+                                    Calculator</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="my-2">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#physics-collapse" aria-expanded="false">
+                        Physics
+                    </button>
+                    <div class="collapse" id="physics-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small my-1">
+                            <li>
+                                <p class="nav-header rounded user-select-none">Basic Physics</p>
+                            </li>
+                            <li><a href="displacement.html" class="link-light rounded"><i
+                                        class="bi bi-arrow-left-right"></i>
+                                    Displacement Calculator</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="my-2">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#biology-collapse" aria-expanded="false">
+                        Biology
+                    </button>
+                    <div class="collapse" id="biology-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small my-1">
+                            <li>
+                                <p class="nav-header rounded user-select-none">Mendel's Law</p>
+                            </li>
+                            <li><a href="punnettsquare.html" class="link-light rounded"><i
+                                        class="bi bi-gender-ambiguous"></i>
+                                    Punnett Square</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="my-2">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#chem-collapse" aria-expanded="false">
+                        Chemistry
+                    </button>
+                    <div class="collapse" id="chem-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small my-1">
+                            <li>
+                                <p class="nav-header rounded user-select-none">Carbon Combustions</p>
+                            </li>
+                            <li><a href="carboncombustions.html" class="link-light rounded"><i
+                                        class="bi bi-minecart-loaded"></i>
+                                    Complete Combustions</a></li>
+                            <li><a href="imperfcarboncombust.html" class="link-light rounded"><i
+                                        class="bi bi-minecart-loaded"></i>
+                                    Incomplete Combustions</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="my-2">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#unit-converter-collapse" aria-expanded="false">
+                        Unit Converter
+                    </button>
+                    <div class="collapse" id="unit-converter-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small my-1">
+                            <li><a href="clenght.html" class="link-light rounded"><i class="bi bi-rulers"></i>
+                                    Lenght</a></li>
+                            <li><a href="ctemp.html" class="link-light rounded"><i class="bi bi-thermometer"></i>
+                                    Temperature</a></li>
+                            <li><a href="cspeed.html" class="link-light rounded"><i class="bi bi-speedometer"></i>
+                                    Speed</a></li>
+                            <li><a href="cweight.html" class="link-light rounded"><i class="bi bi-minecart-loaded"></i>
+                                    Weight</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="my-2">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#links-collapse" aria-expanded="false">
+                        Links
+                    </button>
+                    <div class="collapse" id="links-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small my-1">
+                            <li>
+                                <p class="nav-header rounded user-select-none">Contact</p>
+                            </li>
+                            <li><a href="contact.html" class="link-light rounded"><i class="bi bi-telephone-fill"></i>
+                                    Contact
+                                    Form</a></li>
+                            <li><a href="stats.html" class="link-light rounded"><i class="bi bi-graph-up"></i> Stats</a>
+                            </li>
+                            <li><a href="https://github.com/mathflare" target="_blank" rel="noopener"
+                                    class="link-light rounded"><i class="bi bi-github"></i> GitHub</a></li>
+                            <li><a href="mailto:mathflare@pm.me" target="_blank" rel="noopener"
+                                    class="link-light rounded"><i class="bi bi-envelope-fill"></i> Email</a></li>
+                            <li><a href="https://instagram.com/mathflare" target="_blank" rel="noopener"
+                                    class="link-light rounded"><i class="bi bi-instagram"></i> Instagram</a></li>
+                            <li><a href="https://api.mathflare.tk" target="_blank" rel="noopener"
+                                    class="link-light rounded"><i class="bi bi-hdd-stack-fill"></i> REST API</a></li>
+                            <li><a href="https://developers.mathflare.tk" target="_blank" rel="noopener"
+                                    class="link-light rounded"><i class="bi bi-code-slash"></i> For Developers</a></li>
+                            <li><a href="https://github.com/mathflare/mathflare/issues" target="_blank" rel="noopener"
+                                    class="link-light rounded"><i class="bi bi-bug-fill"></i> Report a Bug</a></li>
+                            <li><a href="https://github.com/mathflare/mathflare/issues" target="_blank" rel="noopener"
+                                    class="link-light rounded"><i class="bi bi-lightbulb-fill"></i> Suggest an Edit</a>
+                            </li>
+                            <li><a href="https://instagram.com/mathflare" target="_blank" rel="noopener"
+                                    class="link-light rounded"><i class="bi bi-instagram"></i> Instagram</a></li>
+                            <li><a href="https://instagram.com/mathflare" target="_blank" rel="noopener"
+                                    class="link-light rounded"><i class="bi bi-instagram"></i> Instagram</a></li>
+                            <li><a href="https://instagram.com/mathflare" target="_blank" rel="noopener"
+                                    class="link-light rounded"><i class="bi bi-instagram"></i> Instagram</a></li>
+                            <li>
+                                <p class="nav-header rounded user-select-none">Legal</p>
+                            </li>
+                            <li><a href="tos.html" class="link-light rounded"><i class="bi bi-card-checklist"></i> Terms
+                                    of Use</a>
+                            <li><a href="license.html" class="link-light rounded"><i
+                                        class="bi bi-credit-card-2-front"></i> Software
+                                    License</a>
+                        </ul>
+                    </div>
+                </li>
+                <li class="border-top my-3"></li>
+                <li class="my-2">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#support-collapse" aria-expanded="false">
+                        🍕 Support MathFlare
+                    </button>
+                    <div class="collapse" id="support-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small my-1">
+                            <li><a href="https://paypal.me/mathflare" target="_blank" rel="noopener"
+                                    class="link-light rounded"><i class="bi bi-heart-fill"
+                                        style="color: var(--bs-pink)"></i>
+                                    PayPal Us</a></li>
+                            <li><a href="https://buymeacoffee.com/mathflare" target="_blank" rel="noopener"
+                                    class="link-light rounded"><i class="bi bi-heart-fill"
+                                        style="color: var(--bs-pink)"></i>
+                                    Buy Us a Pizza</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
