@@ -1,5 +1,5 @@
 const cache_name = "mathflare-offline";
-const urlsToCache = ['public/offline.html'];
+const urlsToCache = ['./public/offline.html'];
 const self = this;
 self.addEventListener('install', (event) => {
     event.waitUntil(
@@ -8,16 +8,16 @@ self.addEventListener('install', (event) => {
                 console.log('initialized cache');
                 return cache.addAll(urlsToCache);
             })
-    )
+    );
 });
 self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request)
             .then(() => {
                 return fetch(event.request)
-                    .catch(() => caches.match('public/offline.html'))
+                    .catch(() => caches.match('./public/offline.html'))
             })
-    )
+    );
 });
 self.addEventListener('activate', (event) => {
     const cacheWhitelist = [];
@@ -30,6 +30,5 @@ self.addEventListener('activate', (event) => {
                 }
             })
         ))
-
-    )
+    );
 });
