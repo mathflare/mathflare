@@ -115,7 +115,8 @@ hr {
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-    background-color: hsl(134, 61%, 41%);
+    opacity: 50%;
+    /* background-color: hsl(134, 61%, 41%); */
 }
 .btn-offcanvas-link {
     display: inline-flex;
