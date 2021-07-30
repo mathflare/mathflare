@@ -19,8 +19,19 @@ body {
 .container-sm {
     margin-top: 7.5em;
 }
-a, a:hover, a:focus {
+a,
+a:hover,
+a:focus {
     color: inherit;
+}
+.donate-link {
+    text-decoration: underline wavy hsl(45, 100%, 51%);
+    transition: 0.2s;
+}
+.donate-link:hover,
+.donate-link:focus {
+    color: hsl(45, 100%, 51%);
+    transition: 0.2s;
 }
 hr {
     border: 2px solid hsl(354, 70%, 54%);
