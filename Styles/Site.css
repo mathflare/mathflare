@@ -231,7 +231,10 @@ hr {
 #tanout,
 #asinout,
 #acosout,
-#atanout {
+#atanout,
+#sinhout,
+#coshout,
+#tanhout {
     font-size: 20px !important;
     line-height: 24px !important;
 }

@@ -101,3 +101,48 @@ document.getElementById('atancalc').addEventListener('click', (event) => {
         document.getElementById('atana').value = '';
     }
 });
+document.getElementById('sinhcalc').addEventListener('click', (event) => {
+    event.preventDefault();
+    const angle = parseFloat(document.getElementById('sinha').value);
+    const degreesToRadians = (degrees) => {
+        return degrees * (Math.PI / 180);
+    };
+    if (isNaN(angle)) {
+        document.getElementById('sinhout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        document.getElementById('sinha').value = '';
+    }
+    else {
+        document.getElementById('sinhout').innerHTML = `<p class="text-success">sinh(${angle}) = ${Math.sinh(degreesToRadians(angle))}</p>`;
+        document.getElementById('sinha').value = '';
+    }
+});
+document.getElementById('coshcalc').addEventListener('click', (event) => {
+    event.preventDefault();
+    const angle = parseFloat(document.getElementById('cosa').value);
+    const degreesToRadians = (degrees) => {
+        return degrees * (Math.PI / 180);
+    };
+    if (isNaN(angle)) {
+        document.getElementById('coshout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        document.getElementById('cosa').value = '';
+    }
+    else {
+        document.getElementById('coshout').innerHTML = `<p class="text-success">cosh(${angle}) = ${Math.cosh(degreesToRadians(angle))}</p>`;
+        document.getElementById('cosa').value = '';
+    }
+});
+document.getElementById('tanhcalc').addEventListener('click', (event) => {
+    event.preventDefault();
+    const angle = parseFloat(document.getElementById('tanha').value);
+    const degreesToRadians = (degrees) => {
+        return degrees * (Math.PI / 180);
+    };
+    if (isNaN(angle)) {
+        document.getElementById('tanhout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        document.getElementById('tanha').value = '';
+    }
+    else {
+        document.getElementById('tanhout').innerHTML = `<p class="text-success">tanh(${angle}) = ${Math.tanh(degreesToRadians(angle))}</p>`;
+        document.getElementById('tanha').value = '';
+    }
+});
