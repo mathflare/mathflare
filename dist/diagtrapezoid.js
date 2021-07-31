@@ -2,9 +2,9 @@
 document.getElementById('trapcalc1').addEventListener('click', (event) => {
     event.preventDefault();
     const clearValues = () => {
-        document.getElementById('trapl1').value = "";
-        document.getElementById('trapleg1').value = "";
-        document.getElementById('trapβ1').value = "";
+        document.getElementById('trapl1').value = '';
+        document.getElementById('trapleg1').value = '';
+        document.getElementById('trapβ1').value = '';
     };
     const degreesToRadians = (degrees) => {
         return degrees * (Math.PI / 180);
@@ -42,9 +42,9 @@ document.getElementById('trapcalc1').addEventListener('click', (event) => {
 document.getElementById('trapcalc2').addEventListener('click', (event) => {
     event.preventDefault();
     const clearValues = () => {
-        document.getElementById('trapl2').value = "";
-        document.getElementById('trapleg2').value = "";
-        document.getElementById('traph2').value = "";
+        document.getElementById('trapl2').value = '';
+        document.getElementById('trapleg2').value = '';
+        document.getElementById('traph2').value = ' ';
     };
     const degreesToRadians = (degrees) => {
         return degrees * (Math.PI / 180);
@@ -69,6 +69,14 @@ document.getElementById('trapcalc2').addEventListener('click', (event) => {
             document.getElementById('trapout2').innerHTML = `<p class="text-warning">The height must be a positive number</p>`;
             clearValues();
         }
+    }
+    else if (leg < lside) {
+        document.getElementById('trapout2').innerHTML = `<p class="text-warning">The leg must be greater than the large segment</p>`;
+        clearValues();
+    }
+    else if (leg < height) {
+        document.getElementById('trapout2').innerHTML = `<p class="text-warning">The leg must be greater than the height</p>`;
+        clearValues();
     }
     else {
         document.getElementById('trapout2').innerHTML = `<p class="text-success">The lenght of the diagonals is D=${Math.sqrt(lside * lside + leg * leg - 2 * lside * Math.sqrt(leg * leg - height * height))} (&#8764; ${(Math.sqrt(lside * lside + leg * leg - 2 * lside * Math.sqrt(leg * leg - height * height))).toFixed(4)})</p>`;
