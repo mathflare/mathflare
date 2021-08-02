@@ -1,14 +1,14 @@
 "use strict";
-const clearValues = () => {
-    document.getElementById('a1').value = "";
-    document.getElementById('a2').value = "";
-    document.getElementById('b1').value = "";
-    document.getElementById('b2').value = "";
-    document.getElementById('c1').value = "";
-    document.getElementById('c2').value = "";
-};
 document.getElementById('button').addEventListener('click', (event) => {
     event.preventDefault();
+    const clearValues = () => {
+        document.getElementById('a1').value = "";
+        document.getElementById('a2').value = "";
+        document.getElementById('b1').value = "";
+        document.getElementById('b2').value = "";
+        document.getElementById('c1').value = "";
+        document.getElementById('c2').value = "";
+    };
     const a1 = parseFloat(document.getElementById('a1').value);
     const b1 = parseFloat(document.getElementById('b1').value);
     const c1 = parseFloat(document.getElementById('c1').value);

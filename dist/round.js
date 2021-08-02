@@ -9,7 +9,7 @@ document.getElementById('button').addEventListener('click', (event) => {
     }
     else {
         if (userSelect == "tofixed") {
-            if (num.toFixed(3) == num) {
+            if (parseFloat(num.toFixed(3)) === num) {
                 document.getElementById('output').innerHTML = `<p class="text-warning">The number is already rounded</p>`;
                 document.getElementById('num').value = "";
             }

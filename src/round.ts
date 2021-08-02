@@ -7,7 +7,7 @@
         (< HTMLInputElement > document.getElementById('num')).value = "";
     } else {
         if (userSelect == "tofixed") {
-            if (num.toFixed(3) == num) {
+            if (parseFloat(num.toFixed(3)) === num) {
                 (< HTMLParagraphElement > document.getElementById('output')).innerHTML = `<p class="text-warning">The number is already rounded</p>`;
                 (< HTMLInputElement > document.getElementById('num')).value = "";
             } else {

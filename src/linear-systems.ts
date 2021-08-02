@@ -1,15 +1,15 @@
 // utilizing determinants (D, Dx, Dy)
 // copyright (c) 2021 MathFlare LLC. - All rights reserved.
-const clearValues = () => {
-    (<HTMLInputElement>document.getElementById('a1')).value = "";
-    (<HTMLInputElement>document.getElementById('a2')).value = "";
-    (<HTMLInputElement>document.getElementById('b1')).value = "";
-    (<HTMLInputElement>document.getElementById('b2')).value = "";
-    (<HTMLInputElement>document.getElementById('c1')).value = "";
-    (<HTMLInputElement>document.getElementById('c2')).value = "";
-};
 (document.getElementById('button') as HTMLButtonElement).addEventListener('click', (event) => {
     event.preventDefault();
+    const clearValues = () => {
+        (<HTMLInputElement>document.getElementById('a1')).value = "";
+        (<HTMLInputElement>document.getElementById('a2')).value = "";
+        (<HTMLInputElement>document.getElementById('b1')).value = "";
+        (<HTMLInputElement>document.getElementById('b2')).value = "";
+        (<HTMLInputElement>document.getElementById('c1')).value = "";
+        (<HTMLInputElement>document.getElementById('c2')).value = "";
+    };
     const a1: number = parseFloat((<HTMLInputElement>document.getElementById('a1')).value)!;
     const b1: number = parseFloat((<HTMLInputElement>document.getElementById('b1')).value)!;
     const c1: number = parseFloat((<HTMLInputElement>document.getElementById('c1')).value)!;
