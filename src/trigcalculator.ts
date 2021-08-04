@@ -115,16 +115,16 @@
 //cosh
 (<HTMLButtonElement>document.getElementById('coshcalc')).addEventListener('click', (event) => {
     event.preventDefault();
-    const angle: number = parseFloat((<HTMLInputElement>document.getElementById('cosa')).value)!;
+    const angle: number = parseFloat((<HTMLInputElement>document.getElementById('cosha')).value)!;
     const degreesToRadians = (degrees: number) => {
         return degrees * (Math.PI / 180);
     }
     if (isNaN(angle)) {
         (<HTMLParagraphElement>document.getElementById('coshout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        (<HTMLInputElement>document.getElementById('cosa')).value = '';
+        (<HTMLInputElement>document.getElementById('cosha')).value = '';
     } else {
         (<HTMLParagraphElement>document.getElementById('coshout')).innerHTML = `<p class="text-success">cosh(${angle}) = ${Math.cosh(degreesToRadians(angle))}</p>`;
-        (<HTMLInputElement>document.getElementById('cosa')).value = '';
+        (<HTMLInputElement>document.getElementById('cosha')).value = '';
     }
 });
 //tanh

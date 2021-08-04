@@ -118,17 +118,17 @@ document.getElementById('sinhcalc').addEventListener('click', (event) => {
 });
 document.getElementById('coshcalc').addEventListener('click', (event) => {
     event.preventDefault();
-    const angle = parseFloat(document.getElementById('cosa').value);
+    const angle = parseFloat(document.getElementById('cosha').value);
     const degreesToRadians = (degrees) => {
         return degrees * (Math.PI / 180);
     };
     if (isNaN(angle)) {
         document.getElementById('coshout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        document.getElementById('cosa').value = '';
+        document.getElementById('cosha').value = '';
     }
     else {
         document.getElementById('coshout').innerHTML = `<p class="text-success">cosh(${angle}) = ${Math.cosh(degreesToRadians(angle))}</p>`;
-        document.getElementById('cosa').value = '';
+        document.getElementById('cosha').value = '';
     }
 });
 document.getElementById('tanhcalc').addEventListener('click', (event) => {
