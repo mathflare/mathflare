@@ -39,3 +39,36 @@ document.getElementById('button2').addEventListener('click', (event) => {
         document.getElementById('sside').value = "";
     }
 });
+document.getElementById('paracalc').addEventListener('click', (event) => {
+    event.preventDefault();
+    const cd = parseFloat(document.getElementById('pcd').value);
+    const ad = parseFloat(document.getElementById('pad').value);
+    const d = parseFloat(document.getElementById('pd').value);
+    const degreesToRadians = (degrees) => {
+        return degrees * (Math.PI / 180);
+    };
+    if (isNaN(cd) || isNaN(ad) || isNaN(d)) {
+        document.getElementById('paraout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        document.getElementById('pcd').value = '';
+        document.getElementById('pad').value = '';
+        document.getElementById('pd').value = '';
+    }
+    else if (cd <= 0 || ad <= 0 || d <= 0) {
+        document.getElementById('paraout').innerHTML = `<p class="text-warning">All the values must be positive</p>`;
+        document.getElementById('pcd').value = '';
+        document.getElementById('pad').value = '';
+        document.getElementById('pd').value = '';
+    }
+    else if (d >= 180) {
+        document.getElementById('paraout').innerHTML = `<p class="text-warning">The angle must be smaller than 180&deg;</p>`;
+        document.getElementById('pcd').value = '';
+        document.getElementById('pad').value = '';
+        document.getElementById('pd').value = '';
+    }
+    else {
+        document.getElementById('paraout').innerHTML = `<p class="text-success">The lenght of the diagonal is D = ${Math.sqrt(cd * cd + ad * ad - 2 * cd * ad * Math.cos(degreesToRadians(d)))} (&#8764; ${(Math.sqrt(cd * cd + ad * ad - 2 * cd * ad * Math.cos(degreesToRadians(d)))).toFixed(4)})</p>`;
+        document.getElementById('pcd').value = '';
+        document.getElementById('pad').value = '';
+        document.getElementById('pd').value = '';
+    }
+});
