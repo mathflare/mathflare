@@ -4,9 +4,12 @@ const W_W = (sol: number, dsub: number) => {
     } else if (sol === 0 || dsub === 0) {
         return '<p class="text-warning">This is not considered a solution</p>';
     } else if (sol < dsub) {
-        return '<p class="text-warning">The disolved substance cannot be greater that the solution weight</p>';
+        return '<p class="text-warning">The disolved substance cannot be greater than the solution weight</p>';
     } else {
         const concentration: number = dsub / sol * 100;
+        if (concentration >= 50) {
+            return '<p class="text-warning">The disolved substance cannot substitue more than 50% of the solution weight</p>';
+        }
         return `<p class="text-success">The concentration of the solution(${sol}g) with a disolved substance of ${dsub}g is ${concentration}% w/w</p>`;
     }
 };
@@ -16,9 +19,12 @@ const W_V = (sol: number, dsub: number) => {
     } else if (sol === 0 || dsub === 0) {
         return '<p class="text-warning">This is not considered a solution</p>';
     } else if (sol < dsub) {
-        return '<p class="text-warning">The disolved substance cannot be greater that the solution weight</p>';
+        return '<p class="text-warning">The disolved substance cannot be greater than the solution weight</p>';
     } else {
         const concentration: number = dsub / sol * 100;
+        if (concentration >= 50) {
+            return '<p class="text-warning">The disolved substance cannot substitue more than 50% of the solution weight</p>';
+        }
         return `<p class="text-success">The concentration of the solution(${sol}ml) with a disolved substance of ${dsub}g is ${concentration}% w/v</p>`;
     }
 };
@@ -28,9 +34,12 @@ const V_V = (sol: number, dsub: number) => {
     } else if (sol === 0 || dsub === 0) {
         return '<p class="text-warning">This is not considered a solution</p>';
     } else if (sol < dsub) {
-        return '<p class="text-warning">The disolved substance cannot be greater that the solution weight</p>';
+        return '<p class="text-warning">The disolved substance cannot be greater than the solution weight</p>';
     } else {
         const concentration: number = dsub / sol * 100;
+        if (concentration >= 50) {
+            return '<p class="text-warning">The disolved substance cannot substitue more than 50% of the solution volume</p>';
+        }
         return `<p class="text-success">The concentration of the solution(${sol}ml) with a disolved substance of ${dsub}ml is ${concentration}% v/v</p>`;
     }
 };
