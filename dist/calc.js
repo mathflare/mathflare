@@ -13,6 +13,14 @@ document.getElementById('add').addEventListener('click', (event) => {
             document.getElementById('result').value = `${a} + ${b} = ${(a + b).toString()}`;
             document.getElementById('num1').value = '';
             document.getElementById('num2').value = '';
+            document.getElementById('copy-to-clipboard').disabled = false;
+            document.getElementById('copy-to-clipboard').addEventListener('click', () => {
+                navigator.clipboard.writeText((a + b).toString()).then(() => {
+                    console.log('Success: copied to clipboard');
+                }, (err) => {
+                    console.error('Error: could not copy to clipboard: ', err);
+                });
+            });
         }
     }
 });
@@ -30,6 +38,14 @@ document.getElementById('sub').addEventListener('click', (event) => {
             document.getElementById('result').value = `${a} - ${b} = ${(a - b).toString()}`;
             document.getElementById('num1').value = '';
             document.getElementById('num2').value = '';
+            document.getElementById('copy-to-clipboard').disabled = false;
+            document.getElementById('copy-to-clipboard').addEventListener('click', () => {
+                navigator.clipboard.writeText((a - b).toString()).then(() => {
+                    console.log('Success: copied to clipboard');
+                }, (err) => {
+                    console.error('Error: could not copy to clipboard: ', err);
+                });
+            });
         }
     }
 });
@@ -47,6 +63,14 @@ document.getElementById('mul').addEventListener('click', (event) => {
             document.getElementById('result').value = `${a} × ${b} = ${(a * b).toString()}`;
             document.getElementById('num1').value = '';
             document.getElementById('num2').value = '';
+            document.getElementById('copy-to-clipboard').disabled = false;
+            document.getElementById('copy-to-clipboard').addEventListener('click', () => {
+                navigator.clipboard.writeText((a * b).toString()).then(() => {
+                    console.log('Success: copied to clipboard');
+                }, (err) => {
+                    console.error('Error: could not copy to clipboard: ', err);
+                });
+            });
         }
     }
 });
@@ -69,6 +93,14 @@ document.getElementById('div').addEventListener('click', (event) => {
             document.getElementById('result').value = `${a} ÷ ${b} = ${(a / b).toString()}`;
             document.getElementById('num1').value = '';
             document.getElementById('num2').value = '';
+            document.getElementById('copy-to-clipboard').disabled = false;
+            document.getElementById('copy-to-clipboard').addEventListener('click', () => {
+                navigator.clipboard.writeText((a / b).toString()).then(() => {
+                    console.log('Success: copied to clipboard');
+                }, (err) => {
+                    console.error('Error: could not copy to clipboard: ', err);
+                });
+            });
         }
     }
 });

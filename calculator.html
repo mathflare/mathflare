@@ -53,10 +53,14 @@
             </div>
             <br>
             <div class="center-form">
-                <input type="text" id="result" class="form-control" placeholder="result" value="" disabled readonly>
+                <div class="input-group">
+                    <input type="text" id="result" class="form-control" placeholder="result" value="" disabled readonly>
+                    <button class="btn btn-outline-light" type="button" id="copy-to-clipboard" disabled>Copy
+                        Result</button>
+                </div>
             </div>
             <br>
-            <div class="center-form">
+            <div class="center-form mb-4">
                 <div class="d-lg-inline-flex d-block">
                     <button class="btn btn-success m-1" id="add">Add &#43;</button>
                     <button class="btn btn-warning m-1" id="sub">Sub &#8722;</button>
@@ -77,6 +81,9 @@
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
         });
+        window.onload = () => {
+            document.getElementById('copy-to-clipboard').disabled = true;
+        }
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->

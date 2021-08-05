@@ -155,7 +155,7 @@ hr {
     width: 40%;
     transition: 0.2s;
 }
-.center input[type="text"] {
+.center input[type="text"]:not(#result) {
     width: 40%;
     transition: 0.2s;
 }
@@ -168,6 +168,10 @@ hr {
     transition: 0.2s;
 }
 .center textarea {
+    width: 40%;
+    transition: 0.2s;
+}
+.input-group {
     width: 40%;
     transition: 0.2s;
 }
@@ -262,7 +266,7 @@ hr {
         width: 50%;
         transition: 0.2s;
     }
-    .center input[type="text"] {
+    .center input[type="text"]:not(#result) {
         width: 50%;
         transition: 0.2s;
     }
@@ -279,6 +283,10 @@ hr {
         transition: 0.2s;
     }
     .message {
+        width: 50%;
+        transition: 0.2s;
+    }
+    .input-group {
         width: 50%;
         transition: 0.2s;
     }
@@ -308,7 +316,7 @@ hr {
         width: 90%;
         transition: 0.2s;
     }
-    .center input[type="text"] {
+    .center input[type="text"]:not(#result) {
         width: 90%;
         transition: 0.2s;
     }
@@ -321,6 +329,10 @@ hr {
         transition: 0.2s;
     }
     .center textarea {
+        width: 90%;
+        transition: 0.2s;
+    }
+    .input-group {
         width: 90%;
         transition: 0.2s;
     }

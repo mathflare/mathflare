@@ -11,6 +11,14 @@
             (<HTMLInputElement>document.getElementById('result')).value = `${a} + ${b} = ${(a + b).toString()}`;
             (<HTMLInputElement>document.getElementById('num1')).value = '';
             (<HTMLInputElement>document.getElementById('num2')).value = '';
+            (<HTMLButtonElement>document.getElementById('copy-to-clipboard')).disabled = false;
+            (<HTMLButtonElement>document.getElementById('copy-to-clipboard')).addEventListener('click', () => {
+                navigator.clipboard.writeText((a + b).toString()).then(() => {
+                    console.log('Success: copied to clipboard');
+                }, (err) => {
+                    console.error('Error: could not copy to clipboard: ', err);
+                });
+            });
         }
     }
 });
@@ -27,6 +35,14 @@
             (<HTMLInputElement>document.getElementById('result')).value = `${a} - ${b} = ${(a - b).toString()}`;
             (<HTMLInputElement>document.getElementById('num1')).value = '';
             (<HTMLInputElement>document.getElementById('num2')).value = '';
+            (<HTMLButtonElement>document.getElementById('copy-to-clipboard')).disabled = false;
+            (<HTMLButtonElement>document.getElementById('copy-to-clipboard')).addEventListener('click', () => {
+                navigator.clipboard.writeText((a - b).toString()).then(() => {
+                    console.log('Success: copied to clipboard');
+                }, (err) => {
+                    console.error('Error: could not copy to clipboard: ', err);
+                });
+            });
         }
     }
 });
@@ -43,6 +59,14 @@
             (<HTMLInputElement>document.getElementById('result')).value = `${a} × ${b} = ${(a * b).toString()}`;
             (<HTMLInputElement>document.getElementById('num1')).value = '';
             (<HTMLInputElement>document.getElementById('num2')).value = '';
+            (<HTMLButtonElement>document.getElementById('copy-to-clipboard')).disabled = false;
+            (<HTMLButtonElement>document.getElementById('copy-to-clipboard')).addEventListener('click', () => {
+                navigator.clipboard.writeText((a * b).toString()).then(() => {
+                    console.log('Success: copied to clipboard');
+                }, (err) => {
+                    console.error('Error: could not copy to clipboard: ', err);
+                });
+            });
         }
     }
 });
@@ -63,6 +87,14 @@
             (<HTMLInputElement>document.getElementById('result')).value = `${a} ÷ ${b} = ${(a / b).toString()}`;
             (<HTMLInputElement>document.getElementById('num1')).value = '';
             (<HTMLInputElement>document.getElementById('num2')).value = '';
+            (<HTMLButtonElement>document.getElementById('copy-to-clipboard')).disabled = false;
+            (<HTMLButtonElement>document.getElementById('copy-to-clipboard')).addEventListener('click', () => {
+                navigator.clipboard.writeText((a / b).toString()).then(() => {
+                    console.log('Success: copied to clipboard');
+                }, (err) => {
+                    console.error('Error: could not copy to clipboard: ', err);
+                });
+            });
         }
     }
 });
