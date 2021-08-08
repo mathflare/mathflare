@@ -25,6 +25,9 @@ ____
 - Percentage Calculator
 - Trigonometry Calculator
 - Diagonal Calulator
+- Factorial Calculator
+- Root Calculator
+- Punnett Square Generator
 - Complete and Incomplete Combustion Calulator
 
 ## FAQ
@@ -60,14 +63,14 @@ ____
 
 ### Main Site
 
-1. [www.mathflare.tk (Cloudflare Pages)](https://www.mathflare.tk)
+1. [www.mathflare.xyz (Cloudflare Pages)](https://www.mathflare.xyz)
 3. [liquidgeometry.ml (redirect)](http://liquidgeometry.ml)
 4. [liquidgeometry.tk (redirect)](http://liquidgeometry.tk)
 
 ## Other
 
-1. [api.mathflare.tk (Heroku)](https://api.mathflare.tk)
-2. [developers.mathflare.tk (Netlify)](https://developers.mathflare.tk)
+1. [api.mathflare.xyz (Heroku)](https://api.mathflare.xyz)
+2. [developers.mathflare.xyz (Netlify)](https://developers.mathflare.xyz)
 
 ----------------------------------------------------------------
 
@@ -82,8 +85,8 @@ See steps and ways to report any vulnerability [here](https://github.com/mathfla
 
 # Terms Of Service
 
-[www.mathflare.tk/tos](https://www.mathflare.tk/tos)
+[www.mathflare.xyz/tos](https://www.mathflare.xyz/tos)
 
 # License
 
-[www.mathflare.tk/license](www.mathflare.tk/license)
+[www.mathflare.xyz/license](https://www.mathflare.xyz/license)
