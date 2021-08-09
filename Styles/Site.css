@@ -1,8 +1,13 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+html {
+    height: -webkit-fill-available;
+}
 body {
     font-family: "Poppins", sans-serif !important;
     color: hsl(0, 0%, 100%);
     background-color: hsl(210, 10%, 15%);
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 ::selection {
     background-color: hsl(0, 0%, 100%);
