@@ -1,13 +1,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
-html {
-    height: -webkit-fill-available;
-}
 body {
     font-family: "Poppins", sans-serif !important;
     color: hsl(0, 0%, 100%);
     background-color: hsl(210, 10%, 15%);
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
 }
 ::selection {
     background-color: hsl(0, 0%, 100%);
@@ -243,7 +238,10 @@ hr {
 #atanout,
 #sinhout,
 #coshout,
-#tanhout {
+#tanhout,
+#sqrtout,
+#cbrtout,
+#nrootout {
     font-size: 20px !important;
     line-height: 24px !important;
 }
@@ -268,35 +266,35 @@ hr {
 /*=====1000 MEDIA QUERY=====*/
 @media screen and (max-width: 1000px) {
     .center input[type="number"] {
-        width: 50%;
+        width: 60%;
         transition: 0.2s;
     }
     .center input[type="text"]:not(#result) {
-        width: 50%;
+        width: 60%;
         transition: 0.2s;
     }
     .center input[type="email"] {
-        width: 50%;
+        width: 60%;
         transition: 0.2s;
     }
     .center textarea {
-        width: 50%;
+        width: 60%;
         transition: 0.2s;
     }
     .center select {
-        width: 50%;
+        width: 60%;
         transition: 0.2s;
     }
     .message {
-        width: 50%;
+        width: 60%;
         transition: 0.2s;
     }
     .input-group {
-        width: 50%;
+        width: 60%;
         transition: 0.2s;
     }
     .table {
-        width: 50%;
+        width: 60%;
         transition: 0.2s;
     }
 }
