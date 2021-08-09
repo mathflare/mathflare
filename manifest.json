@@ -1,7 +1,7 @@
 {
     "name": "MathFlare",
     "short_name": "MathFlare",
-    "description": "the go-to open source website for geometry and algebra",
+    "description": "the go-to open source website for geometry and algebra. Now offering 60+ useful and advanced calculators for free!",
     "author": "MathFlare Co. Ltd.",
     "version": "3,6",
     "manifest_version": 1,
@@ -12,7 +12,7 @@
     "homepage_url": "https://www.mathflare.xyz",
     "icons": [
         {
-            "src": "/Assets/favicon.ico",
+            "src": "https://www.mathflare.xyz/Assets/favicon.ico",
             "sizes": "128x128"
         },
         {

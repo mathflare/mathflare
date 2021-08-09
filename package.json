@@ -1,7 +1,7 @@
 {
   "name": "mathflare",
-  "version": "3.0.0",
-  "description": "the go-to website for algebra and geometry",
+  "version": "3.5.0",
+  "description": "the go-to open source website for geometry and algebra. Now offering 60+ useful and advanced calculators for free!",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/mathflare/mathflare.git"
   },
-  "author": "MathFlare LLC.",
+  "author": "MathFlare.xyz Co. Ltd.",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mathflare/mathflare/issues"
