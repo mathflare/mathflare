@@ -30,6 +30,15 @@ ____
 - Punnett Square Generator
 - Complete and Incomplete Combustion Calulator
 
+## Support MathFlare 🎉
+Ads are always our last option for website monetization.
+That's why we prompt you to financially spport our project through dontations.
+Here are the platfors on witch you can donate:
+- [🍕PayPal](https://www.paypal.me/mathflare)
+- [🍕Buymeacoffee](https://buymeacoffee.com/mathflare)
+- [🍕Ko-Fi](https://ko-fi.com/mathflare)
+- [🍕Patreon](https://www.patreon.com/mathflare)
+
 ## FAQ
 
 #### Are you using vanilla javascript?
