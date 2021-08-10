@@ -281,9 +281,73 @@
                 </li>
                 <li class="border-top my-3"></li>
                 <li>
+                    <div class="input-group w-100">
+                        <input type="search" class="form-control bg-dark text-white" id="search-box"
+                            placeholder="Search Calculators...">
+                        <button class="btn btn-outline-light" type="button" id="search-button">Search</button>
+                    </div>
+                </li>
+                <li class="mt-2">
+                    <p class="text-break" id="search-result"></p>
+                </li>
+                <li>
                     <p class="text-muted" style="padding: 0.5em;">&copy;2021 MathFlare Ltd. - All rights reserved.</p>
                 </li>
             </ul>
         </nav>
     </div>
 </div>
+<script>
+    const searchBox = document.querySelector("#search-box");
+    const searchResult = document.querySelector("#search-result");
+    const calculators = [
+        ['area calculator', 'area'],
+        ['average calculator', 'avg'],
+        ['basic calculator', 'calculator'],
+        ['complete carbon combustion calculator', 'carboncombustions'],
+        ['math cheat sheet', 'cheatsheet'],
+        ['lenght unit converter', 'clenght'],
+        ['solution concentration calculator', 'concentration'],
+        ['contact form', 'contact'],
+        ['speed unit converter', 'cspeed'],
+        ['temperature unit converter', 'ctemp'],
+        ['weight unit converter', 'cweight'],
+        ['diagonal calculator', 'diagpolyg'],
+        ['displacement calculator', 'displacement'],
+        ['1st degeree equation solver', 'equations'],
+        ['factorial calculator', 'fact'],
+        ['handshakes at party calculator', 'handshake'],
+        ['incomplete carbon combustion calculator', 'imperfcarboncombust'],
+        ['1st degree inequality solver', 'inequalities'],
+        ['linear system of equations solver', 'linear-systems'],
+        ['logarithm calculator', 'logar'],
+        ['percentage calculator', 'percent'],
+        ['perimeter calculator', 'perimeter'],
+        ['hypotenuse pythagorean calculator', 'phypotenuses'],
+        ['distance between two points calculator', 'pointsdistance'],
+        ['exponent (power) calculator', 'pow'],
+        ['right side pythagorean calculator', 'prightside'],
+        ['punnett square calculator', 'punnettsquare'],
+        ['quadratic equation solver', 'quadraticequations'],
+        ['root calculator', 'roots'],
+        ['square root calculator', 'roots'],
+        ['cube root calculator', 'roots'],
+        ['nth root calculator', 'roots'],
+        ['round numbers', 'round'],
+        ['slope calculator', 'slope'],
+        ['trigonometric calculator (sine,cosine,tangent)', 'trigcalculator'],
+    ];
+    searchBox.addEventListener("input", () => {
+        const search = searchBox.value.toLowerCase();
+        searchResult.innerHTML = "";
+        if (search.length > 0) {
+            for (let i = 0; i < calculators.length; i++) {
+                if (calculators[i][0].toLowerCase().indexOf(search) !== -1) {
+                    searchResult.innerHTML += `<a href="${calculators[i][1]}.html">${calculators[i][0]}</a><br/>`;
+                }
+            }
+        } else {
+            searchResult.innerHTML = "no results found";
+        }
+    });
+</script>
