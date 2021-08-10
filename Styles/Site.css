@@ -41,6 +41,10 @@ hr {
     margin-top: 1em !important;
     margin-bottom: 1em !important;
 }
+var {
+    font-family: monospace;
+    font-style: normal;
+}
 /*=====SIDEBAR START=====*/
 .navbar-dark {
     background-color: hsl(210, 10%, 15%) !important;
