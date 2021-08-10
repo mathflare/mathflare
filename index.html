@@ -29,6 +29,8 @@
     <link rel="home" href="https://www.mathflare.xyz">
     <meta name="theme-color" content="#FFC107">
     <!-- STYLES -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="manifest" href="manifest.json">
     <link href="Styles/bootstrap-5.0-min.css" rel="stylesheet" />
     <link href="Styles/Scrollbar.css" rel="stylesheet" />
@@ -36,11 +38,6 @@
     <link rel="icon" type="image/png" href="Assets/android-chrome-192x192.png" sizes=192x192>
     <link rel="icon" type="image/png" href="Assets/android-chrome-512x512.png" sizes=512x512>
     <link rel="apple-touch-icon" sizes="180x180" href="Assets/apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="icon" href="https://www.mathflare.xyz/Assets/favicon.ico">
 </head>
@@ -49,12 +46,6 @@
     <!-- NAVBAR START -->
     <div id="nav-container"></div>
     <!-- NAVBAR END -->
-    <!-- <div class="alert alert-dismissible fade show m-2 text-center" role="alert"
-        style="z-index: 999; background-color: #343A40;">
-        Schedule and appointment and <a href="" target="_blank" rel="noopener" id="vacc-promo-link">get vaccinated
-            today</a>!
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div> -->
     <div class="container" style="margin-top: 10em;">
         <div class="text-center mb-5">
             <h1 class="display-5" style="font-weight: 450;"><img src="Assets/icon.png" class="user-select-none mb-1"
@@ -152,43 +143,6 @@
         console.log("%cHello Sir looking around in the console! Insted of hacking, what about you contribute to MathFlare on GitHub?", "font-family:consolas; font-size: 20px");
         console.log("%cMathFlare", "color: DodgerBlue; font-weight: 600; font-family:consolas; font-size: 40px");
         console.log("%cby the way, the curiosity killed the cat you know...", "color: PaleGreen; font-weight: 600; font-family:consolas; font-size: 20px");
-        /* $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=e3bc23053c584ae2bbf332d89bc66f8d", function (data) {
-            const country = data.country;
-            console.log(country);
-            if (country === 'Greece') {
-                document.querySelector('#vacc-promo-link').href = 'https://emvolio.gov.gr/';
-            } else if (country === 'United States') {
-                document.querySelector('#vacc-promo-link').href = 'https://www.cdc.gov/vaccines/';
-            } else if (country === 'United Kingdom') {
-                document.querySelector('#vacc-promo-link').href = 'https://www.gov.uk/government/publications/vaccines-and-immunisation/';
-            } else if (country === 'Germany') {
-                document.querySelector('#vacc-promo-link').href = 'https://impfterminservice.hessen.de/';
-            } else if (country === 'Canada') {
-                document.querySelector('#vacc-promo-link').href = 'https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/vaccines/how-vaccinated.html#a1';
-            } else if (country === 'France') {
-                document.querySelector('#vacc-promo-link').href = 'https://www.sante.fr/cf/centres-vaccination-covid.html';
-            } else if (country === 'Poland') {
-                document.querySelector('#vacc-promo-link').href = 'https://www.gov.pl/web/szczepimysie';
-            } else if (country === 'Russia') {
-                document.querySelector('#vacc-promo-link').href = 'https://www.gosuslugi.ru/10069/1';
-            } else if (country === 'Ireland') {
-                document.querySelector('#vacc-promo-link').href = 'https://vaccine.hse.ie/';
-            } else if (country === 'Netherlands') {
-                document.querySelector('#vacc-promo-link').href = 'https://www.rijksoverheid.nl/onderwerpen/coronavirus-vaccinatie/vraag-en-antwoord/hoe-maak-ik-een-afspraak-voor-vaccinatie-tegen-corona';
-            } else if (country === 'Belgium') {
-                document.querySelector('#vacc-promo-link').href = 'https://www.sante.fr/cf/centres-vaccination-covid.html';
-            } else if (country === 'India') {
-                document.querySelector('#vacc-promo-link').href = 'https://www.cowin.gov.in/';
-            } else if (country === 'Italy') {
-                document.querySelector('#vacc-promo-link').href = 'https://www.prenotazionevaccinicovid.regione.lombardia.it/';
-            } else if (country === 'China') {
-                document.querySelector('#vacc-promo-link').href = 'https://covid19.ca.gov/zh-hant/vaccines/';
-            } else if (country === 'Switzerland') {
-                document.querySelector('#vacc-promo-link').href = 'https://www.onedoc.ch/de/impfzentrum-nicht-covid/sarzens';
-            } else {
-                document.querySelector('#vacc-promo-link').removeAttribute('href');
-            }
-        }); */
     </script>
     <script>
         if ('serviceWorker' in navigator) {
