@@ -19,21 +19,18 @@ ____
 - Math Cheat Sheet
 - 1st degree equation solver
 - Quadratic equation solver
-- Linear 2x2 System Solver
+- 2x2 Linear System of Equations Solver
 - 1st degree inequality solver
 - Displacement Calculator
-- Percentage Calculator
+- Advanced Percentage Calculators
 - Trigonometry Calculator
 - Diagonal Calulator
 - Factorial Calculator
-- Root Calculator
+- Nth Root Calculator
 - Punnett Square Generator
 - Complete and Incomplete Combustion Calulator
 
 ## FAQ
-
-#### Why .tk?
-- We just like it! It's very unique.
 
 #### Are you using vanilla javascript?
 - Yes, we use TypeScript and then compile it into JavaScript
@@ -45,16 +42,21 @@ ____
 - We use Bootstrap Icons.
 
 #### Where is the project hosted?
-- Cloudflare, GitHub Pages, Netlify(for PR previewing only).
+- Cloudflare for the most part.
+
+#### When are new calculators coming?
+- We are constantly working on new calculators and improving existing ones.
 
 #### Can I contribute to the project?
 - Sure! We welcome all contributors.
 
-#### When did the project started?
-- June 2020
+#### Can I link to MathFlare in my website/blog/project?
+- Of course! Here is some example code:
+```HTML
 
-#### Where are the older versions?
-- We haven't kept any older version of the website online.
+    <p><a href="https://www.mathflare.xyz">MathFlare.xyz</a> - The go-to website for alegbra and geometry</p>
+
+```
 
 #### How do you store the statistics?
 - Everything is stored in your browser in the form of cookies. We do not have access to this piece of information.
@@ -64,13 +66,18 @@ ____
 ### Main Site
 
 1. [www.mathflare.xyz (Cloudflare Pages)](https://www.mathflare.xyz)
-3. [liquidgeometry.ml (redirect)](http://liquidgeometry.ml)
-4. [liquidgeometry.tk (redirect)](http://liquidgeometry.tk)
+2. [mathflare.xyz (Cloudflare Pages - redirects to `www`)](https://mathflare.xyz)
+3. [www.mathflare.tk (redirects to new domain)](https://www.mathflare.tk)
+4. [mathflare.tk (redirects to new domain)](https://mathflare.tk)
 
 ## Other
 
 1. [api.mathflare.xyz (Heroku)](https://api.mathflare.xyz)
 2. [developers.mathflare.xyz (Netlify)](https://developers.mathflare.xyz)
+3. [access.mathflare.xyz (Privately Hosted)](https://access.mathflare.xyz)
+3. [mail.mathflare.xyz (Yandex Mail Server)](https://mail.mathflare.xyz)
+3. [backup.mathflare.xyz (Netlify)](https://backup.mathflare.xyz)
+3. [unavailable.mathflare.xyz (Netlify)](https://unavailable.mathflare.xyz)
 
 ----------------------------------------------------------------
 
@@ -89,4 +96,4 @@ See steps and ways to report any vulnerability [here](https://github.com/mathfla
 
 # License
 
-[www.mathflare.xyz/license](https://www.mathflare.xyz/license)
+[MIT](https://github.com/mathflare/mathflare/blob/main/LICENSE "LICENSE file")
