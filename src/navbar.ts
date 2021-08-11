@@ -1,4 +1,3 @@
-"use strict";
 $("#nav-container").load("../public/components/navbar.html", () => {
     let aList = document.querySelectorAll("a");
     for (let i = 0; i < aList.length; i++) {
