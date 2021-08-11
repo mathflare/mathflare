@@ -142,17 +142,6 @@
             document.querySelector('#home-link').classList.add('active');
         });
     </script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./serviceworker.js')
-                    .then((reg) => console.log('Success: ', reg.scope))
-                    .catch((err) => console.log('Error: ', err));
-            });
-        } else {
-            console.log('Service worker is not supported in your browser');
-        }
-    </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>

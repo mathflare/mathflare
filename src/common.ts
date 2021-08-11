@@ -1,5 +1,3 @@
-console.log("%cMathFlare", "color: DodgerBlue; font-weight: 600; font-family:consolas; font-size: 40px");
-console.log("%cby the way, the curiosity killed the cat you know...", "color: PaleGreen; font-weight: 600; font-family:consolas; font-size: 20px");
 const searcCalc = () => {
     const searchBox = <HTMLInputElement>document.querySelector("#search-box");
     const searchResult = <HTMLParagraphElement>document.querySelector("#search-result");
@@ -54,4 +52,3 @@ const searcCalc = () => {
         }
     });
 }
-window.addEventListener("load", searcCalc);
