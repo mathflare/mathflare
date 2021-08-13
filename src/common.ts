@@ -1,7 +1,7 @@
 const searcCalc = () => {
-    const searchBox = <HTMLInputElement>document.querySelector("#search-box");
-    const searchResult = <HTMLParagraphElement>document.querySelector("#search-result");
-    const calculators = [
+    const searchBox: any = <HTMLInputElement>document.querySelector("#search-box");
+    const searchResult: any = <HTMLParagraphElement>document.querySelector("#search-result");
+    const calculators: string[][] = [
         ['area calculator', 'area'],
         ['average calculator', 'avg'],
         ['basic calculator', 'calculator'],
@@ -36,10 +36,10 @@ const searcCalc = () => {
         ['nth root calculator', 'roots'],
         ['round numbers', 'round'],
         ['slope calculator', 'slope'],
-        ['trigonometric calculator (sine,cosine,tangent)', 'trigcalculator'],
+        ['trigonometric calculator (sine,cosine,tangent)', 'trigcalculator']
     ];
     searchBox.addEventListener("input", () => {
-        const search = searchBox.value.toLowerCase();
+        const search: string = searchBox.value.toLowerCase();
         searchResult.innerHTML = '';
         if (search.length > 0) {
             for (let i = 0; i < calculators.length; i++) {
@@ -52,3 +52,4 @@ const searcCalc = () => {
         }
     });
 }
+const openImage = (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight /2}`);

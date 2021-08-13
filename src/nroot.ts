@@ -1,7 +1,7 @@
 (<HTMLButtonElement>document.getElementById('nrootcalc')).addEventListener('click', (event) => {
     event.preventDefault();
-    const rad: number = parseFloat((<HTMLInputElement>document.getElementById('nrootrad')).value)!;
     const exp: number = parseFloat((<HTMLInputElement>document.getElementById('nrootexp')).value)!;
+    const rad: number = parseFloat((<HTMLInputElement>document.getElementById('nrootrad')).value)!;
     if (isNaN(rad) || isNaN(exp)) {
         (<HTMLParagraphElement>document.getElementById('nrootout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.getElementById('nrootrad')).value = '';

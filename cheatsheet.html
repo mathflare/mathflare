@@ -33,6 +33,16 @@
     <link rel="icon" type="image/png" href="Assets/android-chrome-512x512.png" sizes=512x512>
     <link rel="apple-touch-icon" sizes="180x180" href="Assets/apple-touch-icon.png">
     <link rel="icon" href="https://www.mathflare.xyz/Assets/favicon.ico">
+    <style>
+        html,
+        body {
+            scroll-padding-top: 4.5em;
+        }
+
+        .row img {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -432,9 +442,8 @@
             </section>
             <section id="periodictable">
                 <h3>Periodic Table</h3>
-                <a href="Assets/periodic-table.png" target="_parent">
-                    <img src="Assets/periodic-table.png" alt="periodic table" width="100%" height="100%"
-                        style="border: 1px solid white" /></a>
+                <img src="Assets/periodic-table.png" alt="periodic table of elements" class="border" onclick="openImage(this.src, this.alt, this.naturalWidth, this.naturalHeight)"
+                    width="100%" height="100%" />
             </section>
         </div>
     </div>
@@ -460,10 +469,6 @@
         } else {
             console.error('your browser does not support local storage');
         }
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl)
-        });
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->

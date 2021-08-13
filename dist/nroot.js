@@ -1,8 +1,8 @@
 "use strict";
 document.getElementById('nrootcalc').addEventListener('click', (event) => {
     event.preventDefault();
-    const rad = parseFloat(document.getElementById('nrootrad').value);
     const exp = parseFloat(document.getElementById('nrootexp').value);
+    const rad = parseFloat(document.getElementById('nrootrad').value);
     if (isNaN(rad) || isNaN(exp)) {
         document.getElementById('nrootout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         document.getElementById('nrootrad').value = '';

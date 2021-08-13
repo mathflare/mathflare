@@ -37,7 +37,7 @@ const searcCalc = () => {
         ['nth root calculator', 'roots'],
         ['round numbers', 'round'],
         ['slope calculator', 'slope'],
-        ['trigonometric calculator (sine,cosine,tangent)', 'trigcalculator'],
+        ['trigonometric calculator (sine,cosine,tangent)', 'trigcalculator']
     ];
     searchBox.addEventListener("input", () => {
         const search = searchBox.value.toLowerCase();
@@ -54,3 +54,4 @@ const searcCalc = () => {
         }
     });
 };
+const openImage = (imgUri, imgAlt, imgWidth, imgHeight) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
