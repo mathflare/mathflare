@@ -86,6 +86,16 @@ var {
 .btn-offcanvas-link:focus {
     color: hsl(0, 0%, 100%);
     background-color: hsl(208, 11%, 23%);
+    transition: ease-in-out 0.2s;
+}
+.link-light {
+    transition: ease-in-out 0.2s;
+}
+.link-light:hover,
+.link-light:focus {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(208, 11%, 23%);
+    transition: ease-in-out 0.15s;
 }
 .btn-toggle::before {
     width: 1.25em;
