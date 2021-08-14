@@ -1,4 +1,4 @@
-//copyrights (c) 2021 MathFlare Co Ltd. All rights reserved.
+//copyrights (c) 2021 MathFlare.xyz All rights reserved.
 (<HTMLButtonElement>document.getElementById('distcalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const x1: number = parseFloat((<HTMLInputElement>document.getElementById('x1')).value)!;
