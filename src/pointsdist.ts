@@ -19,4 +19,4 @@
         clearValues();
     }
 });
-//copyrights (c) 2021 MathFlare Co. Ltd. All rights reserved.
+//copyrights (c) 2021 MathFlare.xyz All rights reserved.

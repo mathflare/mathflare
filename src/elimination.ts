@@ -1,14 +1,7 @@
-const bond: string = "H3CL4";
-let temp: string = "";
-let numbers: string[] = [];
-let i: number = 0;
-for (; i < bond.length; i++) {
-    if (typeof (parseFloat(bond[i])) === "number") {
-        if (typeof (parseFloat(bond[i])) === "number") {
-            temp += bond[i].toString();
-        } else {
-            temp += bond[i].toString() + " ";
-        }
-    }
-}
-console.log(temp);
+//HxXy + YzOHv
+let ele1: string = 'Cl';
+let ele2: string = 'Br';
+let index1: number = parseFloat('2');
+let index2: number = parseFloat('1');
+let index3: number = parseFloat('3');
+let index4: number = parseFloat('2');

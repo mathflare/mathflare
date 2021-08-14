@@ -1,4 +1,4 @@
-//copyrights (c) 2021 MathFlare Co. Ltd.
+//copyrights (c) 2021 MathFlare.xyz
 (<HTMLButtonElement>document.getElementById('combustcalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const product: string = (<HTMLInputElement>document.querySelector('#prodselect')).value!;
@@ -150,4 +150,4 @@
         }
     }
 });
-//copyrights (c) 2021 MathFlare Co. Ltd.
+//copyrights (c) 2021 MathFlare.xyz

@@ -1,4 +1,4 @@
-//copyright (c) 2021 MathFlare Co. Ltd.
+//copyright (c) 2021 MathFlare.xyz
 (document.getElementById('polyg') as HTMLButtonElement).addEventListener('click', (event) => {
     event.preventDefault();
     var input: string = (<HTMLInputElement>document.getElementById('sides')).value!;
@@ -45,4 +45,4 @@
         }
     }
 });
-//copyright (c) 2021 MathFlare Co. Ltd.
+//copyright (c) 2021 MathFlare.xyz

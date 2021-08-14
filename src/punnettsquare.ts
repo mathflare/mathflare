@@ -1,4 +1,4 @@
-//copyright (c) 2021 MathFlare Co. Ltd.
+//copyright (c) 2021 MathFlare.xyz
 (<HTMLButtonElement>document.getElementById('pscalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const fatherGene: string = (<HTMLSelectElement>document.getElementById('fatherselect')).value!;
@@ -44,4 +44,4 @@
     }
     fetchTable(fatherGene, motherGene);
 });
-//copyright (c) 2021 MathFlare Co. Ltd.
+//copyright (c) 2021 MathFlare.xyz
