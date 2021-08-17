@@ -1,10 +1,10 @@
 {
-    "name": "MathFlare",
+    "name": "MathFlare.xyz",
     "short_name": "MathFlare",
-    "description": "the go-to open source website for geometry and algebra. Now offering 60+ useful and advanced calculators for free!",
+    "description": "the go-to open source website for algebra and geometry. Now offering 60+ useful and advanced calculators for free!",
     "author": "MathFlare.xyz",
     "version": "3,6",
-    "manifest_version": 1,
+    "manifest_version": 2,
     "offline_enabled": false,
     "default_locale": "en",
     "lang": "English",

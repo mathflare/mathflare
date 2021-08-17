@@ -1,7 +1,7 @@
 {
   "name": "mathflare",
   "version": "3.5.0",
-  "description": "the go-to open source website for geometry and algebra. Now offering 60+ useful and advanced calculators for free!",
+  "description": "the go-to open source website for algebra and geometry. Now offering 60+ useful and advanced calculators for free!",
   "main": "index.js",
   "scripts": {
     "test": "jest",
