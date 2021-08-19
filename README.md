@@ -67,6 +67,19 @@ Here are the platfors on witch you can donate:
 
 ```
 
+## Technologies Used
+
+- TypeScript
+- JavaScript
+- Bootstrap.css 5
+- Bootstrap.js 5
+- Bootstrap icons
+- Cloudflare
+- Cloudflare Pages
+- Netlify
+- GitHub
+- Jira
+
 #### How do you store the statistics?
 - Everything is stored in your browser in the form of cookies. We do not have access to this piece of information.
 

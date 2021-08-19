@@ -39,6 +39,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="icon" href="https://www.mathflare.xyz/Assets/favicon.ico">
     <!-- SCRIPTS -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script src="dist/navbar.js" defer></script>
     <script src="dist/common.js" defer></script>
     <script src="dist/main.js" defer></script>
@@ -58,8 +59,8 @@
                 website for algebra and geometry</p>
         </div>
         <div class="center mb-5 mt-0">
-            <button class="btn btn-lg btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#menuSidebar"
-                aria-controls="menuSidebar"><i class="bi bi-list"></i> Menu</button>
+            <button class="btn btn-lg btn-outline-light" onclick="openSideBar()"><i class="bi bi-list"></i>
+                Menu</button>
         </div>
         <div class="row align-items-center justify-content-between mb-5">
             <div class="col-md d-none d-md-block">
@@ -126,6 +127,9 @@
     <script src="dist/jquery-3.6.0-min.js"></script>
     <script src="dist/bootstrap-5.1-min.js"></script>
     <script>
+        const openSideBar = () => {
+            document.querySelector('.navbar-toggler').click();
+        }
         if (typeof (Storage) !== 'undefined') {
             let storage = window.localStorage, pageCount;
             window.addEventListener('load', () => {
