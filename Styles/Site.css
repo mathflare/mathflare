@@ -86,16 +86,19 @@ var {
 .btn-offcanvas-link:focus {
     color: hsl(0, 0%, 100%);
     background-color: hsl(208, 11%, 23%);
-    transition: ease-in-out 0.2s;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .link-light {
-    transition: ease-in-out 0.2s;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .link-light:hover,
 .link-light:focus {
     color: hsl(0, 0%, 100%);
     background-color: hsl(208, 11%, 23%);
-    transition: ease-in-out 0.15s;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .btn-toggle::before {
     width: 1.25em;
@@ -131,7 +134,6 @@ var {
     font-size: 16px;
     font-weight: 500;
     opacity: 50%;
-    /* background-color: hsl(134, 61%, 41%); */
 }
 .btn-offcanvas-link {
     display: inline-flex;
