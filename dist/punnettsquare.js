@@ -16,34 +16,32 @@ document.getElementById('pscalc').addEventListener('click', (event) => {
         document.getElementById('f1m2').innerText = `${F1}${M2}`;
         document.getElementById('f2m1').innerText = `${F2}${M1}`;
         document.getElementById('f2m2').innerText = `${F2}${M2}`;
-        if (F1 === M1) {
-            if (F2 === M2) {
-                if (F1 === F2) {
-                    if (F1 === 'A') {
-                        document.getElementById('output').innerText = '100% for AA';
-                    }
-                    else if (F1 === 'a') {
-                        document.getElementById('output').innerText = '100% for aa';
-                    }
-                }
-                else {
-                    document.getElementById('output').innerText = '50% for Aa, 25% for AA, 25% for aa';
-                }
+        if (F1 === M1 && F2 === M2 && F1 === F2) {
+            if (F1 === 'A') {
+                document.getElementById('output').innerText = 'Genotype: 100% for AA';
+                document.getElementById('phenotypeout').innerText = 'Phenotype: 100% for A';
             }
-            else {
-                document.getElementById('output').innerText = '50% for AA, 50% for Aa';
+            else if (F1 === 'a') {
+                document.getElementById('output').innerText = 'Genotype: 100% for aa';
+                document.getElementById('phenotypeout').innerText = 'Phenotype: 100% for a';
             }
         }
-        else if (F1 !== M1) {
-            if (F2 === M2) {
-                document.getElementById('output').innerText = '50% for Aa, 50% for aa';
-            }
-            else {
-                document.getElementById('output').innerText = '100% for Aa';
-            }
+        else if (F1 == M1 && F2 == M2) {
+            document.getElementById('output').innerText = 'Genotype: 50% for Aa, 25% for AA, 25% for aa';
+            document.getElementById('phenotypeout').innerText = 'Phenotype: 75% for A, 25% for a';
         }
-    };
-    const calculatePercentage = () => {
+        else if (F1 == M1 && F2 != M2) {
+            document.getElementById('output').innerText = 'Genotype: 50% for AA, 50% for Aa';
+            document.getElementById('phenotypeout').innerText = 'Phenotype: 100% for Α';
+        }
+        else if (F1 != M1 && F2 == M2) {
+            document.getElementById('output').innerText = 'Genotype: 50% for Aa, 50% for aa';
+            document.getElementById('phenotypeout').innerText = 'Phenotype: 50% for A, 50% for a';
+        }
+        else if (F1 != M1 && F2 != M2) {
+            document.getElementById('output').innerText = 'Genotype: 100% for Αa';
+            document.getElementById('phenotypeout').innerText = 'Phenotype: 100% for Α';
+        }
     };
     fetchTable(fatherGene, motherGene);
 });
