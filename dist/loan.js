@@ -9,7 +9,7 @@ document.getElementById('loancalc').addEventListener('click', (event) => {
         document.getElementById('interest').value = '';
         document.getElementById('term').value = '';
     };
-    if (isNaN(amount) || isNaN(rate) || isNaN(term)) {
+    if (isNaN(amount) || isNaN(rate) || isNaN(term) || rate > 100 || term > 1000) {
         document.getElementById('loanout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
     }
@@ -20,13 +20,7 @@ document.getElementById('loancalc').addEventListener('click', (event) => {
     else {
         const a = Math.pow(1 + (rate / 100 / 12), term * 12);
         const total = (amount * a * (rate / 100 / 12)) / (a - 1);
-        if (total === Math.floor(total)) {
-            document.getElementById('loanout').innerHTML = `<p class="text-success">EMI: €${total}</p>`;
-            clearValues();
-        }
-        else {
-            document.getElementById('loanout').innerHTML = `<p class="text-success">EMI: €${total} (&#8764; €${total.toFixed(2)})</p>`;
-            clearValues();
-        }
+        document.getElementById('loanout').innerHTML = `<p class="text-success">EMI: ${document.getElementById('currencyselect').value}${total.toFixed(2)}</p>`;
+        clearValues();
     }
 });

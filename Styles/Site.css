@@ -168,7 +168,7 @@ var {
     margin-top: 7.5em;
     z-index: 1 !important;
 }
-.center input[type="number"] {
+.center input[type="number"]:not(#amount) {
     width: 40%;
     transition: 0.2s;
 }
@@ -283,7 +283,7 @@ var {
 }
 /*=====1000 MEDIA QUERY=====*/
 @media screen and (max-width: 1000px) {
-    .center input[type="number"] {
+    .center input[type="number"]:not(#amount) {
         width: 60%;
         transition: 0.2s;
     }
@@ -333,7 +333,7 @@ var {
     .btn-mobile {
         display: none;
     }
-    .center input[type="number"] {
+    .center input[type="number"]:not(#amount) {
         width: 90%;
         transition: 0.2s;
     }

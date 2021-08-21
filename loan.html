@@ -11,7 +11,7 @@
     <meta name="og:title" content="MathFlare - Loan Calculator" />
     <meta name="twitter:title" content="MathFlare - Loan Calculator" />
     <meta name="keywords"
-        content="loan, calculate loan, loan calculator, morgage loan calculator, EMI calculator, algebra, math, mathflare, math flare">
+        content="loan, calculate loan, loan calculator, morgage calculator, morgage loan calculator, emi, EMI calculator, algebra, math, mathflare, math flare">
     <meta name="description" content="Calculate loan EMI" />
     <meta name="og:description" content="Calculate loan EMI" />
     <meta name="twitter:description" content="Calculate loan EMI" />
@@ -49,12 +49,26 @@
         <form autocomplete="off">
             <h4 class="text-white">Amount</h4>
             <div class="center-form">
-                <input type="number" id="amount" placeholder="€amount" class="form-control mb-0" step="0.1" min="0" />
+                <div class="input-group">
+                    <select class="form-select" id="currencyselect">
+                        <option value="&#36;">&#36; - Dollar</option>
+                        <option value="&#8364;">&#8364; - Euro</option>
+                        <option value="&#163;">&#163; - Pound</option>
+                        <option value="&#165;">&#165; - Yen</option>
+                        <option value="&#8377;">&#8377; - Indian Rupee</option>
+                        <option value="&#8381;">&#8381; - Ruble</option>
+                        <option value="&#8369;">&#8369; - Peso</option>
+                        <option value="&#8356;">&#8356; - Lira</option>
+                    </select>
+                    <input type="number" id="amount" placeholder="€amount" class="form-control" style="width: 65%"
+                        step="0.1" min="0" />
+                </div>
             </div>
             <br />
             <h4 class="text-white">Interest rate</h4>
             <div class="center-form">
-                <input type="number" id="interest" placeholder="%interest rate" class="form-control mb-0" step="0.1" min="0" />
+                <input type="number" id="interest" placeholder="%interest rate" class="form-control mb-0" step="0.1"
+                    min="0" />
             </div>
             <br />
             <h4 class="text-white">Term</h4>
