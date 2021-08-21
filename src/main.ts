@@ -1,3 +1,6 @@
+/* $(window).on('load', (): void => {
+    $('#spinner').fadeOut(1000);
+}); */
 document.addEventListener("DOMContentLoaded", () => {
     console.log("%cMathFlare", "color: DodgerBlue; font-weight: 600; font-family:consolas; font-size: 40px");
     console.log("%cby the way, the curiosity killed the cat you know...", "color: PaleGreen; font-weight: 600; font-family:consolas; font-size: 20px");
