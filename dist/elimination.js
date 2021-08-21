@@ -42,17 +42,17 @@ document.getElementById('eliminationcalc').addEventListener('click', (event) => 
         clearValues();
     }
     else if (z > 1 || k > 1) {
-        document.getElementById('eliminationout').innerHTML = `<p class="text-warning">The value of z or k cannot be more or less than 1</p>`;
+        document.getElementById('eliminationout').innerHTML = `<p class="text-warning">The value of z or k cannot be more than 1</p>`;
         clearValues();
     }
     else {
         if (x === m) {
-            const result = `H<sub>${x}</sub>${y}<sub>${z}</sub> + ${w}<sub>${k}</sub>OH<sub>${m}</sub> &#8594; ${x}H<sub>2</sub>O + ${w}${y}`;
+            const result = `H<sub class="text-warning">${x}</sub>${y}<sub><span class="text-warning">${z}</span></sub> + </span class="text-warning">${w}</span><sub class="text-warning">${k}</sub>OH<sub class="text-warning">${m}</sub> &#8594; <span class="text-warning">${x}</span>H<sub>2</sub>O + <span class="text-warning">${w}${y}</span>`;
             document.getElementById('eliminationout').innerHTML = `${removeOne(result)}`;
             clearValues();
         }
         else {
-            const result = `${m}H<sub>${x}</sub>${y}<sub>${z}</sub> + ${x}${w}<sub>${k}</sub>OH<sub>${m}</sub> &#8594; ${x * m}H<sub>2</sub>O + ${w}${x}${y}${m}`;
+            const result = `<span class="text-warning">${m}</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span><sub class="text-warning">${z}</sub> + <span class="text-warning">${x}${w}</span><sub class="text-warning">${k}</sub>OH<sub class="text-warning">${m}</sub> &#8594; <span class="text-warning">${x * m}</span>H<sub>2</sub>O + <span class="text-warning">${w}<sub>${x}</sub>${y}<sub>${m}</sub></span>`;
             document.getElementById('eliminationout').innerHTML = `${removeOne(result)}`;
             clearValues();
         }
