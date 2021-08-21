@@ -12,7 +12,7 @@
         (<HTMLInputElement>document.getElementById('b3')).value = "";
         (<HTMLInputElement>document.getElementById('c3')).value = "";
     } else if (a == 0 && b == 0 && c == 0) {
-        (<HTMLElement>document.getElementById('output2')).innerHTML = `<p class="text-warning">The equation is indefinite: it is true for all values. <br> It has infinite coordinates where X=Y</p>`;
+        (<HTMLElement>document.getElementById('output2')).innerHTML = `<p class="text-warning">The equation is indefinite: it is true for all values. <br /> It has infinite coordinates where X=Y</p>`;
         (<HTMLInputElement>document.getElementById('a3')).value = "";
         (<HTMLInputElement>document.getElementById('b3')).value = "";
         (<HTMLInputElement>document.getElementById('c3')).value = "";

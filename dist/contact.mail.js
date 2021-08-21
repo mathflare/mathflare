@@ -7,7 +7,7 @@ const js_onSuccess = () => {
     console.log('message sent successfully');
     sendButton.value = 'Send';
     sendButton.disabled = false;
-    document.querySelector('#user-message').innerHTML = `<p class="text-success">Your message has been sent successfully. <br> We will get back to you soon.</p>`;
+    document.querySelector('#user-message').innerHTML = `<p class="text-success">Your message has been sent successfully. <br /> We will get back to you soon.</p>`;
     document.querySelector('#contact-form').reset();
 };
 const js_onError = (error) => {

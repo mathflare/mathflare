@@ -13,7 +13,7 @@ document.getElementById('button2').addEventListener('click', (event) => {
         document.getElementById('c3').value = "";
     }
     else if (a == 0 && b == 0 && c == 0) {
-        document.getElementById('output2').innerHTML = `<p class="text-warning">The equation is indefinite: it is true for all values. <br> It has infinite coordinates where X=Y</p>`;
+        document.getElementById('output2').innerHTML = `<p class="text-warning">The equation is indefinite: it is true for all values. <br /> It has infinite coordinates where X=Y</p>`;
         document.getElementById('a3').value = "";
         document.getElementById('b3').value = "";
         document.getElementById('c3').value = "";

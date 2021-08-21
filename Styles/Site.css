@@ -168,15 +168,15 @@ var {
     margin-top: 7.5em;
     z-index: 1 !important;
 }
-.center input[type="number"]:not(#amount) {
+.center input[type="number"]:not(.input-group-item) {
     width: 40%;
     transition: 0.2s;
 }
-.center input[type="text"]:not(#result) {
+.center input[type="text"]:not(.input-group-item) {
     width: 40%;
     transition: 0.2s;
 }
-.center input[type="email"] {
+.center input[type="email"]:not(.input-group-item) {
     width: 40%;
     transition: 0.2s;
 }
@@ -184,7 +184,7 @@ var {
     width: 40%;
     transition: 0.2s;
 }
-.center textarea {
+.center textarea:not(.input-group-item) {
     width: 40%;
     transition: 0.2s;
 }
@@ -283,19 +283,19 @@ var {
 }
 /*=====1000 MEDIA QUERY=====*/
 @media screen and (max-width: 1000px) {
-    .center input[type="number"]:not(#amount) {
+    .center input[type="number"]:not(.input-group-item) {
         width: 60%;
         transition: 0.2s;
     }
-    .center input[type="text"]:not(#result) {
+    .center input[type="text"]:not(.input-group-item) {
         width: 60%;
         transition: 0.2s;
     }
-    .center input[type="email"] {
+    .center input[type="email"]:not(.input-group-item) {
         width: 60%;
         transition: 0.2s;
     }
-    .center textarea {
+    .center textarea:not(.input-group-item) {
         width: 60%;
         transition: 0.2s;
     }
@@ -333,15 +333,15 @@ var {
     .btn-mobile {
         display: none;
     }
-    .center input[type="number"]:not(#amount) {
+    .center input[type="number"]:not(.input-group-item) {
         width: 90%;
         transition: 0.2s;
     }
-    .center input[type="text"]:not(#result) {
+    .center input[type="text"]:not(.input-group-item) {
         width: 90%;
         transition: 0.2s;
     }
-    .center input[type="email"] {
+    .center input[type="email"]:not(.input-group-item) {
         width: 90%;
         transition: 0.2s;
     }
@@ -349,7 +349,7 @@ var {
         width: 90%;
         transition: 0.2s;
     }
-    .center textarea {
+    .center textarea:not(.input-group-item) {
         width: 90%;
         transition: 0.2s;
     }
