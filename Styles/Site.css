@@ -259,7 +259,8 @@ var {
 #sqrtout,
 #cbrtout,
 #nrootout,
-#loanout {
+#loanout,
+#eliminationout {
     font-size: 20px !important;
     line-height: 24px !important;
 }
