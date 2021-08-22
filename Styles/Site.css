@@ -194,7 +194,7 @@ var {
 }
 .message {
     width: 40%;
-    height: 100px;
+    
     min-height: 20px;
     transition: 0.2s;
 }
@@ -209,7 +209,6 @@ var {
 }
 .banner-calc-ad {
     width: 50%;
-    height: 100px;
 }
 /*=====CHEAT SHEET TABLE START=====*/
 .formulas-body tr:hover {
@@ -322,7 +321,7 @@ var {
     }
     .banner-calc-ad {
         width: 70%;
-        height: 100px;
+        
     }
 }
 /*=====915 MEDIA QUERY=====*/
@@ -372,6 +371,6 @@ var {
     }
     .banner-calc-ad {
         width: 90%;
-        height: 100px;
+        
     }
 }
