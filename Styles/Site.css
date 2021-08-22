@@ -207,6 +207,10 @@ var {
     justify-content: center;
     align-items: center;
 }
+.banner-calc-ad {
+    width: 50%;
+    height: 100px;
+}
 /*=====CHEAT SHEET TABLE START=====*/
 .formulas-body tr:hover {
     background-color: hsl(0, 0%, 100%) !important;
@@ -316,6 +320,10 @@ var {
         width: 60%;
         transition: 0.2s;
     }
+    .banner-calc-ad {
+        width: 70%;
+        height: 100px;
+    }
 }
 /*=====915 MEDIA QUERY=====*/
 @media screen and (max-width: 915px) {
@@ -361,5 +369,9 @@ var {
     .message {
         width: 90%;
         transition: 0.2s;
+    }
+    .banner-calc-ad {
+        width: 90%;
+        height: 100px;
     }
 }
