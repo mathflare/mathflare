@@ -41,7 +41,7 @@ const removeOne: (str: string) => string = (str: string) => {
         clearValues();
     } else {
         if (x === m) {
-            const result: string = `H<sub class="text-warning">${x}</sub>${y}<sub><span class="text-warning">${z}</span></sub> + </span class="text-warning">${w}</span><sub class="text-warning">${k}</sub>OH<sub class="text-warning">${m}</sub> &#8594; <span class="text-warning">${x}</span>H<sub>2</sub>O + <span class="text-warning">${w}${y}</span>`;
+            const result: string = `H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span><sub><span class="text-warning">${z}</span></sub> + <span class="text-warning">${w}</span><sub class="text-warning">${k}</sub>OH<sub class="text-warning">${m}</sub> &#8594; <span class="text-warning">${x}</span>H<sub>2</sub>O + <span class="text-warning">${w}${y}</span>`;
             (<HTMLParagraphElement>document.getElementById('eliminationout')).innerHTML = `${removeOne(result)}`;
             clearValues();
         } else {

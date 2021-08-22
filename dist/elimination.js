@@ -47,7 +47,7 @@ document.getElementById('eliminationcalc').addEventListener('click', (event) => 
     }
     else {
         if (x === m) {
-            const result = `H<sub class="text-warning">${x}</sub>${y}<sub><span class="text-warning">${z}</span></sub> + </span class="text-warning">${w}</span><sub class="text-warning">${k}</sub>OH<sub class="text-warning">${m}</sub> &#8594; <span class="text-warning">${x}</span>H<sub>2</sub>O + <span class="text-warning">${w}${y}</span>`;
+            const result = `H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span><sub><span class="text-warning">${z}</span></sub> + <span class="text-warning">${w}</span><sub class="text-warning">${k}</sub>OH<sub class="text-warning">${m}</sub> &#8594; <span class="text-warning">${x}</span>H<sub>2</sub>O + <span class="text-warning">${w}${y}</span>`;
             document.getElementById('eliminationout').innerHTML = `${removeOne(result)}`;
             clearValues();
         }
