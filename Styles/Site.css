@@ -194,7 +194,7 @@ var {
 }
 .message {
     width: 40%;
-    
+
     min-height: 20px;
     transition: 0.2s;
 }
@@ -208,6 +208,8 @@ var {
     align-items: center;
 }
 .banner-calc-ad {
+    display: flex !important;
+    flex-direction: column !important;
     width: 50%;
     height: 200px !important;
 }
