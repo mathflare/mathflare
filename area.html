@@ -10,7 +10,8 @@
     <meta name="title" content="MathFlare - Area Calculator">
     <meta name="og:title" content="MathFlare - Area Calculator" />
     <meta name="twitter:title" content="MathFlare - Area Calculator" />
-    <meta name="keywords" content="area, area calculator, calculator, square, triangle, parallelogram, rectangle, circle, trapezoid, geometry, mathflare, math flare">
+    <meta name="keywords"
+        content="area, area calculator, calculator, square, triangle, parallelogram, rectangle, circle, trapezoid, geometry, mathflare, math flare">
     <meta name="description" content="Calculate the area of the most common geometrical shapes." />
     <meta name="og:description" content="Calculate the area of the most common geometrical shapes." />
     <meta name="twitter:description" content="Calculate the area of the most common geometrical shapes." />
@@ -48,7 +49,11 @@
         <form autocomplete="off">
             <h4 class="text-white"><i class="bi bi-square"></i> Square</h4>
             <div class="center-form">
-                <input type="number" id="squareside" placeholder="side" class="form-control mb-0" step="0.1" min="0" />
+                <div class="input-group">
+                    <span class="input-group-text">cm</span>
+                    <input type="number" id="squareside" placeholder="side" class="form-control mb-0 input-group-item"
+                        step="0.1" min="0" />
+                </div>
             </div>
             <br />
             <div class="center-form">
@@ -68,11 +73,19 @@
         <form autocomplete="off">
             <h4 class="text-white"><i class="bi bi-file"></i> Parallelogram</h4>
             <div class="center-form">
-                <input type="number" id="paraw" placeholder="width" class="form-control mb-0" step="0.1" min="0" />
+                <div class="input-group">
+                    <span class="input-group-text">cm</span>
+                    <input type="number" id="paraw" placeholder="width" class="form-control mb-0 input-group-item"
+                        step="0.1" min="0" />
+                </div>
             </div>
             <br />
             <div class="center-form">
-                <input type="number" id="parah" placeholder="height" class="form-control mb-0" step="0.1" min="0" />
+                <div class="input-group">
+                    <span class="input-group-text">cm</span>
+                    <input type="number" id="parah" placeholder="height" class="form-control mb-0 input-group-item"
+                        step="0.1" min="0" />
+                </div>
             </div>
             <br />
             <div class="center-form">
@@ -92,12 +105,19 @@
         <form autocomplete="off">
             <h4 class="text-white"><i class="bi bi-triangle"></i> Triangle</h4>
             <div class="center-form">
-                <input type="number" id="tria" placeholder="segment" class="form-control mb-0" step="0.1" min="0" />
+                <div class="input-group">
+                    <span class="input-group-text">cm</span>
+                    <input type="number" id="tria" placeholder="segment" class="form-control mb-0 input-group-item"
+                        step="0.1" min="0" />
+                </div>
             </div>
             <br />
             <div class="center-form">
-                <input type="number" id="trib" placeholder="corresponding height" class="form-control mb-0" step="0.1"
-                    min="0" />
+                <div class="input-group">
+                    <span class="input-group-text">cm</span>
+                    <input type="number" id="trib" placeholder="corresponding height"
+                        class="form-control mb-0 input-group-item" step="0.1" min="0" />
+                </div>
             </div>
             <br />
             <div class="center-form">
@@ -117,7 +137,11 @@
         <form autocomplete="off">
             <h4 class="text-white"><i class="bi bi-triangle"></i> Equilateral Triangle</h4>
             <div class="center-form">
-                <input type="number" id="etris" placeholder="side" class="form-control mb-0" step="0.1" min="0" />
+                <div class="input-group">
+                    <span class="input-group-text">cm</span>
+                    <input type="number" id="etris" placeholder="side" class="form-control mb-0 input-group-item"
+                        step="0.1" min="0" />
+                </div>
             </div>
             <br />
             <div class="center-form">
@@ -137,7 +161,11 @@
         <form autocomplete="off">
             <h4 class="text-white"><i class="bi bi-circle"></i> Circle</h4>
             <div class="center-form">
-                <input type="number" id="circler" placeholder="radius" class="form-control mb-0" step="0.1" min="0" />
+                <div class="input-group">
+                    <span class="input-group-text">cm</span>
+                    <input type="number" id="circler" placeholder="radius" class="form-control mb-0 input-group-item"
+                        step="0.1" min="0" />
+                </div>
             </div>
             <br />
             <div class="center-form">
@@ -157,17 +185,27 @@
         <form autocomplete="off">
             <h4 class="text-white"><i class="bi bi-pentagon"></i> Trapezoid</h4>
             <div class="center-form">
-                <input type="number" id="trapa" placeholder="small segment" class="form-control mb-0" step="0.1"
-                    min="0" />
+                <div class="input-group">
+                    <span class="input-group-text">cm</span>
+                    <input type="number" id="trapa" placeholder="small segment"
+                        class="form-control mb-0 input-group-item" step="0.1" min="0" />
+                </div>
             </div>
             <br />
             <div class="center-form">
-                <input type="number" id="trapb" placeholder="large segment" class="form-control mb-0" step="0.1"
-                    min="0" />
+                <div class="input-group">
+                    <span class="input-group-text">cm</span>
+                    <input type="number" id="trapb" placeholder="large segment"
+                        class="form-control mb-0 input-group-item" step="0.1" min="0" />
+                </div>
             </div>
             <br />
             <div class="center-form">
-                <input type="number" id="trapc" placeholder="height" class="form-control mb-0" step="0.1" min="0" />
+                <div class="input-group">
+                    <span class="input-group-text">cm</span>
+                    <input type="number" id="trapc" placeholder="height" class="form-control mb-0 input-group-item"
+                        step="0.1" min="0" />
+                </div>
             </div>
             <br />
             <div class="center-form">

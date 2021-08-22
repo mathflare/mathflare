@@ -51,7 +51,11 @@
         <form autocomplete="off">
             <h4 class="text-white">Square</h4>
             <div class="center-form">
-                <input type="number" id="sside" placeholder="side" class="form-control mb-0" min="0" />
+                <div class="input-group">
+                    <span class="input-group-text">cm</span>
+                    <input type="number" id="sside" placeholder="side" class="form-control mb-0 input-group-item"
+                        min="0" />
+                </div>
             </div>
             <br />
             <div class="center-form">
@@ -71,15 +75,27 @@
         <form autocomplete="off">
             <h4 class="text-white">Parallelogram</h4>
             <div class="center-form">
-                <input type="number" id="pcd" placeholder="first side" class="form-control mb-0" min="0" step="0.1"/>
+                <div class="input-group">
+                    <span class="input-group-text">cm</span>
+                    <input type="number" id="pcd" placeholder="first side" class="form-control mb-0 input-group-item"
+                        min="0" step="0.1" />
+                </div>
             </div>
             <br />
             <div class="center-form">
-                <input type="number" id="pad" placeholder="second side" class="form-control mb-0" min="0" step="0.1"/>
+                <div class="input-group">
+                    <span class="input-group-text">cm</span>
+                    <input type="number" id="pad" placeholder="second side" class="form-control mb-0 input-group-item"
+                        min="0" step="0.1" />
+                </div>
             </div>
             <br />
             <div class="center-form">
-                <input type="number" id="pd" placeholder="angle&#176;" class="form-control mb-0" min="0" step="0.1"/>
+                <div class="input-group">
+                    <span class="input-group-text">degrees&#176;</span>
+                    <input type="number" id="pd" placeholder="angle" class="form-control mb-0 input-group-item" min="0"
+                        step="0.1" />
+                </div>
             </div>
             <br />
             <div class="center-form">
@@ -99,7 +115,8 @@
         <form autocomplete="off">
             <h4 class="text-white">Number of Diagonals in a Convex Polygon</h4>
             <div class="center-form">
-                <input type="number" id="vertex" placeholder="number of vertices" class="form-control mb-0" min="3" />
+                <input type="number" id="vertex" placeholder="number of vertices" class="form-control mb-0" min="3"
+                    step="0.1" />
             </div>
             <br />
             <div class="center-form">
@@ -112,8 +129,8 @@
         </div>
         <br />
         <div class="my-4">
-            <a href="https://duckduckgo.com/?q=number+of+diagonals+in+a+convex+polygon" target="_blank"
-                rel="noopener" class="btn btn-outline-light">Find information on the web</a>
+            <a href="https://duckduckgo.com/?q=number+of+diagonals+in+a+convex+polygon" target="_blank" rel="noopener"
+                class="btn btn-outline-light">Find information on the web</a>
         </div>
         <hr class="bg-danger" style="width: 50%;" />
         <h3 class="text-white">Trapezoid Diagonals</h4>
@@ -121,15 +138,27 @@
             <h4 class="text-white">using the sides and angles at the base</h4>
             <form autocomplete="off">
                 <div class="center-form">
-                    <input type="number" id="trapl1" placeholder="large base" class="form-control mb-0" />
+                    <div class="input-group">
+                        <span class="input-group-text">cm</span>
+                        <input type="number" id="trapl1" placeholder="large base"
+                            class="form-control mb-0 input-group-item" step="0.1" />
+                    </div>
                 </div>
                 <br />
                 <div class="center-form">
-                    <input type="number" id="trapleg1" placeholder="leg" class="form-control mb-0" />
+                    <div class="input-group">
+                        <span class="input-group-text">cm</span>
+                        <input type="number" id="trapleg1" placeholder="leg" class="form-control mb-0 input-group-item"
+                            step="0.1" />
+                    </div>
                 </div>
                 <br />
                 <div class="center-form">
-                    <input type="number" id="trapβ1" placeholder="β&#176;" class="form-control mb-0" />
+                    <div class="input-group">
+                        <span class="input-group-text">degrees&#176;</span>
+                        <input type="number" id="trapβ1" placeholder="β" class="form-control mb-0 input-group-item"
+                            step="0.1" />
+                    </div>
                 </div>
                 <br />
                 <div class="center-form">
@@ -149,15 +178,27 @@
             <h4 class="text-white">using the sides and the height</h4>
             <form autocomplete="off">
                 <div class="center-form">
-                    <input type="number" id="trapl2" placeholder="large base" class="form-control mb-0" />
+                    <div class="input-group">
+                        <span class="input-group-text">cm</span>
+                        <input type="number" id="trapl2" placeholder="large base" class="form-control mb-0"
+                            step="0.1" />
+                    </div>
                 </div>
                 <br />
                 <div class="center-form">
-                    <input type="number" id="trapleg2" placeholder="leg" class="form-control mb-0" />
+                    <div class="input-group">
+                        <span class="input-group-text">cm</span>
+                        <input type="number" id="trapleg2" placeholder="leg" class="form-control mb-0 input-group-item"
+                            step="0.1" />
+                    </div>
                 </div>
                 <br />
                 <div class="center-form">
-                    <input type="number" id="traph2" placeholder="height" class="form-control mb-0" />
+                    <div class="input-group">
+                        <span class="input-group-text">cm</span>
+                        <input type="number" id="traph2" placeholder="height" class="form-control mb-0 input-group-item"
+                            step="0.1" />
+                    </div>
                 </div>
                 <br />
                 <div class="center-form">

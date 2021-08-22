@@ -67,13 +67,20 @@
             <br />
             <h4 class="text-white">Interest rate</h4>
             <div class="center-form">
-                <input type="number" id="interest" placeholder="%interest rate" class="form-control mb-0" step="0.1"
-                    min="0" />
+                <div class="input-group">
+                    <span class="input-group-text">%</span>
+                    <input type="number" id="interest" placeholder="interest rate"
+                        class="form-control mb-0 input-group-item" step="0.1" min="0" />
+                </div>
             </div>
             <br />
             <h4 class="text-white">Term</h4>
             <div class="center-form">
-                <input type="number" id="term" placeholder="term(years)" class="form-control mb-0" step="0.1" min="0" />
+                <div class="input-group">
+                    <span class="input-group-text">years</span>
+                    <input type="number" id="term" placeholder="term" class="form-control mb-0 input-group-item"
+                        step="0.1" min="0" />
+                </div>
             </div>
             <br />
             <div class="center-form">
