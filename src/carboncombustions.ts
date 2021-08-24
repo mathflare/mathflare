@@ -28,8 +28,13 @@ function replace(c: number) {
         } else {
             const h: number = 2 * c + 2;
             const o: number = (h / 2 + 2 * c) / 2;
-            (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${replace(c)} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${replace(c)}<span class="text-warning">CO<sub>2</sub></span></p>`;
-            (<HTMLInputElement>document.getElementById('carbons')).value = "";
+            if (Math.floor(o) !== o) {
+                (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${replace(c)} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${replace(c)}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                (<HTMLInputElement>document.getElementById('carbons')).value = "";
+            } else {
+                (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${replace(c)} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${replace(c)}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                (<HTMLInputElement>document.getElementById('carbons')).value = "";
+            }
         }
     } else if (bond === 'double') {
         if (isNaN(c)) {
@@ -52,8 +57,13 @@ function replace(c: number) {
         } else {
             const h: number = 2 * c;
             const o: number = (h / 2 + 2 * c) / 2;
-            (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
-            (<HTMLInputElement>document.getElementById('carbons')).value = "";
+            if (Math.floor(o) !== o) {
+                (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                (<HTMLInputElement>document.getElementById('carbons')).value = "";
+            } else {
+                (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                (<HTMLInputElement>document.getElementById('carbons')).value = "";
+            }
         }
     } else if (bond === 'triple') {
         if (isNaN(c)) {
@@ -76,8 +86,13 @@ function replace(c: number) {
         } else {
             const h: number = 2 * c - 2;
             const o: number = (h / 2 + 2 * c) / 2;
-            (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${replace(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
-            (<HTMLInputElement>document.getElementById('carbons')).value = "";
+            if (Math.floor(o) !== o) {
+                (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${replace(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                (<HTMLInputElement>document.getElementById('carbons')).value = "";
+            } else {
+                (<HTMLParagraphElement>document.getElementById('output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${replace(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                (<HTMLInputElement>document.getElementById('carbons')).value = "";
+            }
         }
     }
 });
