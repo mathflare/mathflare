@@ -1,4 +1,5 @@
-//HxYz + WkOHm
+//copyrights (c) 2021 MathFlare.xyz
+//HxYz + M^+v
 const replaceOne: (str: string) => string = (str: string) => {
     let final: string = '';
     for (let i: number = 0; i < str.length; i++) {
@@ -52,3 +53,4 @@ const replaceOne: (str: string) => string = (str: string) => {
         }
     }
 });
+//copyrights (c) 2021 MathFlare.xyz

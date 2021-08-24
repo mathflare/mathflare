@@ -1,4 +1,12 @@
 "use strict";
+function replace(c) {
+    let final = '';
+    if (c !== 1) {
+        final += c;
+    }
+    return final;
+}
+;
 document.getElementById('combustcalc').addEventListener('click', (event) => {
     event.preventDefault();
     const c = parseFloat(document.getElementById('carbons').value);
@@ -25,7 +33,7 @@ document.getElementById('combustcalc').addEventListener('click', (event) => {
         else {
             const h = 2 * c + 2;
             const o = (h / 2 + 2 * c) / 2;
-            document.getElementById('output').innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
+            document.getElementById('output').innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${replace(c)} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${replace(c)}<span class="text-warning">CO<sub>2</sub></span></p>`;
             document.getElementById('carbons').value = "";
         }
     }
@@ -85,7 +93,7 @@ document.getElementById('combustcalc').addEventListener('click', (event) => {
         else {
             const h = 2 * c - 2;
             const o = (h / 2 + 2 * c) / 2;
-            document.getElementById('output').innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
+            document.getElementById('output').innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${replace(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
             document.getElementById('carbons').value = "";
         }
     }

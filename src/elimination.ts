@@ -1,3 +1,4 @@
+//copyrights (c) 2021 MathFlare.xyz
 //HxYz + WkOHm
 const removeOne: (str: string) => string = (str: string) => {
     let final: string = '';
@@ -51,3 +52,4 @@ const removeOne: (str: string) => string = (str: string) => {
         }
     }
 });
+//copyrights (c) 2021 MathFlare.xyz
