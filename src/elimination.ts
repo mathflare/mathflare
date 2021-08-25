@@ -33,7 +33,7 @@ const removeOne: (str: string) => string = (str: string) => {
     } else if (x > 3 || m > 3) {
         (<HTMLParagraphElement>document.getElementById('eliminationout')).innerHTML = `<p class="text-warning">The value of x or m cannot be more than 3</p>`;
         clearValues();
-    }  else {
+    } else {
         if (x === m) {
             const result: string = `H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${w}</span>OH<sub class="text-warning">${m}</sub> &#8594; <span class="text-warning">${x}</span>H<sub>2</sub>O + <span class="text-warning">${w}${y}</span>`;
             (<HTMLParagraphElement>document.getElementById('eliminationout')).innerHTML = `${removeOne(result)}`;
