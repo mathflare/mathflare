@@ -37,14 +37,26 @@ const replaceOne: (str: string) => string = (str: string) => {
         (<HTMLParagraphElement>document.getElementById('acmetalout')).innerHTML = `<p class="text-warning">There is not any reaction since the metal is one of these (Cu,Ag,Au,Pt)</p>`;
         clearValues();
     } else {
-        if (x === v) { //2 HxYz + 2 M --> 2 MY + x H2
-            const result: string = `<span class="text-warning">2</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">2</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">2</span><span class="text-warning">${m}</span><span class="text-warning">${y}</span> + <span class="text-warning">${x}</span>H<sub>2</sub>`;
-            (<HTMLParagraphElement>document.getElementById('acmetalout')).innerHTML = `${replaceOne(result)}`;
-            clearValues();
-        } else { //2*v HxYy + 2*x M --> 2 MxYv + v*x H2
-            const result: string = `<span class="text-warning">${2 * v}</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${2 * x}</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">2</span><span class="text-warning">${m}</span><sub class="text-warning">${x}</sub><span class="text-warning">${y}</span><sub class="text-warning">${v}</sub> + <span class="text-warning">${x * v}</span>H<sub>2</sub>`;
-            (<HTMLParagraphElement>document.getElementById('acmetalout')).innerHTML = `${replaceOne(result)}`;
-            clearValues();
+        if (x === v) {
+            if (x == 2) { //HxY + M --> MY + H2
+                const result: string = `H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${m}</span> &#8594; <span class="text-warning">${m}</span><span class="text-warning">${y}</span> + H<sub>2</sub>`;
+                (<HTMLParagraphElement>document.getElementById('acmetalout')).innerHTML = `${replaceOne(result)}`;
+                clearValues();
+            } else { //2 HxY + 2 M --> 2 MY + x H2
+                const result: string = `<span class="text-warning">2</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">2</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">2</span><span class="text-warning">${m}</span><span class="text-warning">${y}</span> + <span class="text-warning">${x}</span>H<sub>2</sub>`;
+                (<HTMLParagraphElement>document.getElementById('acmetalout')).innerHTML = `${replaceOne(result)}`;
+                clearValues();
+            }
+        } else {
+            if (x == 2) { //v HxY + x M --> MxYv + v H2
+                const result: string = `<span class="text-warning">${v}</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${x}</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">${m}</span><sub class="text-warning">${x}</sub><span class="text-warning">${y}</span><sub class="text-warning">${v}</sub> + <span class="text-warning">${v}</span>H<sub>2</sub>`;
+                (<HTMLParagraphElement>document.getElementById('acmetalout')).innerHTML = `${replaceOne(result)}`;
+                clearValues();
+            } else { //2*v HxY + 2*x M --> 2 MxYv + v*x H2 
+                const result: string = `<span class="text-warning">${2 * v}</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${2 * x}</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">2</span><span class="text-warning">${m}</span><sub class="text-warning">${x}</sub><span class="text-warning">${y}</span><sub class="text-warning">${v}</sub> + <span class="text-warning">${x * v}</span>H<sub>2</sub>`;
+                (<HTMLParagraphElement>document.getElementById('acmetalout')).innerHTML = `${replaceOne(result)}`;
+                clearValues();
+            }
         }
     }
 });

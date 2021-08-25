@@ -43,14 +43,28 @@ document.getElementById('acmetalcalc').addEventListener('click', (event) => {
     }
     else {
         if (x === v) {
-            const result = `<span class="text-warning">2</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">2</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">2</span><span class="text-warning">${m}</span><span class="text-warning">${y}</span> + <span class="text-warning">${x}</span>H<sub>2</sub>`;
-            document.getElementById('acmetalout').innerHTML = `${replaceOne(result)}`;
-            clearValues();
+            if (x == 2) {
+                const result = `H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${m}</span> &#8594; <span class="text-warning">${m}</span><span class="text-warning">${y}</span> + H<sub>2</sub>`;
+                document.getElementById('acmetalout').innerHTML = `${replaceOne(result)}`;
+                clearValues();
+            }
+            else {
+                const result = `<span class="text-warning">2</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">2</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">2</span><span class="text-warning">${m}</span><span class="text-warning">${y}</span> + <span class="text-warning">${x}</span>H<sub>2</sub>`;
+                document.getElementById('acmetalout').innerHTML = `${replaceOne(result)}`;
+                clearValues();
+            }
         }
         else {
-            const result = `<span class="text-warning">${2 * v}</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${2 * x}</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">2</span><span class="text-warning">${m}</span><sub class="text-warning">${x}</sub><span class="text-warning">${y}</span><sub class="text-warning">${v}</sub> + <span class="text-warning">${x * v}</span>H<sub>2</sub>`;
-            document.getElementById('acmetalout').innerHTML = `${replaceOne(result)}`;
-            clearValues();
+            if (x == 2) {
+                const result = `<span class="text-warning">${v}</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${x}</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">${m}</span><sub class="text-warning">${x}</sub><span class="text-warning">${y}</span><sub class="text-warning">${v}</sub> + <span class="text-warning">${v}</span>H<sub>2</sub>`;
+                document.getElementById('acmetalout').innerHTML = `${replaceOne(result)}`;
+                clearValues();
+            }
+            else {
+                const result = `<span class="text-warning">${2 * v}</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${2 * x}</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">2</span><span class="text-warning">${m}</span><sub class="text-warning">${x}</sub><span class="text-warning">${y}</span><sub class="text-warning">${v}</sub> + <span class="text-warning">${x * v}</span>H<sub>2</sub>`;
+                document.getElementById('acmetalout').innerHTML = `${replaceOne(result)}`;
+                clearValues();
+            }
         }
     }
 });
