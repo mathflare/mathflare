@@ -47,7 +47,9 @@
         <h1 class="text-white">Neutralization Reaction Calculator</h1>
         <hr class="bg-danger" style="width: 60%;" />
         <form autocomplete="off">
-            <h4 class="text-white">H<sub class="text-warning">x</sub><span class="text-warning">Y</span> + <span class="text-warning">W</span>OH<sub class="text-warning">m</sub></h4>
+            <h4 class="text-white">H<sub class="text-warning">x</sub><span class="text-warning">Y</span><sub
+                    class="text-warning">z</sub> + <span class="text-warning">W</span><sub
+                    class="text-warning">k</sub>OH<sub class="text-warning">m</sub></h4>
             <div class="center-form">
                 <div class="input-group">
                     <span class="input-group-text">index</span>
@@ -64,12 +66,23 @@
                     <span class="input-group-text">Non-Metal</span>
                     <input type="text" id="y" placeholder="Y" class="form-control input-group-item" step="0.1"
                         min="0" />
-                        <input type="number" id="m" placeholder="m" class="form-control input-group-item" step="0.1"
+                    <input type="number" id="k" placeholder="k" class="form-control input-group-item" step="0.1"
                         min="0" />
                     <span class="input-group-text">index</span>
                 </div>
             </div>
             <br />
+            <div class="center-form">
+                <div class="input-group">
+                    <span class="input-group-text">index</span>
+                    <input type="number" id="z" placeholder="z" class="form-control input-group-item" step="0.1"
+                        min="0" />
+                    <input type="number" id="m" placeholder="m" class="form-control input-group-item" step="0.1"
+                        min="0" />
+                    <span class="input-group-text">index</span>
+                </div>
+            </div>
+            <br>
             <div class="center-form">
                 <input type="submit" id="eliminationcalc" class="btn btn-success btn-lg" value="Calculate">
             </div>
