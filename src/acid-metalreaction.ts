@@ -9,6 +9,12 @@ const replaceOne: (str: string) => string = (str: string) => {
     };
     return final;
 };
+function parenthese(str: string, v: number) {
+    if (str.length != 3 || v === 1) {
+        return `<span class="text-warning">${str}</span>`;
+    }
+    return `(<span class="text-warning">${str}</span>)`;
+}
 (<HTMLButtonElement>document.getElementById('acmetalcalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const x: number = parseFloat((<HTMLInputElement>document.getElementById('x')).value)!;
@@ -49,11 +55,11 @@ const replaceOne: (str: string) => string = (str: string) => {
             }
         } else {
             if (x == 2) { //v HxY + x M --> MxYv + v H2
-                const result: string = `<span class="text-warning">${v}</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${x}</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">${m}</span><sub class="text-warning">${x}</sub><span class="text-warning">${y}</span><sub class="text-warning">${v}</sub> + <span class="text-warning">${v}</span>H<sub>2</sub>`;
+                const result: string = `<span class="text-warning">${v}</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${x}</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">${m}</span><sub class="text-warning">${x}</sub>${parenthese(y, v)}<sub class="text-warning">${v}</sub> + <span class="text-warning">${v}</span>H<sub>2</sub>`;
                 (<HTMLParagraphElement>document.getElementById('acmetalout')).innerHTML = `${replaceOne(result)}`;
                 clearValues();
             } else { //2*v HxY + 2*x M --> 2 MxYv + v*x H2 
-                const result: string = `<span class="text-warning">${2 * v}</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${2 * x}</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">2</span><span class="text-warning">${m}</span><sub class="text-warning">${x}</sub><span class="text-warning">${y}</span><sub class="text-warning">${v}</sub> + <span class="text-warning">${x * v}</span>H<sub>2</sub>`;
+                const result: string = `<span class="text-warning">${2 * v}</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${2 * x}</span><span class="text-warning">${m}</span> &#8594; <span class="text-warning">2</span><span class="text-warning">${m}</span><sub class="text-warning">${x}</sub>${parenthese(y, v)}<sub class="text-warning">${v}</sub> + <span class="text-warning">${x * v}</span>H<sub>2</sub>`;
                 (<HTMLParagraphElement>document.getElementById('acmetalout')).innerHTML = `${replaceOne(result)}`;
                 clearValues();
             }
