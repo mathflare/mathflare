@@ -9,6 +9,16 @@ const removeOne: (str: string) => string = (str: string) => {
     };
     return final;
 };
+function parenthesis(str: string, v: number) {
+    if (str == 'OH' && v !== 1) {
+        return `<span class="text-warning">(</span>${str}<span class="text-warning">)</span>`;
+    }
+    else if (str.length != 3 || v === 1) {
+        if (str == 'OH') return str;
+        else return `<span class="text-warning">${str}</span>`;
+    }
+    return `(<span class="text-warning">${str}</span>)`;
+}
 (<HTMLButtonElement>document.getElementById('eliminationcalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const x: number = parseFloat((<HTMLInputElement>document.getElementById('x')).value)!;
@@ -35,11 +45,11 @@ const removeOne: (str: string) => string = (str: string) => {
         clearValues();
     } else {
         if (x === m) {
-            const result: string = `H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${w}</span>OH<sub class="text-warning">${m}</sub> &#8594; <span class="text-warning">${x}</span>H<sub>2</sub>O + <span class="text-warning">${w}${y}</span>`;
+            const result: string = `H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${w}</span>${parenthesis('OH', m)}<sub class="text-warning">${m}</sub> &#8594; <span class="text-warning">${x}</span>H<sub>2</sub>O + <span class="text-warning">${w}${y}</span>`;
             (<HTMLParagraphElement>document.getElementById('eliminationout')).innerHTML = `${removeOne(result)}`;
             clearValues();
         } else {
-            const result: string = `<span class="text-warning">${m}</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${x}${w}</span>OH<sub class="text-warning">${m}</sub> &#8594; <span class="text-warning">${x * m}</span>H<sub>2</sub>O + <span class="text-warning">${w}<sub>${x}</sub>${y}<sub>${m}</sub></span>`;
+            const result: string = `<span class="text-warning">${m}</span>H<sub class="text-warning">${x}</sub><span class="text-warning">${y}</span> + <span class="text-warning">${x}${w}</span>${parenthesis('OH', m)}<sub class="text-warning">${m}</sub> &#8594; <span class="text-warning">${x * m}</span>H<sub>2</sub>O + <span class="text-warning">${w}<sub>${x}</sub></span>${parenthesis(y, m)}<sub class="text-warning">${m}</sub>`;
             (<HTMLParagraphElement>document.getElementById('eliminationout')).innerHTML = `${removeOne(result)}`;
             clearValues();
         }
