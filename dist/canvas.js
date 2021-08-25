@@ -1,5 +1,5 @@
 "use strict";
-const canvas = document.getElementById('canvas');
+const canvas = document.querySelector('#canvas');
 const ctx = canvas.getContext("2d");
 ctx.translate(canvas.width / 2, canvas.height / 2);
 ctx.strokeStyle = '#FFFFFF';

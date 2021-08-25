@@ -1,11 +1,11 @@
 //copyright (c) 2021 MathFlare LLC.
-(document.getElementById('button') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event) => {
     event.preventDefault();
-    let input: string = (<HTMLInputElement>document.getElementById('input')).value!;
+    let input: string = (<HTMLInputElement>document.querySelector('#input')).value!;
     input = input.replace(' ', '');
     if (input == "" || input.charAt(0) == "," || input.charAt(input.length - 1) == ",") {
-        (document.getElementById('output') as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
-        (<HTMLInputElement>document.getElementById('input')).value = "";
+        (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
+        (<HTMLInputElement>document.querySelector('#input')).value = "";
         console.error('empty or not correct format');
     } else {
         const array = input.split(',');
@@ -17,8 +17,8 @@
             }
         }
         if (isInvalid) {
-            (document.getElementById('output') as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
-            (<HTMLInputElement>document.getElementById('input')).value = "";
+            (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
+            (<HTMLInputElement>document.querySelector('#input')).value = "";
             console.error('NaN');
         } else {
             const array = input.split(',').map(Number);
@@ -28,11 +28,11 @@
             }
             const avg: number = total / array.length;
             if (isNaN(avg)) {
-                (document.getElementById('output') as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
-                (<HTMLInputElement>document.getElementById('input')).value = "";
+                (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
+                (<HTMLInputElement>document.querySelector('#input')).value = "";
             } else {
-                (document.getElementById('output') as HTMLElement).innerHTML = `<p class="text-success">The average of all these numbers is ${avg}</p>`;
-                (<HTMLInputElement>document.getElementById('input')).value = "";
+                (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-success">The average of all these numbers is ${avg}</p>`;
+                (<HTMLInputElement>document.querySelector('#input')).value = "";
             }
         }
     }

@@ -7,10 +7,10 @@ const loadStats = () => {
     const equations = storage.getItem("equation");
     const formulas = storage.getItem("formulas");
     const ineq = storage.getItem("ineq");
-    (<HTMLParagraphElement>document.getElementById('page-views')).innerText = pageviews!;
-    (<HTMLParagraphElement>document.getElementById('equations-solved')).innerText = equations!;
-    (<HTMLParagraphElement>document.getElementById('formulas-views')).innerText = formulas!;
-    (<HTMLParagraphElement>document.getElementById('ineq')).innerText = ineq!;
+    (<HTMLParagraphElement>document.querySelector('#page-views')).innerText = pageviews!;
+    (<HTMLParagraphElement>document.querySelector('#equations-solved')).innerText = equations!;
+    (<HTMLParagraphElement>document.querySelector('#formulas-views')).innerText = formulas!;
+    (<HTMLParagraphElement>document.querySelector('#ineq')).innerText = ineq!;
     if (!storage.getItem("statCount")) {
         storage.setItem("statCount", 1);
     } else {

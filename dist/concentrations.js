@@ -53,33 +53,33 @@ const V_V = (sol, dsub) => {
         return `<p class="text-success">The concentration of the solution(${sol}ml) with a disolved substance of ${dsub}ml is ${concentration}% v/v</p>`;
     }
 };
-document.getElementById('conccalc').addEventListener('click', (event) => {
+document.querySelector('#conccalc').addEventListener('click', (event) => {
     event.preventDefault();
-    const conc_select = document.getElementById('conc-select').value;
-    const solution = parseFloat(document.getElementById('solution').value);
-    const disolved_substance = parseFloat(document.getElementById('dsub').value);
+    const conc_select = document.querySelector('#conc-select').value;
+    const solution = parseFloat(document.querySelector('#solution').value);
+    const disolved_substance = parseFloat(document.querySelector('#dsub').value);
     const clearValues = () => {
-        document.getElementById('solution').value = '';
-        document.getElementById('dsub').value = '';
+        document.querySelector('#solution').value = '';
+        document.querySelector('#dsub').value = '';
     };
     if (conc_select === 'ww') {
-        document.getElementById('output').innerHTML = `${W_W(solution, disolved_substance)}`;
+        document.querySelector('#output').innerHTML = `${W_W(solution, disolved_substance)}`;
         clearValues();
     }
     else if (conc_select === 'wv') {
-        document.getElementById('output').innerHTML = `${W_V(solution, disolved_substance)}`;
+        document.querySelector('#output').innerHTML = `${W_V(solution, disolved_substance)}`;
         clearValues();
     }
     else if (conc_select === 'vv') {
-        document.getElementById('output').innerHTML = `${V_V(solution, disolved_substance)}`;
+        document.querySelector('#output').innerHTML = `${V_V(solution, disolved_substance)}`;
         clearValues();
     }
 });
-document.getElementById('conc-select').addEventListener('change', (event) => {
+document.querySelector('#conc-select').addEventListener('change', (event) => {
     event.preventDefault();
-    const select = document.getElementById('conc-select').value;
-    const sol_input = document.getElementById('solution');
-    const dsub_input = document.getElementById('dsub');
+    const select = document.querySelector('#conc-select').value;
+    const sol_input = document.querySelector('#solution');
+    const dsub_input = document.querySelector('#dsub');
     if (select === 'ww') {
         sol_input.placeholder = 'solution weight';
         dsub_input.placeholder = 'disolved substance weight';

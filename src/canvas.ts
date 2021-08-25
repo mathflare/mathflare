@@ -1,4 +1,4 @@
-const canvas: any = <HTMLCanvasElement> document.getElementById('canvas')!;
+const canvas: any = <HTMLCanvasElement> document.querySelector('#canvas')!;
 const ctx: any = canvas.getContext("2d")!;
 ctx.translate(canvas.width/2,canvas.height/2);
 ctx.strokeStyle = '#FFFFFF';

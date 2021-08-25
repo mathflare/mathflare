@@ -1,11 +1,11 @@
 "use strict";
-document.getElementById('button').addEventListener('click', (event) => {
+document.querySelector('#button').addEventListener('click', (event) => {
     event.preventDefault();
-    let input = document.getElementById('input').value;
+    let input = document.querySelector('#input').value;
     input = input.replace(' ', '');
     if (input == "" || input.charAt(0) == "," || input.charAt(input.length - 1) == ",") {
-        document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
-        document.getElementById('input').value = "";
+        document.querySelector('#output').innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
+        document.querySelector('#input').value = "";
         console.error('empty or not correct format');
     }
     else {
@@ -18,8 +18,8 @@ document.getElementById('button').addEventListener('click', (event) => {
             }
         }
         if (isInvalid) {
-            document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
-            document.getElementById('input').value = "";
+            document.querySelector('#output').innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
+            document.querySelector('#input').value = "";
             console.error('NaN');
         }
         else {
@@ -30,12 +30,12 @@ document.getElementById('button').addEventListener('click', (event) => {
             }
             const avg = total / array.length;
             if (isNaN(avg)) {
-                document.getElementById('output').innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
-                document.getElementById('input').value = "";
+                document.querySelector('#output').innerHTML = `<p class="text-warning">Please enter a valid value and use the correct format as shown in the example</p>`;
+                document.querySelector('#input').value = "";
             }
             else {
-                document.getElementById('output').innerHTML = `<p class="text-success">The average of all these numbers is ${avg}</p>`;
-                document.getElementById('input').value = "";
+                document.querySelector('#output').innerHTML = `<p class="text-success">The average of all these numbers is ${avg}</p>`;
+                document.querySelector('#input').value = "";
             }
         }
     }

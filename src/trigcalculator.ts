@@ -1,144 +1,144 @@
 //sin
-(<HTMLButtonElement>document.getElementById('sincalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#sincalc')).addEventListener('click', (event) => {
     event.preventDefault();
-    const angle: number = parseFloat((<HTMLInputElement>document.getElementById('sina')).value)!;
+    const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#sina')).value)!;
     const degreesToRadians = (degrees: number) => {
         return degrees * (Math.PI / 180);
     }
     if (isNaN(angle)) {
-        (<HTMLParagraphElement>document.getElementById('sinout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        (<HTMLInputElement>document.getElementById('sina')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#sinout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        (<HTMLInputElement>document.querySelector('#sina')).value = '';
     } else {
-        (<HTMLParagraphElement>document.getElementById('sinout')).innerHTML = `<p class="text-success">sin(${angle}) = ${Math.sin(degreesToRadians(angle))}</p>`;
-        (<HTMLInputElement>document.getElementById('sina')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#sinout')).innerHTML = `<p class="text-success">sin(${angle}) = ${Math.sin(degreesToRadians(angle))}</p>`;
+        (<HTMLInputElement>document.querySelector('#sina')).value = '';
     }
 });
 //cos
-(<HTMLButtonElement>document.getElementById('coscalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#coscalc')).addEventListener('click', (event) => {
     event.preventDefault();
-    const angle: number = parseFloat((<HTMLInputElement>document.getElementById('cosa')).value)!;
+    const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#cosa')).value)!;
     const degreesToRadians = (degrees: number) => {
         return degrees * (Math.PI / 180);
     }
     if (isNaN(angle)) {
-        (<HTMLParagraphElement>document.getElementById('cosout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        (<HTMLInputElement>document.getElementById('cosa')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#cosout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        (<HTMLInputElement>document.querySelector('#cosa')).value = '';
     } else {
-        (<HTMLParagraphElement>document.getElementById('cosout')).innerHTML = `<p class="text-success">cos(${angle}) = ${Math.cos(degreesToRadians(angle))}</p>`;
-        (<HTMLInputElement>document.getElementById('cosa')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#cosout')).innerHTML = `<p class="text-success">cos(${angle}) = ${Math.cos(degreesToRadians(angle))}</p>`;
+        (<HTMLInputElement>document.querySelector('#cosa')).value = '';
     }
 });
 //tan
-(<HTMLButtonElement>document.getElementById('tancalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#tancalc')).addEventListener('click', (event) => {
     event.preventDefault();
-    const angle: number = parseFloat((<HTMLInputElement>document.getElementById('tana')).value)!;
+    const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#tana')).value)!;
     const degreesToRadians = (degrees: number) => {
         return degrees * (Math.PI / 180);
     }
     if (isNaN(angle)) {
-        (<HTMLParagraphElement>document.getElementById('tanout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        (<HTMLInputElement>document.getElementById('tana')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#tanout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        (<HTMLInputElement>document.querySelector('#tana')).value = '';
     } else if (angle === 90) {
-        (<HTMLParagraphElement>document.getElementById('tanout')).innerHTML = `<p class="text-warning">The angle cannot be 90&#176;</p>`;
-        (<HTMLInputElement>document.getElementById('tana')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#tanout')).innerHTML = `<p class="text-warning">The angle cannot be 90&#176;</p>`;
+        (<HTMLInputElement>document.querySelector('#tana')).value = '';
     } else {
-        (<HTMLParagraphElement>document.getElementById('tanout')).innerHTML = `<p class="text-success">tan(${angle}) = ${Math.tan(degreesToRadians(angle))}</p>`;
-        (<HTMLInputElement>document.getElementById('tana')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#tanout')).innerHTML = `<p class="text-success">tan(${angle}) = ${Math.tan(degreesToRadians(angle))}</p>`;
+        (<HTMLInputElement>document.querySelector('#tana')).value = '';
     }
 });
 //asin
-(<HTMLButtonElement>document.getElementById('asincalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#asincalc')).addEventListener('click', (event) => {
     event.preventDefault();
-    const angle: number = parseFloat((<HTMLInputElement>document.getElementById('asina')).value)!;
+    const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#asina')).value)!;
     const degreesToRadians = (degrees: number) => {
         return degrees * (Math.PI / 180);
     }
     if (isNaN(angle)) {
-        (<HTMLParagraphElement>document.getElementById('asinout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        (<HTMLInputElement>document.getElementById('asina')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#asinout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        (<HTMLInputElement>document.querySelector('#asina')).value = '';
     } else if (angle > 1 || angle < -1) {
-        (<HTMLParagraphElement>document.getElementById('asinout')).innerHTML = `<p class="text-warning">The angle must be between -1 and 1</p>`;
-        (<HTMLInputElement>document.getElementById('asina')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#asinout')).innerHTML = `<p class="text-warning">The angle must be between -1 and 1</p>`;
+        (<HTMLInputElement>document.querySelector('#asina')).value = '';
     } else {
-        (<HTMLParagraphElement>document.getElementById('asinout')).innerHTML = `<p class="text-success">asin(${angle}) = ${Math.asin(degreesToRadians(angle))}</p>`;
-        (<HTMLInputElement>document.getElementById('asina')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#asinout')).innerHTML = `<p class="text-success">asin(${angle}) = ${Math.asin(degreesToRadians(angle))}</p>`;
+        (<HTMLInputElement>document.querySelector('#asina')).value = '';
     }
 });
 //acos
-(<HTMLButtonElement>document.getElementById('acoscalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#acoscalc')).addEventListener('click', (event) => {
     event.preventDefault();
-    const angle: number = parseFloat((<HTMLInputElement>document.getElementById('acosa')).value)!;
+    const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#acosa')).value)!;
     const degreesToRadians = (degrees: number) => {
         return degrees * (Math.PI / 180);
     }
     if (isNaN(angle)) {
-        (<HTMLParagraphElement>document.getElementById('acosout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        (<HTMLInputElement>document.getElementById('acosa')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#acosout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        (<HTMLInputElement>document.querySelector('#acosa')).value = '';
     } else if (angle > 1 || angle < -1) {
-        (<HTMLParagraphElement>document.getElementById('acosout')).innerHTML = `<p class="text-warning">The angle must be between -1 and 1</p>`;
-        (<HTMLInputElement>document.getElementById('acosa')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#acosout')).innerHTML = `<p class="text-warning">The angle must be between -1 and 1</p>`;
+        (<HTMLInputElement>document.querySelector('#acosa')).value = '';
     } else {
-        (<HTMLParagraphElement>document.getElementById('acosout')).innerHTML = `<p class="text-success">acos(${angle}) = ${Math.acos(degreesToRadians(angle))}</p>`;
-        (<HTMLInputElement>document.getElementById('acosa')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#acosout')).innerHTML = `<p class="text-success">acos(${angle}) = ${Math.acos(degreesToRadians(angle))}</p>`;
+        (<HTMLInputElement>document.querySelector('#acosa')).value = '';
     }
 });
 //atan
-(<HTMLButtonElement>document.getElementById('atancalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#atancalc')).addEventListener('click', (event) => {
     event.preventDefault();
-    const angle: number = parseFloat((<HTMLInputElement>document.getElementById('atana')).value)!;
+    const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#atana')).value)!;
     const degreesToRadians = (degrees: number) => {
         return degrees * (Math.PI / 180);
     }
     if (isNaN(angle)) {
-        (<HTMLParagraphElement>document.getElementById('atanout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        (<HTMLInputElement>document.getElementById('atana')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#atanout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        (<HTMLInputElement>document.querySelector('#atana')).value = '';
     } else {
-        (<HTMLParagraphElement>document.getElementById('atanout')).innerHTML = `<p class="text-success">atan(${angle}) = ${Math.atan(degreesToRadians(angle))}</p>`;
-        (<HTMLInputElement>document.getElementById('atana')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#atanout')).innerHTML = `<p class="text-success">atan(${angle}) = ${Math.atan(degreesToRadians(angle))}</p>`;
+        (<HTMLInputElement>document.querySelector('#atana')).value = '';
     }
 });
 //sinh
-(<HTMLButtonElement>document.getElementById('sinhcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#sinhcalc')).addEventListener('click', (event) => {
     event.preventDefault();
-    const angle: number = parseFloat((<HTMLInputElement>document.getElementById('sinha')).value)!;
+    const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#sinha')).value)!;
     const degreesToRadians = (degrees: number) => {
         return degrees * (Math.PI / 180);
     }
     if (isNaN(angle)) {
-        (<HTMLParagraphElement>document.getElementById('sinhout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        (<HTMLInputElement>document.getElementById('sinha')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#sinhout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        (<HTMLInputElement>document.querySelector('#sinha')).value = '';
     } else {
-        (<HTMLParagraphElement>document.getElementById('sinhout')).innerHTML = `<p class="text-success">sinh(${angle}) = ${Math.sinh(degreesToRadians(angle))}</p>`;
-        (<HTMLInputElement>document.getElementById('sinha')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#sinhout')).innerHTML = `<p class="text-success">sinh(${angle}) = ${Math.sinh(degreesToRadians(angle))}</p>`;
+        (<HTMLInputElement>document.querySelector('#sinha')).value = '';
     }
 });
 //cosh
-(<HTMLButtonElement>document.getElementById('coshcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#coshcalc')).addEventListener('click', (event) => {
     event.preventDefault();
-    const angle: number = parseFloat((<HTMLInputElement>document.getElementById('cosha')).value)!;
+    const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#cosha')).value)!;
     const degreesToRadians = (degrees: number) => {
         return degrees * (Math.PI / 180);
     }
     if (isNaN(angle)) {
-        (<HTMLParagraphElement>document.getElementById('coshout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        (<HTMLInputElement>document.getElementById('cosha')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#coshout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        (<HTMLInputElement>document.querySelector('#cosha')).value = '';
     } else {
-        (<HTMLParagraphElement>document.getElementById('coshout')).innerHTML = `<p class="text-success">cosh(${angle}) = ${Math.cosh(degreesToRadians(angle))}</p>`;
-        (<HTMLInputElement>document.getElementById('cosha')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#coshout')).innerHTML = `<p class="text-success">cosh(${angle}) = ${Math.cosh(degreesToRadians(angle))}</p>`;
+        (<HTMLInputElement>document.querySelector('#cosha')).value = '';
     }
 });
 //tanh
-(<HTMLButtonElement>document.getElementById('tanhcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#tanhcalc')).addEventListener('click', (event) => {
     event.preventDefault();
-    const angle: number = parseFloat((<HTMLInputElement>document.getElementById('tanha')).value)!;
+    const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#tanha')).value)!;
     const degreesToRadians = (degrees: number) => {
         return degrees * (Math.PI / 180);
     }
     if (isNaN(angle)) {
-        (<HTMLParagraphElement>document.getElementById('tanhout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        (<HTMLInputElement>document.getElementById('tanha')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#tanhout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        (<HTMLInputElement>document.querySelector('#tanha')).value = '';
     } else {
-        (<HTMLParagraphElement>document.getElementById('tanhout')).innerHTML = `<p class="text-success">tanh(${angle}) = ${Math.tanh(degreesToRadians(angle))}</p>`;
-        (<HTMLInputElement>document.getElementById('tanha')).value = '';
+        (<HTMLParagraphElement>document.querySelector('#tanhout')).innerHTML = `<p class="text-success">tanh(${angle}) = ${Math.tanh(degreesToRadians(angle))}</p>`;
+        (<HTMLInputElement>document.querySelector('#tanha')).value = '';
     }
 });
