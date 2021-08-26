@@ -2,13 +2,10 @@
 //using sides and angle
 (<HTMLButtonElement>document.querySelector('#trapcalc1')).addEventListener('click', (event) => {
     event.preventDefault();
-    const clearValues = () => {
+    const clearValues: () => void = () => {
         (<HTMLInputElement>document.querySelector('#trapl1')).value = '';
         (<HTMLInputElement>document.querySelector('#trapleg1')).value = '';
         (<HTMLInputElement>document.querySelector('#trapβ1')).value = '';
-    }
-    const degreesToRadians = (degrees: number) => {
-        return degrees * (Math.PI / 180);
     }
     const lside: number = parseFloat((<HTMLInputElement>document.querySelector('#trapl1')).value)!;
     const leg: number = parseFloat((<HTMLInputElement>document.querySelector('#trapleg1')).value)!;
@@ -44,9 +41,6 @@
         (<HTMLInputElement>document.querySelector('#trapl2')).value = '';
         (<HTMLInputElement>document.querySelector('#trapleg2')).value = '';
         (<HTMLInputElement>document.querySelector('#traph2')).value = ' ';
-    }
-    const degreesToRadians = (degrees: number) => {
-        return degrees * (Math.PI / 180);
     }
     const lside: number = parseFloat((<HTMLInputElement>document.querySelector('#trapl2')).value)!;
     const leg: number = parseFloat((<HTMLInputElement>document.querySelector('#trapleg2')).value)!;

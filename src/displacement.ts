@@ -3,7 +3,7 @@
     event.preventDefault();
     const v: number = parseFloat((<HTMLInputElement>document.querySelector('#v1')).value)!;
     const dt: number = parseFloat((<HTMLInputElement>document.querySelector('#dt1')).value)!;
-    const clearValues = () => {
+    const clearValues: () => void = () => {
         (<HTMLInputElement>document.querySelector('#v1')).value = '';
         (<HTMLInputElement>document.querySelector('#dt1')).value = '';
     }

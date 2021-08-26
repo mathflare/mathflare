@@ -2,7 +2,7 @@ var storage: any = window.localStorage;
 window.addEventListener('load', () => {
     loadStats();
 });
-const loadStats = () => {
+const loadStats: () => void = () => {
     const pageviews = storage.getItem("pageCount");
     const equations = storage.getItem("equation");
     const formulas = storage.getItem("formulas");
@@ -19,10 +19,10 @@ const loadStats = () => {
         storage.setItem("statCount", statCount);
     }
 }
-const clearStats = () => {
+const clearStats: () => void = () => {
     storage.clear();
     reload();
 };
-const reload = () => {
+const reload: () => void = () => {
     location.reload();
 };

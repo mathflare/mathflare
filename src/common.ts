@@ -52,7 +52,12 @@ const searcCalc = () => {
         }
     });
 }
-const openImage = (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
+
+const degreesToRadians: (degrees: number) => number = (degrees: number) => {
+    return degrees * (Math.PI / 180);
+}
+
+const openImage: (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => void = (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
 
 /* document.oncontextmenu = (clickEvent: Event) => {
     clickEvent.preventDefault();

@@ -2,9 +2,6 @@
 (<HTMLButtonElement>document.querySelector('#sincalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#sina')).value)!;
-    const degreesToRadians = (degrees: number) => {
-        return degrees * (Math.PI / 180);
-    }
     if (isNaN(angle)) {
         (<HTMLParagraphElement>document.querySelector('#sinout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.querySelector('#sina')).value = '';
@@ -17,9 +14,6 @@
 (<HTMLButtonElement>document.querySelector('#coscalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#cosa')).value)!;
-    const degreesToRadians = (degrees: number) => {
-        return degrees * (Math.PI / 180);
-    }
     if (isNaN(angle)) {
         (<HTMLParagraphElement>document.querySelector('#cosout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.querySelector('#cosa')).value = '';
@@ -32,9 +26,6 @@
 (<HTMLButtonElement>document.querySelector('#tancalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#tana')).value)!;
-    const degreesToRadians = (degrees: number) => {
-        return degrees * (Math.PI / 180);
-    }
     if (isNaN(angle)) {
         (<HTMLParagraphElement>document.querySelector('#tanout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.querySelector('#tana')).value = '';
@@ -50,9 +41,6 @@
 (<HTMLButtonElement>document.querySelector('#asincalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#asina')).value)!;
-    const degreesToRadians = (degrees: number) => {
-        return degrees * (Math.PI / 180);
-    }
     if (isNaN(angle)) {
         (<HTMLParagraphElement>document.querySelector('#asinout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.querySelector('#asina')).value = '';
@@ -68,9 +56,6 @@
 (<HTMLButtonElement>document.querySelector('#acoscalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#acosa')).value)!;
-    const degreesToRadians = (degrees: number) => {
-        return degrees * (Math.PI / 180);
-    }
     if (isNaN(angle)) {
         (<HTMLParagraphElement>document.querySelector('#acosout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.querySelector('#acosa')).value = '';
@@ -86,9 +71,6 @@
 (<HTMLButtonElement>document.querySelector('#atancalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#atana')).value)!;
-    const degreesToRadians = (degrees: number) => {
-        return degrees * (Math.PI / 180);
-    }
     if (isNaN(angle)) {
         (<HTMLParagraphElement>document.querySelector('#atanout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.querySelector('#atana')).value = '';
@@ -101,9 +83,6 @@
 (<HTMLButtonElement>document.querySelector('#sinhcalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#sinha')).value)!;
-    const degreesToRadians = (degrees: number) => {
-        return degrees * (Math.PI / 180);
-    }
     if (isNaN(angle)) {
         (<HTMLParagraphElement>document.querySelector('#sinhout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.querySelector('#sinha')).value = '';
@@ -116,9 +95,6 @@
 (<HTMLButtonElement>document.querySelector('#coshcalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#cosha')).value)!;
-    const degreesToRadians = (degrees: number) => {
-        return degrees * (Math.PI / 180);
-    }
     if (isNaN(angle)) {
         (<HTMLParagraphElement>document.querySelector('#coshout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.querySelector('#cosha')).value = '';
@@ -131,9 +107,6 @@
 (<HTMLButtonElement>document.querySelector('#tanhcalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#tanha')).value)!;
-    const degreesToRadians = (degrees: number) => {
-        return degrees * (Math.PI / 180);
-    }
     if (isNaN(angle)) {
         (<HTMLParagraphElement>document.querySelector('#tanhout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.querySelector('#tanha')).value = '';

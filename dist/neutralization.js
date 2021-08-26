@@ -5,7 +5,6 @@ document.querySelector('#eliminationcalc').addEventListener('click', (event) => 
     const y = (document.querySelector('#y').value);
     const w = (document.querySelector('#w').value);
     const m = parseFloat(document.querySelector('#m').value);
-    document.querySelector('#');
     const clearValues = () => {
         document.querySelector('#x').value = '';
         document.querySelector('#y').value = '';

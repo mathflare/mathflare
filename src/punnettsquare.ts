@@ -3,7 +3,7 @@
     event.preventDefault();
     const fatherGene: string = (<HTMLSelectElement>document.querySelector('#fatherselect')).value!;
     const motherGene: string = (<HTMLSelectElement>document.querySelector('#motherselect')).value!;
-    const fetchTable = (fg: string, mg: string) => {
+    const fetchTable: (fg: string, mg: string) => void = (fg: string, mg: string) => {
         const F1: string = fg[0];
         const F2: string = fg[1];
         const M1: string = mg[0];

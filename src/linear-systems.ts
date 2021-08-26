@@ -2,7 +2,7 @@
 // copyright (c) 2021 MathFlare LLC. - All rights reserved.
 (document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event) => {
     event.preventDefault();
-    const clearValues = () => {
+    const clearValues: () => void = () => {
         (<HTMLInputElement>document.querySelector('#a1')).value = "";
         (<HTMLInputElement>document.querySelector('#a2')).value = "";
         (<HTMLInputElement>document.querySelector('#b1')).value = "";

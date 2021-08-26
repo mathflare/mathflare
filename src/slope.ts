@@ -5,7 +5,7 @@
     const y1: number = parseFloat((<HTMLInputElement>document.querySelector('#y1')).value)!;
     const x2: number = parseFloat((<HTMLInputElement>document.querySelector('#x2')).value)!;
     const y2: number = parseFloat((<HTMLInputElement>document.querySelector('#y2')).value)!;
-    const clearValues = () => {
+    const clearValues: () => void = () => {
         (<HTMLInputElement>document.querySelector('#x1')).value = '';
         (<HTMLInputElement>document.querySelector('#y1')).value = '';
         (<HTMLInputElement>document.querySelector('#x2')).value = '';

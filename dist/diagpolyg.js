@@ -44,9 +44,6 @@ document.querySelector('#paracalc').addEventListener('click', (event) => {
     const cd = parseFloat(document.querySelector('#pcd').value);
     const ad = parseFloat(document.querySelector('#pad').value);
     const d = parseFloat(document.querySelector('#pd').value);
-    const degreesToRadians = (degrees) => {
-        return degrees * (Math.PI / 180);
-    };
     if (isNaN(cd) || isNaN(ad) || isNaN(d)) {
         document.querySelector('#paraout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         document.querySelector('#pcd').value = '';

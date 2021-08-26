@@ -40,9 +40,6 @@
     const cd: number = parseFloat((<HTMLInputElement>document.querySelector('#pcd')).value)!;
     const ad: number = parseFloat((<HTMLInputElement>document.querySelector('#pad')).value)!;
     const d: number = parseFloat((<HTMLInputElement>document.querySelector('#pd')).value)!;
-    const degreesToRadians = (degrees: number) => {
-        return degrees * (Math.PI / 180);
-    }
     if (isNaN(cd) || isNaN(ad) || isNaN(d)) {
         (document.querySelector('#paraout') as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.querySelector('#pcd')).value = '';

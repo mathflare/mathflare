@@ -6,9 +6,6 @@ document.querySelector('#trapcalc1').addEventListener('click', (event) => {
         document.querySelector('#trapleg1').value = '';
         document.querySelector('#trapβ1').value = '';
     };
-    const degreesToRadians = (degrees) => {
-        return degrees * (Math.PI / 180);
-    };
     const lside = parseFloat(document.querySelector('#trapl1').value);
     const leg = parseFloat(document.querySelector('#trapleg1').value);
     const b = parseFloat(document.querySelector('#trapβ1').value);
@@ -45,9 +42,6 @@ document.querySelector('#trapcalc2').addEventListener('click', (event) => {
         document.querySelector('#trapl2').value = '';
         document.querySelector('#trapleg2').value = '';
         document.querySelector('#traph2').value = ' ';
-    };
-    const degreesToRadians = (degrees) => {
-        return degrees * (Math.PI / 180);
     };
     const lside = parseFloat(document.querySelector('#trapl2').value);
     const leg = parseFloat(document.querySelector('#trapleg2').value);

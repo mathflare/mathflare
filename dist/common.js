@@ -54,4 +54,7 @@ const searcCalc = () => {
         }
     });
 };
+const degreesToRadians = (degrees) => {
+    return degrees * (Math.PI / 180);
+};
 const openImage = (imgUri, imgAlt, imgWidth, imgHeight) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);

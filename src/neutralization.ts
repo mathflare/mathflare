@@ -6,7 +6,6 @@
     const y: string = ((<HTMLInputElement>document.querySelector('#y')).value)!;
     const w: string = ((<HTMLInputElement>document.querySelector('#w')).value)!;
     const m: number = parseFloat((<HTMLInputElement>document.querySelector('#m')).value)!;
-    document.querySelector('#');
     const clearValues: () => void = () => {
         (<HTMLInputElement>document.querySelector('#x')).value = '';
         (<HTMLInputElement>document.querySelector('#y')).value = '';
