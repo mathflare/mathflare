@@ -270,6 +270,8 @@ var {
 #acmetalout {
     font-size: 20px !important;
     line-height: 24px !important;
+    padding-left: 2em !important;
+    padding-right: 3em !important;
 }
 .output-container {
     line-height: 24px !important;
