@@ -6,7 +6,6 @@ const loadNavbar: () => void = () => {
             if (window.location.pathname.replace(".html", "") != "/") {
                 if (a.href.indexOf(window.location.pathname.replace(".html", "")) !== -1) {
                     a.classList.add("active");
-                    break;
                 }
             }
         }
