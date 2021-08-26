@@ -50,37 +50,37 @@
             <h4 class="text-white">X<sup class="text-warning">+z</sup><span class="text-warning"> + </span>Y<sup class="text-warning">-v</sup></h4>
             <div class="center-form">
                 <div class="input-group">
-                    <span class="input-group-text">index</span>
-                    <input type="number" id="x" placeholder="x" class="form-control input-group-item" step="0.1"
-                        min="0" />
-                    <input type="text" id="w" placeholder="W" class="form-control input-group-item" step="0.1"
-                        min="0" />
                     <span class="input-group-text">Metal</span>
+                    <input type="number" id="x" placeholder="X" class="form-control input-group-item" step="0.1"
+                        min="0" />
+                    <input type="text" id="y" placeholder="Y" class="form-control input-group-item" step="0.1"
+                        min="0" />
+                    <span class="input-group-text">Non-Metal</span>
                 </div>
             </div>
             <br />
             <div class="center-form">
                 <div class="input-group">
-                    <span class="input-group-text">Non-Metal</span>
-                    <input type="text" id="y" placeholder="Y" class="form-control input-group-item" step="0.1"
+                    <span class="input-group-text">index</span>
+                    <input type="text" id="z" placeholder="z" class="form-control input-group-item" step="0.1"
                         min="0" />
-                        <input type="number" id="m" placeholder="m" class="form-control input-group-item" step="0.1"
+                        <input type="number" id="v" placeholder="v" class="form-control input-group-item" step="0.1"
                         min="0" />
                     <span class="input-group-text">index</span>
                 </div>
             </div>
             <br />
             <div class="center-form">
-                <input type="submit" id="eliminationcalc" class="btn btn-success btn-lg" value="Calculate">
+                <input type="submit" id="inorgancalc" class="btn btn-success btn-lg" value="Calculate">
             </div>
         </form>
         <br />
         <div style="max-height: 1em;">
-            <p class="text-success" id="eliminationout"></p>
+            <p class="text-success" id="inorganout"></p>
         </div>
         <br />
         <div class="my-4">
-            <a href="https://duckduckgo.com/?q=neutralization+reaction" target="_blank" rel="noopener"
+            <a href="https://duckduckgo.com/?q=inorganic+compounds" target="_blank" rel="noopener"
                 class="btn btn-outline-light m-2">Find information on the web</a>
         </div>
         <br />
@@ -88,7 +88,7 @@
     <!-- SCRIPTS START -->
     <script src="dist/jquery-3.6.0-min.js"></script>
     <script src="dist/bootstrap-5.1-min.js"></script>
-    <script src="dist/neutralization.js"></script>
+    <script src="dist/inorganiccomp.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>
