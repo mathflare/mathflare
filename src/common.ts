@@ -1,4 +1,4 @@
-const searcCalc = () => {
+const searcCalc: () => void = () => {
     const searchBox: any = <HTMLInputElement>document.querySelector("#search-box");
     const searchResult: any = <HTMLParagraphElement>document.querySelector("#search-result");
     const calculators: string[][] = [

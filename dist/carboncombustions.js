@@ -3,10 +3,12 @@ document.querySelector('#combustcalc').addEventListener('click', (event) => {
     event.preventDefault();
     const c = parseFloat(document.querySelector('#carbons').value);
     const bond = document.querySelector('#bondselect').value;
-    const cToString = (c) => {
+    const replaceOne = (c) => {
+        let final = '';
         if (c !== 1) {
-            return c.toString();
+            final += c;
         }
+        return final;
     };
     if (bond === 'single') {
         if (isNaN(c)) {
@@ -31,11 +33,11 @@ document.querySelector('#combustcalc').addEventListener('click', (event) => {
             const h = 2 * c + 2;
             const o = (h / 2 + 2 * c) / 2;
             if (Math.floor(o) !== o) {
-                document.querySelector('#output').innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${cToString(c)} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${cToString(c)}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                document.querySelector('#output').innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${replaceOne(c)} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceOne(c)}<span class="text-warning">CO<sub>2</sub></span></p>`;
                 document.querySelector('#carbons').value = '';
             }
             else {
-                document.querySelector('#output').innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${cToString(c)} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${cToString(c)}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                document.querySelector('#output').innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${replaceOne(c)} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceOne(c)}<span class="text-warning">CO<sub>2</sub></span></p>`;
                 document.querySelector('#carbons').value = '';
             }
         }
@@ -103,11 +105,11 @@ document.querySelector('#combustcalc').addEventListener('click', (event) => {
             const h = 2 * c - 2;
             const o = (h / 2 + 2 * c) / 2;
             if (Math.floor(o) !== o) {
-                document.querySelector('#output').innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${cToString(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                document.querySelector('#output').innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceOne(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
                 document.querySelector('#carbons').value = '';
             }
             else {
-                document.querySelector('#output').innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${cToString(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                document.querySelector('#output').innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceOne(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
                 document.querySelector('#carbons').value = '';
             }
         }

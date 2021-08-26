@@ -1,14 +1,14 @@
 //copyrights (c) 2021 MathFlare.xyz
-function replaceone(c: number) {
-    let final: string = '';
-    if (c !== 1) {
-        final += c;
-    }
-    return final;
-};
 (<HTMLButtonElement>document.querySelector('#combustcalc')).addEventListener('click', (event) => {
     event.preventDefault();
     const product: string = (<HTMLInputElement>document.querySelector('#prodselect')).value!;
+    const replaceOne: (c: number) => string = (c: number) => {
+        let final: string = '';
+        if (c !== 1) {
+            final += c;
+        }
+        return final;
+    };
     if (product === 'co') {
         const c: number = parseFloat((<HTMLInputElement>document.querySelector('#carbons')).value)!;
         const bond: string = (<HTMLInputElement>document.querySelector('#bondselect')).value!;
@@ -31,10 +31,10 @@ function replaceone(c: number) {
                 const h: number = 2 * c + 2;
                 const o: number = (h / 2 + c) / 2;
                 if (Math.floor(o) !== o) {
-                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${replaceone(c)} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceone(c)}<span class="text-warning">CO</span></p>`;
+                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${replaceOne(c)} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceOne(c)}<span class="text-warning">CO</span></p>`;
                     (<HTMLInputElement>document.querySelector('#carbons')).value = "";
                 } else {
-                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${replaceone(c)} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceone(c)}<span class="text-warning">CO</span></p>`;
+                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${replaceOne(c)} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceOne(c)}<span class="text-warning">CO</span></p>`;
                     (<HTMLInputElement>document.querySelector('#carbons')).value = "";
                 }
             }
@@ -89,10 +89,10 @@ function replaceone(c: number) {
                 const h: number = 2 * c - 2;
                 const o: number = (h / 2 + c) / 2;
                 if (Math.floor(o) !== o) {
-                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceone(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO</span></p>`;
+                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceOne(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO</span></p>`;
                     (<HTMLInputElement>document.querySelector('#carbons')).value = "";
                 } else {
-                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceone(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO</span></p>`;
+                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceOne(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO</span></p>`;
                     (<HTMLInputElement>document.querySelector('#carbons')).value = "";
                 }
             }
@@ -119,10 +119,10 @@ function replaceone(c: number) {
                 const h: number = 2 * c + 2;
                 const o: number = (h / 2) / 2;
                 if (Math.floor(o) !== o) {
-                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${replaceone(h)}<span class="text-warning">C</span>${replaceone(c)} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceone(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceone(c)}<span class="text-warning">C</span></p>`;
+                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${replaceOne(h)}<span class="text-warning">C</span>${replaceOne(c)} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceOne(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceOne(c)}<span class="text-warning">C</span></p>`;
                     (<HTMLInputElement>document.querySelector('#carbons')).value = "";
                 } else {
-                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${replaceone(h)}<span class="text-warning">C</span>${replaceone(c)} + ${replaceone(o)}<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceone(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceone(c)}<span class="text-warning">C</span></p>`;
+                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${replaceOne(h)}<span class="text-warning">C</span>${replaceOne(c)} + ${replaceOne(o)}<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceOne(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceOne(c)}<span class="text-warning">C</span></p>`;
                     (<HTMLInputElement>document.querySelector('#carbons')).value = "";
                 }
             }
@@ -148,10 +148,10 @@ function replaceone(c: number) {
                 const h: number = 2 * c;
                 const o: number = (h / 2) / 2;
                 if (Math.floor(o) !== o) {
-                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${replaceone(h)}<span class="text-warning">C</span>${replaceone(c)} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceone(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceone(c)}<span class="text-warning">C</span></p>`;
+                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${replaceOne(h)}<span class="text-warning">C</span>${replaceOne(c)} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceOne(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceOne(c)}<span class="text-warning">C</span></p>`;
                     (<HTMLInputElement>document.querySelector('#carbons')).value = "";
                 } else {
-                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${replaceone(h)}<span class="text-warning">C</span>${replaceone(c)} + ${replaceone(o)}<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceone(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceone(c)}<span class="text-warning">C</span></p>`;
+                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${replaceOne(h)}<span class="text-warning">C</span>${replaceOne(c)} + ${replaceOne(o)}<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceOne(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceOne(c)}<span class="text-warning">C</span></p>`;
                     (<HTMLInputElement>document.querySelector('#carbons')).value = "";
                 }
             }
@@ -177,10 +177,10 @@ function replaceone(c: number) {
                 const h: number = 2 * c - 2;
                 const o: number = (h / 2) / 2;
                 if (Math.floor(o) !== o) {
-                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${replaceone(h)}<span class="text-warning">C</span>${replaceone(c)} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceone(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceone(c)}<span class="text-warning">C</span></p>`;
+                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${replaceOne(h)}<span class="text-warning">C</span>${replaceOne(c)} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceOne(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceOne(c)}<span class="text-warning">C</span></p>`;
                     (<HTMLInputElement>document.querySelector('#carbons')).value = "";
                 } else {
-                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${replaceone(h)}<span class="text-warning">C</span>${replaceone(c)} + ${replaceone(o)}<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceone(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceone(c)}<span class="text-warning">C</span></p>`;
+                    (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${replaceOne(h)}<span class="text-warning">C</span>${replaceOne(c)} + ${replaceOne(o)}<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceOne(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceOne(c)}<span class="text-warning">C</span></p>`;
                     (<HTMLInputElement>document.querySelector('#carbons')).value = "";
                 }
             }

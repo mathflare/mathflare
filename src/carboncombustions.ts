@@ -3,10 +3,12 @@
     event.preventDefault();
     const c: number = parseFloat((<HTMLInputElement>document.querySelector('#carbons')).value)!;
     const bond: string = (<HTMLInputElement>document.querySelector('#bondselect')).value!;
-    const cToString: (c: number) => string | undefined = (c: number) => {
+    const replaceOne: (c: number) => string | undefined = (c: number) => {
+        let final: string = '';
         if (c !== 1) {
-            return c.toString();
+            final += c;
         }
+        return final;
     };
     if (bond === 'single') {
         if (isNaN(c)) {
@@ -27,10 +29,10 @@
             const h: number = 2 * c + 2;
             const o: number = (h / 2 + 2 * c) / 2;
             if (Math.floor(o) !== o) {
-                (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${cToString(c)} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${cToString(c)}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${replaceOne(c)} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceOne(c)}<span class="text-warning">CO<sub>2</sub></span></p>`;
                 (<HTMLInputElement>document.querySelector('#carbons')).value = '';
             } else {
-                (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${cToString(c)} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${cToString(c)}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${replaceOne(c)} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${h / 2}<span class="text-warning">H<sub>2</sub>O</span> + ${replaceOne(c)}<span class="text-warning">CO<sub>2</sub></span></p>`;
                 (<HTMLInputElement>document.querySelector('#carbons')).value = '';
             }
         }
@@ -85,10 +87,10 @@
             const h: number = 2 * c - 2;
             const o: number = (h / 2 + 2 * c) / 2;
             if (Math.floor(o) !== o) {
-                (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${cToString(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o * 2}/2<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceOne(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
                 (<HTMLInputElement>document.querySelector('#carbons')).value = '';
             } else {
-                (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${cToString(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
+                (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success"><span class="text-warning">H</span>${h}<span class="text-warning">C</span>${c} + ${o}<span class="text-warning">O<sub>2</sub></span> &#8594; ${replaceOne(h / 2)}<span class="text-warning">H<sub>2</sub>O</span> + ${c}<span class="text-warning">CO<sub>2</sub></span></p>`;
                 (<HTMLInputElement>document.querySelector('#carbons')).value = '';
             }
         }
