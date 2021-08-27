@@ -19,7 +19,7 @@
                 final += str[i];
             }
         };
-        return final;
+        return escape(final);
     };
     const addParentheses: (str: string, v: number) => string = (str: string, v: number) => {
         if (str == 'OH' && v !== 1) {
@@ -47,53 +47,43 @@
             if (z != 1) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `<p class="text-warning">The value of z must be 1 since the metal is H</p>`;
                 clearValues();
-            }
-            else if (z == v) {
+            } else if (z == v) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${x}${y}<span class="text-warning">: acid</span>`;
                 clearValues();
-            }
-            else {
+            } else {
                 const result: string = `${x}<sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub>:<span class="text-warning"> acid</span>`;
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${removeOne(result)}`;
                 clearValues();
             }
-        }
-        else if (y == 'O') {
+        } else if (y == 'O') {
             if (v != 2) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `<p class="text-warning">The value of v must be 2 since the non-metal is O</p>`;
                 clearValues();
-            }
-            else if (z == v) {
+            } else if (z == v) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${x}${y}<span class="text-warning">: oxide</span>`;
                 clearValues();
-            }
-            else {
+            } else {
                 const result: string = `${x}<sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub>:<span class="text-warning"> oxide</span>`;
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${removeOne(result)}`;
                 clearValues();
             }
-        }
-        else if (y == 'OH') {
+        } else if (y == 'OH') {
             if (v != 1) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `<p class="text-warning">The value of v must be 1 since the non-metal is OH</p>`;
                 clearValues();
-            }
-            else if (z == v) {
+            } else if (z == v) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${x}${y}<span class="text-warning">: base</span>`;
                 clearValues();
-            }
-            else {
+            } else {
                 const result: string = `${x}<sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub>:<span class="text-warning"> base</span>`;
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${removeOne(result)}`;
                 clearValues();
             }
-        }
-        else {
+        } else {
             if (z == v) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${x}${y}<span class="text-warning">: salt</span>`;
                 clearValues();
-            }
-            else {
+            } else {
                 const result: string = `${x}<sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub>:<span class="text-warning"> salt</span>`;
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${removeOne(result)}`;
                 clearValues();
