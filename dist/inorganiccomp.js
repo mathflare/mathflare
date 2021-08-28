@@ -19,7 +19,7 @@ document.querySelector('#inorgancalc').addEventListener('click', (event) => {
             }
         }
         ;
-        return escape(final);
+        return final;
     };
     const addParentheses = (str, v) => {
         if (str == 'OH' && v !== 1) {

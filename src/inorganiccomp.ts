@@ -19,7 +19,7 @@
                 final += str[i];
             }
         };
-        return escape(final);
+        return final;
     };
     const addParentheses: (str: string, v: number) => string = (str: string, v: number) => {
         if (str == 'OH' && v !== 1) {

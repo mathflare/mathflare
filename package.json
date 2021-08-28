@@ -2,10 +2,11 @@
   "name": "mathflare",
   "version": "3.5.0",
   "description": "the go-to open source website for algebra and geometry. Now offering 60+ useful and advanced calculators for free!",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "jest",
-    "start": "lite-server"
+    "start": "lite-server",
+    "run": "electron ."
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://www.mathflare.xyz",
   "devDependencies": {
+    "electron": "^13.2.3",
     "jest": "^27.0.6",
     "lite-server": "^2.6.1"
   },
