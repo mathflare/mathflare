@@ -291,7 +291,6 @@ var {
 }
 .logo {
     -webkit-user-drag: none;
-    user-drag: none;
 }
 /*=====1000 MEDIA QUERY=====*/
 @media screen and (max-width: 1000px) {

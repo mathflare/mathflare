@@ -3,7 +3,7 @@
     scrollbar-color: hsl(0, 0%, 53%) hsl(210, 10%, 15%);
 }
 ::-webkit-scrollbar {
-    width: 0.3em;
+    width: 0.45vw;
 }
 ::-webkit-scrollbar-track {
     background-color: hsl(210, 10%, 15%);
