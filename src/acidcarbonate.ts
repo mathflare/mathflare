@@ -43,11 +43,22 @@
         (<HTMLParagraphElement>document.querySelector('#accarbout')).innerHTML = `<p class="text-warning">The value of z or v cannot be more than 3</p>`;
         clearValues();
     } else {
+        if (z == v) {
+            if (z == 2) {// XCO3 + HvY --> XY + H2O + CO2
 
-        const result: string = ``;
-        (<HTMLParagraphElement>document.querySelector('#accarbout')).innerHTML = `${removeOne(result)}`;
-        clearValues();
+            } else {// X2CO3Z + 2HvY --> 2XY + vH2O + zCO2
 
+            }
+        } else if (v == 2) {// X2CO3z + zHvY --> XvYz + zH2O + zCO2
+
+        } else if (z == 2) {// vXCO3 + zHvY --> XvYz + vH2O + vCO2
+
+        } else {// vX2CO3z + 2*zHvY --> 2XvYz + v*zH2O + v*zCO2
+
+        }
     }
 });
+//const result: string = ``;
+//(<HTMLParagraphElement>document.querySelector('#accarbout')).innerHTML = `${removeOne(result)}`;
+//clearValues();
 //copyrights (c) 2021 MathFlare.xyz

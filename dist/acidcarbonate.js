@@ -50,8 +50,17 @@ document.querySelector('#accarbcalc').addEventListener('click', (event) => {
         clearValues();
     }
     else {
-        const result = ``;
-        document.querySelector('#accarbout').innerHTML = `${removeOne(result)}`;
-        clearValues();
+        if (z == v) {
+            if (z == 2) {
+            }
+            else {
+            }
+        }
+        else if (v == 2) {
+        }
+        else if (z == 2) {
+        }
+        else {
+        }
     }
 });
