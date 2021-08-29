@@ -22,10 +22,10 @@
         return final;
     };
     const addParentheses: (str: string, v: number) => string = (str: string, v: number) => {
-        if (str == 'OH' && v !== 1) {
+        if (str == 'CO<sub>3</sub>' && v !== 1) {
             return `<span class="text-warning">(</span>${str}<span class="text-warning">)</span>`;
         } else if (str.length != 3 || v === 1) {
-            if (str == 'OH') return str;
+            if (str == 'CO<sub>3</sub>') return str;
             else return `<span class="text-warning">${str}</span>`;
         }
         return `(<span class="text-warning">${str}</span>)`;
@@ -45,20 +45,27 @@
     } else {
         if (z == v) {
             if (z == 2) {// XCO3 + HvY --> XY + H2O + CO2
-
+                const result: string = `<span class="text-warning">${x}</span>CO<sub>3</sub> + H<sub class="text-warning">${v}</sub><span class="text-warning">${y}</span> &#8594; <span class="text-warning">${x}${y}</span> + H<sub>2</sub>O + CO<sub>2</sub>`;
+                (<HTMLParagraphElement>document.querySelector('#accarbout')).innerHTML = `${removeOne(result)}`;
+                clearValues();
             } else {// X2CO3Z + 2HvY --> 2XY + vH2O + zCO2
-
+                const result: string = `<span class="text-warning">${x}</span><sub>2</sub>${addParentheses('CO<sub>3</sub>', z)}<sub class="text-warning">${z}</sub> + <span class="text-warning">2</span>H<sub class="text-warning">${v}</sub><span class="text-warning">${y}</span> &#8594; <span class="text-warning">2${x}${y}</span> + <span class="text-warning">${v}</span>H<sub>2</sub>O + <span class="text-warning">${z}</span>CO<sub>2</sub>`;
+                (<HTMLParagraphElement>document.querySelector('#accarbout')).innerHTML = `${removeOne(result)}`;
+                clearValues();
             }
         } else if (v == 2) {// X2CO3z + zHvY --> XvYz + zH2O + zCO2
-
+            const result: string = `<span class="text-warning">${x}</span><sub>2</sub>${addParentheses('CO<sub>3</sub>', z)}<sub class="text-warning">${z}</sub> + <span class="text-warning">${z}</span>H<sub class="text-warning">${v}</sub><span class="text-warning">${y}</span> &#8594; <span class="text-warning">${x}</span><sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub> + <span class="text-warning">${z}</span>H<sub>2</sub>O + <span class="text-warning">${z}</span>CO<sub>2</sub>`;
+            (<HTMLParagraphElement>document.querySelector('#accarbout')).innerHTML = `${removeOne(result)}`;
+            clearValues();
         } else if (z == 2) {// vXCO3 + zHvY --> XvYz + vH2O + vCO2
-
+            const result: string = `<span class="text-warning">${v}${x}</span>CO<sub>3</sub> + <span class="text-warning">${z}</span>H<sub class="text-warning">${v}</sub><span class="text-warning">${y}</span> &#8594; <span class="text-warning">${x}</span><sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub> + <span class="text-warning">${v}</span>H<sub>2</sub>O + <span class="text-warning">${v}</span>CO<sub>2</sub>`;
+            (<HTMLParagraphElement>document.querySelector('#accarbout')).innerHTML = `${removeOne(result)}`;
+            clearValues();
         } else {// vX2CO3z + 2*zHvY --> 2XvYz + v*zH2O + v*zCO2
-
+            const result: string = `<span class="text-warning">${v}${x}</span><sub>2</sub>${addParentheses('CO<sub>3</sub>', z)}<sub class="text-warning">${z}</sub> + <span class="text-warning">${2 * z}</span>H<sub class="text-warning">${v}</sub><span class="text-warning">${y}</span> &#8594; <span class="text-warning">2${x}</span><sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub> + <span class="text-warning">${v * z}</span>H<sub>2</sub>O + <span class="text-warning">${v * z}</span>CO<sub>2</sub>`;
+            (<HTMLParagraphElement>document.querySelector('#accarbout')).innerHTML = `${removeOne(result)}`;
+            clearValues();
         }
     }
 });
-//const result: string = ``;
-//(<HTMLParagraphElement>document.querySelector('#accarbout')).innerHTML = `${removeOne(result)}`;
-//clearValues();
 //copyrights (c) 2021 MathFlare.xyz
