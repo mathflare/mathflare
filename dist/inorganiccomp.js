@@ -55,17 +55,17 @@ document.querySelector('#inorgancalc').addEventListener('click', (event) => {
                 document.querySelector('#inorganout').innerHTML = `<p class="text-warning">The value of z must be 1 since the metal is H</p>`;
                 clearValues();
             }
+            else if (y == 'OH' && v === 1) {
+                const result = `H<sub class="text-warning">2</sub>O:<span class="text-warning"> water</span>`;
+                document.querySelector('#inorganout').innerHTML = `${removeOne(result)}`;
+                clearValues();
+            }
             else if (z == v) {
                 document.querySelector('#inorganout').innerHTML = `${x}${y}<span class="text-warning">: acid</span>`;
                 clearValues();
             }
             else if (y == 'O' && v === 2) {
                 const result = `${x}<sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub>:<span class="text-warning"> water</span>`;
-                document.querySelector('#inorganout').innerHTML = `${removeOne(result)}`;
-                clearValues();
-            }
-            else if (y == 'OH' && v === 1) {
-                const result = `<span class="text-warning">H<sub>2<\sub></span>:<span class="text-warning"> water</span>`;
                 document.querySelector('#inorganout').innerHTML = `${removeOne(result)}`;
                 clearValues();
             }
