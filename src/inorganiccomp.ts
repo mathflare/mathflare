@@ -54,6 +54,10 @@
                 const result: string = `${x}<sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub>:<span class="text-warning"> water</span>`;
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${removeOne(result)}`;
                 clearValues();
+            } else if (y == 'OH' && v === 1) {
+                const result: string = `<span class="text-warning">H<sub>2<\sub></span>:<span class="text-warning"> water</span>`;
+                (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${removeOne(result)}`;
+                clearValues();
             } else {
                 const result: string = `${x}<sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub>:<span class="text-warning"> acid</span>`;
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${removeOne(result)}`;

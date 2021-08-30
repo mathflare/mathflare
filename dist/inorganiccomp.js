@@ -64,6 +64,11 @@ document.querySelector('#inorgancalc').addEventListener('click', (event) => {
                 document.querySelector('#inorganout').innerHTML = `${removeOne(result)}`;
                 clearValues();
             }
+            else if (y == 'OH' && v === 1) {
+                const result = `<span class="text-warning">H<sub>2<\sub></span>:<span class="text-warning"> water</span>`;
+                document.querySelector('#inorganout').innerHTML = `${removeOne(result)}`;
+                clearValues();
+            }
             else {
                 const result = `${x}<sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub>:<span class="text-warning"> acid</span>`;
                 document.querySelector('#inorganout').innerHTML = `${removeOne(result)}`;

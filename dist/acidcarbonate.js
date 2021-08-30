@@ -50,8 +50,8 @@ document.querySelector('#accarbcalc').addEventListener('click', (event) => {
         clearValues();
     }
     else {
-        if (z == v) {
-            if (z == 2) {
+        if (z === v) {
+            if (z === 2) {
                 const result = `<span class="text-warning">${x}</span>CO<sub>3</sub> + H<sub class="text-warning">${v}</sub><span class="text-warning">${y}</span> &#8594; <span class="text-warning">${x}${y}</span> + H<sub>2</sub>O + CO<sub>2</sub>`;
                 document.querySelector('#accarbout').innerHTML = `${removeOne(result)}`;
                 clearValues();
@@ -62,12 +62,12 @@ document.querySelector('#accarbcalc').addEventListener('click', (event) => {
                 clearValues();
             }
         }
-        else if (v == 2) {
+        else if (v === 2) {
             const result = `<span class="text-warning">${x}</span><sub>2</sub>${addParentheses('CO<sub>3</sub>', z)}<sub class="text-warning">${z}</sub> + <span class="text-warning">${z}</span>H<sub class="text-warning">${v}</sub><span class="text-warning">${y}</span> &#8594; <span class="text-warning">${x}</span><sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub> + <span class="text-warning">${z}</span>H<sub>2</sub>O + <span class="text-warning">${z}</span>CO<sub>2</sub>`;
             document.querySelector('#accarbout').innerHTML = `${removeOne(result)}`;
             clearValues();
         }
-        else if (z == 2) {
+        else if (z === 2) {
             const result = `<span class="text-warning">${v}${x}</span>CO<sub>3</sub> + <span class="text-warning">${z}</span>H<sub class="text-warning">${v}</sub><span class="text-warning">${y}</span> &#8594; <span class="text-warning">${x}</span><sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub> + <span class="text-warning">${v}</span>H<sub>2</sub>O + <span class="text-warning">${v}</span>CO<sub>2</sub>`;
             document.querySelector('#accarbout').innerHTML = `${removeOne(result)}`;
             clearValues();
