@@ -1,7 +1,7 @@
 "use strict";
 window.addEventListener('load', () => {
     const pathname = window.location.pathname.replace('/', '');
-    if (pathname == '404.html' || pathname == '404') {
+    if (pathname === '404.html' || pathname === '404') {
         document.querySelector('#user-error-explanation').innerText = 'this is the 404 page layout';
     }
     else {

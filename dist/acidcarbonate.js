@@ -33,7 +33,7 @@ document.querySelector('#acidcarboncalc').addEventListener('click', (event) => {
         }
         return `(<span class="text-warning">${str}</span>)`;
     };
-    if (isNaN(z) || y == '' || x == '' || isNaN(v)) {
+    if (isNaN(z) || y === '' || x === '' || isNaN(v)) {
         document.querySelector('#acidcarbonout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
     }

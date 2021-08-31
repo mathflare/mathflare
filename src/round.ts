@@ -6,7 +6,7 @@
         (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         (<HTMLInputElement>document.querySelector('#num')).value = "";
     } else {
-        if (userSelect == "tofixed") {
+        if (userSelect === "tofixed") {
             if (parseFloat(num.toFixed(3)) === num) {
                 (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-warning">The number is already rounded</p>`;
                 (<HTMLInputElement>document.querySelector('#num')).value = "";
@@ -15,8 +15,8 @@
                     } </p>`;
                 (<HTMLInputElement>document.querySelector('#num')).value = "";
             }
-        } else if (userSelect == "round") {
-            if (Math.round(num) == num) {
+        } else if (userSelect === "round") {
+            if (Math.round(num) === num) {
                 (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The number is already rounded</p>`;
                 (<HTMLInputElement>document.querySelector('#num')).value = "";
             } else {
@@ -24,8 +24,8 @@
                     }</p>`;
                 (<HTMLInputElement>document.querySelector('#num')).value = "";
             }
-        } else if (userSelect == "ceil") {
-            if (Math.ceil(num) == num) {
+        } else if (userSelect === "ceil") {
+            if (Math.ceil(num) === num) {
                 (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The number is already rounded</p>`;
                 (<HTMLInputElement>document.querySelector('#num')).value = "";
             } else {
@@ -33,8 +33,8 @@
                     }</p>`;
                 (<HTMLInputElement>document.querySelector('#num')).value = "";
             }
-        } else if (userSelect == "floor") {
-            if (Math.floor(num) == num) {
+        } else if (userSelect === "floor") {
+            if (Math.floor(num) === num) {
                 (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The number is already rounded</p>`;
                 (<HTMLInputElement>document.querySelector('#num')).value = "";
             } else {

@@ -22,15 +22,15 @@
         return final;
     };
     const addParentheses: (str: string, v: number) => string = (str: string, v: number) => {
-        if (str == 'OH' && v !== 1) {
+        if (str === 'OH' && v !== 1) {
             return `<span class="text-warning">(</span>${str}<span class="text-warning">)</span>`;
         } else if (str.length != 3 || v === 1) {
-            if (str == 'OH') return str;
+            if (str === 'OH') return str;
             else return `<span class="text-warning">${str}</span>`;
         }
         return `(<span class="text-warning">${str}</span>)`;
     };
-    if (x == '' || y == '' || isNaN(z) || isNaN(v)) {
+    if (x === '' || y === '' || isNaN(z) || isNaN(v)) {
         (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
     } else if (z <= 0 || v <= 0) {
@@ -43,18 +43,18 @@
         (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `<p class="text-warning">The value of z or v cannot be more than 3</p>`;
         clearValues();
     } else {
-        if (x == 'H') {
+        if (x === 'H') {
             if (z != 1) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `<p class="text-warning">The value of z must be 1 since the metal is H</p>`;
                 clearValues();
-            } else if (y == 'OH' && v === 1) {
+            } else if (y === 'OH' && v === 1) {
                 const result: string = `H<sub class="text-warning">2</sub>O:<span class="text-warning"> water</span>`;
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${removeOne(result)}`;
                 clearValues();
-            } else if (z == v) {
+            } else if (z === v) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${x}${y}<span class="text-warning">: acid</span>`;
                 clearValues();
-            } else if (y == 'O' && v === 2) {
+            } else if (y === 'O' && v === 2) {
                 const result: string = `${x}<sub class="text-warning">${v}</sub>${addParentheses(y, z)}<sub class="text-warning">${z}</sub>:<span class="text-warning"> water</span>`;
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${removeOne(result)}`;
                 clearValues();
@@ -63,11 +63,11 @@
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${removeOne(result)}`;
                 clearValues();
             }
-        } else if (y == 'O') {
+        } else if (y === 'O') {
             if (v != 2) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `<p class="text-warning">The value of v must be 2 since the non-metal is O</p>`;
                 clearValues();
-            } else if (z == v) {
+            } else if (z === v) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${x}${y}<span class="text-warning">: oxide</span>`;
                 clearValues();
             } else {
@@ -75,11 +75,11 @@
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${removeOne(result)}`;
                 clearValues();
             }
-        } else if (y == 'OH') {
+        } else if (y === 'OH') {
             if (v != 1) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `<p class="text-warning">The value of v must be 1 since the non-metal is OH</p>`;
                 clearValues();
-            } else if (z == v) {
+            } else if (z === v) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${x}${y}<span class="text-warning">: base</span>`;
                 clearValues();
             } else {
@@ -88,7 +88,7 @@
                 clearValues();
             }
         } else {
-            if (z == v) {
+            if (z === v) {
                 (<HTMLParagraphElement>document.querySelector('#inorganout')).innerHTML = `${x}${y}<span class="text-warning">: salt</span>`;
                 clearValues();
             } else {

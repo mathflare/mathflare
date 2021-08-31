@@ -30,7 +30,7 @@
         }
         return `(<span class="text-warning">${str}</span>)`;
     };
-    if (isNaN(z) || y == '' || x == '' || isNaN(v)) {
+    if (isNaN(z) || y === '' || x === '' || isNaN(v)) {
         (<HTMLParagraphElement>document.querySelector('#acidcarbonout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
     } else if (z <= 0 || v <= 0) {

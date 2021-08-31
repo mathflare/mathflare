@@ -3,7 +3,7 @@ document.querySelector('#pscalc').addEventListener('click', (event) => {
     event.preventDefault();
     const fatherGene = document.querySelector('#fatherselect').value;
     const motherGene = document.querySelector('#motherselect').value;
-    const fetchTable = (fg, mg) => {
+    const fetchGenotypeTable = (fg, mg) => {
         const F1 = fg[0];
         const F2 = fg[1];
         const M1 = mg[0];
@@ -43,5 +43,5 @@ document.querySelector('#pscalc').addEventListener('click', (event) => {
             document.querySelector('#phenotypeout').innerText = 'Phenotype: 100% for Α';
         }
     };
-    fetchTable(fatherGene, motherGene);
+    fetchGenotypeTable(fatherGene, motherGene);
 });

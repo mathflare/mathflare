@@ -33,7 +33,7 @@ document.querySelector('#eliminationcalc').addEventListener('click', (event) => 
         }
         return `(<span class="text-warning">${str}</span>)`;
     };
-    if (isNaN(x) || y == '' || w == '' || isNaN(m)) {
+    if (isNaN(x) || y === '' || w === '' || isNaN(m)) {
         document.querySelector('#eliminationout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
     }
