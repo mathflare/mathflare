@@ -44,7 +44,7 @@ const searcCalc = () => {
         searchResult.innerHTML = '';
         if (search.length > 0) {
             for (let i = 0; i < calculators.length; i++) {
-                if (calculators[i][0].toLowerCase().indexOf(search) !== -1) {
+                if (calculators[i][0].toLowerCase().includes(search)) {
                     searchResult.innerHTML += `<a href="${calculators[i][1]}.html">${calculators[i][0]}</a><br/>`;
                 }
             }
@@ -58,3 +58,8 @@ const degreesToRadians = (degrees) => {
     return degrees * (Math.PI / 180);
 };
 const openImage = (imgUri, imgAlt, imgWidth, imgHeight) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
+document.oncontextmenu = (clickEvent) => {
+    clickEvent.preventDefault();
+    window.alert('saic!');
+    window.alert('you thought');
+};

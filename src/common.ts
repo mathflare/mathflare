@@ -43,7 +43,7 @@ const searcCalc: () => void = () => {
         searchResult.innerHTML = '';
         if (search.length > 0) {
             for (let i = 0; i < calculators.length; i++) {
-                if (calculators[i][0].toLowerCase().indexOf(search) !== -1) {
+                if (calculators[i][0].toLowerCase().includes(search)) {
                     searchResult.innerHTML += `<a href="${calculators[i][1]}.html">${calculators[i][0]}</a><br/>`;
                 }
             }
@@ -59,8 +59,8 @@ const degreesToRadians: (degrees: number) => number = (degrees: number) => {
 
 const openImage: (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => void = (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
 
-/* document.oncontextmenu = (clickEvent: Event) => {
+document.oncontextmenu = (clickEvent: Event) => {
     clickEvent.preventDefault();
     window.alert('saic!');
     window.alert('you thought')
-}; */
+};
