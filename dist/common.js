@@ -59,7 +59,5 @@ const degreesToRadians = (degrees) => {
 };
 const openImage = (imgUri, imgAlt, imgWidth, imgHeight) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
 document.oncontextmenu = (clickEvent) => {
-    clickEvent.preventDefault();
-    window.alert('saic!');
-    window.alert('you thought');
+    console.log(clickEvent);
 };

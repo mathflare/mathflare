@@ -60,7 +60,6 @@ const degreesToRadians: (degrees: number) => number = (degrees: number) => {
 const openImage: (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => void = (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
 
 document.oncontextmenu = (clickEvent: Event) => {
-    clickEvent.preventDefault();
-    window.alert('saic!');
-    window.alert('you thought')
+    //clickEvent.preventDefault();
+    console.log(clickEvent);
 };
