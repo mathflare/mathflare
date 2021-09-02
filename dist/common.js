@@ -58,6 +58,21 @@ const degreesToRadians = (degrees) => {
     return degrees * (Math.PI / 180);
 };
 const openImage = (imgUri, imgAlt, imgWidth, imgHeight) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
+document.addEventListener('keydown', (e) => {
+    const sidebar = document.querySelector('#menuSidebar');
+    const offcanvas = new bootstrap.Offcanvas(sidebar);
+    if (e.keyCode === 87) {
+        e.stopPropagation();
+        e.preventDefault();
+        if (sidebar.classList.contains('show')) {
+            offcanvas.toggle(sidebar);
+            console.log('hide');
+        }
+        else {
+            offcanvas.toggle(sidebar);
+        }
+    }
+});
 document.oncontextmenu = (clickEvent) => {
     console.log(clickEvent);
 };

@@ -59,6 +59,21 @@ const degreesToRadians: (degrees: number) => number = (degrees: number) => {
 
 const openImage: (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => void = (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
 
+document.addEventListener('keydown', (e: any) => {
+    const sidebar = <HTMLDivElement>document.querySelector('#menuSidebar');
+    const offcanvas = new bootstrap.Offcanvas(sidebar);
+    if (e.keyCode === 87) {
+        e.stopPropagation();
+        e.preventDefault();
+        if (sidebar.classList.contains('show')) {
+            offcanvas.toggle(sidebar);
+            console.log('hide');
+        } else {
+            offcanvas.toggle(sidebar);
+        }
+    }
+});
+
 document.oncontextmenu = (clickEvent: Event) => {
     //clickEvent.preventDefault();
     console.log(clickEvent);

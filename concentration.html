@@ -10,7 +10,8 @@
     <meta name="title" content="MathFlare - Solution Concentration Calculator">
     <meta name="og:title" content="MathFlare - Solution Concentration Calculator" />
     <meta name="twitter:title" content="MathFlare - Solution Concentration Calculator" />
-    <meta name="keywords" content="concentration, solution, solvant, disolved substance, v/v, w/v, w/w, chemistry, mathflare, math flare">
+    <meta name="keywords"
+        content="concentration, solution, solvant, disolved substance, v/v, w/v, w/w, chemistry, mathflare, math flare">
     <meta name="description" content="Calculate the solution concentration" />
     <meta name="og:description" content="Calculate the solution concentration" />
     <meta name="twitter:description" content="Calculate the solution concentration" />
@@ -57,12 +58,13 @@
             <br />
             <h4 class="text-white">Solution</h4>
             <div class="center-form">
-                <input type="number" id="solution" placeholder="solution weight" class="form-control mb-0" min="0" />
+                <input type="number" id="concsolution" placeholder="solution weight" class="form-control mb-0"
+                    min="0" />
             </div>
             <br />
             <h4 class="text-white">Disolved Substance</h4>
             <div class="center-form">
-                <input type="number" id="dsub" placeholder="disolved substance weight" class="form-control mb-0"/>
+                <input type="number" id="concdsub" placeholder="disolved substance weight" class="form-control mb-0" />
             </div>
             <br />
             <div class="center-form">
@@ -71,20 +73,103 @@
         </form>
         <br />
         <div style="max-height: 1em;">
-            <p class="text-success" id="output"></p>
+            <p class="text-success" id="concout"></p>
         </div>
         <br />
         <br />
         <br />
         <div class="my-4">
-            <a href="https://duckduckgo.com/?q=calculate+solution+concentration" target="_blank"
-                rel="noopener" class="btn btn-outline-light">Find information on the web</a>
+            <a href="https://duckduckgo.com/?q=calculate+solution+concentration" target="_blank" rel="noopener"
+                class="btn btn-outline-light">Find information on the web</a>
+        </div>
+        <br />
+        <hr class="bg-danger" style="width: 50%;" />
+        <form autocomplete="off">
+            <h3 class="text-white">Disolved Substance Weight/Volume Calculator</h3>
+            <hr class="bg-danger" style="width: 40%;" />
+            <h4 class="text-white">Choose the concentration type</h4>
+            <div class=" center-form">
+                <select class="form-select center-form" id="dsub-select">
+                    <option value="ww">W/W</option>
+                    <option value="wv">W/V</option>
+                    <option value="vv">V/V</option>
+                </select>
+            </div>
+            <br />
+            <h4 class="text-white">Solution</h4>
+            <div class="center-form">
+                <input type="number" id="dsubsolution" placeholder="solution weight" class="form-control mb-0"
+                    min="0" />
+            </div>
+            <br />
+            <h4 class="text-white">Concentration</h4>
+            <div class="center-form">
+                <input type="number" id="dsubconcentration" placeholder="concentration&#37;"
+                    class="form-control mb-0" />
+            </div>
+            <br />
+            <div class="center-form">
+                <input type="submit" id="dsubcalc" class="btn btn-success btn-lg" value="Calculate Disolved Substance">
+            </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="dsubout"></p>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="my-4">
+            <a href="https://duckduckgo.com/?q=calculate+solution+concentration" target="_blank" rel="noopener"
+                class="btn btn-outline-light">Find information on the web</a>
+        </div>
+        <br />
+        <hr class="bg-danger" style="width: 50%;" />
+        <form autocomplete="off">
+            <h3 class="text-white">Solution Weight/Volume Calculator</h3>
+            <hr class="bg-danger" style="width: 40%;" />
+            <h4 class="text-white">Choose the concentration type</h4>
+            <div class=" center-form">
+                <select class="form-select center-form" id="sol-select">
+                    <option value="ww">W/W</option>
+                    <option value="wv">W/V</option>
+                    <option value="vv">V/V</option>
+                </select>
+            </div>
+            <br />
+            <h4 class="text-white">Disolved Substance</h4>
+            <div class="center-form">
+                <input type="number" id="soldsub" placeholder="disolved substance weight" class="form-control mb-0"
+                    min="0" />
+            </div>
+            <br />
+            <h4 class="text-white">Concentration</h4>
+            <div class="center-form">
+                <input type="number" id="solconcentration" placeholder="concentration&#37;" class="form-control mb-0" />
+            </div>
+            <br />
+            <div class="center-form">
+                <input type="submit" id="solcalc" class="btn btn-success btn-lg" value="Calculate Solution" />
+            </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="solout"></p>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="my-4">
+            <a href="https://duckduckgo.com/?q=calculate+solution+concentration" target="_blank" rel="noopener"
+                class="btn btn-outline-light">Find information on the web</a>
         </div>
     </div>
     <!-- SCRIPTS START -->
     <script src="dist/jquery-3.6.0-min.js"></script>
     <script src="dist/bootstrap-5.1-min.js"></script>
-    <script src="dist/concentrations.js"></script>
+    <script src="dist/concentration.js"></script>
+    <script src="dist/concentration-disolvedsub.js"></script>
+    <script src="dist/concentration-solution.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>
