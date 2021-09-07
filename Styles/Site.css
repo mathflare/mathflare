@@ -271,7 +271,8 @@ var {
 #inorganout,
 #bmicatout,
 #bmiout,
-#acidcarbonout {
+#acidcarbonout,
+#reductionout {
     font-size: 20px !important;
     line-height: 24px !important;
     padding-left: 3em !important;

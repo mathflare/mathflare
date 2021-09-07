@@ -57,20 +57,38 @@ const searcCalc = () => {
 const degreesToRadians = (degrees) => {
     return degrees * (Math.PI / 180);
 };
+const reduceFraction = (x, y) => {
+    let result = '';
+    if (x / y === Math.floor(x / y)) {
+        result = `${(x / y).toString()}`;
+    }
+    else {
+        for (let i = Math.max(Math.abs(x), Math.abs(y)); i > 1; i--) {
+            if ((x % i === 0) && (y % i === 0)) {
+                x /= i;
+                y /= i;
+            }
+        }
+        if (x > 0 && y < 0) {
+            result = `<sup>${(-x).toString()}</sup>&frasl;<sub>${(-y).toString()}</sub>`;
+        }
+        else if (x < 0 && y < 0) {
+            result = `<sup>${(-x).toString()}</sup>&frasl;<sub>${(-y).toString()}</sub>`;
+        }
+        else {
+            result = `<sup>${x.toString()}</sup>&frasl;<sub>${y.toString()}</sub>`;
+        }
+    }
+    return result;
+};
 const openImage = (imgUri, imgAlt, imgWidth, imgHeight) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
 document.addEventListener('keydown', (e) => {
     const sidebar = document.querySelector('#menuSidebar');
     const offcanvas = new bootstrap.Offcanvas(sidebar);
-    if (e.keyCode === 87) {
+    if (e.keyCode === 9) {
         e.stopPropagation();
         e.preventDefault();
-        if (sidebar.classList.contains('show')) {
-            offcanvas.toggle(sidebar);
-            console.log('hide');
-        }
-        else {
-            offcanvas.toggle(sidebar);
-        }
+        offcanvas.toggle(sidebar);
     }
 });
 document.oncontextmenu = (clickEvent) => {
