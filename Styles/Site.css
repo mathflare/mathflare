@@ -272,7 +272,11 @@ var {
 #bmicatout,
 #bmiout,
 #acidcarbonout,
-#reductionout {
+#reductionout,
+#compdnaout,
+#solout,
+#concout,
+#dsubout {
     font-size: 20px !important;
     line-height: 24px !important;
     padding-left: 3em !important;

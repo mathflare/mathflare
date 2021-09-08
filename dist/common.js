@@ -63,7 +63,7 @@ const reduceFraction = (x, y) => {
         result = `${(x / y).toString()}`;
     }
     else if (x !== Math.floor(x) || y !== Math.floor(y)) {
-        result = `${(x / y).toString()} (~${(Math.floor(x / y)).toString()})`;
+        result = `${(x / y).toString()}`;
     }
     else {
         for (let i = Math.max(Math.abs(x), Math.abs(y)); i > 1; i--) {
@@ -88,7 +88,7 @@ const openImage = (imgUri, imgAlt, imgWidth, imgHeight) => window.open(imgUri, `
 document.addEventListener('keydown', (e) => {
     const sidebar = document.querySelector('#menuSidebar');
     const offcanvas = new bootstrap.Offcanvas(sidebar);
-    if (e.keyCode === 9) {
+    if (e.keyCode === 192) {
         e.stopPropagation();
         e.preventDefault();
         offcanvas.toggle(sidebar);
