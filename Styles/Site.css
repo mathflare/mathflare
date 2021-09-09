@@ -276,7 +276,8 @@ var {
 #compdnaout,
 #solout,
 #concout,
-#dsubout {
+#dsubout,
+#comprnaout {
     font-size: 20px !important;
     line-height: 24px !important;
     padding-left: 3em !important;
