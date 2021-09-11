@@ -60,7 +60,7 @@ const degreesToRadians: (degrees: number) => number = (degrees: number) => {
 const countDecimalpart: (x: number, y: number) => number = (x: number, y: number) => {
     const num: string = (Math.abs(x)).toString();
     let numDecimalLenght: number = 0;
-    const den: string = (Math.abs(x)).toString();
+    const den: string = (Math.abs(y)).toString();
     let denDecimalLenght: number = 0;
     for (let i: number = 0; i < num.length; i++) {
         if (num[i] === '.') {
