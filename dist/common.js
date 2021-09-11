@@ -63,12 +63,14 @@ const countDecimalpart = (x, y) => {
     const den = (Math.abs(x)).toString();
     let denDecimalLenght = 0;
     for (let i = 0; i < num.length; i++) {
-        if (num[i] === '.')
+        if (num[i] === '.') {
             numDecimalLenght = num.length - i - 1;
+        }
     }
     for (let j = 0; j < den.length; j++) {
-        if (den[j] === '.')
+        if (den[j] === '.') {
             denDecimalLenght = den.length - j - 1;
+        }
     }
     if (numDecimalLenght >= denDecimalLenght) {
         return numDecimalLenght;

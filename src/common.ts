@@ -63,12 +63,14 @@ const countDecimalpart: (x: number, y: number) => number = (x: number, y: number
     const den: string = (Math.abs(x)).toString();
     let denDecimalLenght: number = 0;
     for (let i: number = 0; i < num.length; i++) {
-        if (num[i] === '.')
+        if (num[i] === '.') {
             numDecimalLenght = num.length - i - 1;
+        }
     }
     for (let j: number = 0; j < den.length; j++) {
-        if (den[j] === '.')
+        if (den[j] === '.') {
             denDecimalLenght = den.length - j - 1;
+        }
     }
     if (numDecimalLenght >= denDecimalLenght) {
         return numDecimalLenght;
@@ -78,7 +80,7 @@ const countDecimalpart: (x: number, y: number) => number = (x: number, y: number
 };
 
 const reduceFraction: (x: number, y: number) => string = (x: number, y: number) => {
-    let result = '';
+    let result: string = '';
     if (x / y === Math.floor(x / y)) {
         result = `${(x / y).toString()}`;
     } else if (x !== Math.floor(x) || y !== Math.floor(y)) {
@@ -131,4 +133,5 @@ document.addEventListener('keydown', (e: any) => {
 
 document.oncontextmenu = (clickEvent: Event) => {
     console.log(clickEvent);
+    //to do: create a custom context menu
 };
