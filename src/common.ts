@@ -57,23 +57,58 @@ const degreesToRadians: (degrees: number) => number = (degrees: number) => {
     return degrees * (Math.PI / 180);
 };
 
+const countDecimalpart: (x: number, y: number) => number = (x: number, y: number) => {
+    const num: string = (Math.abs(x)).toString();
+    let numDecimalLenght: number = 0;
+    const den: string = (Math.abs(x)).toString();
+    let denDecimalLenght: number = 0;
+    for (let i: number = 0; i < num.length; i++) {
+        if (num[i] === '.')
+            numDecimalLenght = num.length - i - 1;
+    }
+    for (let j: number = 0; j < den.length; j++) {
+        if (den[j] === '.')
+            denDecimalLenght = den.length - j - 1;
+    }
+    if (numDecimalLenght >= denDecimalLenght) {
+        return numDecimalLenght;
+    } else {
+        return denDecimalLenght;
+    }
+};
+
 const reduceFraction: (x: number, y: number) => string = (x: number, y: number) => {
     let result = '';
     if (x / y === Math.floor(x / y)) {
         result = `${(x / y).toString()}`;
     } else if (x !== Math.floor(x) || y !== Math.floor(y)) {
-        result = `${(x / y).toString()}`;
-    } else {
-        for (let i: number = Math.max(Math.abs(x), Math.abs(y)); i > 1; i--) {
-            if ((x % i === 0) && (y % i === 0)) {
-                x /= i;
-                y /= i;
+        for (let i: number = 0; i <= countDecimalpart(x, y); i++) {
+            x *= 10;
+            y *= 10;
+        }
+        for (let j: number = Math.max(Math.abs(x), Math.abs(y)); j > 1; j--) {
+            if ((x % j === 0) && (y % j === 0)) {
+                x /= j;
+                y /= j;
             }
         }
         if (x > 0 && y < 0) {
             result = `<sup>${(-x).toString()}</sup>&frasl;<sub>${(-y).toString()}</sub>`;
+        } else if (x < 0 && y < 0) {
+            result = `<sup>${(-x).toString()}</sup>&frasl;<sub>${(-y).toString()}</sub>`;
+        } else {
+            result = `<sup>${x.toString()}</sup>&frasl;<sub>${y.toString()}</sub>`;
         }
-        else if (x < 0 && y < 0) {
+    } else {
+        for (let k: number = Math.max(Math.abs(x), Math.abs(y)); k > 1; k--) {
+            if ((x % k === 0) && (y % k === 0)) {
+                x /= k;
+                y /= k;
+            }
+        }
+        if (x > 0 && y < 0) {
+            result = `<sup>${(-x).toString()}</sup>&frasl;<sub>${(-y).toString()}</sub>`;
+        } else if (x < 0 && y < 0) {
             result = `<sup>${(-x).toString()}</sup>&frasl;<sub>${(-y).toString()}</sub>`;
         } else {
             result = `<sup>${x.toString()}</sup>&frasl;<sub>${y.toString()}</sub>`;
