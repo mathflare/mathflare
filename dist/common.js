@@ -57,59 +57,19 @@ const searcCalc = () => {
 const degreesToRadians = (degrees) => {
     return degrees * (Math.PI / 180);
 };
-const countDecimalpart = (x, y) => {
-    const num = (Math.abs(x)).toString();
-    let numDecimalLenght = 0;
-    const den = (Math.abs(y)).toString();
-    let denDecimalLenght = 0;
-    for (let i = 0; i < num.length; i++) {
-        if (num[i] === '.') {
-            numDecimalLenght = num.length - i - 1;
-        }
-    }
-    for (let j = 0; j < den.length; j++) {
-        if (den[j] === '.') {
-            denDecimalLenght = den.length - j - 1;
-        }
-    }
-    if (numDecimalLenght >= denDecimalLenght) {
-        return numDecimalLenght;
-    }
-    else {
-        return denDecimalLenght;
-    }
-};
 const reduceFraction = (x, y) => {
     let result = '';
     if (x / y === Math.floor(x / y)) {
         result = `${(x / y).toString()}`;
     }
     else if (x !== Math.floor(x) || y !== Math.floor(y)) {
-        for (let i = 0; i <= countDecimalpart(x, y); i++) {
-            x *= 10;
-            y *= 10;
-        }
-        for (let j = Math.max(Math.abs(x), Math.abs(y)); j > 1; j--) {
-            if ((x % j === 0) && (y % j === 0)) {
-                x /= j;
-                y /= j;
-            }
-        }
-        if (x > 0 && y < 0) {
-            result = `<sup>${(-x).toString()}</sup>&frasl;<sub>${(-y).toString()}</sub>`;
-        }
-        else if (x < 0 && y < 0) {
-            result = `<sup>${(-x).toString()}</sup>&frasl;<sub>${(-y).toString()}</sub>`;
-        }
-        else {
-            result = `<sup>${x.toString()}</sup>&frasl;<sub>${y.toString()}</sub>`;
-        }
+        result = `${(x / y).toString()}`;
     }
     else {
-        for (let k = Math.max(Math.abs(x), Math.abs(y)); k > 1; k--) {
-            if ((x % k === 0) && (y % k === 0)) {
-                x /= k;
-                y /= k;
+        for (let i = Math.max(Math.abs(x), Math.abs(y)); i > 1; i--) {
+            if ((x % i === 0) && (y % i === 0)) {
+                x /= i;
+                y /= i;
             }
         }
         if (x > 0 && y < 0) {

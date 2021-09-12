@@ -57,7 +57,7 @@ const degreesToRadians: (degrees: number) => number = (degrees: number) => {
     return degrees * (Math.PI / 180);
 };
 
-const countDecimalpart: (x: number, y: number) => number = (x: number, y: number) => {
+/* const countDecimalpart: (x: number, y: number) => number = (x: number, y: number) => {
     const num: string = (Math.abs(x)).toString();
     let numDecimalLenght: number = 0;
     const den: string = (Math.abs(y)).toString();
@@ -77,40 +77,25 @@ const countDecimalpart: (x: number, y: number) => number = (x: number, y: number
     } else {
         return denDecimalLenght;
     }
-};
+}; */
 
 const reduceFraction: (x: number, y: number) => string = (x: number, y: number) => {
-    let result: string = '';
+    let result = '';
     if (x / y === Math.floor(x / y)) {
         result = `${(x / y).toString()}`;
     } else if (x !== Math.floor(x) || y !== Math.floor(y)) {
-        for (let i: number = 0; i <= countDecimalpart(x, y); i++) {
-            x *= 10;
-            y *= 10;
-        }
-        for (let j: number = Math.max(Math.abs(x), Math.abs(y)); j > 1; j--) {
-            if ((x % j === 0) && (y % j === 0)) {
-                x /= j;
-                y /= j;
-            }
-        }
-        if (x > 0 && y < 0) {
-            result = `<sup>${(-x).toString()}</sup>&frasl;<sub>${(-y).toString()}</sub>`;
-        } else if (x < 0 && y < 0) {
-            result = `<sup>${(-x).toString()}</sup>&frasl;<sub>${(-y).toString()}</sub>`;
-        } else {
-            result = `<sup>${x.toString()}</sup>&frasl;<sub>${y.toString()}</sub>`;
-        }
+        result = `${(x / y).toString()}`;
     } else {
-        for (let k: number = Math.max(Math.abs(x), Math.abs(y)); k > 1; k--) {
-            if ((x % k === 0) && (y % k === 0)) {
-                x /= k;
-                y /= k;
+        for (let i: number = Math.max(Math.abs(x), Math.abs(y)); i > 1; i--) {
+            if ((x % i === 0) && (y % i === 0)) {
+                x /= i;
+                y /= i;
             }
         }
         if (x > 0 && y < 0) {
             result = `<sup>${(-x).toString()}</sup>&frasl;<sub>${(-y).toString()}</sub>`;
-        } else if (x < 0 && y < 0) {
+        }
+        else if (x < 0 && y < 0) {
             result = `<sup>${(-x).toString()}</sup>&frasl;<sub>${(-y).toString()}</sub>`;
         } else {
             result = `<sup>${x.toString()}</sup>&frasl;<sub>${y.toString()}</sub>`;
