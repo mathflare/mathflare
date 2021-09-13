@@ -42,13 +42,14 @@
     <script src="dist/navbar.js" defer></script>
     <script src="dist/common.js" defer></script>
     <script src="dist/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
 </head>
 
 <body>
     <!-- NAVBAR START -->
     <div id="nav-container"></div>
     <!-- NAVBAR END -->
-    <div class="container" style="margin-top: 10em;">
+    <div class="container p-4" style="margin-top: 10em;">
         <div class="text-center mb-5">
             <h1 class="display-5" style="font-weight: 450;"><img src="Assets/icon.png" class="user-select-none mb-1"
                     style="height: 1em;" alt="logo"> MathFlare</h1>
@@ -61,8 +62,8 @@
                 Menu</button>
         </div>
         <div class="row align-items-center justify-content-between mb-5">
-            <div class="col-md d-none d-md-block">
-                <img src="Assets/calculator.svg" alt="calculator" width="80%" class="img-fluid">
+            <div class="col-md">
+                <img src="Assets/calculator.svg" alt="calculator" width="80%" class="img-fluid img-landing">
             </div>
             <div class="col-md p-2 p-md-5">
                 <h2 class="text-warning fw-normal">90+ Calculators</h2>
@@ -76,13 +77,13 @@
                 <p class="lead">MathFlare's goal is to help students of all grades to achieve academic success by
                     offering numerous useful tools and documentation for free.</p>
             </div>
-            <div class="col-md d-none d-md-block">
-                <img src="Assets/exam.svg" alt="calculator" width="80%" class="img-fluid">
+            <div class="col-md">
+                <img src="Assets/exam.svg" alt="calculator" width="80%" class="img-fluid img-landing">
             </div>
         </div>
         <div class="row align-items-center justify-content-between mb-5">
-            <div class="col-md d-none d-md-block">
-                <img src="Assets/ease-of-use.svg" alt="calculator" width="80%" class="img-fluid">
+            <div class="col-md">
+                <img src="Assets/ease-of-use.svg" alt="calculator" width="80%" class="img-fluid img-landing">
             </div>
             <div class="col-md p-2 p-md-5">
                 <h2 class="text-warning fw-normal">Easy to Use</h2>
@@ -99,25 +100,32 @@
                         href="contact.html">contact form</a> to report any mistakes or suggest an addition to our site.
                 </p>
             </div>
-            <div class="col-md d-none d-md-block">
-                <img src="Assets/feedback.svg" alt="calculator" width="80%" class="img-fluid">
+            <div class="col-md">
+                <img src="Assets/feedback.svg" alt="calculator" width="80%" class="img-fluid img-landing">
             </div>
         </div>
-        <div class="row align-items-center justify-content-between mb-5">
-            <div class="col-md d-none d-md-block">
-                <img src="Assets/rocket.svg" alt="calculator" width="80%" class="img-fluid">
+        <section id="donate">
+            <div class="row align-items-center justify-content-between mb-5">
+                <div class="col-md">
+                    <img src="Assets/rocket.svg" alt="calculator" width="80%" class="img-fluid img-landing">
+                </div>
+                <div class="col-md p-2 p-md-5">
+                    <h2 class="text-warning fw-normal">Support the Open Source Project</h2>
+                    <p class="lead">As an open source project free from envasive ads and shady trackers our only source
+                        of
+                        income are donations .If you would like to help us continue developing MathFlare, please
+                        consider
+                        financially
+                        supporting us through <a href="https://buymeacoffee.com/mathflare" target="_blank"
+                            rel="noopener" class="donate-link">buymeacoffee</a>, <a href="https://ko-fi.com/mathflare"
+                            target="_blank" rel="noopener" class="donate-link">Ko-fi</a>,
+                        <a href="https://patreon.com/mathflare" target="_blank" rel="noopener"
+                            class="donate-link">Patreon</a> or <a href="https://www.paypal.me/mathflare" target="_blank"
+                            rel="noopener" class="donate-link">PayPal</a>
+                    </p>
+                </div>
             </div>
-            <div class="col-md p-2 p-md-5">
-                <h2 class="text-warning fw-normal">Support the Open Source Project</h2>
-                <p class="lead">If you would like to help us continue developing MathFlare, please consider financially
-                    supporting us through <a href="https://buymeacoffee.com/mathflare" target="_blank" rel="noopener"
-                        class="donate-link">buymeacoffee</a>, <a href="https://ko-fi.com/mathflare" target="_blank"
-                        rel="noopener" class="donate-link">Ko-fi</a>, <a href="https://patreon.com/mathflare"
-                        target="_blank" rel="noopener" class="donate-link">Patreon</a> or <a
-                        href="https://www.paypal.me/mathflare" target="_blank" rel="noopener"
-                        class="donate-link">PayPal</a></p>
-            </div>
-        </div>
+        </section>
     </div>
     <!-- SCRIPTS START -->
     <script src="dist/jquery-3.6.0-min.js"></script>
@@ -142,6 +150,15 @@
         }
         window.addEventListener('load', () => {
             document.querySelector('#home-link').classList.add('active');
+        });
+        
+        const donateLinks = document.querySelectorAll('.donate-link');
+        donateLinks.forEach(link => {
+            link.addEventListener('mouseover', () => {
+                party.confetti(link, {
+                    count: party.variation.range(20, 40)
+                });
+            });
         });
     </script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>

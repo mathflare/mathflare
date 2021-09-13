@@ -28,6 +28,7 @@ a:focus {
 .donate-link {
     text-decoration: underline wavy hsl(45, 100%, 51%);
     transition: 0.2s;
+    z-index: 9999999999;
 }
 .donate-link:hover,
 .donate-link:focus {
@@ -44,6 +45,9 @@ hr {
 var {
     font-family: monospace;
     font-style: normal;
+}
+#party-js-container {
+    bottom: 0px !important;
 }
 /*=====SIDEBAR START=====*/
 .navbar-dark {
@@ -387,5 +391,13 @@ var {
     .banner-calc-ad {
         width: 90%;
         height: 200px !important;
+    }
+}
+/*=====915 MEDIA QUERY=====*/
+@media screen and (max-width: 768px) {
+    .img-landing {
+        display: flex;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
