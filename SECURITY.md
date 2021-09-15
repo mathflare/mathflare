@@ -10,7 +10,7 @@
 
 ## Reporting a Vulnerability
 
-**In order to report a security vulnerability in our code, please email us immediately at liquid-geometry@dkatsios.tk** <br />
+**In order to report a security vulnerability in our code, please email us immediately at mathflare@protonmail.com** <br />
 **🚧DO NOT MAKE AN ISSUE ABOUT IT. CONTACT US DIRECTLY🚧**
 
 ### Steps
