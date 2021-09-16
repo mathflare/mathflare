@@ -63,7 +63,12 @@ const GCD = (a, b) => {
     return absB === 0 ? absA : GCD(absB, absA % absB);
 };
 const LCM = (a, b) => {
-    return Math.abs(a * b) / GCD(a, b);
+    if (a < 0 && b < 0) {
+        return -a * b / GCD(a, b);
+    }
+    else {
+        return a * b / GCD(a, b);
+    }
 };
 const reduceFraction = (x, y) => {
     let result = '';

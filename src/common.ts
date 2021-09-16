@@ -86,7 +86,12 @@ const GCD: (a: number, b: number) => number = (a: number, b: number) => {
 }
 
 const LCM: (a: number, b: number) => number = (a: number, b: number) => {
-    return Math.abs(a * b) / GCD(a, b);
+    if (a < 0 && b < 0) {
+        return -a * b / GCD(a, b);
+    }
+    else {
+        return a * b / GCD(a, b);
+    }
 }
 
 const reduceFraction: (x: number, y: number) => string = (x: number, y: number) => {

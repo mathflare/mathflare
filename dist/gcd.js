@@ -8,11 +8,6 @@ document.querySelector('#gcdcalc').addEventListener('click', (event) => {
         document.querySelector('#gcda').value = '';
         document.querySelector('#gcdb').value = '';
     }
-    else if (a < 0 || b < 0) {
-        document.querySelector('#gcdout').innerHTML = `<p class="text-warning">Both values must be greater that zero</p>`;
-        document.querySelector('#gcda').value = '';
-        document.querySelector('#gcdb').value = '';
-    }
     else {
         document.querySelector('#gcdout').innerHTML = `<p class="text-success">gcd(${a},${b}) = ${GCD(a, b)}</p>`;
         document.querySelector('#gcda').value = '';
