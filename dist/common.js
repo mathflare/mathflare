@@ -57,6 +57,14 @@ const searcCalc = () => {
 const degreesToRadians = (degrees) => {
     return degrees * (Math.PI / 180);
 };
+const GCD = (a, b) => {
+    const absA = Math.abs(a);
+    const absB = Math.abs(b);
+    return absB === 0 ? absA : GCD(absB, absA % absB);
+};
+const LCM = (a, b) => {
+    return Math.abs(a * b) / GCD(a, b);
+};
 const reduceFraction = (x, y) => {
     let result = '';
     if (x / y === Math.floor(x / y)) {

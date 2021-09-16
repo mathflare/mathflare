@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- SEO -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathFlare - Greatest Common Devisor Calculator</title>
+    <meta name="title" content="MathFlare - Greatest Common Devisor Calculator">
+    <meta name="og:title" content="MathFlare - MathFlare - Greatest Common Devisor Calculator" />
+    <meta name="twitter:title" content="MathFlare - MathFlare - Greatest Common Devisor Calculator" />
+    <meta name="keywords"
+        content="gcd, calculate gcd, greatest common devisor calculator, algebra, math, mathflare, math flare">
+    <meta name="description" content="Calculate the greatest common devisor of 2 numbers" />
+    <meta name="og:description" content="Calculate the greatest common devisor of 2 numbers" />
+    <meta name="twitter:description" content="Calculate the greatest common devisor of 2 numbers" />
+    <meta name="author" content="MathFlare.xyz" />
+    <meta name="og:url" content="https://www.mathflare.xyz/gcd" />
+    <link rel="canonical" href="https://www.mathflare.xyz/gcd">
+    <meta name="og:image" content="https://www.mathflare.xyz/Assets/logo.png" />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://www.mathflare.xyz/Assets/logo.png">
+    <link rel="home" href="https://www.mathflare.xyz">
+    <!-- STYLES / ICONS -->
+    <link href="Styles/bootstrap-5.0-min.css" rel="stylesheet" />
+    <link href="Styles/Scrollbar.css" rel="stylesheet" />
+    <link href="Styles/Site.css" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="Assets/android-chrome-192x192.png" sizes=192x192>
+    <link rel="icon" type="image/png" href="Assets/android-chrome-512x512.png" sizes=512x512>
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/apple-touch-icon.png">
+    <!-- SCRIPTS -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="dist/navbar.js" defer></script>
+    <script src="dist/common.js" defer></script>
+    <script src="dist/main.js" defer></script>
+</head>
+
+<body>
+    <!-- NAVBAR START -->
+    <div id="nav-container"></div>
+    <!-- NAVBAR END -->
+    <div class="center">
+        <h1 class="text-white">Greatest Common Devisor Calculator</h1>
+        <hr class="bg-danger" style="width: 60%;" />
+        <form autocomplete="off">
+            <h4 class="text-white">Enter the first number</h4>
+            <div class="center-form">
+                <input type="number" id="gcda" placeholder="a" class="form-control mb-0" step="0.1" min="0" />
+            </div>
+            <br />
+            <h4 class="text-white">Enter the second number</h4>
+            <div class="center-form">
+                <input type="number" id="gcdb" placeholder="b" class="form-control mb-0" step="0.1" min="0" />
+            </div>
+            <br />
+            <div class="center-form">
+                <input type="submit" id="gcdcalc" class="btn btn-success btn-lg" value="Calculate">
+            </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="gcdout"></p>
+        </div>
+        <br />
+        <div class="my-4">
+            <a href="https://duckduckgo.com/?q=calculate+the+greatest+common+devisor" target="_blank" rel="noopener"
+                class="btn btn-outline-light m-2">Find information on the web</a>
+        </div>
+        <br />
+    </div>
+    <!-- SCRIPTS START -->
+    <script src="dist/jquery-3.6.0-min.js"></script>
+    <script src="dist/bootstrap-5.1-min.js"></script>
+    <script src="dist/gcd.js"></script>
+    <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
+    <!-- SCRIPT END -->
+</body>
+
+</html>

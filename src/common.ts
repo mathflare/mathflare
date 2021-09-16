@@ -79,6 +79,16 @@ const degreesToRadians: (degrees: number) => number = (degrees: number) => {
     }
 }; */
 
+const GCD: (a: number, b: number) => number = (a: number, b: number) => {
+    const absA = Math.abs(a);
+    const absB = Math.abs(b);
+    return absB === 0 ? absA : GCD(absB, absA % absB);
+}
+
+const LCM: (a: number, b: number) => number = (a: number, b: number) => {
+    return Math.abs(a * b) / GCD(a, b);
+}
+
 const reduceFraction: (x: number, y: number) => string = (x: number, y: number) => {
     let result = '';
     if (x / y === Math.floor(x / y)) {
