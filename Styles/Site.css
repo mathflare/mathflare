@@ -104,6 +104,12 @@ var {
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
         border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+.link-light:active {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(208, 11%, 20%) !important;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
 .btn-toggle::before {
     width: 1.25em;
     line-height: 0;

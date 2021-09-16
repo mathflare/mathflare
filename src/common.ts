@@ -88,8 +88,7 @@ const GCD: (a: number, b: number) => number = (a: number, b: number) => {
 const LCM: (a: number, b: number) => number = (a: number, b: number) => {
     if (a < 0 && b < 0) {
         return -a * b / GCD(a, b);
-    }
-    else {
+    } else {
         return a * b / GCD(a, b);
     }
 }
