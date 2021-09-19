@@ -119,6 +119,30 @@ const reduceFraction: (x: number, y: number) => string = (x: number, y: number) 
     return result;
 };
 
+const addFraction: (x: number, y: number, a: number, b: number) => string = (x: number, y: number, a: number, b: number) => {
+    let result = '';
+    const lcm: number = LCM(Math.abs(y), Math.abs(b));
+    const kapelaki1: number = lcm / Math.abs(y);
+    const kapelaki2: number = lcm / Math.abs(b);
+    x *= kapelaki1;
+    y *= kapelaki1;
+    a *= kapelaki2;
+    b *= kapelaki2;
+    if (y < 0 && b < 0) {
+        result = `${reduceFraction(-x - a, Math.abs(y))}`;
+    }
+    else if (b < 0) {
+        result = `${reduceFraction(x - a, Math.abs(y))}`;
+    }
+    else if (y < 0) {
+        result = `${reduceFraction(-x + a, Math.abs(y))}`;
+    }
+    else {
+        result = `${reduceFraction(x + a, Math.abs(y))}`;
+    }
+    return result;
+};
+
 const openImage: (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => void = (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
 
 document.addEventListener('keydown', (e: any) => {
