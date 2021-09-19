@@ -19,7 +19,30 @@ document.querySelector('#compdnacalc').addEventListener('click', (event) => {
                     result += 'G';
                     break;
                 default:
-                    result += 'X';
+                    result += '<span class="text-warning">X</span>';
+                    break;
+            }
+        }
+        return result;
+    };
+    const revComplementaryDna = (strand) => {
+        let result = '';
+        for (let i = strand.length - 1; i >= 0; i--) {
+            switch (strand[i]) {
+                case 'A':
+                    result += 'T';
+                    break;
+                case 'T':
+                    result += 'A';
+                    break;
+                case 'G':
+                    result += 'C';
+                    break;
+                case 'C':
+                    result += 'G';
+                    break;
+                default:
+                    result += '<span class="text-warning">X</span>';
                     break;
             }
         }
@@ -50,7 +73,7 @@ document.querySelector('#compdnacalc').addEventListener('click', (event) => {
         }
         else if (select === 'rev-comp') {
             if (complementaryDna(dna_string).includes('X')) {
-                document.querySelector('#compdnaout').innerHTML = `<p class="text-success">Reverse complementary sequence: ${complementaryDna(dna_string).split('').reverse().join('')}</p>`;
+                document.querySelector('#compdnaout').innerHTML = `<p class="text-success">Reverse complementary sequence: ${revComplementaryDna(dna_string)}</p>`;
                 document.querySelector('#dnastring').value = '';
                 document.querySelector('#hasxmessage').innerText = 'X means that a character you entered in the sequence is not valid.';
             }
