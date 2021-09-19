@@ -19,7 +19,7 @@ document.querySelector('#compdnacalc').addEventListener('click', (event) => {
                     result += 'G';
                     break;
                 default:
-                    result += '<span class="text-warning">X</span>';
+                    result += 'X';
                     break;
             }
         }
