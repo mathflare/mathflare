@@ -16,7 +16,7 @@ document.querySelector('#addfractcalc').addEventListener('click', (event) => {
         clearValues();
     }
     else {
-        document.querySelector('#addfractout').innerHTML = `${addFraction(x, y, a, b)}`;
+        document.querySelector('#addfractout').innerHTML = `${addFractions(x, y, a, b)}`;
         clearValues();
     }
 });

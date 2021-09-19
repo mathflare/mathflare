@@ -14,7 +14,7 @@
         (<HTMLParagraphElement>document.querySelector('#addfractout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
     } else {
-        (<HTMLParagraphElement>document.querySelector('#addfractout')).innerHTML = `${addFraction(x, y, a, b)}`;
+        (<HTMLParagraphElement>document.querySelector('#addfractout')).innerHTML = `${addFractions(x, y, a, b)}`;
         clearValues();
     }
 });

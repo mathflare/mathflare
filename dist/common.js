@@ -97,28 +97,26 @@ const reduceFraction = (x, y) => {
     }
     return result;
 };
-const addFraction = (x, y, a, b) => {
-    let result = '';
+const addFractions = (x, y, a, b) => {
     const lcm = LCM(Math.abs(y), Math.abs(b));
-    const kapelaki1 = lcm / Math.abs(y);
-    const kapelaki2 = lcm / Math.abs(b);
-    x *= kapelaki1;
-    y *= kapelaki1;
-    a *= kapelaki2;
-    b *= kapelaki2;
+    const temp1 = lcm / Math.abs(y);
+    const temp2 = lcm / Math.abs(b);
+    x *= temp1;
+    y *= temp1;
+    a *= temp2;
+    b *= temp2;
     if (y < 0 && b < 0) {
-        result = `${reduceFraction(-x - a, Math.abs(y))}`;
+        return reduceFraction(-x - a, Math.abs(y));
     }
     else if (b < 0) {
-        result = `${reduceFraction(x - a, Math.abs(y))}`;
+        return reduceFraction(x - a, Math.abs(y));
     }
     else if (y < 0) {
-        result = `${reduceFraction(-x + a, Math.abs(y))}`;
+        return reduceFraction(-x + a, Math.abs(y));
     }
     else {
-        result = `${reduceFraction(x + a, Math.abs(y))}`;
+        return reduceFraction(x + a, Math.abs(y));
     }
-    return result;
 };
 const openImage = (imgUri, imgAlt, imgWidth, imgHeight) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
 document.addEventListener('keydown', (e) => {
