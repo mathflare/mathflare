@@ -127,13 +127,13 @@ const addFractions: (x: number, y: number, a: number, b: number) => string = (x:
     a *= temp2;
     b *= temp2;
     if (y < 0 && b < 0) {
-        return reduceFraction(-x - a, Math.abs(y));
+        return `${reduceFraction(-x - a, Math.abs(y))}`;
     } else if (b < 0) {
-        return reduceFraction(x - a, Math.abs(y));
+        return `${reduceFraction(x - a, Math.abs(y))}`;
     } else if (y < 0) {
-        return reduceFraction(-x + a, Math.abs(y));
+        return `${reduceFraction(-x + a, Math.abs(y))}`;
     } else {
-        return reduceFraction(x + a, Math.abs(y));
+        return `${reduceFraction(x + a, Math.abs(y))}`;
     }
 };
 

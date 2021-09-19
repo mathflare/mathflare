@@ -106,16 +106,16 @@ const addFractions = (x, y, a, b) => {
     a *= temp2;
     b *= temp2;
     if (y < 0 && b < 0) {
-        return reduceFraction(-x - a, Math.abs(y));
+        return `${reduceFraction(-x - a, Math.abs(y))}`;
     }
     else if (b < 0) {
-        return reduceFraction(x - a, Math.abs(y));
+        return `${reduceFraction(x - a, Math.abs(y))}`;
     }
     else if (y < 0) {
-        return reduceFraction(-x + a, Math.abs(y));
+        return `${reduceFraction(-x + a, Math.abs(y))}`;
     }
     else {
-        return reduceFraction(x + a, Math.abs(y));
+        return `${reduceFraction(x + a, Math.abs(y))}`;
     }
 };
 const openImage = (imgUri, imgAlt, imgWidth, imgHeight) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
