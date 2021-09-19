@@ -15,8 +15,13 @@ document.querySelector('#addfractcalc').addEventListener('click', (event) => {
         document.querySelector('#addfractout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
     }
+    else if (Math.floor(x) !== x || Math.floor(y) !== y || Math.floor(a) !== a || Math.floor(b) !== b) {
+        document.querySelector('#addfractout').innerHTML = `<p class="text-warning">All numbers must be integers</p>`;
+        clearValues();
+    }
     else {
-        document.querySelector('#addfractout').innerHTML = `${addFractions(x, y, a, b)}`;
+        const result = addFractions(x, y, a, b);
+        document.querySelector('#addfractout').innerHTML = `${reduceFraction(result[0][0], result[0][1])}`;
         clearValues();
     }
 });

@@ -30,7 +30,7 @@
     <meta name="theme-color" content="#FFC107">
     <!-- STYLES / ICONS -->
     <link rel="manifest" href="manifest.json">
-    <link href="Styles/bootstrap-5.0-min.css" rel="stylesheet" />
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
     <link href="Styles/Scrollbar.css" rel="stylesheet" />
     <link href="Styles/Site.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="Assets/android-chrome-192x192.png" sizes=192x192>
@@ -45,6 +45,8 @@
     </style>
     <!-- SCRIPTS -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="dist/jquery.min.js" defer></script>
+    <script src="dist/bootstrap.min.js" defer></script>
     <script src="dist/navbar.js" defer></script>
     <script src="dist/common.js" defer></script>
     <script src="dist/main.js" defer></script>
@@ -134,8 +136,7 @@
         </section>
     </div>
     <!-- SCRIPTS START -->
-    <script src="dist/jquery-3.6.0-min.js"></script>
-    <script src="dist/bootstrap-5.1-min.js"></script>
+    
     <script>
         const openSideBar = () => {
             document.querySelector('.navbar-toggler').click();

@@ -11,7 +11,7 @@
         if (Math.sqrt(num) === Math.floor(Math.sqrt(num))) {
             (<HTMLParagraphElement>document.querySelector('#sqrtout')).innerHTML = `<p class="text-success">&#8730;${num} = ${Math.sqrt(num)}</p>`;
             (<HTMLInputElement>document.querySelector('#sqrtrad')).value = "";
-        }else {
+        } else {
             (<HTMLParagraphElement>document.querySelector('#sqrtout')).innerHTML = `<p class="text-success">&#8730;${num} = ${Math.sqrt(num)} (&#8764; ${Math.sqrt(num).toFixed(3)})</p>`;
             (<HTMLInputElement>document.querySelector('#sqrtrad')).value = "";
         }

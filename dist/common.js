@@ -101,21 +101,32 @@ const addFractions = (x, y, a, b) => {
     const lcm = LCM(Math.abs(y), Math.abs(b));
     const temp1 = lcm / Math.abs(y);
     const temp2 = lcm / Math.abs(b);
+    let result = [
+        []
+    ];
     x *= temp1;
     y *= temp1;
     a *= temp2;
     b *= temp2;
     if (y < 0 && b < 0) {
-        return `${reduceFraction(-x - a, Math.abs(y))}`;
+        result[0][0] = -x - a;
+        result[0][1] = Math.abs(y);
+        return result;
     }
     else if (b < 0) {
-        return `${reduceFraction(x - a, Math.abs(y))}`;
+        result[0][0] = x - a;
+        result[0][1] = Math.abs(y);
+        return result;
     }
     else if (y < 0) {
-        return `${reduceFraction(-x + a, Math.abs(y))}`;
+        result[0][0] = -x + a;
+        result[0][1] = Math.abs(y);
+        return result;
     }
     else {
-        return `${reduceFraction(x + a, Math.abs(y))}`;
+        result[0][0] = x + a;
+        result[0][1] = Math.abs(y);
+        return result;
     }
 };
 const openImage = (imgUri, imgAlt, imgWidth, imgHeight) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);

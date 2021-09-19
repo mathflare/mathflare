@@ -118,22 +118,37 @@ const reduceFraction: (x: number, y: number) => string = (x: number, y: number) 
     return result;
 };
 
-const addFractions: (x: number, y: number, a: number, b: number) => string = (x: number, y: number, a: number, b: number) => {
+const addFractions: (x: number, y: number, a: number, b: number) => number[][] = (x: number, y: number, a: number, b: number) => {
     const lcm: number = LCM(Math.abs(y), Math.abs(b));
     const temp1: number = lcm / Math.abs(y);
     const temp2: number = lcm / Math.abs(b);
+    let result: number[][] = [
+        []
+    ];
     x *= temp1;
     y *= temp1;
     a *= temp2;
     b *= temp2;
     if (y < 0 && b < 0) {
-        return `${reduceFraction(-x - a, Math.abs(y))}`;
+        //reduceFraction(-x - a, Math.abs(y));
+        result[0][0] = -x - a;
+        result[0][1] = Math.abs(y);
+        return result;
     } else if (b < 0) {
-        return `${reduceFraction(x - a, Math.abs(y))}`;
+        //reduceFraction(x - a, Math.abs(y));
+        result[0][0] = x - a;
+        result[0][1] = Math.abs(y);
+        return result;
     } else if (y < 0) {
-        return `${reduceFraction(-x + a, Math.abs(y))}`;
+        //reduceFraction(-x + a, Math.abs(y));
+        result[0][0] = -x + a;
+        result[0][1] = Math.abs(y);
+        return result;
     } else {
-        return `${reduceFraction(x + a, Math.abs(y))}`;
+        //reduceFraction(x + a, Math.abs(y));
+        result[0][0] = x + a;
+        result[0][1] = Math.abs(y);
+        return result;
     }
 };
 

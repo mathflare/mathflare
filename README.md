@@ -7,60 +7,70 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/40421144-5482-41c2-83e1-f72c392501bc/deploy-status)](https://app.netlify.com/sites/mathflare/deploys)
 
-____
+---
 
 </div>
 
 ## MathFlare now offers:
 
-- Area Calculator
-- Pythagorian Theorem solver
-- Unit Converter
-- Math Cheat Sheet
-- 1st degree equation solver
-- Quadratic equation solver
-- 2x2 Linear System of Equations Solver
-- 1st degree inequality solver
-- Displacement Calculator
-- Advanced Percentage Calculators
-- Trigonometry Calculator
-- Diagonal Calulator
-- Factorial Calculator
-- Nth Root Calculator
-- Punnett Square Generator
-- Complete and Incomplete Combustion Calulator
+-   Area Calculator
+-   Pythagorian Theorem solver
+-   Unit Converter
+-   Math Cheat Sheet
+-   1st degree equation solver
+-   Quadratic equation solver
+-   2x2 Linear System of Equations Solver
+-   1st degree inequality solver
+-   Displacement Calculator
+-   Advanced Percentage Calculators
+-   Trigonometry Calculator
+-   Diagonal Calulator
+-   Factorial Calculator
+-   Nth Root Calculator
+-   Punnett Square Generator
+-   Complete and Incomplete Combustion Calulator
 
 ## Support MathFlare 🎉
+
 Ads are always our last option for website monetization.
 That's why we prompt you to financially spport our project through dontations.
 Here are the platfors on witch you can donate:
-- [🍕PayPal](https://www.paypal.me/mathflare)
-- [🍕Buymeacoffee](https://buymeacoffee.com/mathflare)
-- [🍕Ko-Fi](https://ko-fi.com/mathflare)
-- [🍕Patreon](https://www.patreon.com/mathflare)
+
+-   [🍕PayPal](https://www.paypal.me/mathflare)
+-   [🍕Buymeacoffee](https://buymeacoffee.com/mathflare)
+-   [🍕Ko-Fi](https://ko-fi.com/mathflare)
+-   [🍕Patreon](https://www.patreon.com/mathflare)
 
 ## FAQ
 
 #### Are you using vanilla javascript?
-- Yes, we use TypeScript and then compile it into JavaScript
+
+-   Yes, we use TypeScript and then compile it into JavaScript
 
 #### Do you write your own CSS?
-- We use Bootstrap for the most part. All the custom CSS is in the `Site.css` file.
+
+-   We use Bootstrap for the most part. All the custom CSS is in the `Site.css` file.
 
 #### Are the icons custom?
-- We use Bootstrap Icons.
+
+-   We use Bootstrap Icons.
 
 #### Where is the project hosted?
-- Cloudflare for the most part.
+
+-   Cloudflare for the most part.
 
 #### When are new calculators coming?
-- We are constantly working on new calculators and improving existing ones.
+
+-   We are constantly working on new calculators and improving existing ones.
 
 #### Can I contribute to the project?
-- Sure! We welcome all contributors.
+
+-   Sure! We welcome all contributors.
 
 #### Can I link to MathFlare in my website/blog/project?
-- Of course! Here is some example code:
+
+-   Of course! Here is some example code:
+
 ```HTML
 
     <p><a href="https://www.mathflare.xyz">MathFlare.xyz</a> - The go-to website for alegbra and geometry</p>
@@ -69,19 +79,20 @@ Here are the platfors on witch you can donate:
 
 ## Technologies Used
 
-- TypeScript
-- JavaScript
-- Bootstrap.css 5
-- Bootstrap.js 5
-- Bootstrap icons
-- Cloudflare
-- Cloudflare Pages
-- Netlify
-- GitHub
-- Jira
+-   TypeScript
+-   JavaScript
+-   Bootstrap.css 5
+-   Bootstrap.js 5
+-   Bootstrap icons
+-   Cloudflare
+-   Cloudflare Pages
+-   Netlify
+-   GitHub
+-   Jira
 
 #### How do you store the statistics?
-- Everything is stored in your browser in the form of cookies. We do not have access to this piece of information.
+
+-   Everything is stored in your browser in the form of cookies. We do not have access to this piece of information.
 
 ## Domains
 
@@ -97,12 +108,11 @@ Here are the platfors on witch you can donate:
 1. [api.mathflare.xyz (Heroku)](https://api.mathflare.xyz)
 2. [developers.mathflare.xyz (Netlify)](https://developers.mathflare.xyz)
 3. [access.mathflare.xyz (Privately Hosted)](https://access.mathflare.xyz)
-3. [mail.mathflare.xyz (Yandex Mail Server)](https://mail.mathflare.xyz)
-3. [backup.mathflare.xyz (Netlify)](https://backup.mathflare.xyz)
-3. [unavailable.mathflare.xyz (Netlify)](https://unavailable.mathflare.xyz)
+4. [mail.mathflare.xyz (Yandex Mail Server)](https://mail.mathflare.xyz)
+5. [backup.mathflare.xyz (Netlify)](https://backup.mathflare.xyz)
+6. [unavailable.mathflare.xyz (Netlify)](https://unavailable.mathflare.xyz)
 
-----------------------------------------------------------------
-
+---
 
 # Contributing
 

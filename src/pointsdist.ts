@@ -15,7 +15,7 @@
         (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
     } else {
-        (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success">The distance between (${x1},${y1}) and (${x2},${y2}) is ${Math.sqrt(Math.pow(x2 - x1, 2)+Math.pow(y2 - y1, 2))}m</p>`;
+        (<HTMLParagraphElement>document.querySelector('#output')).innerHTML = `<p class="text-success">The distance between (${x1},${y1}) and (${x2},${y2}) is ${Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))}m</p>`;
         clearValues();
     }
 });

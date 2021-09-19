@@ -11,7 +11,7 @@
         if (Math.cbrt(num) === Math.floor(Math.cbrt(num))) {
             (<HTMLParagraphElement>document.querySelector('#cbrtout')).innerHTML = `<p class="text-success">&#8731;${num} = ${Math.cbrt(num)}</p>`;
             (<HTMLInputElement>document.querySelector('#cbrtrad')).value = "";
-        }else {
+        } else {
             (<HTMLParagraphElement>document.querySelector('#cbrtout')).innerHTML = `<p class="text-success">&#8731;${num} = ${Math.cbrt(num)} (&#8764; ${Math.cbrt(num).toFixed(3)})</p>`;
             (<HTMLInputElement>document.querySelector('#cbrtrad')).value = "";
         }

@@ -2,10 +2,9 @@
 
 ## Supported Versions
 
-
 | Version | Supported          |
 | ------- | ------------------ |
-| < 3.0.x   | :white_check_mark: |
+| < 3.0.x | :white_check_mark: |
 | > 3.0   | :x:                |
 
 ## Reporting a Vulnerability
@@ -15,6 +14,6 @@
 
 ### Steps
 
-- **Describe what the vulnerability is and hoe it affects the website/users**
-- **Specify the excact file and line of code of the vulnerability**
-- **Recommend fixes(optional)**
+-   **Describe what the vulnerability is and hoe it affects the website/users**
+-   **Specify the excact file and line of code of the vulnerability**
+-   **Recommend fixes(optional)**
