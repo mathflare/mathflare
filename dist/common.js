@@ -97,7 +97,7 @@ const reduceFraction = (x, y) => {
     }
     return result;
 };
-const likeFractions = (x, y, a, b) => {
+const likeToUnlike = (x, y, a, b) => {
     const lcm = LCM(Math.abs(y), Math.abs(b));
     const temp1 = lcm / Math.abs(y);
     const temp2 = lcm / Math.abs(b);

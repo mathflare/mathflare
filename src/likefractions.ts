@@ -17,7 +17,7 @@
         (<HTMLParagraphElement>document.querySelector('#likefractout')).innerHTML = `<p class="text-warning">All numbers must be integers</p>`;
         clearValues();
     } else {
-        (<HTMLParagraphElement>document.querySelector('#likefractout')).innerHTML = `${likeFractions(x, y, a, b)}`;
+        (<HTMLParagraphElement>document.querySelector('#likefractout')).innerHTML = `${likeToUnlike(x, y, a, b)}`;
         clearValues();
     }
 });

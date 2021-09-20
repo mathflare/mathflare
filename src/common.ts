@@ -118,7 +118,7 @@ const reduceFraction: (x: number, y: number) => string = (x: number, y: number) 
     return result;
 };
 
-const likeFractions: (x: number, y: number, a: number, b: number) => string = (x: number, y: number, a: number, b: number) => {
+const likeToUnlike: (x: number, y: number, a: number, b: number) => string = (x: number, y: number, a: number, b: number) => {
     const lcm: number = LCM(Math.abs(y), Math.abs(b));
     const temp1: number = lcm / Math.abs(y);
     const temp2: number = lcm / Math.abs(b);
@@ -128,14 +128,11 @@ const likeFractions: (x: number, y: number, a: number, b: number) => string = (x
     b *= temp2;
     if (y < 0 && b < 0) {
         return `<span class="text-warning"><sup>${(-x).toString()}</sup>&frasl;<sub>${(Math.abs(y)).toString()}</sub></span>  <sup>${(-a).toString()}</sup>&frasl;<sub>${(Math.abs(b)).toString()}</sub>`;
-    }
-    else if (b < 0) {
+    } else if (b < 0) {
         return `<span class="text-warning"><sup>${(x).toString()}</sup>&frasl;<sub>${(Math.abs(y)).toString()}</sub></span>  <sup>${(-a).toString()}</sup>&frasl;<sub>${(Math.abs(b)).toString()}</sub>`;
-    }
-    else if (y < 0) {
+    } else if (y < 0) {
         return `<span class="text-warning"><sup>${(-x).toString()}</sup>&frasl;<sub>${(Math.abs(y)).toString()}</sub></span>  <sup>${(a).toString()}</sup>&frasl;<sub>${(Math.abs(b)).toString()}</sub>`;
-    }
-    else {
+    } else {
         return `<span class="text-warning"><sup>${(x).toString()}</sup>&frasl;<sub>${(Math.abs(y)).toString()}</sub></span>  <sup>${(a).toString()}</sup>&frasl;<sub>${(Math.abs(b)).toString()}</sub>`;
     }
 };

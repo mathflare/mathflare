@@ -20,7 +20,7 @@ document.querySelector('#likefractcalc').addEventListener('click', (event) => {
         clearValues();
     }
     else {
-        document.querySelector('#likefractout').innerHTML = `${likeFractions(x, y, a, b)}`;
+        document.querySelector('#likefractout').innerHTML = `${likeToUnlike(x, y, a, b)}`;
         clearValues();
     }
 });
