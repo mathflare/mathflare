@@ -309,7 +309,8 @@ var {
 #gcdout,
 #lcmout,
 #addfractout,
-#likefractout {
+#likefractout,
+#numpairsout {
     font-size: 20px !important;
     line-height: 24px !important;
     padding-left: 3em !important;
