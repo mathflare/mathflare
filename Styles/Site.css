@@ -49,6 +49,24 @@ var {
 #party-js-container {
     bottom: 0px !important;
 }
+.card {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(210, 10%, 15%);
+    border: 0.05em solid #fff;
+}
+.btn.btn-outline-discrete {
+    color: hsl(0, 0%, 100%);
+    border: 0.04em solid hsl(0, 0%, 100%);
+}
+.btn.btn-outline-discrete:hover,
+.btn.btn-outline-discrete:focus {
+    background-color: hsl(210, 10%, 19%);
+}
+.btn.btn-outline-discrete:active {
+    background-color: hsl(210, 10%, 22%);
+    border: 0.04em solid rgb(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 0.2rem rgb(255, 255, 255, 0.5);
+}
 /*=====SIDEBAR START=====*/
 .navbar-dark {
     background-color: hsl(210, 10%, 15%) !important;

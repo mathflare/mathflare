@@ -37,7 +37,19 @@ const searcCalc = () => {
         ['nth root calculator', 'roots'],
         ['round numbers', 'round'],
         ['slope calculator', 'slope'],
-        ['trigonometric calculator (sine,cosine,tangent)', 'trigcalculator']
+        ['trigonometric calculator (sine,cosine,tangent)', 'trigcalculator'],
+        ['inorganic compound calculator', 'inorganiccomp'],
+        ['neutralization reaction calculator', 'neutralization'],
+        ['acid-metal reaction calculator', 'acidmetalreaction'],
+        ['dna complement generator', 'complementarydna'],
+        ['rna complement generator', 'complementaryrna'],
+        ['loan calculator', 'loan'],
+        ['bmi calculator', 'bmi'],
+        ['fraction addition calculator', 'fractionaddition'],
+        ['unlike to like fraction converter', 'likefractions'],
+        ['fraction reduction calculator', 'fractionreduction'],
+        ['greatest common divisor calculator (GCD)', 'gcd'],
+        ['least common multiple calculator (LCM)', 'lcm'],
     ];
     searchBox.addEventListener("input", () => {
         const search = searchBox.value.toLowerCase();
