@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- SEO -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathFlare - Number of Pairs Calculator</title>
+    <meta name="title" content="MathFlare - Number of Pairs Calculator">
+    <meta name="og:title" content="MathFlare - Number of Pairs Calculator" />
+    <meta name="twitter:title" content="MathFlare - Number of Pairs Calculator" />
+    <meta name="keywords"
+        content="number of pairs calculator, number of pairs, pairs, number, math problem, problem, math formula, mathflare, math flare">
+    <meta name="description" content="Calculate the number of pairs of a set of numbers." />
+    <meta name="og:description"
+        content="Calculate the number of pairs of a set of numbers." />
+    <meta name="twitter:description"
+        content="Calculate the number of pairs of a set of numbers." />
+    <meta name="author" content="MathFlare.xyz" />
+    <meta name="og:url" content="https://www.mathflare.xyz/numberpairs" />
+    <link rel="canonical" href="https://www.mathflare.xyz/numberpairs">
+    <meta name="og:image" content="https://www.mathflare.xyz/Assets/logo.png" />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://www.mathflare.xyz/Assets/logo.png">
+    <link rel="home" href="https://www.mathflare.xyz">
+    <!-- STYLES / ICONS -->
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="Styles/Scrollbar.css" rel="stylesheet" />
+    <link href="Styles/Site.css" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="Assets/android-chrome-192x192.png" sizes=192x192>
+    <link rel="icon" type="image/png" href="Assets/android-chrome-512x512.png" sizes=512x512>
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/apple-touch-icon.png">
+    <!-- SCRIPTS -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="dist/jquery.min.js" defer></script>
+    <script src="dist/bootstrap.min.js" defer></script>
+    <script src="dist/navbar.js" defer></script>
+    <script src="dist/common.js" defer></script>
+    <script src="dist/main.js" defer></script>
+</head>
+
+<body>
+    <!-- NAVBAR START -->
+    <div id="nav-container"></div>
+    <!-- NAVBAR END -->
+    <div class="center">
+        <h1 class="text-white">Number of Pairs</h1>
+        <hr class="bg-danger" style="width: 60%;" />
+        <form autocomplete="off">
+            <h4 class="text-white">Enter how many numbers you have</h4>
+            <div class="center-form">
+                <input type="number" id="n" placeholder="number" class="form-control mb-0" min="1" />
+            </div>
+            <br />
+            <div class="center-form">
+                <input type="submit" id="calc" class="btn btn-success btn-lg" value="Calculate">
+            </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="output"></p>
+        </div>
+        <br />
+        <div class="my-4">
+            <a href="https://duckduckgo.com/?q=number+of+pairs" target="_blank" rel="noopener"
+                class="btn btn-outline-light">Find information on the web</a>
+        </div>
+        <br />
+    </div>
+    <!-- SCRIPTS START -->
+    
+    <script src="dist/numberpairs.js"></script>
+    <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
+    <!-- SCRIPT END -->
+</body>
+
+</html>
