@@ -11,11 +11,11 @@ document.querySelector('#numpairscalc').addEventListener('click', (event) => {
         document.querySelector('#n').value = '';
     }
     else if (n % 2 != 0) {
-        document.querySelector('#numpairsout').innerHTML = `<p class="text-success">there are ${Math.floor(Math.abs(n) / 2)} pairs of numbers with 1 extra number(position: ${(Math.abs(n) + 1) / 2})</p>`;
+        document.querySelector('#numpairsout').innerHTML = `<p class="text-success">There are ${Math.floor(Math.abs(n) / 2)} pairs of numbers with 1 extra number(position: ${(Math.abs(n) + 1) / 2})</p>`;
         document.querySelector('#n').value = '';
     }
     else {
-        document.querySelector('#numpairsout').innerHTML = `<p class="text-success">there are ${Math.abs(n) / 2} pairs of numbers with ${Math.abs(n) % 2} extra numbers</p>`;
+        document.querySelector('#numpairsout').innerHTML = `<p class="text-success">There are ${Math.abs(n) / 2} pairs of numbers with 0 extra numbers</p>`;
         document.querySelector('#n').value = '';
     }
 });

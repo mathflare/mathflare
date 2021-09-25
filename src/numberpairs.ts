@@ -8,10 +8,10 @@
         (<HTMLParagraphElement>document.querySelector('#numpairsout')).innerHTML = `<p class="text-warning">the value must be a positive integer</p>`;
         (<HTMLInputElement>document.querySelector('#n')).value = '';
     } else if (n % 2 != 0) {
-        (<HTMLParagraphElement>document.querySelector('#numpairsout')).innerHTML = `<p class="text-success">there are ${Math.floor(Math.abs(n) / 2)} pairs of numbers with 1 extra number(position: ${(Math.abs(n) + 1) / 2})</p>`;
+        (<HTMLParagraphElement>document.querySelector('#numpairsout')).innerHTML = `<p class="text-success">There are ${Math.floor(Math.abs(n) / 2)} pairs of numbers with 1 extra number(position: ${(Math.abs(n) + 1) / 2})</p>`;
         (<HTMLInputElement>document.querySelector('#n')).value = '';
     } else {
-        (<HTMLParagraphElement>document.querySelector('#numpairsout')).innerHTML = `<p class="text-success">there are ${Math.abs(n) / 2} pairs of numbers with ${Math.abs(n) % 2} extra numbers</p>`;
+        (<HTMLParagraphElement>document.querySelector('#numpairsout')).innerHTML = `<p class="text-success">There are ${Math.abs(n) / 2} pairs of numbers with 0 extra numbers</p>`;
         (<HTMLInputElement>document.querySelector('#n')).value = '';
     }
 });
