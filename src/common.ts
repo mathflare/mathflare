@@ -49,6 +49,7 @@ const searcCalc: () => void = () => {
         ['fraction reduction calculator', 'fractionreduction'],
         ['greatest common divisor calculator (GCD)', 'gcd'],
         ['least common multiple calculator (LCM)', 'lcm'],
+        ['number of pairs', 'pairs'],
     ];
     searchBox.addEventListener("input", () => {
         const search: string = searchBox.value.toLowerCase();
