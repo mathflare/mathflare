@@ -6,12 +6,12 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathFlare - Calculator</title>
-    <meta name="title" content="MathFlare - Calculator">
-    <meta name="og:title" content="MathFlare - Calculator" />
-    <meta name="twitter:title" content="MathFlare - Calculator" />
+    <title>MathFlare - Scientific Calculator</title>
+    <meta name="title" content="MathFlare - Scientific Calculator">
+    <meta name="og:title" content="MathFlare - Scientific Calculator" />
+    <meta name="twitter:title" content="MathFlare - Scientific Calculator" />
     <meta name="keywords"
-        content="calculator, substraction, multiplication, division, addition, math, mathflare, math flare">
+        content="calculator, scientific calculator, substraction, multiplication, division, addition, powers, square root, math, mathflare, math flare">
     <meta name="description" content="Fully functional simple calculator" />
     <meta name="og:description" content="Fully functional simple calculator" />
     <meta name="twitter:description" content="Fully functional simple calculator" />
@@ -39,6 +39,16 @@
     <script src="dist/navbar.js" defer></script>
     <script src="dist/common.js" defer></script>
     <script src="dist/main.js" defer></script>
+    <style>
+        .mathcontainer {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .w-20 {
+            width: 20% !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,46 +56,95 @@
     <div id="nav-container"></div>
     <!-- NAVBAR END -->
     <div class="center">
-        <h1 class="text-white">Simple Calculator</h1>
+        <h1 class="text-white">Scientific Calculator</h1>
         <hr class="bg-danger" style="width: 60%;" />
-        <form autocomplete="off">
-            <div class="center-form">
-                <input type="number" id="num1" class="form-control" placeholder="first number" step="0.1">
-            </div>
-            <br />
-            <div class="center-form">
-                <input type="number" id="num2" class="form-control" placeholder="second number" step="0.1">
-            </div>
-            <br />
-            <div class="center-form">
-                <div class="input-group">
-                    <input type="text" id="result" class="form-control input-group-item" placeholder="result" value=""
-                        disabled readonly>
-                    <button class="btn btn-outline-light" type="button" id="copy-to-clipboard" disabled>Copy
-                        Result</button>
+        <div class="mathcontainer mb-5">
+            <form autocomplete="off">
+                <div>
+                    <div class="center-form">
+                        <div class="input-group w-100">
+                            <span class="input-group-text">input</span>
+                            <input type="text" id="display" class="form-control input-group-item"
+                                placeholder="operations">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="center-form">
+                        <div class="input-group w-100">
+                            <span class="input-group-text">result</span>
+                            <input type="text" id="result" class="form-control input-group-item" placeholder="result"
+                                disabled readonly>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="input-group w-100">
+                        <button type="submit" class="btn btn-success input-group-item w-50"
+                            id="evaluate">Calculate</button>
+                        <button type="button" class="btn btn-danger input-group-item w-50" id="clear">CE</button>
+                    </div>
+                    <br />
+                    <div class="input-group w-100 mb-3">
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="+" id="operant">Add
+                            &#43;</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="-" id="operant">Subtract
+                            &#8722;</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="*" id="operant">Multiply
+                            &#215;</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="/" id="operant">Divide
+                            &#247;</button>
+                    </div>
+                    <div class="input-group w-100">
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="1" id="operant"
+                            style="border-bottom-left-radius: 0px;">1</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="2" id="operant">2</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="3" id="operant">3</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="4" id="operant"
+                            style="border-bottom-right-radius: 0px;">4</button>
+                    </div>
+                    <div class="input-group w-100">
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="5" id="operant"
+                            style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;">5</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="6" id="operant">6</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="7" id="operant">7</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="8" id="operant"
+                            style="border-top-right-radius: 0px; border-bottom-right-radius: 0px;">8</button>
+                    </div>
+                    <div class="input-group w-100">
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="9" id="operant"
+                            style="border-top-left-radius: 0px;">9</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="0" id="operant">0</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="00" id="operant">00</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="." id="operant"
+                            style="border-top-right-radius: 0px;">.</button>
+                    </div>
+                    <div class="input-group w-100 my-3">
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="sin()"
+                            id="operant">sin</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="cos()"
+                            id="operant">cos</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="tan()"
+                            id="operant">tan</button>
+                        <button type="button" class="btn btn-outline-info w-25" data-digit="log()"
+                            id="operant">log</button>
+                    </div>
+                    <div class="input-group w-100">
+                        <button type="button" class="btn btn-outline-info w-50" data-digit="sqrt()" id="operant"
+                            style="border-bottom-left-radius: 0px;">sqrt</button>
+                        <button type="button" class="btn btn-outline-info w-50" data-digit="pow(x , y)" id="operant"
+                            style="border-bottom-right-radius: 0px;">pow x<sup>y</sup></button>
+                    </div>
+                    <div class="input-group w-100">
+                        <button type="button" class="btn btn-outline-info w-50" data-digit="(" id="operant"
+                            style="border-top-left-radius: 0px;">(</button>
+                        <button type="button" class="btn btn-outline-info w-50" data-digit=")" id="operant"
+                            style="border-top-right-radius: 0px;">)</button>
+                    </div>
                 </div>
-            </div>
-            <br />
-            <div class="center-form mb-4">
-                <div class="d-lg-inline-flex d-block">
-                    <button class="btn btn-success m-1" id="add">Add &#43;</button>
-                    <button class="btn btn-warning m-1" id="sub">Sub &#8722;</button>
-                    <button class="btn btn-primary m-1" id="mul">Mul &#215;</button>
-                    <button class="btn btn-info m-1" id="div">Div &#247;</button>
-                    <input type="reset" class="btn btn-danger m-1" value="Clear">
-                </div>
-            </div>
-            <br />
-        </form>
+            </form>
+        </div>
     </div>
     <!-- SCRIPTS START -->
-    
-    <script src="dist/calc.js"></script>
-    <script>
-        window.onload = () => {
-            document.querySelector('#copy-to-clipboard').disabled = true;
-        }
-    </script>
+    <script src="dist/scicalc.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>
