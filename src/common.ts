@@ -186,6 +186,15 @@ const addFractions: (x: number, y: number, a: number, b: number) => number[][] =
 
 const openImage: (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => void = (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
 
+const copyToClipboard: (text: string) => void = (text: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+        console.log('Success: copied to clipboard');
+    }, (err) => {
+        console.error('Error: could not copy to clipboard: ', err);
+    });
+}
+
+
 document.addEventListener('keydown', (e: any) => {
     const sidebar = <HTMLDivElement>document.querySelector('#menuSidebar');
     const offcanvas = new bootstrap.Offcanvas(sidebar);

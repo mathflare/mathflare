@@ -164,6 +164,13 @@ const addFractions = (x, y, a, b) => {
     }
 };
 const openImage = (imgUri, imgAlt, imgWidth, imgHeight) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);
+const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text).then(() => {
+        console.log('Success: copied to clipboard');
+    }, (err) => {
+        console.error('Error: could not copy to clipboard: ', err);
+    });
+};
 document.addEventListener('keydown', (e) => {
     const sidebar = document.querySelector('#menuSidebar');
     const offcanvas = new bootstrap.Offcanvas(sidebar);
