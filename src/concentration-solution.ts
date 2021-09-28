@@ -33,7 +33,7 @@
         } else if (dsub === 0 && conc === 0) {
             return '<p class="text-warning">This is not considered a solution</p>';
         } else if (conc >= 50) {
-            return '<p class="text-warning">The disolved substance cannot substitue more than 50% of the solution weight</p>'
+            return '<p class="text-warning">The disolved substance cannot substitue more than 50% of the solution volume</p>'
         } else {
             const sol: number = dsub / conc * 100;
             return `<p class="text-success">The solution with concentration ${conc}% v/v and disolved substance of ${dsub}ml is ${sol}ml</p>`;

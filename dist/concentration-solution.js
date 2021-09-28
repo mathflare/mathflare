@@ -42,7 +42,7 @@ document.querySelector('#solcalc').addEventListener('click', (event) => {
             return '<p class="text-warning">This is not considered a solution</p>';
         }
         else if (conc >= 50) {
-            return '<p class="text-warning">The disolved substance cannot substitue more than 50% of the solution weight</p>';
+            return '<p class="text-warning">The disolved substance cannot substitue more than 50% of the solution volume</p>';
         }
         else {
             const sol = dsub / conc * 100;

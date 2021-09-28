@@ -48,7 +48,7 @@ document.querySelector('#conccalc').addEventListener('click', (event) => {
             return '<p class="text-warning">This is not considered a solution</p>';
         }
         else if (sol < dsub) {
-            return '<p class="text-warning">The disolved substance cannot be greater than the solution weight</p>';
+            return '<p class="text-warning">The disolved substance cannot be greater than the solution volume</p>';
         }
         else {
             const concentration = dsub / sol * 100;

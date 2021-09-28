@@ -39,7 +39,7 @@
         } else if (sol === 0 || dsub === 0) {
             return '<p class="text-warning">This is not considered a solution</p>';
         } else if (sol < dsub) {
-            return '<p class="text-warning">The disolved substance cannot be greater than the solution weight</p>';
+            return '<p class="text-warning">The disolved substance cannot be greater than the solution volume</p>';
         } else {
             const concentration: number = dsub / sol * 100;
             if (concentration >= 50) {
