@@ -14,7 +14,7 @@ document.querySelector('#evaluate').addEventListener('click', (e) => {
     }
     else {
         try {
-            const result = eval(display.value.replace('×', '*').replace('÷', '/').replace('log', 'Math.log').replace('sin', 'Math.sin').replace('cos', 'Math.cos').replace('tan', 'Math.tan').replace('sqrt', 'Math.sqrt').replace('pow', 'Math.pow').replace('π', 'Math.PI').replace('e', 'Math.E').replace('^', '**').replace('hyp', 'Math.hypot'));
+            const result = eval(display.value.replace(/\×/g, '*').replace(/\÷/g, '/').replace(/\log/g, 'Math.log').replace(/\sin/g, 'Math.sin').replace(/\cos/g, 'Math.cos').replace(/\tan/g, 'Math.tan').replace(/\sqrt/g, 'Math.sqrt').replace(/\pow/g, 'Math.pow').replace(/\pi/g, 'Math.PI').replace(/\e/g, 'Math.E').replace(/\^/g, '**').replace(/\hyp/g, 'Math.hypot'));
             if (isNaN(result)) {
                 document.querySelector('#result').value = 'Please enter a correct operation';
             }
