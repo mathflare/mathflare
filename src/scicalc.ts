@@ -10,17 +10,17 @@ operants.forEach((operant: any) => {
     e.preventDefault();
     const display: HTMLInputElement = <HTMLInputElement>document.querySelector('#display');
     if (display.value.trim().length === 0) {
-        (<HTMLInputElement>document.querySelector('#result')).value = 'Please enter a correct operation'
+        (<HTMLInputElement>document.querySelector('#result')).value = 'Please enter a valid operation'
     } else {
         try {
-            const result = eval(display.value.replace(/\×/g, '*').replace(/\÷/g, '/').replace(/\log/g, 'Math.log').replace(/\sin/g, 'Math.sin').replace(/\cos/g, 'Math.cos').replace(/\tan/g, 'Math.tan').replace(/\sqrt/g, 'Math.sqrt').replace(/\pow/g, 'Math.pow').replace(/\pi/g, 'Math.PI').replace(/\e/g, 'Math.E').replace(/\^/g, '**').replace(/\hyp/g, 'Math.hypot'));
+            const result = eval(display.value.replace(/\×/g, '*').replace(/\÷/g, '/').replace(/log/g, 'Math.log').replace(/sin/g, 'Math.sin').replace(/cos/g, 'Math.cos').replace(/tan/g, 'Math.tan').replace(/sqrt/g, 'Math.sqrt').replace(/pow/g, 'Math.pow').replace(/pi/g, 'Math.PI').replace(/e/g, 'Math.E').replace(/\^/g, '**').replace(/hyp/g, 'Math.hypot').replace(/abs/g, 'Math.abs').replace(/\%/g, '/100'));
             if (isNaN(result)) {
-                (<HTMLInputElement>document.querySelector('#result')).value = 'Please enter a correct operation'
+                (<HTMLInputElement>document.querySelector('#result')).value = 'Please enter a valid operation'
             } else {
                 (<HTMLInputElement>document.querySelector('#result')).value = result.toString();
             }
         } catch (e) {
-            (<HTMLInputElement>document.querySelector('#result')).value = 'Math Error';
+            (<HTMLInputElement>document.querySelector('#result')).value = 'Please enter a valid operation';
         }
     }
 });
