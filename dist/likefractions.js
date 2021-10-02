@@ -19,6 +19,10 @@ document.querySelector('#likefractcalc').addEventListener('click', (event) => {
         document.querySelector('#likefractout').innerHTML = `<p class="text-warning">All numbers must be integers</p>`;
         clearValues();
     }
+    else if (y === 0 || b === 0) {
+        document.querySelector('#likefractout').innerHTML = `<p class="text-warning">The value of y and b mustn't be 0</p>`;
+        clearValues();
+    }
     else {
         document.querySelector('#likefractout').innerHTML = `${likeToUnlike(x, y, a, b)}`;
         clearValues();

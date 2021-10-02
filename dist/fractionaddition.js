@@ -19,6 +19,10 @@ document.querySelector('#addfractcalc').addEventListener('click', (event) => {
         document.querySelector('#addfractout').innerHTML = `<p class="text-warning">All numbers must be integers</p>`;
         clearValues();
     }
+    else if (y === 0 || b === 0) {
+        document.querySelector('#addfractout').innerHTML = `<p class="text-warning">The value of y and b mustn't be 0</p>`;
+        clearValues();
+    }
     else {
         const result = addFractions(x, y, a, b);
         document.querySelector('#addfractout').innerHTML = `${reduceFraction(result[0][0], result[0][1])}`;

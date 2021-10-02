@@ -11,6 +11,10 @@ document.querySelector('#reductioncalc').addEventListener('click', (event) => {
         document.querySelector('#reductionout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
     }
+    else if (y === 0) {
+        document.querySelector('#reductionout').innerHTML = `<p class="text-warning">The value of y mustn't be 0</p>`;
+        clearValues();
+    }
     else {
         document.querySelector('#reductionout').innerHTML = `${reduceFraction(x, y)}`;
         clearValues();
