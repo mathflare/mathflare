@@ -20,7 +20,7 @@ document.querySelector('#addfractcalc').addEventListener('click', (event) => {
         clearValues();
     }
     else if (y === 0 || b === 0) {
-        document.querySelector('#addfractout').innerHTML = `<p class="text-warning">The value of y and b mustn't be 0</p>`;
+        document.querySelector('#addfractout').innerHTML = `<p class="text-warning">The value of y and b cannot be 0</p>`;
         clearValues();
     }
     else {
