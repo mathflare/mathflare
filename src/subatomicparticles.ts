@@ -21,10 +21,13 @@
     } else if (a <= 0 || b <= 0 || x <= 0 || y <= 0) {
         (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
+    } else if (Math.floor(a) !== a || Math.floor(b) !== b || Math.floor(x) !== x || Math.floor(y) !== y) {
+        (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        clearValues();
     } else if (y === b && w !== v || y !== b && w === v) {
         (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-warning">same elements must have the same atomic number and different elements must have a different atomic mumber</p>`;
         clearValues();
-    } else if (!(x >= 2 * y || a >= 2 * b)) {
+    } else if (x < 2 * y || a < 2 * b) {
         (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-warning">The mass number must be greater than or equal to the atomic number times 2</p>`;
         clearValues();
     } else if (w === v) {

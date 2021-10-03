@@ -23,11 +23,15 @@ document.querySelector('#subparticalc').addEventListener('click', (event) => {
         document.querySelector('#subparticout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
     }
+    else if (Math.floor(a) !== a || Math.floor(b) !== b || Math.floor(x) !== x || Math.floor(y) !== y) {
+        document.querySelector('#subparticout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        clearValues();
+    }
     else if (y === b && w !== v || y !== b && w === v) {
         document.querySelector('#subparticout').innerHTML = `<p class="text-warning">same elements must have the same atomic number and different elements must have a different atomic mumber</p>`;
         clearValues();
     }
-    else if (!(x >= 2 * y || a >= 2 * b)) {
+    else if (x < 2 * y || a < 2 * b) {
         document.querySelector('#subparticout').innerHTML = `<p class="text-warning">The mass number must be greater than or equal to the atomic number times 2</p>`;
         clearValues();
     }
