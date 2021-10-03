@@ -22,28 +22,28 @@
         (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         clearValues();
     } else if (y === b && w !== v || y !== b && w === v) {
-        (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-warning">Same elements must have the same atomic number and different elements must have different atomic mumber</p>`;
+        (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-warning">same elements must have the same atomic number and different elements must have a different atomic mumber</p>`;
         clearValues();
     } else if (!(x >= 2 * y || a >= 2 * b)) {
-        (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-warning">Mass number must be greater or equal to the double of atomic number</p>`;
+        (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-warning">The mass number must be greater than or equal to the atomic number times 2</p>`;
         clearValues();
-    } else if (w === v) {//isotope
+    } else if (w === v) {
         if (x !== a) {
-            (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-success"><span class="text-warning">Isotopes</span><br/>${y}p<sup>+</sup> &#61; ${b}p<sup>+</sup><br/>${y}e<sup>-</sup> &#61; ${b}e<sup>-</sup><br/>${x - y}n  &#8800; ${a - b}n<br/>Same chemical element, same chemical properties<br/>Different mass</p>`;
+            (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-success"><span class="text-warning">Isotopes</span><br/>${y}p<sup>+</sup> &#61; ${b}p<sup>+</sup><br/>${y}e<sup>-</sup> &#61; ${b}e<sup>-</sup><br/>${x - y}n  &#8800; ${a - b}n<br/>same chemical element, same chemical properties, different mass</p><br />`;
             clearValues();
         } else {
-            (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-success">${y}p<sup>+</sup> &#61; ${b}p<sup>+</sup><br/>${y}e<sup>-</sup> &#61; ${b}e<sup>-</sup><br/>${x - y}n  &#61; ${a - b}n<br/>Same chemical element, same chemical properties<br/>Same mass</p>`;
+            (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-success">${y}p<sup>+</sup> &#61; ${b}p<sup>+</sup><br/>${y}e<sup>-</sup> &#61; ${b}e<sup>-</sup><br/>${x - y}n  &#61; ${a - b}n<br/>same chemical element, same chemical properties, same mass</p><br />`;
             clearValues();
         }
-    } else if (x === a) {//isobar
-        (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-success"><span class="text-warning">Isobars</span><br/>${y}p<sup>+</sup> &#8800; ${b}p<sup>+</sup><br/>${y}e<sup>-</sup> &#8800; ${b}e<sup>-</sup><br/>${x - y}n  &#8800; ${a - b}n<br/>Different chemical element, different chemical properties<br/>Same mass</p>`;
+    } else if (x === a) {
+        (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-success"><span class="text-warning">Isobars</span><br/>${y}p<sup>+</sup> &#8800; ${b}p<sup>+</sup><br/>${y}e<sup>-</sup> &#8800; ${b}e<sup>-</sup><br/>${x - y}n  &#8800; ${a - b}n<br/>different chemical element, different chemical properties, same mass</p><br />`;
         clearValues();
     } else {
         if (x - y === a - b) {
-            (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-success">${y}p<sup>+</sup> &#8800; ${b}p<sup>+</sup><br/>${y}e<sup>-</sup> &#8800; ${b}e<sup>-</sup><br/>${x - y}n  &#61; ${a - b}n<br/>Different chemical element, different chemical properties<br/>Different mass</p>`;
+            (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-success">${y}p<sup>+</sup> &#8800; ${b}p<sup>+</sup><br/>${y}e<sup>-</sup> &#8800; ${b}e<sup>-</sup><br/>${x - y}n  &#61; ${a - b}n<br/>different chemical element, different chemical properties, different mass</p><br />`;
             clearValues();
         } else {
-            (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-success">${y}p<sup>+</sup> &#8800; ${b}p<sup>+</sup><br/>${y}e<sup>-</sup> &#8800; ${b}e<sup>-</sup><br/>${x - y}n  &#8800; ${a - b}n<br/>Different chemical element, different chemical properties<br/>Different mass</p>`;
+            (<HTMLParagraphElement>document.querySelector('#subparticout')).innerHTML = `<p class="text-success">${y}p<sup>+</sup> &#8800; ${b}p<sup>+</sup><br/>${y}e<sup>-</sup> &#8800; ${b}e<sup>-</sup><br/>${x - y}n  &#8800; ${a - b}n<br/>different chemical element, different chemical properties, different mass</p><br />`;
             clearValues();
         }
     }

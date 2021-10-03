@@ -310,7 +310,8 @@ var {
 #lcmout,
 #addfractout,
 #likefractout,
-#numpairsout {
+#numpairsout,
+#subparticout {
     font-size: 20px !important;
     line-height: 24px !important;
     padding-left: 3em !important;
@@ -333,8 +334,8 @@ var {
 .logo {
     -webkit-user-drag: none;
 }
-/*=====1000 MEDIA QUERY=====*/
-@media screen and (max-width: 1000px) {
+/*=====1500 MEDIA QUERY=====*/
+@media screen and (max-width: 1500px) {
     .center input[type="number"]:not(.input-group-item) {
         width: 60%;
         transition: 0.2s;
@@ -372,8 +373,8 @@ var {
         height: 200px !important;
     }
 }
-/*=====915 MEDIA QUERY=====*/
-@media screen and (max-width: 915px) {
+/*=====960 MEDIA QUERY=====*/
+@media screen and (max-width: 960px) {
     .navbar-brand {
         text-align: center !important;
         margin-left: auto !important;
