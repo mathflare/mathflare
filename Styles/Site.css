@@ -73,13 +73,12 @@ var {
 }
 .offcanvas {
     background-color: hsl(210, 10%, 15%);
-    z-index: 1000000 !important;
+    z-index: 999998;
     transition: 0.3s;
 }
 @media screen and (max-width: 600px) {
     .offcanvas {
         width: 100%;
-        margin-left: 0;
         margin-right: 0;
         transition: 0.3s;
     }
