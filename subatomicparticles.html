@@ -61,6 +61,8 @@
     <div class="center">
         <h1 class="text-white px-4">Atomic/Mass number to number of Subatomic Particles</h1>
         <hr class="bg-danger" style="width: 60%;" />
+        <h2 class="text-white px-4">For Tow Atoms</h2>
+        <hr class="bg-danger" style="width: 30%;" />
         <form autocomplete="off">
             <h4 class="nobr mb-3"><span class="supsub text-warning">x<br />y</span>V</h4>
             <div class="center-form">
@@ -106,8 +108,77 @@
         </div>
         <br />
     </div>
+    <div class="center">
+        <hr class="bg-danger" style="width: 60%;" />
+        <h2 class="text-white px-4">For One Atom</h2>
+        <hr class="bg-danger" style="width: 30%;" />
+        <form autocomplete="off">
+            <h4 class="nobr mb-3"><span class="supsub text-warning">A<br />z</span>X</h4>
+            <div class="center-form">
+                <div class="input-group">
+                    <span class="input-group-text">mass number</span>
+                    <input type="number" id="a1" placeholder="A" class="form-control input-group-item" step="0.1" />
+                    <input type="number" id="z1" placeholder="z" class="form-control input-group-item" step="0.1" />
+                    <span class="input-group-text">atomic number</span>
+                </div>
+            </div>
+            <br />
+            <div class="center-form">
+                <div class="input-group">
+                    <span class="input-group-text">element</span>
+                    <input type="text" id="x1" placeholder="X" class="form-control input-group-item" />
+                </div>
+            </div>
+            <br />
+            <div class="center-form">
+                <input type="submit" id="atomcalc" class="btn btn-success btn-lg" value="Calculate">
+            </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="atomout"></p>
+        </div>
+        <br />
+    </div>
+    <div class="center">
+        <hr class="bg-danger" style="width: 60%;" />
+        <h2 class="text-white px-4">For One Ion</h2>
+        <hr class="bg-danger" style="width: 30%;" />
+        <form autocomplete="off">
+            <h4 class="nobr mb-3"><span class="supsub text-warning">A<br />z</span>X<sup class="text-warning">v</sup>
+            </h4>
+            <div class="center-form">
+                <div class="input-group">
+                    <span class="input-group-text">mass number</span>
+                    <input type="number" id="a2" placeholder="A" class="form-control input-group-item" step="0.1" />
+                    <input type="number" id="z2" placeholder="z" class="form-control input-group-item" step="0.1" />
+                    <span class="input-group-text">atomic number</span>
+                </div>
+            </div>
+            <br />
+            <div class="center-form">
+                <div class="input-group">
+                    <span class="input-group-text">element</span>
+                    <input type="text" id="x2" placeholder="X" class="form-control input-group-item" />
+                    <input type="number" id="v2" placeholder="v" class="form-control input-group-item" step="0.1" />
+                    <span class="input-group-text">oxidation number</span>
+                </div>
+            </div>
+            <br />
+            <div class="center-form">
+                <input type="submit" id="ioncalc" class="btn btn-success btn-lg" value="Calculate">
+            </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="ionout"></p>
+        </div>
+        <br />
+    </div>
     <!-- SCRIPTS START -->
     <script src="dist/subatomicparticles.js"></script>
+    <script src="dist/subpartoneatom.js"></script>
+    <script src="dist/subpartion.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>
