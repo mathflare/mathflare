@@ -6,18 +6,18 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathFlare - RNA Complement Generator</title>
-    <meta name="title" content="MathFlare - DNA Complement Generator">
-    <meta name="og:title" content="MathFlare - DNA Complement Generator" />
-    <meta name="twitter:title" content="MathFlare - DNA Complement Generator" />
+    <title>MathFlare - Protein Translation</title>
+    <meta name="title" content="MathFlare - Protein Translation">
+    <meta name="og:title" content="MathFlare - Protein Translation" />
+    <meta name="twitter:title" content="MathFlare - Protein Translation" />
     <meta name="keywords"
-        content="complementary rna, rna complement, rna complement generator, rna, biology, genetics, mathflare, math flare">
+        content="protein translation, translate protein, protein, codon, amino acids, rna, dna, biology, genetics, mathflare, math flare">
     <meta name="description" content="Calculate the average of a set of numbers." />
     <meta name="og:description" content="Calculate the average of a set of numbers." />
     <meta name="twitter:description" content="Calculate the average of a set of numbers." />
     <meta name="author" content="MathFlare.xyz" />
-    <meta name="og:url" content="https://www.mathflare.xyz/complementaryrna" />
-    <link rel="canonical" href="https://www.mathflare.xyz/complementaryrna">
+    <meta name="og:url" content="https://www.mathflare.xyz/proteintranslation" />
+    <link rel="canonical" href="https://www.mathflare.xyz/proteintranslation">
     <meta name="og:image" content="https://www.mathflare.xyz/Assets/logo.png" />
     <meta name="og:locale" content="en_US" />
     <meta name="og:type" content="website" />
@@ -46,45 +46,42 @@
     <div id="nav-container"></div>
     <!-- NAVBAR END -->
     <div class="center">
-        <h1 class="text-white px-4">RNA Complement Generator</h1>
+        <h1 class="text-white px-4">Protein Translation</h1>
         <hr class="bg-danger" style="width: 60%;" />
         <form autocomplete="off" spellcheck="false">
             <div class="center-form">
                 <select class="form-select center-form" id="select">
-                    <option value="comp">Complement</option>
-                    <option value="rev">Reverse</option>
-                    <option value="rev-comp">Reverse Complement</option>
+                    <option value="DNA">DNA input sequence</option>
+                    <option value="RNA">RNA input sequence</option>
                 </select>
             </div>
             <br />
-            <h4 class="text-white">Enter the DNA sequence</h4>
+            <h4 class="text-white">Enter the sequence</h4>
             <div class="center-form">
                 <div class="input-group">
-                    <textarea id="rnastring" placeholder="eg. ATTGC" class="form-control input-group-item message"
-                        required></textarea>
+                    <textarea id="sequence" placeholder="eg. AGC" class="form-control message input-group-item" required></textarea>
                     <button type="reset" class="btn btn-danger">Clear</button>
                 </div>
             </div>
             <br />
             <div class="center-form">
-                <input type="submit" id="comprnacalc" class="btn btn-success btn-lg" value="Generate">
+                <input type="submit" id="proteincalc" class="btn btn-success btn-lg" value="Translate">
             </div>
             <div class="my-4">
-                <a href="https://duckduckgo.com/?q=generate+rna+complement" target="_blank" rel="noopener"
+                <a href="https://duckduckgo.com/?q=translate+proteins" target="_blank" rel="noopener"
                     class="btn btn-outline-light">Find information on the web</a>
             </div>
+            <p class="p-2"><span class="text-warning">X</span> means that a character you entered in the sequence is not
+                valid.</p>
         </form>
         <p id="hasxmessage" class="text-warning p-2"></p>
         <div style="max-height: 1em;">
-            <p class="text-success text-break" id="comprnaout"></p>
+            <p class="text-success text-break" id="proteinout"></p>
         </div>
         <br />
     </div>
-    <!-- SCRIPTS START -->
-
-    <script src="dist/complementary-rna.js"></script>
+    <script src="dist/proteintranslation.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
-    <!-- SCRIPT END -->
 </body>
 
 </html>

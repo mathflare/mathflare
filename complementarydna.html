@@ -48,7 +48,7 @@
     <div class="center">
         <h1 class="text-white px-4">DNA Complement Generator</h1>
         <hr class="bg-danger" style="width: 60%;" />
-        <form autocomplete="off">
+        <form autocomplete="off" spellcheck="false">
             <div class="center-form">
                 <select class="form-select center-form" id="select">
                     <option value="comp">Complement</option>
@@ -59,7 +59,11 @@
             <br />
             <h4 class="text-white">Enter the DNA sequence</h4>
             <div class="center-form">
-                <textarea id="dnastring" placeholder="eg. ATTGC" class="form-control message" required></textarea>
+                <div class="input-group">
+                    <textarea id="dnastring" placeholder="eg. ATTGC" class="form-control input-group-item message"
+                        required></textarea>
+                    <button type="reset" class="btn btn-danger">Clear</button>
+                </div>
             </div>
             <br />
             <div class="center-form">
@@ -77,7 +81,7 @@
         <br />
     </div>
     <!-- SCRIPTS START -->
-    
+
     <script src="dist/complementary-dna.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->

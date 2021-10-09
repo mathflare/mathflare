@@ -51,6 +51,8 @@ const searcCalc = () => {
         ['greatest common divisor calculator (GCD)', 'gcd'],
         ['least common multiple calculator (LCM)', 'lcm'],
         ['number of pairs calculator', 'numberpairs'],
+        ['Atomic/Mass number to number of Subatomic Particles', 'subatomicparticles'],
+        ['Protein Translation', 'proteintranslation'],
     ];
     searchBox.addEventListener("input", () => {
         const search = searchBox.value.toLowerCase();

@@ -50,36 +50,30 @@ document.querySelector('#compdnacalc').addEventListener('click', (event) => {
     };
     if (dna_string.length === 0) {
         document.querySelector('#compdnaout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        document.querySelector('#dnastring').value = '';
     }
     else {
         const select = document.querySelector('#select').value;
         if (select === 'comp') {
             if (complementaryDna(dna_string).includes('X')) {
                 document.querySelector('#compdnaout').innerHTML = `<p class="text-success">Complementary sequence: ${complementaryDna(dna_string)}</p>`;
-                document.querySelector('#dnastring').value = '';
                 document.querySelector('#hasxmessage').innerText = 'X means that a character you entered in the sequence is not valid.';
             }
             else {
                 document.querySelector('#compdnaout').innerHTML = `<p class="text-success">${complementaryDna(dna_string)}</p>`;
-                document.querySelector('#dnastring').value = '';
                 document.querySelector('#hasxmessage').innerText = '';
             }
         }
         else if (select === 'rev') {
             document.querySelector('#compdnaout').innerHTML = `<p class="text-success">Reverse sequence: ${dna_string.split('').reverse().join('')}</p>`;
-            document.querySelector('#dnastring').value = '';
             document.querySelector('#hasxmessage').innerText = '';
         }
         else if (select === 'rev-comp') {
             if (complementaryDna(dna_string).includes('X')) {
                 document.querySelector('#compdnaout').innerHTML = `<p class="text-success">Reverse complementary sequence: ${revComplementaryDna(dna_string)}</p>`;
-                document.querySelector('#dnastring').value = '';
                 document.querySelector('#hasxmessage').innerText = 'X means that a character you entered in the sequence is not valid.';
             }
             else {
                 document.querySelector('#compdnaout').innerHTML = `<p class="text-success">Reverse complementary sequence: ${complementaryDna(dna_string).split('').reverse().join('')}</p>`;
-                document.querySelector('#dnastring').value = '';
                 document.querySelector('#hasxmessage').innerText = '';
             }
         }
