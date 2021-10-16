@@ -49,8 +49,7 @@
         <h1 class="text-white px-4">Contact MathFlare</h1>
         <hr class="bg-danger" style="width: 60%; margin: auto;" />
         <form id="contact-form" autocomplete="on">
-            <p class=" text-white"><i class="bi bi-lightbulb"></i> Tip: Include your name in the subject of the email
-            </p>
+            <p class=" text-white"><i class="bi bi-lightbulb"></i> We typically respond within 4 and 24 hours</p>
             <div class="center-form">
                 <input type="email" id="email" name="email" placeholder="Your email address" class="form-control mb-0"
                     required />
@@ -67,8 +66,8 @@
             <div class="h-captcha mt-3" data-sitekey="f905f0c2-dacd-408f-b39c-51c7aeace28f"></div>
             <div class="form-check center-form d-inline-block">
                 <input class="form-check-input" type="checkbox" id="agree-to-tos" required>
-                <label class="form-check-label" for="agree-to-tos">
-                    I have read and agree with the <a href="tos.html">Terms of Service</a>
+                <label class="form-check-label user-select-none" for="agree-to-tos">
+                    I have read and agree with the <a class="hover-link" href="tos.html">Terms of Service</a>
                 </label>
             </div>
             <div class="button-group my-3">
@@ -77,11 +76,10 @@
             </div>
         </form>
         <p id="user-message"></p>
-        <p><i class="bi bi-lightning"></i> Didn't work? why don't you send us an <a href="mailto:contact@mathflare.xyz"
-                target="_blank" rel="noopener">email</a>?</p>
+        <p><i class="bi bi-lightning"></i> Didn't work? Why don't you send us a good-old <a class="hover-link"
+                href="mailto:contact@mathflare.xyz" target="_blank" rel="noopener">email</a>?</p>
     </div>
     <!-- SCRIPTS START -->
-    
     <script src="https://hcaptcha.com/1/api.js?hl=en" async defer></script>
     <script src="dist/contact.mail.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>

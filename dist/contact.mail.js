@@ -22,7 +22,7 @@ const js_send = () => {
         || document.querySelector("#" + form_id_js + " [name='text']").value === ''
         || !document.querySelector('#agree-to-tos').checked
         || document.querySelector('.h-captcha').children[0].getAttribute('data-hcaptcha-response') === '') {
-        document.querySelector('#user-message').innerHTML = `<p class="text-warning">Please fill out all the fields</p>`;
+        document.querySelector('#user-message').innerHTML = `<p class="text-warning">Please fill out all the required fields</p>`;
     }
     else {
         sendButton.value = 'Sending…';

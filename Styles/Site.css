@@ -336,6 +336,16 @@ var {
 .logo {
     -webkit-user-drag: none;
 }
+.hover-link {
+    transition: all 0.2s ease-in-out;
+}
+.hover-link:hover,
+.hover-link:focus {
+    color: hsl(45, 100%, 51%);
+}
+.hover-link:active {
+    color: hsl(45, 100%, 65%);
+}
 /*=====1500 MEDIA QUERY=====*/
 @media screen and (max-width: 1500px) {
     .center input[type="number"]:not(.input-group-item) {
