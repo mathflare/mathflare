@@ -1,7 +1,7 @@
 "use strict";
 document.querySelector('#compdnacalc').addEventListener('click', (event) => {
     event.preventDefault();
-    const dna_string = document.querySelector('#dnastring').value;
+    const dna_string = document.querySelector('#dnastring').value.replace(/\s/g, '').toUpperCase();
     const complementaryDna = (strand) => {
         let result = '';
         for (let i = 0; i < strand.length; i++) {
@@ -104,16 +104,16 @@ document.querySelector('#compdnacalc').addEventListener('click', (event) => {
     };
     if (dna_string.length === 0) {
         document.querySelector('#compdnaout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        document.querySelector('#a_count').innerText = "";
-        document.querySelector('#a_perc').innerText = "";
-        document.querySelector('#t_count').innerText = "";
-        document.querySelector('#t_perc').innerText = "";
-        document.querySelector('#c_count').innerText = "";
-        document.querySelector('#c_perc').innerText = "";
-        document.querySelector('#g_count').innerText = "";
-        document.querySelector('#g_perc').innerText = "";
-        document.querySelector('#error_count').innerText = "";
-        document.querySelector('#error_perc').innerText = "";
+        document.querySelector('#a_count').innerText = '';
+        document.querySelector('#a_perc').innerText = '';
+        document.querySelector('#t_count').innerText = '';
+        document.querySelector('#t_perc').innerText = '';
+        document.querySelector('#c_count').innerText = '';
+        document.querySelector('#c_perc').innerText = '';
+        document.querySelector('#g_count').innerText = '';
+        document.querySelector('#g_perc').innerText = '';
+        document.querySelector('#error_count').innerText = '';
+        document.querySelector('#error_perc').innerText = '';
     }
     else {
         const select = document.querySelector('#select').value;
@@ -128,18 +128,17 @@ document.querySelector('#compdnacalc').addEventListener('click', (event) => {
         }
     }
 });
-document.querySelector('#clear').addEventListener('click', (event) => {
-    event.preventDefault();
-    document.querySelector('#dnastring').value = "";
-    document.querySelector('#a_count').innerText = "";
-    document.querySelector('#a_perc').innerText = "";
-    document.querySelector('#t_count').innerText = "";
-    document.querySelector('#t_perc').innerText = "";
-    document.querySelector('#c_count').innerText = "";
-    document.querySelector('#c_perc').innerText = "";
-    document.querySelector('#g_count').innerText = "";
-    document.querySelector('#g_perc').innerText = "";
-    document.querySelector('#error_count').innerText = "";
-    document.querySelector('#error_perc').innerText = "";
-    document.querySelector('#compdnaout').innerText = "";
+document.querySelector('#clearbtn').addEventListener('click', (event) => {
+    document.querySelector('#dnastring').value = '';
+    document.querySelector('#a_count').innerText = '';
+    document.querySelector('#a_perc').innerText = '';
+    document.querySelector('#t_count').innerText = '';
+    document.querySelector('#t_perc').innerText = '';
+    document.querySelector('#c_count').innerText = '';
+    document.querySelector('#c_perc').innerText = '';
+    document.querySelector('#g_count').innerText = '';
+    document.querySelector('#g_perc').innerText = '';
+    document.querySelector('#error_count').innerText = '';
+    document.querySelector('#error_perc').innerText = '';
+    document.querySelector('#compdnaout').innerText = '';
 });

@@ -105,16 +105,16 @@ document.querySelector('#comprnacalc').addEventListener('click', (event) => {
     };
     if (rna_string.length === 0) {
         document.querySelector('#comprnaout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        document.querySelector('#a_count').innerText = "";
-        document.querySelector('#a_perc').innerText = "";
-        document.querySelector('#u_count').innerText = "";
-        document.querySelector('#u_perc').innerText = "";
-        document.querySelector('#c_count').innerText = "";
-        document.querySelector('#c_perc').innerText = "";
-        document.querySelector('#g_count').innerText = "";
-        document.querySelector('#g_perc').innerText = "";
-        document.querySelector('#error_count').innerText = "";
-        document.querySelector('#error_perc').innerText = "";
+        document.querySelector('#a_count').innerText = '';
+        document.querySelector('#a_perc').innerText = '';
+        document.querySelector('#u_count').innerText = '';
+        document.querySelector('#u_perc').innerText = '';
+        document.querySelector('#c_count').innerText = '';
+        document.querySelector('#c_perc').innerText = '';
+        document.querySelector('#g_count').innerText = '';
+        document.querySelector('#g_perc').innerText = '';
+        document.querySelector('#error_count').innerText = '';
+        document.querySelector('#error_perc').innerText = '';
     }
     else {
         if (select === 'comp') {
@@ -128,28 +128,28 @@ document.querySelector('#comprnacalc').addEventListener('click', (event) => {
         }
     }
 });
-document.querySelector('#clear').addEventListener('click', (event) => {
+document.querySelector('#clearbtn').addEventListener('click', (event) => {
     event.preventDefault();
-    document.querySelector('#rnastring').value = "";
-    document.querySelector('#a_count').innerText = "";
-    document.querySelector('#a_perc').innerText = "";
-    document.querySelector('#u_count').innerText = "";
-    document.querySelector('#u_perc').innerText = "";
-    document.querySelector('#c_count').innerText = "";
-    document.querySelector('#c_perc').innerText = "";
-    document.querySelector('#g_count').innerText = "";
-    document.querySelector('#g_perc').innerText = "";
-    document.querySelector('#error_count').innerText = "";
-    document.querySelector('#error_perc').innerText = "";
-    document.querySelector('#comprnaout').innerText = "";
+    document.querySelector('#rnastring').value = '';
+    document.querySelector('#a_count').innerText = '';
+    document.querySelector('#a_perc').innerText = '';
+    document.querySelector('#u_count').innerText = '';
+    document.querySelector('#u_perc').innerText = '';
+    document.querySelector('#c_count').innerText = '';
+    document.querySelector('#c_perc').innerText = '';
+    document.querySelector('#g_count').innerText = '';
+    document.querySelector('#g_perc').innerText = '';
+    document.querySelector('#error_count').innerText = '';
+    document.querySelector('#error_perc').innerText = '';
+    document.querySelector('#comprnaout').innerText = '';
 });
 document.querySelector('#select').addEventListener('change', (event) => {
     event.preventDefault();
     const select = document.querySelector('#select').value;
     if (select === 'rev') {
-        document.querySelector('#base_u').innerHTML = "T";
+        document.querySelector('#base_u').innerHTML = 'T';
     }
     else {
-        document.querySelector('#base_u').innerHTML = "U";
+        document.querySelector('#base_u').innerHTML = 'U';
     }
 });

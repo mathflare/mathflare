@@ -1,6 +1,6 @@
 (<HTMLButtonElement>document.querySelector('#compdnacalc')).addEventListener('click', (event) => {
     event.preventDefault();
-    const dna_string: string = (<HTMLInputElement>document.querySelector('#dnastring')).value!;
+    const dna_string: string = (<HTMLInputElement>document.querySelector('#dnastring')).value.replace(/\s/g, '').toUpperCase()!;
     const complementaryDna: (strand: string) => string = (strand: string) => {
         let result: string = '';
         for (let i: number = 0; i < strand.length; i++) {
@@ -98,16 +98,16 @@
     };
     if (dna_string.length === 0) {
         (<HTMLParagraphElement>document.querySelector('#compdnaout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#t_count')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#t_perc')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#error_count')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#error_perc')).innerText = "";
+        (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#t_count')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#t_perc')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#error_count')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#error_perc')).innerText = '';
     } else {
         const select: string = (<HTMLSelectElement>document.querySelector('#select')).value!;
         if (select === 'comp') {
@@ -119,18 +119,18 @@
         }
     }
 });
-(<HTMLButtonElement>document.querySelector('#clear')).addEventListener('click', (event) => {
-    event.preventDefault();
-    (<HTMLInputElement>document.querySelector('#dnastring')).value = "";
-    (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#t_count')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#t_perc')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#error_count')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#error_perc')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#compdnaout')).innerText = "";
+
+(<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event) => {
+    (<HTMLInputElement>document.querySelector('#dnastring')).value = '';
+    (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#t_count')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#t_perc')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#error_count')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#error_perc')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#compdnaout')).innerText = '';
 });

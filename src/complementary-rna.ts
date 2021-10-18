@@ -99,16 +99,16 @@
     };
     if (rna_string.length === 0) {
         (<HTMLParagraphElement>document.querySelector('#comprnaout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
-        (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#u_count')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#u_perc')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#error_count')).innerText = "";
-        (<HTMLParagraphElement>document.querySelector('#error_perc')).innerText = "";
+        (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#u_count')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#u_perc')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#error_count')).innerText = '';
+        (<HTMLParagraphElement>document.querySelector('#error_perc')).innerText = '';
     } else {
         if (select === 'comp') {
             (<HTMLParagraphElement>document.querySelector('#comprnaout')).innerHTML = `<p class="text-success">Complementary sequence: ${complementaryRna(rna_string).replace(/X/g, '<span class="text-warning">X</span>')}</p>`;
@@ -119,27 +119,27 @@
         }
     }
 });
-(<HTMLButtonElement>document.querySelector('#clear')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event) => {
     event.preventDefault();
-    (<HTMLInputElement>document.querySelector('#rnastring')).value = "";
-    (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#u_count')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#u_perc')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#error_count')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#error_perc')).innerText = "";
-    (<HTMLParagraphElement>document.querySelector('#comprnaout')).innerText = "";
+    (<HTMLInputElement>document.querySelector('#rnastring')).value = '';
+    (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#u_count')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#u_perc')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#error_count')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#error_perc')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#comprnaout')).innerText = '';
 });
 (<HTMLInputElement>document.querySelector('#select')).addEventListener('change', (event) => {
     event.preventDefault();
     const select: string = (<HTMLSelectElement>document.querySelector('#select')).value!;
     if (select === 'rev') {
-        (<HTMLParagraphElement>document.querySelector('#base_u')).innerHTML = "T";
+        (<HTMLParagraphElement>document.querySelector('#base_u')).innerHTML = 'T';
     } else {
-        (<HTMLParagraphElement>document.querySelector('#base_u')).innerHTML = "U";
+        (<HTMLParagraphElement>document.querySelector('#base_u')).innerHTML = 'U';
     }
 });
