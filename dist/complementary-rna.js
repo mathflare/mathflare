@@ -1,7 +1,7 @@
 "use strict";
 document.querySelector('#comprnacalc').addEventListener('click', (event) => {
     event.preventDefault();
-    const rna_string = document.querySelector('#rnastring').value;
+    const rna_string = document.querySelector('#rnastring').value.replace(/\s/g, '').toUpperCase();
     const select = document.querySelector('#select').value;
     const complementaryRna = (strand) => {
         let result = '';

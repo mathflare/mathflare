@@ -1,6 +1,6 @@
 (<HTMLButtonElement>document.querySelector('#comprnacalc')).addEventListener('click', (event) => {
     event.preventDefault();
-    const rna_string: string = (<HTMLInputElement>document.querySelector('#rnastring')).value!;
+    const rna_string: string = (<HTMLInputElement>document.querySelector('#rnastring')).value.replace(/\s/g, '').toUpperCase()!;
     const select: string = (<HTMLSelectElement>document.querySelector('#select')).value!;
     const complementaryRna: (strand: string) => string = (strand: string) => {
         let result: string = '';
