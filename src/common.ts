@@ -52,6 +52,7 @@ const searcCalc: () => void = () => {
         ['number of pairs calculator', 'numberpairs'],
         ['Atomic/Mass number to number of Subatomic Particles', 'subatomicparticles'],
         ['Protein Translation', 'proteintranslation'],
+        ['DNA/RNA Content', 'dnarnacontent']
     ];
     searchBox.addEventListener("input", () => {
         const search: string = searchBox.value.toLowerCase();
