@@ -62,7 +62,7 @@
                 <div class="input-group">
                     <textarea id="dnastring" placeholder="eg. ATTGC" class="form-control input-group-item message"
                         required></textarea>
-                    <button type="reset" class="btn btn-danger">Clear</button>
+                    <button type="reset" class="btn btn-danger" id="clear">Clear</button>
                 </div>
             </div>
             <br />
@@ -73,8 +73,45 @@
                 <a href="https://duckduckgo.com/?q=generate+dna+complement" target="_blank" rel="noopener"
                     class="btn btn-outline-light">Find information on the web</a>
             </div>
+            <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+                <thead>
+                    <tr>
+                        <th>Base</th>
+                        <th>Count</th>
+                        <th>&#37;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td id="a_count"></td>
+                        <td id="a_perc"></td>
+                    </tr>
+                    <tr>
+                        <td>T</td>
+                        <td id="t_count"></td>
+                        <td id="t_perc"></td>
+                    </tr>
+                    <tr>
+                        <td>G</td>
+                        <td id="g_count"></td>
+                        <td id="g_perc"></td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td id="c_count"></td>
+                        <td id="c_perc"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="text-warning">X</span></td>
+                        <td id="error_count"></td>
+                        <td id="error_perc"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="p-2"><span class="text-warning">X</span> means that a character you entered in the sequence is not
+                valid.</p>
         </form>
-        <p id="hasxmessage" class="text-warning p-2"></p>
         <div style="max-height: 1em;">
             <p class="text-success text-break" id="compdnaout"></p>
         </div>

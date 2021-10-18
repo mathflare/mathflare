@@ -6,18 +6,17 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathFlare - RNA Complement Generator</title>
-    <meta name="title" content="MathFlare - DNA Complement Generator">
-    <meta name="og:title" content="MathFlare - DNA Complement Generator" />
-    <meta name="twitter:title" content="MathFlare - DNA Complement Generator" />
-    <meta name="keywords"
-        content="complementary rna, rna complement, rna complement generator, rna, biology, genetics, mathflare, math flare">
-    <meta name="description" content="Calculate the average of a set of numbers." />
-    <meta name="og:description" content="Calculate the average of a set of numbers." />
-    <meta name="twitter:description" content="Calculate the average of a set of numbers." />
+    <title>MathFlare - DNA/RNA Content</title>
+    <meta name="title" content="MathFlare - DNA/RNA Content">
+    <meta name="og:title" content="MathFlare - DNA/RNA Content" />
+    <meta name="twitter:title" content="MathFlare - DNA/RNA Content" />
+    <meta name="keywords" content="dna, rna, percentage, dna/rna content, , biology, genetics, mathflare, math flare">
+    <meta name="description" content="Calculate the DNA/RNA content percentage." />
+    <meta name="og:description" content="Calculate the DNA/RNA content percentage." />
+    <meta name="twitter:description" content="Calculate the DNA/RNA content percentage." />
     <meta name="author" content="MathFlare.xyz" />
-    <meta name="og:url" content="https://www.mathflare.xyz/complementaryrna" />
-    <link rel="canonical" href="https://www.mathflare.xyz/complementaryrna">
+    <meta name="og:url" content="https://www.mathflare.xyz/dnarnacontent" />
+    <link rel="canonical" href="https://www.mathflare.xyz/dnarnacontent">
     <meta name="og:image" content="https://www.mathflare.xyz/Assets/logo.png" />
     <meta name="og:locale" content="en_US" />
     <meta name="og:type" content="website" />
@@ -46,28 +45,27 @@
     <div id="nav-container"></div>
     <!-- NAVBAR END -->
     <div class="center">
-        <h1 class="text-white px-4">RNA Complement Generator</h1>
+        <h1 class="text-white px-4">DNA/RNA Content</h1>
         <hr class="bg-danger" style="width: 60%;" />
         <form autocomplete="off" spellcheck="false">
             <div class="center-form">
-                <select class="form-select center-form" id="select">
-                    <option value="comp">Complement</option>
-                    <option value="rev">Reverse</option>
-                    <option value="rev-comp">Reverse Complement</option>
+                <select class="form-select center-form" id="contentselect">
+                    <option value="dna">DNA</option>
+                    <option value="rna">RNA</option>
                 </select>
             </div>
             <br />
-            <h4 class="text-white">Enter the DNA sequence</h4>
+            <h4 class="text-white" id="title">Enter the DNA sequence</h4>
             <div class="center-form">
                 <div class="input-group">
-                    <textarea id="rnastring" placeholder="eg. ATTGC" class="form-control input-group-item message"
+                    <textarea id="sequence" placeholder="eg. ATTGC" class="form-control input-group-item message"
                         required></textarea>
                     <button type="reset" class="btn btn-danger" id="clear">Clear</button>
                 </div>
             </div>
             <br />
             <div class="center-form">
-                <input type="submit" id="comprnacalc" class="btn btn-success btn-lg" value="Generate">
+                <input type="submit" id="dnarnacalc" class="btn btn-success btn-lg" value="Calculate">
             </div>
             <div class="my-4">
                 <a href="https://duckduckgo.com/?q=generate+rna+complement" target="_blank" rel="noopener"
@@ -88,9 +86,9 @@
                         <td id="a_perc"></td>
                     </tr>
                     <tr>
-                        <td id="base_u">U</td>
-                        <td id="u_count"></td>
-                        <td id="u_perc"></td>
+                        <td id="base_t">T</td>
+                        <td id="t_count"></td>
+                        <td id="t_perc"></td>
                     </tr>
                     <tr>
                         <td>G</td>
@@ -113,13 +111,13 @@
                 valid.</p>
         </form>
         <div style="max-height: 1em;">
-            <p class="text-success text-break" id="comprnaout"></p>
+            <p class="text-success text-break" id="drnaout"></p>
         </div>
         <br />
     </div>
     <!-- SCRIPTS START -->
 
-    <script src="dist/complementary-rna.js"></script>
+    <script src="dist/dnarnacontent.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
 </body>
