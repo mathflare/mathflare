@@ -16,8 +16,8 @@ document.querySelector('#conccalc').addEventListener('click', (event) => {
         }
         else {
             const concentration = dsub / sol * 100;
-            if (concentration >= 50) {
-                return '<p class="text-warning">The disolved substance cannot substitue more than 50% of the solution weight</p>';
+            if (concentration >= 100) {
+                return '<p class="text-warning">The disolved substance cannot substitue more than 100% of the solution weight</p>';
             }
             return `<p class="text-success">The concentration of the solution(${sol}g) with a disolved substance of ${dsub}g is ${concentration}% w/w</p>`;
         }
@@ -34,8 +34,8 @@ document.querySelector('#conccalc').addEventListener('click', (event) => {
         }
         else {
             const concentration = dsub / sol * 100;
-            if (concentration >= 50) {
-                return '<p class="text-warning">The disolved substance cannot substitue more than 50% of the solution weight</p>';
+            if (concentration >= 100) {
+                return '<p class="text-warning">The disolved substance cannot substitue more than 100% of the solution weight</p>';
             }
             return `<p class="text-success">The concentration of the solution(${sol}ml) with a disolved substance of ${dsub}g is ${concentration}% w/v</p>`;
         }
@@ -52,8 +52,8 @@ document.querySelector('#conccalc').addEventListener('click', (event) => {
         }
         else {
             const concentration = dsub / sol * 100;
-            if (concentration >= 50) {
-                return '<p class="text-warning">The disolved substance cannot substitue more than 50% of the solution volume</p>';
+            if (concentration >= 100) {
+                return '<p class="text-warning">The disolved substance cannot substitue more than 100% of the solution volume</p>';
             }
             return `<p class="text-success">The concentration of the solution(${sol}ml) with a disolved substance of ${dsub}ml is ${concentration}% v/v</p>`;
         }

@@ -8,8 +8,8 @@
             return '<p class="text-warning">Please enter a valid value</p>';
         } else if (dsub === 0 && conc === 0) {
             return '<p class="text-warning">This is not considered a solution</p>';
-        } else if (conc >= 50) {
-            return '<p class="text-warning">The disolved substance cannot substitue more than 50% of the solution weight</p>'
+        } else if (conc >= 100) {
+            return '<p class="text-warning">The disolved substance cannot substitue more than 100% of the solution weight</p>'
         } else {
             const sol: number = dsub / conc * 100;
             return `<p class="text-success">The solution with concentration ${conc}% w/w and disolved substance of ${dsub}g is ${sol}g</p>`;
@@ -20,8 +20,8 @@
             return '<p class="text-warning">Please enter a valid value</p>';
         } else if (dsub === 0 && conc === 0) {
             return '<p class="text-warning">This is not considered a solution</p>';
-        } else if (conc >= 50) {
-            return '<p class="text-warning">The disolved substance cannot substitue more than 50% of the solution weight</p>'
+        } else if (conc >= 100) {
+            return '<p class="text-warning">The disolved substance cannot substitue more than 100% of the solution weight</p>'
         } else {
             const sol: number = dsub / conc * 100;
             return `<p class="text-success">The solution with concentration ${conc}% w/v and disolved substance of ${dsub}g is ${sol}ml</p>`;
@@ -32,8 +32,8 @@
             return '<p class="text-warning">Please enter a valid value</p>';
         } else if (dsub === 0 && conc === 0) {
             return '<p class="text-warning">This is not considered a solution</p>';
-        } else if (conc >= 50) {
-            return '<p class="text-warning">The disolved substance cannot substitue more than 50% of the solution volume</p>'
+        } else if (conc >= 100) {
+            return '<p class="text-warning">The disolved substance cannot substitue more than 100% of the solution volume</p>'
         } else {
             const sol: number = dsub / conc * 100;
             return `<p class="text-success">The solution with concentration ${conc}% v/v and disolved substance of ${dsub}ml is ${sol}ml</p>`;
