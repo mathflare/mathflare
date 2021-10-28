@@ -48,7 +48,7 @@
         (<HTMLInputElement>document.querySelector('#y3')).value = "";
         (<HTMLInputElement>document.querySelector('#z3')).value = "";
     } else {
-        (document.querySelector('#output3') as HTMLElement).innerHTML = `<p class="text-success">x = ${z / y
+        (document.querySelector('#output3') as HTMLElement).innerHTML = `<p class="text-success">x = ${reduceFraction(z, y)
             }</p>`;
         (<HTMLInputElement>document.querySelector('#y3')).value = "";
         (<HTMLInputElement>document.querySelector('#z3')).value = "";

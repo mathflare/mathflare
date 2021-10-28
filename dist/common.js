@@ -92,7 +92,7 @@ const reduceFraction = (x, y) => {
         result = `${(x / y).toString()}`;
     }
     else if (x !== Math.floor(x) || y !== Math.floor(y)) {
-        result = `${(x / y).toString()}`;
+        result = `&#8764; ${(x / y).toFixed(3).toString()}`;
     }
     else {
         for (let i = Math.max(Math.abs(x), Math.abs(y)); i > 1; i--) {

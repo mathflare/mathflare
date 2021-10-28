@@ -49,7 +49,7 @@ document.querySelector('#button3').addEventListener('click', (event) => {
         document.querySelector('#z3').value = "";
     }
     else {
-        document.querySelector('#output3').innerHTML = `<p class="text-success">x = ${z / y}</p>`;
+        document.querySelector('#output3').innerHTML = `<p class="text-success">x = ${reduceFraction(z, y)}</p>`;
         document.querySelector('#y3').value = "";
         document.querySelector('#z3').value = "";
     }
