@@ -33,13 +33,13 @@
             (<HTMLInputElement>document.querySelector('#c1')).value = "";
         }
     } else {
-        const x: number = -c / a;
+        //const x: number = -c / a;
         if (a < 0) {
-            (<HTMLParagraphElement>document.querySelector('#output1')).innerHTML = `<p class="text-success">x < ${x}</p>`;
+            (<HTMLParagraphElement>document.querySelector('#output1')).innerHTML = `<p class="text-success">x < ${reduceFraction(-c, a)}</p>`;
             (<HTMLInputElement>document.querySelector('#a1')).value = "";
             (<HTMLInputElement>document.querySelector('#c1')).value = "";
         } else {
-            (<HTMLParagraphElement>document.querySelector('#output1')).innerHTML = `<p class="text-success">x > ${x}</p>`;
+            (<HTMLParagraphElement>document.querySelector('#output1')).innerHTML = `<p class="text-success">x > ${reduceFraction(-c, a)}</p>`;
             (<HTMLInputElement>document.querySelector('#a1')).value = "";
             (<HTMLInputElement>document.querySelector('#c1')).value = "";
         }
@@ -79,13 +79,13 @@
             (<HTMLInputElement>document.querySelector('#c2')).value = "";
         }
     } else {
-        const x: number = -c / a;
+        //const x: number = -c / a;
         if (a < 0) {
-            (<HTMLParagraphElement>document.querySelector('#output2')).innerHTML = `<p class="text-success">x &#8804; ${x}</p>`;
+            (<HTMLParagraphElement>document.querySelector('#output2')).innerHTML = `<p class="text-success">x &#8804; ${reduceFraction(-c, a)}</p>`;
             (<HTMLInputElement>document.querySelector('#a2')).value = "";
             (<HTMLInputElement>document.querySelector('#c2')).value = "";
         } else {
-            (<HTMLParagraphElement>document.querySelector('#output2')).innerHTML = `<p class="text-success">x &#8805; ${x}</p>`;
+            (<HTMLParagraphElement>document.querySelector('#output2')).innerHTML = `<p class="text-success">x &#8805; ${reduceFraction(-c, a)}</p>`;
             (<HTMLInputElement>document.querySelector('#a2')).value = "";
             (<HTMLInputElement>document.querySelector('#c2')).value = "";
         }
@@ -125,13 +125,13 @@
             (<HTMLInputElement>document.querySelector('#c3')).value = "";
         }
     } else {
-        const x: number = -c / a;
+        //const x: number = -c / a;
         if (a < 0) {
-            (<HTMLParagraphElement>document.querySelector('#output3')).innerHTML = `<p class="text-success">x > ${x}</p>`;
+            (<HTMLParagraphElement>document.querySelector('#output3')).innerHTML = `<p class="text-success">x > ${reduceFraction(-c, a)}</p>`;
             (<HTMLInputElement>document.querySelector('#a3')).value = "";
             (<HTMLInputElement>document.querySelector('#c3')).value = "";
         } else {
-            (<HTMLParagraphElement>document.querySelector('#output3')).innerHTML = `<p class="text-success">x < ${x}</p>`;
+            (<HTMLParagraphElement>document.querySelector('#output3')).innerHTML = `<p class="text-success">x < ${reduceFraction(-c, a)}</p>`;
             (<HTMLInputElement>document.querySelector('#a3')).value = "";
             (<HTMLInputElement>document.querySelector('#c3')).value = "";
         }
@@ -171,13 +171,13 @@
             (<HTMLInputElement>document.querySelector('#c4')).value = "";
         }
     } else {
-        const x: number = -c / a;
+        //const x: number = -c / a;
         if (a < 0) {
-            (<HTMLParagraphElement>document.querySelector('#output4')).innerHTML = `<p class="text-success">x &#8805; ${x}</p>`;
+            (<HTMLParagraphElement>document.querySelector('#output4')).innerHTML = `<p class="text-success">x &#8805; ${reduceFraction(-c, a)}</p>`;
             (<HTMLInputElement>document.querySelector('#a4')).value = "";
             (<HTMLInputElement>document.querySelector('#c4')).value = "";
         } else {
-            (<HTMLParagraphElement>document.querySelector('#output4')).innerHTML = `<p class="text-success">x &#8804; ${x}</p>`;
+            (<HTMLParagraphElement>document.querySelector('#output4')).innerHTML = `<p class="text-success">x &#8804; ${reduceFraction(-c, a)}</p>`;
             (<HTMLInputElement>document.querySelector('#a4')).value = "";
             (<HTMLInputElement>document.querySelector('#c4')).value = "";
         }

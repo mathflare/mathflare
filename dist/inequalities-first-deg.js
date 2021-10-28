@@ -38,14 +38,13 @@ document.querySelector('#calc1').addEventListener('click', (event) => {
         }
     }
     else {
-        const x = -c / a;
         if (a < 0) {
-            document.querySelector('#output1').innerHTML = `<p class="text-success">x < ${x}</p>`;
+            document.querySelector('#output1').innerHTML = `<p class="text-success">x < ${reduceFraction(-c, a)}</p>`;
             document.querySelector('#a1').value = "";
             document.querySelector('#c1').value = "";
         }
         else {
-            document.querySelector('#output1').innerHTML = `<p class="text-success">x > ${x}</p>`;
+            document.querySelector('#output1').innerHTML = `<p class="text-success">x > ${reduceFraction(-c, a)}</p>`;
             document.querySelector('#a1').value = "";
             document.querySelector('#c1').value = "";
         }
@@ -90,14 +89,13 @@ document.querySelector('#calc2').addEventListener('click', (event) => {
         }
     }
     else {
-        const x = -c / a;
         if (a < 0) {
-            document.querySelector('#output2').innerHTML = `<p class="text-success">x &#8804; ${x}</p>`;
+            document.querySelector('#output2').innerHTML = `<p class="text-success">x &#8804; ${reduceFraction(-c, a)}</p>`;
             document.querySelector('#a2').value = "";
             document.querySelector('#c2').value = "";
         }
         else {
-            document.querySelector('#output2').innerHTML = `<p class="text-success">x &#8805; ${x}</p>`;
+            document.querySelector('#output2').innerHTML = `<p class="text-success">x &#8805; ${reduceFraction(-c, a)}</p>`;
             document.querySelector('#a2').value = "";
             document.querySelector('#c2').value = "";
         }
@@ -142,14 +140,13 @@ document.querySelector('#calc3').addEventListener('click', (event) => {
         }
     }
     else {
-        const x = -c / a;
         if (a < 0) {
-            document.querySelector('#output3').innerHTML = `<p class="text-success">x > ${x}</p>`;
+            document.querySelector('#output3').innerHTML = `<p class="text-success">x > ${reduceFraction(-c, a)}</p>`;
             document.querySelector('#a3').value = "";
             document.querySelector('#c3').value = "";
         }
         else {
-            document.querySelector('#output3').innerHTML = `<p class="text-success">x < ${x}</p>`;
+            document.querySelector('#output3').innerHTML = `<p class="text-success">x < ${reduceFraction(-c, a)}</p>`;
             document.querySelector('#a3').value = "";
             document.querySelector('#c3').value = "";
         }
@@ -194,14 +191,13 @@ document.querySelector('#calc4').addEventListener('click', (event) => {
         }
     }
     else {
-        const x = -c / a;
         if (a < 0) {
-            document.querySelector('#output4').innerHTML = `<p class="text-success">x &#8805; ${x}</p>`;
+            document.querySelector('#output4').innerHTML = `<p class="text-success">x &#8805; ${reduceFraction(-c, a)}</p>`;
             document.querySelector('#a4').value = "";
             document.querySelector('#c4').value = "";
         }
         else {
-            document.querySelector('#output4').innerHTML = `<p class="text-success">x &#8804; ${x}</p>`;
+            document.querySelector('#output4').innerHTML = `<p class="text-success">x &#8804; ${reduceFraction(-c, a)}</p>`;
             document.querySelector('#a4').value = "";
             document.querySelector('#c4').value = "";
         }
