@@ -156,6 +156,23 @@
             </div>
         </section>
     </div>
+    <footer class="p-5" style="background-color: hsl(210, 11%, 10%);">
+        <div class="container mt-0">
+            <div class="row g-3">
+                <div class="col-md">
+                    <p class="text-muted text-center m-0">
+                        &copy;2021 MathFlare.xyz - a <a href="https://beaverops.dkatsios.ml" target="_blank"
+                            rel="noopener" class="hover-link">Beaverops&#8482;</a> company
+                    </p>
+                </div>
+                <div class="col-md">
+                    <p class="text-muted text-center m-0">
+                        Made with &#10084; in &#127468;&#127479;
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script>
         if (typeof (Storage) !== 'undefined') {
             let storage = window.localStorage, pageCount;
@@ -178,30 +195,23 @@
         donateLinks.forEach(link => {
             link.addEventListener('mouseover', () => {
                 party.confetti(link, {
-                    count: party.variation.range(20, 40)
+                    count: party.variation.range(15, 25)
                 });
             });
         });
         const slogans = [
             'now with 50% more calculator!',
-            'gets the job done fast.',
-            'my doctor says \'MathFlare\'',
-            'next stop, MathFlare', 'satisfies the need.',
-            'standing above the rest with our calculators',
+            'next stop, MathFlare',
             'MathFlare: the other white meat',
-            'Get MathFlare, forget the rest',
             'Mathflare tested, mother approved.',
-            'Mathflare - empowering people.',
             'Eureka!',
             'Aaaahhh, Mathflare!',
-            'get your ducks in a row with MathFlare'
         ];
         const slogan = document.querySelector('#slogan');
         window.addEventListener('load', () => {
             slogan.innerText = (slogans[Math.floor(Math.random() * slogans.length)]).toLowerCase();
         })
     </script>
-    <script src="dist/proteintranslation.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
 </body>
 
