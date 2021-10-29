@@ -1,5 +1,5 @@
 //copyrights (c) 2021 MathFlare LLC. All rights reserved.
-(<HTMLButtonElement>document.querySelector('#slopecalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#slopecalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const x1: number = parseFloat((<HTMLInputElement>document.querySelector('#x1')).value)!;
     const y1: number = parseFloat((<HTMLInputElement>document.querySelector('#y1')).value)!;

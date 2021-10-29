@@ -1,5 +1,5 @@
 //copyright (c) 2021 MathFlare LLC.
-(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     let input: string = (<HTMLInputElement>document.querySelector('#input')).value!;
     input = input.replace(' ', '');

@@ -1,5 +1,5 @@
 //copyright (c) 2021 MathFlare LLC.
-(<HTMLButtonElement>document.querySelector('#button')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#button')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const num: number = parseFloat((<HTMLInputElement>document.querySelector('#number')).value)!;
     if (isNaN(num)) {

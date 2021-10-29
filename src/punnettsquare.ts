@@ -1,5 +1,5 @@
 //copyright (c) 2021 MathFlare.xyz
-(<HTMLButtonElement>document.querySelector('#pscalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#pscalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const fatherGene: string = (<HTMLSelectElement>document.querySelector('#fatherselect')).value!;
     const motherGene: string = (<HTMLSelectElement>document.querySelector('#motherselect')).value!;

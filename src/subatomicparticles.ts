@@ -1,5 +1,5 @@
 //copyrights (c) 2021 MathFlare.xyz
-(<HTMLButtonElement>document.querySelector('#subparticalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#subparticalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const x: number = parseFloat((<HTMLInputElement>document.querySelector('#x')).value)!;
     const y: number = parseFloat((<HTMLInputElement>document.querySelector('#y')).value)!;

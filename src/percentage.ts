@@ -1,5 +1,5 @@
 //copyrights (c) 2021 MathFlare LLC. All rights reserved.
-(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const num: number = parseFloat((<HTMLInputElement>document.querySelector('#num1')).value)!;
     const den: number = parseFloat((<HTMLInputElement>document.querySelector('#den1')).value)!;
@@ -19,7 +19,7 @@
     }
 });
 
-(document.querySelector('#button2') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button2') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const per: number = parseFloat((<HTMLInputElement>document.querySelector('#per2')).value)!;
     const num2: number = parseFloat((<HTMLInputElement>document.querySelector('#num2')).value)!;
@@ -35,7 +35,7 @@
     }
 });
 
-(document.querySelector('#button3') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button3') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const init: number = parseFloat((<HTMLInputElement>document.querySelector('#init3')).value)!;
     const fin: number = parseFloat((<HTMLInputElement>document.querySelector('#fin3')).value)!;
@@ -61,7 +61,7 @@
     }
 });
 
-(document.querySelector('#button4') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button4') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const userSelect: string = (<HTMLSelectElement>document.querySelector('#select')).value!;
     const init: number = parseFloat((<HTMLInputElement>document.querySelector('#init4')).value)!;
@@ -97,7 +97,7 @@
     }
 });
 
-(document.querySelector('#button5') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button5') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const userSelect: string = (<HTMLSelectElement>document.querySelector('#select2')).value!;
     const fin: number = parseFloat((<HTMLInputElement>document.querySelector('#fin5')).value)!;

@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#proteincalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#proteincalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const select: string = (<HTMLSelectElement>document.querySelector('#select')).value;
     const Dictionary: { [key: string]: string } = {
@@ -104,7 +104,7 @@
         }
     }
 });
-(<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     (<HTMLInputElement>document.querySelector('#sequence')).value = '';
     (<HTMLParagraphElement>document.querySelector('#proteinout')).innerText = '';

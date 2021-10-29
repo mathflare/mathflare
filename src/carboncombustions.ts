@@ -1,5 +1,5 @@
 //copyrights (c) 2021 MathFlare.xyz
-(<HTMLButtonElement>document.querySelector('#combustcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#combustcalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const c: number = parseFloat((<HTMLInputElement>document.querySelector('#carbons')).value)!;
     const bond: string = (<HTMLInputElement>document.querySelector('#bondselect')).value!;

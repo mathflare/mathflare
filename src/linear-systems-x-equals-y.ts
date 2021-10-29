@@ -1,5 +1,5 @@
 //copyrights (c) 2021 MathFlare LLC. All rights reserved.
-(<HTMLButtonElement>document.querySelector('#button2')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#button2')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const a = parseFloat((<HTMLInputElement>document.querySelector('#a3')).value)!;
     const b = parseFloat((<HTMLInputElement>document.querySelector('#b3')).value)!;

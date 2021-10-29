@@ -1,6 +1,6 @@
 //copyrights (c) 2021 MathFlare LLC. All rights reserved.
 //using sides and angle
-(<HTMLButtonElement>document.querySelector('#trapcalc1')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#trapcalc1')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const clearValues: () => void = () => {
         (<HTMLInputElement>document.querySelector('#trapl1')).value = '';
@@ -35,7 +35,7 @@
     }
 });
 //using height
-(<HTMLButtonElement>document.querySelector('#trapcalc2')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#trapcalc2')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const clearValues = () => {
         (<HTMLInputElement>document.querySelector('#trapl2')).value = '';

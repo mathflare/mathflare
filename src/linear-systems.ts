@@ -1,6 +1,6 @@
 // utilizing determinants (D, Dx, Dy)
 // copyright (c) 2021 MathFlare LLC. - All rights reserved.
-(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const clearValues: () => void = () => {
         (<HTMLInputElement>document.querySelector('#a1')).value = "";

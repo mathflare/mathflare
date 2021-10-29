@@ -1,4 +1,4 @@
-(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const hypo: number = parseFloat((<HTMLInputElement>document.querySelector('#hypo')).value)!;
     const leg: number = parseFloat((<HTMLInputElement>document.querySelector('#side')).value)!;

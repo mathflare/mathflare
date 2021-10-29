@@ -1,4 +1,4 @@
-(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const base: number = parseFloat((<HTMLInputElement>document.querySelector('#base')).value)!;
     const exp: number = parseFloat((<HTMLInputElement>document.querySelector('#exp')).value)!;

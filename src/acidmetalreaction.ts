@@ -1,6 +1,6 @@
 //copyrights (c) 2021 MathFlare.xyz
 //HxYz + M^+v
-(<HTMLButtonElement>document.querySelector('#acmetalcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#acmetalcalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const x: number = parseFloat((<HTMLInputElement>document.querySelector('#x')).value)!;
     const y: string = ((<HTMLInputElement>document.querySelector('#y')).value)!;

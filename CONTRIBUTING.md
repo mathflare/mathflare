@@ -49,7 +49,7 @@ If your commit messages do not follow the guidelines, you will be asked to ammen
 ### Calculation with TypeScript
 
 ```TS
-(<HTMLButtonElement> document.querySelector('#button')).addEventListener('click', (event) => {
+(<HTMLButtonElement> document.querySelector('#button')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const num: number = parseFloat((< HTMLInputElement > document.querySelector('#number')).value)!;
     if (isNaN(num)) {

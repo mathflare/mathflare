@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#add')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#add')).addEventListener('click', (event: Event) => {
     {
         event.preventDefault();
         const a: number = parseFloat((<HTMLInputElement>document.querySelector('#num1')).value);
@@ -22,7 +22,7 @@
         }
     }
 });
-(<HTMLButtonElement>document.querySelector('#sub')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#sub')).addEventListener('click', (event: Event) => {
     {
         event.preventDefault();
         const a: number = parseFloat((<HTMLInputElement>document.querySelector('#num1')).value);
@@ -46,7 +46,7 @@
         }
     }
 });
-(<HTMLButtonElement>document.querySelector('#mul')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#mul')).addEventListener('click', (event: Event) => {
     {
         event.preventDefault();
         const a: number = parseFloat((<HTMLInputElement>document.querySelector('#num1')).value);
@@ -70,7 +70,7 @@
         }
     }
 });
-(<HTMLButtonElement>document.querySelector('#div')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#div')).addEventListener('click', (event: Event) => {
     {
         event.preventDefault();
         const a: number = parseFloat((<HTMLInputElement>document.querySelector('#num1')).value);

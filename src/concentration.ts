@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#conccalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#conccalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const conc_select: string = (<HTMLSelectElement>document.querySelector('#conc-select')).value!;
     const solution: number = parseFloat((<HTMLInputElement>document.querySelector('#concsolution')).value)!;
@@ -64,7 +64,7 @@
     }
 });
 
-(<HTMLInputElement>document.querySelector('#conc-select')).addEventListener('change', (event) => {
+(<HTMLInputElement>document.querySelector('#conc-select')).addEventListener('change', (event: Event) => {
     event.preventDefault();
     const select: string = (<HTMLSelectElement>document.querySelector('#conc-select')).value!;
     const sol_input: any = <HTMLInputElement>document.querySelector('#concsolution');

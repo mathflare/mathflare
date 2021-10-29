@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#dsubcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#dsubcalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const dsub_select: string = (<HTMLSelectElement>document.querySelector('#dsub-select')).value!;
     const solution: number = parseFloat((<HTMLInputElement>document.querySelector('#dsubsolution')).value)!;
@@ -55,7 +55,7 @@
     }
 });
 
-(<HTMLInputElement>document.querySelector('#dsub-select')).addEventListener('change', (event) => {
+(<HTMLInputElement>document.querySelector('#dsub-select')).addEventListener('change', (event: Event) => {
     event.preventDefault();
     const select: string = (<HTMLSelectElement>document.querySelector('#dsub-select')).value!;
     const sol_input: any = <HTMLInputElement>document.querySelector('#dsubsolution');

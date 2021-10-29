@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#dnarnacalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#dnarnacalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const sequence: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
     const select: string = (<HTMLSelectElement>document.querySelector('#contentselect')).value!;
@@ -94,7 +94,7 @@
         }
     }
 });
-(<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event: Event) => {
     (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
     (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = '';
     (<HTMLParagraphElement>document.querySelector('#t_count')).innerText = '';
@@ -107,7 +107,7 @@
     (<HTMLParagraphElement>document.querySelector('#error_perc')).innerText = '';
     (<HTMLParagraphElement>document.querySelector('#drnaout')).innerText = '';
 });
-(<HTMLInputElement>document.querySelector('#contentselect')).addEventListener('change', (event) => {
+(<HTMLInputElement>document.querySelector('#contentselect')).addEventListener('change', (event: Event) => {
     event.preventDefault();
     const select: string = (<HTMLSelectElement>document.querySelector('#contentselect')).value!;
     const sequencepch: any = <HTMLInputElement>document.querySelector('#sequence');

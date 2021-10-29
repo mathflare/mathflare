@@ -1,6 +1,6 @@
 //copyrights (c) 2021 MathFlare.xyz
 //HxYz + WkOHm
-(<HTMLButtonElement>document.querySelector('#eliminationcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#eliminationcalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const x: number = parseFloat((<HTMLInputElement>document.querySelector('#x')).value)!;
     const y: string = ((<HTMLInputElement>document.querySelector('#y')).value)!;

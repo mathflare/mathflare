@@ -1,6 +1,6 @@
 //copyright (c) 2021 MathFlare LLC.
 //ax+c>0
-(<HTMLButtonElement>document.querySelector('#calc1')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#calc1')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const a: number = parseFloat((<HTMLInputElement>document.querySelector('#a1')).value)!;
     const c: number = parseFloat((<HTMLInputElement>document.querySelector('#c1')).value)!;
@@ -46,7 +46,7 @@
     }
 });
 //ax+c>=0
-(<HTMLButtonElement>document.querySelector('#calc2')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#calc2')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const a: number = parseFloat((<HTMLInputElement>document.querySelector('#a2')).value)!;
     const c: number = parseFloat((<HTMLInputElement>document.querySelector('#c2')).value)!;
@@ -92,7 +92,7 @@
     }
 });
 //ax+c<0
-(<HTMLButtonElement>document.querySelector('#calc3')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#calc3')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const a: number = parseFloat((<HTMLInputElement>document.querySelector('#a3')).value)!;
     const c: number = parseFloat((<HTMLInputElement>document.querySelector('#c3')).value)!;
@@ -138,7 +138,7 @@
     }
 });
 //ax+c<=0
-(<HTMLButtonElement>document.querySelector('#calc4')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#calc4')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const a: number = parseFloat((<HTMLInputElement>document.querySelector('#a4')).value)!;
     const c: number = parseFloat((<HTMLInputElement>document.querySelector('#c4')).value)!;

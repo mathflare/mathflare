@@ -1,6 +1,6 @@
 //copyrights (c) 2021 MathFlare LLC. All rights reserved.
 // square
-(document.querySelector('#squarecalc') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#squarecalc') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const side: number = parseFloat((<HTMLInputElement>document.querySelector('#squareside')).value)!;
     if (isNaN(side)) {
@@ -16,7 +16,7 @@
     }
 });
 // parallelogram
-(document.querySelector('#paracalc') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#paracalc') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const width: number = parseFloat((<HTMLInputElement>document.querySelector('#paraw')).value)!;
     const height: number = parseFloat((<HTMLInputElement>document.querySelector('#parah')).value)!;
@@ -36,7 +36,7 @@
     }
 });
 // triangle
-(document.querySelector('#tricalc') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#tricalc') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const a: number = parseFloat((<HTMLInputElement>document.querySelector('#tria')).value)!;
     const b: number = parseFloat((<HTMLInputElement>document.querySelector('#trib')).value)!;
@@ -56,7 +56,7 @@
     }
 });
 // equilateral triangle
-(document.querySelector('#etricalc') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#etricalc') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const side: number = parseFloat((<HTMLInputElement>document.querySelector('#etris')).value)!;
     if (isNaN(side)) {
@@ -73,7 +73,7 @@
     }
 });
 // circle
-(document.querySelector('#circlecalc') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#circlecalc') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const r: number = parseFloat((<HTMLInputElement>document.querySelector('#circler')).value)!;
     const p: number = 3.14!;
@@ -92,7 +92,7 @@
     }
 });
 // trapezoid
-(document.querySelector('#trapcalc') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#trapcalc') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const a: number = parseFloat((<HTMLInputElement>document.querySelector('#trapa')).value)!;
     const b: number = parseFloat((<HTMLInputElement>document.querySelector('#trapb')).value)!;

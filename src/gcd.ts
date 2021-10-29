@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#gcdcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#gcdcalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const a: number = parseFloat((<HTMLInputElement>document.querySelector('#gcda')).value)!;
     const b: number = parseFloat((<HTMLInputElement>document.querySelector('#gcdb')).value)!;

@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#lcmcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#lcmcalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const a: number = parseFloat((<HTMLInputElement>document.querySelector('#lcma')).value)!;
     const b: number = parseFloat((<HTMLInputElement>document.querySelector('#lcmb')).value)!;
