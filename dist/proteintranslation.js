@@ -87,7 +87,7 @@ document.querySelector('#proteincalc').addEventListener('click', (event) => {
         return protein;
     };
     if (select === 'RNA') {
-        const RNA = document.querySelector('#sequence').value;
+        const RNA = document.querySelector('#sequence').value.replace(/\s/g, '').toUpperCase();
         if (RNA === '') {
             document.querySelector('#proteinout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         }
@@ -99,7 +99,7 @@ document.querySelector('#proteincalc').addEventListener('click', (event) => {
         }
     }
     else if (select === 'DNA') {
-        const DNA = document.querySelector('#sequence').value;
+        const DNA = document.querySelector('#sequence').value.replace(/\s/g, '').toUpperCase();
         const RNA = DNA.replace(/A/g, 'U').replace(/T/g, 'A').replace(/G/g, 'C').replace(/C/g, 'G').replace(/ /g, '');
         if (RNA === '') {
             document.querySelector('#proteinout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
@@ -111,4 +111,9 @@ document.querySelector('#proteincalc').addEventListener('click', (event) => {
             document.querySelector('#proteinout').innerHTML = `<p class="text-success">Protein sequence: ${proteinTranslation(RNA)}</p>`;
         }
     }
+});
+document.querySelector('#clearbtn').addEventListener('click', (event) => {
+    event.preventDefault();
+    document.querySelector('#sequence').value = '';
+    document.querySelector('#proteinout').innerText = '';
 });

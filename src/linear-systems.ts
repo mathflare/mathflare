@@ -10,7 +10,7 @@
         (<HTMLInputElement>document.querySelector('#c1')).value = "";
         (<HTMLInputElement>document.querySelector('#c2')).value = "";
     };
-    const drawLines: (a1: number, b1: number, c1: number, a2: number, b2: number, c2: number) => void = (a1: number, b1: number, c1: number, a2: number, b2: number, c2: number) => {
+    /* const drawLines: (a1: number, b1: number, c1: number, a2: number, b2: number, c2: number) => void = (a1: number, b1: number, c1: number, a2: number, b2: number, c2: number) => {
         const canvas: any = <HTMLCanvasElement>document.querySelector('#canvas');
         const ctx: any = canvas.getContext('2d');
         ctx.font = "30px Monospace";
@@ -68,7 +68,7 @@
             ctx.lineWidth = 1.5;
             ctx.stroke();
         }
-    };
+    }; */
     const a1: number = parseFloat((<HTMLInputElement>document.querySelector('#a1')).value)!;
     const b1: number = parseFloat((<HTMLInputElement>document.querySelector('#b1')).value)!;
     const c1: number = parseFloat((<HTMLInputElement>document.querySelector('#c1')).value)!;
@@ -84,39 +84,32 @@
     } else if (a1 == 0 && b1 == 0 && c1 == 0 && a2 == 0 && b2 == 0 && c2 == 0) {
         (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system is indefinite: x &#8714; R , y &#8714; R</p>`;
         clearValues();
-        drawLines(a1, b1, c1, a2, b2, c2);
     } else if (a1 == 0 && b1 == 0 && c1 != 0 || a2 == 0 && b2 == 0 && c2 != 0) {
         (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system is a contradiction: it has no solutions</p>`;
         clearValues();
-        drawLines(a1, b1, c1, a2, b2, c2);
     } else if (D == 0 && Dx != 0 || D == 0 && Dy != 0) {
         (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system is a contradiction: it has no solutions</p>`;
         clearValues();
-        drawLines(a1, b1, c1, a2, b2, c2);
     } else if (D == 0 && Dx == 0 && Dy == 0) {
         if (a1 == 0 && b1 == 0 && c1 == 0) {
             if (a2 != 0 && b2 == 0) {
                 (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (${c2 / a2
                     } , k) k &#8714; R</p>`;
                 clearValues();
-                drawLines(a1, b1, c1, a2, b2, c2);
             } else if (a2 == 0 && b2 != 0) {
                 (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${c2 / b2
                     }) k &#8714; R</p>`;
                 clearValues();
-                drawLines(a1, b1, c1, a2, b2, c2);
             } else if (a2 != 0 && b2 != 0) {
                 if (c2 == 0) {
                     (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${- b2 / a2
                         }k) k &#8714; R</p>`;
                     clearValues();
-                    drawLines(a1, b1, c1, a2, b2, c2);
                 } else {
                     (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${c2 / a2
                         }${- b2 / a2
                         }k) k &#8714; R</p>`;
                     clearValues();
-                    drawLines(a1, b1, c1, a2, b2, c2);
                 }
             }
         } else if (a2 == 0 && b2 == 0 && c2 == 0) {
@@ -124,54 +117,45 @@
                 (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (${c1 / a1
                     } , k) k &#8714; R</p>`;
                 clearValues();
-                drawLines(a1, b1, c1, a2, b2, c2);
             } else if (a1 == 0 && b1 != 0) {
                 (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${c1 / b1
                     }) k &#8714; R</p>`;
                 clearValues();
-                drawLines(a1, b1, c1, a2, b2, c2);
             } else if (a1 != 0 && b1 != 0) {
                 if (c1 == 0) {
                     (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${- b1 / a1
                         }k) k &#8714; R</p>`;
                     clearValues();
-                    drawLines(a1, b1, c1, a2, b2, c2);
                 } else {
                     (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${c1 / a1
                         }${- b1 / a1
                         }k) k &#8714; R</p>`;
                     clearValues();
-                    drawLines(a1, b1, c1, a2, b2, c2);
                 }
             }
         } else if (a1 == 0 && b1 != 0 && a2 == 0 && b2 != 0) {
             (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${c1 / b1
                 }) k &#8714; R</p>`;
             clearValues();
-            drawLines(a1, b1, c1, a2, b2, c2);
         } else if (a1 != 0 && b1 == 0 && a2 != 0 && b2 == 0) {
             (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (${c1 / a1
                 } , k) k &#8714; R</p>`;
             clearValues();
-            drawLines(a1, b1, c1, a2, b2, c2);
         } else if (a1 != 0 && b1 != 0 && c1 == 0 /*&& a2 != 0 && b2 != 0 && c2 == 0*/
         ) {
             (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${- b1 / a1
                 }k) k &#8714; R</p>`;
             clearValues();
-            drawLines(a1, b1, c1, a2, b2, c2);
         } else {
             (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-warning">The system has unlimited solutions: (x,y) = (k , ${c1 / a1
                 }${- b1 / a1
                 }k) k &#8714; R</p>`;
             clearValues();
-            drawLines(a1, b1, c1, a2, b2, c2);
         }
     } else if (D != 0) {
         const x: number = Dx / D;
         const y: number = Dy / D;
         (document.querySelector('#output') as HTMLElement).innerHTML = `<p class="text-success">The system has a single solution (x , y) = (${x} , ${y})</p>`;
-        drawLines(a1, b1, c1, a2, b2, c2);
         clearValues();
     }
 });

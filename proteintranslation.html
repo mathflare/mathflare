@@ -6,18 +6,18 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathFlare - Protein Translation</title>
-    <meta name="title" content="MathFlare - Protein Translation">
-    <meta name="og:title" content="MathFlare - Protein Translation" />
-    <meta name="twitter:title" content="MathFlare - Protein Translation" />
+    <title>MathFlare - Translation</title>
+    <meta name="title" content="MathFlare - Translation">
+    <meta name="og:title" content="MathFlare - Translation" />
+    <meta name="twitter:title" content="MathFlare - Translation" />
     <meta name="keywords"
-        content="protein translation, translate protein, protein, codon, amino acids, rna, dna, biology, genetics, mathflare, math flare">
-    <meta name="description" content="Calculate the average of a set of numbers." />
-    <meta name="og:description" content="Calculate the average of a set of numbers." />
-    <meta name="twitter:description" content="Calculate the average of a set of numbers." />
+        content="protein, translation, translate rna, translate dna, codon, amino acids, biology, genetics, mathflare, math flare">
+    <meta name="description" content="Translate RNA/DNA to protein." />
+    <meta name="og:description" content="Translate RNA/DNA to protein." />
+    <meta name="twitter:description" content="Translate RNA/DNA to protein." />
     <meta name="author" content="MathFlare.xyz" />
-    <meta name="og:url" content="https://www.mathflare.xyz/proteintranslation" />
-    <link rel="canonical" href="https://www.mathflare.xyz/proteintranslation">
+    <meta name="og:url" content="https://www.mathflare.xyz/translation" />
+    <link rel="canonical" href="https://www.mathflare.xyz/translation">
     <meta name="og:image" content="https://www.mathflare.xyz/Assets/logo.png" />
     <meta name="og:locale" content="en_US" />
     <meta name="og:type" content="website" />
@@ -46,8 +46,10 @@
     <div id="nav-container"></div>
     <!-- NAVBAR END -->
     <div class="center">
-        <h1 class="text-white px-4">Protein Translation</h1>
+        <h1 class="text-white px-4">Translation</h1>
         <hr class="bg-danger" style="width: 60%;" />
+        <h3 class="text-white px-4">DNA&#8725;RNA to Protein</h3>
+        <hr class="bg-danger" style="width: 30%;" />
         <form autocomplete="off" spellcheck="false">
             <div class="center-form">
                 <select class="form-select center-form" id="select">
@@ -61,7 +63,7 @@
                 <div class="input-group">
                     <textarea id="sequence" placeholder="eg. AGC" class="form-control message input-group-item"
                         required></textarea>
-                    <button type="reset" class="btn btn-danger">Clear</button>
+                    <button type="reset" id="clearbtn" class="btn btn-danger">Clear</button>
                 </div>
             </div>
             <br />
@@ -69,7 +71,7 @@
                 <input type="submit" id="proteincalc" class="btn btn-success btn-lg" value="Translate">
             </div>
             <div class="my-4">
-                <a href="https://duckduckgo.com/?q=translate+proteins" target="_blank" rel="noopener"
+                <a href="https://duckduckgo.com/?q=translate+rna/dna" target="_blank" rel="noopener"
                     class="btn btn-outline-light">Find information on the web</a>
             </div>
             <p class="p-2"><span class="text-warning">X</span> means that a character you entered in the sequence is not
