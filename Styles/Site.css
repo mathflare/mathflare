@@ -35,6 +35,23 @@ a:focus {
     color: hsl(45, 100%, 51%);
     transition: 0.2s;
 }
+input.form-control,
+select.form-select,
+textarea.form-control {
+    transition: all ease-in-out 0.28s !important;
+}
+input.form-control:hover,
+select.form-select:hover,
+textarea.form-control:hover {
+    border-color: hsla(45, 100%, 51%, 0.5) !important;
+    box-shadow: 0 0 0 0.12rem hsla(45, 100%, 51%, 0.5) !important;
+}
+input.form-control:focus,
+select.form-select:focus,
+textarea.form-control:focus {
+    border-color: hsla(45, 100%, 51%, 0.8) !important;
+    box-shadow: 0 0 0 0.2rem hsla(45, 100%, 51%, 0.8) !important;
+}
 hr {
     border: 2px solid hsl(354, 70%, 54%);
     border-radius: 3px;
