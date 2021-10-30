@@ -160,7 +160,7 @@
         if (typeof (Storage) !== 'undefined') {
             const ele = document.querySelectorAll('.ineq');
             for (let i = 0; i < ele.length; i++) {
-                ele[i].addEventListener('click', (event) => {
+                ele[i].addEventListener('click', (event: Event) => {
                     event.preventDefault();
                     if (!storage.getItem("ineq")) {
                         storage.setItem('ineq', 1);

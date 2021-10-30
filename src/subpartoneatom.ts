@@ -1,5 +1,5 @@
 //copyrights (c) 2021 MathFlare.xyz
-(<HTMLButtonElement>document.querySelector('#atomcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#atomcalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const x: string = ((<HTMLInputElement>document.querySelector('#x1')).value)!;
     const z: number = parseFloat((<HTMLInputElement>document.querySelector('#z1')).value)!;

@@ -139,7 +139,7 @@
         if (typeof (Storage) !== 'undefined') {
             const ele = document.querySelectorAll('.equation');
             for (let i = 0; i < ele.length; i++) {
-                ele[i].addEventListener('click', (event) => {
+                ele[i].addEventListener('click', (event: Event) => {
                     event.preventDefault();
                     if (!storage.getItem("equation")) {
                         storage.setItem('equation', 1);

@@ -1,5 +1,5 @@
 //Δx
-(<HTMLButtonElement>document.querySelector('#dxcalc1')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#dxcalc1')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const v: number = parseFloat((<HTMLInputElement>document.querySelector('#v1')).value)!;
     const dt: number = parseFloat((<HTMLInputElement>document.querySelector('#dt1')).value)!;
@@ -19,7 +19,7 @@
     }
 });
 //Δt
-(<HTMLButtonElement>document.querySelector('#dtcalc2')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#dtcalc2')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const v: number = parseFloat((<HTMLInputElement>document.querySelector('#v2')).value)!;
     const dx: number = parseFloat((<HTMLInputElement>document.querySelector('#dx2')).value)!;
@@ -56,7 +56,7 @@
     }
 });
 //v
-(<HTMLButtonElement>document.querySelector('#vcalc3')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#vcalc3')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const dx: number = parseFloat((<HTMLInputElement>document.querySelector('#dx3')).value)!;
     const dt: number = parseFloat((<HTMLInputElement>document.querySelector('#dt3')).value)!;

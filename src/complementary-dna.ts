@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#compdnacalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#compdnacalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const dna_string: string = (<HTMLInputElement>document.querySelector('#dnastring')).value.replace(/\s/g, '').toUpperCase()!;
     const complementaryDna: (strand: string) => string = (strand: string) => {
@@ -120,7 +120,7 @@
     }
 });
 
-(<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event: Event) => {
     (<HTMLInputElement>document.querySelector('#dnastring')).value = '';
     (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
     (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = '';

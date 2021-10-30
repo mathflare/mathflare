@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#loancalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#loancalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const amount: number = parseFloat((<HTMLInputElement>document.querySelector('#amount')).value)!;
     const rate: number = parseFloat((<HTMLInputElement>document.querySelector('#interest')).value)!;

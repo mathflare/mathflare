@@ -1,5 +1,5 @@
 //copyrights (c) 2021 MathFlare LLC. All rights reserved.
-(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const n: number = parseFloat((<HTMLInputElement>document.querySelector('#vertex')).value)!;
     if (isNaN(n) || !(Math.floor(n) == n)) {
@@ -20,7 +20,7 @@
     }
 });
 
-(document.querySelector('#button2') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button2') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const n: number = parseFloat((<HTMLInputElement>document.querySelector('#sside')).value)!;
     if (isNaN(n)) {
@@ -35,7 +35,7 @@
     }
 });
 
-(document.querySelector('#paracalc') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#paracalc') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const cd: number = parseFloat((<HTMLInputElement>document.querySelector('#pcd')).value)!;
     const ad: number = parseFloat((<HTMLInputElement>document.querySelector('#pad')).value)!;

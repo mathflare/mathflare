@@ -1,5 +1,5 @@
 // x + y = z
-(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const y: number = parseFloat((<HTMLInputElement>document.querySelector('#y')).value)!;
     const z: number = parseFloat((<HTMLInputElement>document.querySelector('#z')).value)!;
@@ -15,7 +15,7 @@
     }
 });
 // x - y = z
-(document.querySelector('#button2') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button2') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const y: number = parseFloat((<HTMLInputElement>document.querySelector('#y2')).value)!;
     const z: number = parseFloat((<HTMLInputElement>document.querySelector('#z2')).value)!;
@@ -31,7 +31,7 @@
     }
 });
 // xy = z
-(document.querySelector('#button3') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#button3') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const y: number = parseFloat((<HTMLInputElement>document.querySelector('#y3')).value)!;
     const z: number = parseFloat((<HTMLInputElement>document.querySelector('#z3')).value)!;

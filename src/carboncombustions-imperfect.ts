@@ -1,5 +1,5 @@
 //copyrights (c) 2021 MathFlare.xyz
-(<HTMLButtonElement>document.querySelector('#combustcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#combustcalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const product: string = (<HTMLInputElement>document.querySelector('#prodselect')).value!;
     const replaceOne: (c: number) => string = (c: number) => {

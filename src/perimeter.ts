@@ -1,6 +1,6 @@
 //copyrights (c) 2021 MathFlare LLC. All rights reserved.
 // square
-(document.querySelector('#square') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#square') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const n: number = parseFloat((<HTMLInputElement>document.querySelector('#squaren')).value)!;
     if (isNaN(n)) {
@@ -15,7 +15,7 @@
     }
 });
 // parallelogram
-(document.querySelector('#para') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#para') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const width: number = parseFloat((<HTMLInputElement>document.querySelector('#paraw')).value)!;
     const height: number = parseFloat((<HTMLInputElement>document.querySelector('#parah')).value)!;
@@ -34,7 +34,7 @@
     }
 });
 // triangle
-(document.querySelector('#tri') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#tri') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const a: number = parseFloat((<HTMLInputElement>document.querySelector('#tria')).value)!;
     const b: number = parseFloat((<HTMLInputElement>document.querySelector('#trib')).value)!;
@@ -57,7 +57,7 @@
     }
 });
 // equilateral triangle
-(document.querySelector('#eqtri') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#eqtri') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const n: number = parseFloat((<HTMLInputElement>document.querySelector('#trin')).value)!;
     if (isNaN(n)) {
@@ -72,7 +72,7 @@
     }
 });
 // circle
-(document.querySelector('#circle') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#circle') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const r: number = parseFloat((<HTMLInputElement>document.querySelector('#circler')).value)!;
     const p: number = 3.14!;

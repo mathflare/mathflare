@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#comprnacalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#comprnacalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const rna_string: string = (<HTMLInputElement>document.querySelector('#rnastring')).value.replace(/\s/g, '').toUpperCase()!;
     const select: string = (<HTMLSelectElement>document.querySelector('#select')).value!;
@@ -119,7 +119,7 @@
         }
     }
 });
-(<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     (<HTMLInputElement>document.querySelector('#rnastring')).value = '';
     (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
@@ -134,7 +134,7 @@
     (<HTMLParagraphElement>document.querySelector('#error_perc')).innerText = '';
     (<HTMLParagraphElement>document.querySelector('#comprnaout')).innerText = '';
 });
-(<HTMLInputElement>document.querySelector('#select')).addEventListener('change', (event) => {
+(<HTMLInputElement>document.querySelector('#select')).addEventListener('change', (event: Event) => {
     event.preventDefault();
     const select: string = (<HTMLSelectElement>document.querySelector('#select')).value!;
     if (select === 'rev') {

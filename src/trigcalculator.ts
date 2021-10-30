@@ -1,5 +1,5 @@
 //sin
-(<HTMLButtonElement>document.querySelector('#sincalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#sincalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#sina')).value)!;
     if (isNaN(angle)) {
@@ -11,7 +11,7 @@
     }
 });
 //cos
-(<HTMLButtonElement>document.querySelector('#coscalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#coscalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#cosa')).value)!;
     if (isNaN(angle)) {
@@ -23,7 +23,7 @@
     }
 });
 //tan
-(<HTMLButtonElement>document.querySelector('#tancalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#tancalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#tana')).value)!;
     if (isNaN(angle)) {
@@ -38,7 +38,7 @@
     }
 });
 //asin
-(<HTMLButtonElement>document.querySelector('#asincalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#asincalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#asina')).value)!;
     if (isNaN(angle)) {
@@ -53,7 +53,7 @@
     }
 });
 //acos
-(<HTMLButtonElement>document.querySelector('#acoscalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#acoscalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#acosa')).value)!;
     if (isNaN(angle)) {
@@ -68,7 +68,7 @@
     }
 });
 //atan
-(<HTMLButtonElement>document.querySelector('#atancalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#atancalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#atana')).value)!;
     if (isNaN(angle)) {
@@ -80,7 +80,7 @@
     }
 });
 //sinh
-(<HTMLButtonElement>document.querySelector('#sinhcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#sinhcalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#sinha')).value)!;
     if (isNaN(angle)) {
@@ -92,7 +92,7 @@
     }
 });
 //cosh
-(<HTMLButtonElement>document.querySelector('#coshcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#coshcalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#cosha')).value)!;
     if (isNaN(angle)) {
@@ -104,7 +104,7 @@
     }
 });
 //tanh
-(<HTMLButtonElement>document.querySelector('#tanhcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#tanhcalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const angle: number = parseFloat((<HTMLInputElement>document.querySelector('#tanha')).value)!;
     if (isNaN(angle)) {

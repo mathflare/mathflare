@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#bmicalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#bmicalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const weight: number = parseFloat((<HTMLInputElement>document.querySelector('#weight')).value)!;
     const height: number = parseFloat((<HTMLInputElement>document.querySelector('#height')).value!) / 100;

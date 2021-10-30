@@ -1,6 +1,6 @@
 //copyrights (c) 2021 MathFlare.xyz
 //X2CO3z + HvY
-(<HTMLButtonElement>document.querySelector('#acidcarboncalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#acidcarboncalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const x: string = ((<HTMLInputElement>document.querySelector('#x')).value)!;
     const y: string = ((<HTMLInputElement>document.querySelector('#y')).value)!;

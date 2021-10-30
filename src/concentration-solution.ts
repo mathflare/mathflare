@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#solcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#solcalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const sol_select: string = (<HTMLSelectElement>document.querySelector('#sol-select')).value!;
     const dsubstance: number = parseFloat((<HTMLInputElement>document.querySelector('#soldsub')).value)!;
@@ -55,7 +55,7 @@
     }
 });
 
-(<HTMLInputElement>document.querySelector('#sol-select')).addEventListener('change', (event) => {
+(<HTMLInputElement>document.querySelector('#sol-select')).addEventListener('change', (event: Event) => {
     event.preventDefault();
     const select: string = (<HTMLSelectElement>document.querySelector('#sol-select')).value!;
     const dsub: any = <HTMLInputElement>document.querySelector('#soldsub');

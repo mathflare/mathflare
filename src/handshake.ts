@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#calc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#calc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const n: number = parseFloat((<HTMLInputElement>document.querySelector('#n')).value)!;
     if (isNaN(n) || Math.floor(n) !== n) {

@@ -1,5 +1,5 @@
 //copyright (c) 2021 MathFlare.xyz
-(document.querySelector('#polyg') as HTMLButtonElement).addEventListener('click', (event) => {
+(document.querySelector('#polyg') as HTMLButtonElement).addEventListener('click', (event: Event) => {
     event.preventDefault();
     var input: string = (<HTMLInputElement>document.querySelector('#sides')).value!;
     if (input == "" || input.charAt(0) == "," || input.charAt(input.length - 1) == ",") {

@@ -1,4 +1,4 @@
-(<HTMLButtonElement>document.querySelector('#likefractcalc')).addEventListener('click', (event) => {
+(<HTMLButtonElement>document.querySelector('#likefractcalc')).addEventListener('click', (event: Event) => {
     event.preventDefault();
     const x: number = parseFloat((<HTMLInputElement>document.querySelector('#x')).value)!;
     const y: number = parseFloat((<HTMLInputElement>document.querySelector('#y')).value)!;
