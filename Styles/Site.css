@@ -1,5 +1,6 @@
 @import url(../Assets/fonts/fonts.css);
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Fruktur&display=swap");
 body {
     font-family: "MathFont", "Segoe UI", sans-serif !important;
     color: hsl(0, 0%, 100%);
@@ -83,6 +84,11 @@ var {
     background-color: hsl(210, 10%, 22%);
     border: 0.04em solid rgb(255, 255, 255, 0.5);
     box-shadow: 0 0 0 0.2rem rgb(255, 255, 255, 0.5);
+}
+.font-spooky {
+    font-family: "Fruktur", cursive !important;
+    color: hsl(27, 100%, 46%) !important;
+    letter-spacing: 0.06em;
 }
 /*=====SIDEBAR START=====*/
 .navbar-dark {
