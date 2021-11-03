@@ -98,11 +98,32 @@
                 </div>
             </div>
             <br />
-            <div class="center-form">
+            <div class="btn-group">
                 <input type="submit" id="subparticalc" class="btn btn-success btn-lg" value="Calculate">
+                <input type="reset" id="clearbtn" class="btn btn-danger btn-lg" value="Clear">
             </div>
         </form>
         <br />
+        <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+            <thead>
+                <td>First Element</td>
+                <td>Second Element</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="proton1">p<sup>+</sup></td>
+                    <td id="proton2">p<sup>+</sup></td>
+                </tr>
+                <tr>
+                    <td id="electron1">e<sup>-</sup></td>
+                    <td id="electron2">e<sup>-</sup></td>
+                </tr>
+                <tr>
+                    <td id="neutron1">n</td>
+                    <td id="neutron2">n</td>
+                </tr>
+            </tbody>
+        </table>
         <div style="max-height: 1em;">
             <p class="text-success" id="subparticout"></p>
         </div>
@@ -130,11 +151,28 @@
                 </div>
             </div>
             <br />
-            <div class="center-form">
+            <div class="btn-group">
                 <input type="submit" id="atomcalc" class="btn btn-success btn-lg" value="Calculate">
+                <input type="reset" id="clearbtnatom" class="btn btn-danger btn-lg" value="Clear">
             </div>
         </form>
         <br />
+        <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+            <thead>
+                <td>Element</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="protonatom">p<sup>+</sup></td>
+                </tr>
+                <tr>
+                    <td id="electronatom">e<sup>-</sup></td>
+                </tr>
+                <tr>
+                    <td id="neutronatom">n</td>
+                </tr>
+            </tbody>
+        </table>
         <div style="max-height: 1em;">
             <p class="text-success" id="atomout"></p>
         </div>
@@ -165,11 +203,28 @@
                 </div>
             </div>
             <br />
-            <div class="center-form">
+            <div class="btn-group">
                 <input type="submit" id="ioncalc" class="btn btn-success btn-lg" value="Calculate">
+                <input type="reset" id="clearbtnion" class="btn btn-danger btn-lg" value="Clear">
             </div>
         </form>
         <br />
+        <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+            <thead>
+                <td>Ion</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="protonion">p<sup>+</sup></td>
+                </tr>
+                <tr>
+                    <td id="electronion">e<sup>-</sup></td>
+                </tr>
+                <tr>
+                    <td id="neutronion">n</td>
+                </tr>
+            </tbody>
+        </table>
         <div style="max-height: 1em;">
             <p class="text-success" id="ionout"></p>
         </div>
