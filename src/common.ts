@@ -41,7 +41,7 @@ const searcCalc: () => void = () => {
         ['neutralization reaction calculator', 'neutralization'],
         ['acid-metal reaction calculator', 'acidmetalreaction'],
         ['dna complement generator', 'complementarydna'],
-        ['rna complement generator', 'complementaryrna'],
+        ['dna transcription generator', 'complementaryrna'],
         ['loan calculator', 'loan'],
         ['bmi calculator', 'bmi'],
         ['fraction addition calculator', 'fractionaddition'],
@@ -50,9 +50,10 @@ const searcCalc: () => void = () => {
         ['greatest common divisor calculator (GCD)', 'gcd'],
         ['least common multiple calculator (LCM)', 'lcm'],
         ['number of pairs calculator', 'numberpairs'],
-        ['Atomic/Mass number to number of Subatomic Particles', 'subatomicparticles'],
-        ['Protein Translation', 'proteintranslation'],
-        ['DNA/RNA Content', 'dnarnacontent']
+        ['atomic/mass number to number of subatomic particles', 'subatomicparticles'],
+        ['dna/rna to protein translator', 'proteintranslation'],
+        ['dna/rna content calculator', 'dnarnacontent'],
+        ['protein content calculator', 'proteincontent']
     ];
     searchBox.addEventListener("input", () => {
         const search: string = searchBox.value.toLowerCase();
@@ -185,6 +186,30 @@ const addFractions: (x: number, y: number, a: number, b: number) => number[][] =
         result[0][1] = Math.abs(y);
         return result;
     }
+};
+
+const Dnatranscription: (strand: string) => string = (strand: string) => {
+    let result: string = '';
+    for (let i: number = 0; i < strand.length; i++) {
+        switch (strand[i]) {
+            case 'A':
+                result += 'U';
+                break;
+            case 'T':
+                result += 'A';
+                break;
+            case 'G':
+                result += 'C';
+                break;
+            case 'C':
+                result += 'G';
+                break;
+            default:
+                result += 'X';
+                break;
+        }
+    }
+    return result;
 };
 
 const openImage: (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => void = (imgUri: string, imgAlt: string, imgWidth: number, imgHeight: number) => window.open(imgUri, `MathFlare.xyz - ${imgAlt}` || 'MathFlare.xyz', `width=${imgWidth / 2},height=${imgHeight / 2}`);

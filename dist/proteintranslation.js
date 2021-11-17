@@ -100,7 +100,7 @@ document.querySelector('#proteincalc').addEventListener('click', (event) => {
     }
     else if (select === 'DNA') {
         const DNA = document.querySelector('#sequence').value.replace(/\s/g, '').toUpperCase();
-        const RNA = DNA.replace(/A/g, 'U').replace(/T/g, 'A').replace(/G/g, 'C').replace(/C/g, 'G').replace(/ /g, '');
+        const RNA = Dnatranscription(DNA);
         if (RNA === '') {
             document.querySelector('#proteinout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         }

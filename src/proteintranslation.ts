@@ -94,7 +94,7 @@
         }
     } else if (select === 'DNA') {
         const DNA: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
-        const RNA: string = DNA.replace(/A/g, 'U').replace(/T/g, 'A').replace(/G/g, 'C').replace(/C/g, 'G').replace(/ /g, '');
+        const RNA: string = Dnatranscription(DNA);
         if (RNA === '') {
             (<HTMLParagraphElement>document.querySelector('#proteinout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
         } else if (RNA.length % 3 !== 0) {

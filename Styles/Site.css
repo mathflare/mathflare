@@ -335,7 +335,8 @@ var {
 #atomout,
 #ionout,
 #proteinout,
-#drnaout {
+#drnaout,
+#proteincontout {
     font-size: 20px !important;
     line-height: 24px !important;
     padding-left: 3em !important;
