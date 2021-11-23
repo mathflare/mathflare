@@ -133,12 +133,12 @@
         let error_perc: number = 0;
         let error_count: number = 0;
         for (let i: number = 0; i < sequence.length; i++) {
-            if (percent[sequence[i]] === undefined) {
-                error_perc += 1 / sequence.length * 100;
-                error_count++;
-            } else if (sequence[i] === '*') {
+            if (sequence[i] === '*') {
                 percent['END'] += 1 / sequence.length * 100;
                 count['END']++;
+            } else if (percent[sequence[i]] === undefined) {
+                error_perc += 1 / sequence.length * 100;
+                error_count++;
             } else {
                 percent[sequence[i]] += 1 / sequence.length * 100;
                 count[sequence[i]]++;

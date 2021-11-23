@@ -54,7 +54,8 @@ const searcCalc = () => {
         ['atomic/mass number to number of subatomic particles', 'subatomicparticles'],
         ['dna/rna to protein translator', 'proteintranslation'],
         ['dna/rna content calculator', 'dnarnacontent'],
-        ['protein content calculator', 'proteincontent']
+        ['protein content calculator', 'proteincontent'],
+        ['protein to dna/rna translator', 'proteintodnarna']
     ];
     searchBox.addEventListener("input", () => {
         const search = searchBox.value.toLowerCase();
