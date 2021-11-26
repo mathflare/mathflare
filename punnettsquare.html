@@ -66,33 +66,37 @@
                 </select>
             </div>
             <br />
-            <div class="center-form">
+            <div class="btn-group">
                 <input type="submit" id="pscalc" class="btn btn-success btn-lg" value="Calculate">
+                <button type="button" onclick="printTable()" class="btn btn-warning btn-lg">Print Results</button>
             </div>
         </form>
         <br />
-        <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
-            <thead>
-                <tr>
-                    <th scope="col"><sup><i class="bi bi-gender-male"></i></sup>&frasl;<sub><i
-                                class="bi bi-gender-female"></i></sub></th>
-                    <th id="f1" scope="col">Α</th>
-                    <th id="f2" scope="col">Α</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th id="m1" scope="row">Α</th>
-                    <td id="f1m1">ΑΑ</td>
-                    <td id="f2m1">ΑΑ</td>
-                </tr>
-                <tr>
-                    <th id="m2" scope="row">Α</th>
-                    <td id="f1m2">ΑΑ</td>
-                    <td id="f2m2">ΑΑ</td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="table-container">
+            <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: calc(100% /3);"><sup><i
+                                    class="bi bi-gender-male"></i></sup>&frasl;<sub><i
+                                    class="bi bi-gender-female"></i></sub></th>
+                        <th id="f1" scope="col" style="width: calc(100% /3);">Α</th>
+                        <th id="f2" scope="col" style="width: calc(100% /3);">Α</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="m1" scope="row">Α</th>
+                        <td id="f1m1">ΑΑ</td>
+                        <td id="f2m1">ΑΑ</td>
+                    </tr>
+                    <tr>
+                        <th id="m2" scope="row">Α</th>
+                        <td id="f1m2">ΑΑ</td>
+                        <td id="f2m2">ΑΑ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <p>Chances:</p>
         <div style="height: 1em !important;">
             <p class="text-warning" id="output">Genotype: 100% for AA</p>
@@ -101,14 +105,14 @@
         <div style="height: 1em !important;">
             <p class="text-warning" style="font-size: 20px;" id="phenotypeout">Phenotype: 100% for A</p>
         </div>
-        <div class="my-4">
+        <div class="my-5">
             <a href="https://duckduckgo.com/?q=find+punnett+square" target="_blank" rel="noopener"
                 class="btn btn-outline-light">Find information on the web</a>
         </div>
         <br />
     </div>
     <!-- SCRIPTS START -->
-    
+
     <script src="dist/punnettsquare.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->

@@ -208,6 +208,20 @@ document.addEventListener('keydown', (e) => {
         offcanvas.toggle(sidebar);
     }
 });
+const printTable = () => {
+    const table = document.querySelector('#table-container').innerHTML;
+    const printWindow = window.open('', '', 'height=400,width=600');
+    if (printWindow) {
+        printWindow.document.write(table);
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.print();
+        printWindow.close();
+    }
+    else {
+        alert('Please allow popups in order to print.');
+    }
+};
 document.oncontextmenu = (clickEvent) => {
     console.log(clickEvent);
 };

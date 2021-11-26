@@ -197,7 +197,7 @@
     if (select === 'Protein') {
         const Protein: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
         if (Protein === '') {
-            (<HTMLParagraphElement>document.querySelector('#proteincontout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+            (<HTMLInputElement>document.querySelector('#sequence')).focus();
             //count
             (<HTMLParagraphElement>document.querySelector('#f_count')).innerText = '';
             (<HTMLParagraphElement>document.querySelector('#l_count')).innerText = '';
@@ -246,13 +246,12 @@
             (<HTMLParagraphElement>document.querySelector('#x_perc')).innerText = '';
         } else {
             proteinPerc(Protein);
-            (<HTMLParagraphElement>document.querySelector('#proteincontout')).innerText = '';
         }
     }
     else if (select === 'RNA') {
         const RNA: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
         if (RNA === '') {
-            (<HTMLParagraphElement>document.querySelector('#proteincontout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+            (<HTMLInputElement>document.querySelector('#sequence')).focus();
             //count
             (<HTMLParagraphElement>document.querySelector('#f_count')).innerText = '';
             (<HTMLParagraphElement>document.querySelector('#l_count')).innerText = '';
@@ -300,7 +299,6 @@
             (<HTMLParagraphElement>document.querySelector('#w_perc')).innerText = '';
             (<HTMLParagraphElement>document.querySelector('#x_perc')).innerText = '';
         } else if (RNA.length % 3 !== 0) {
-            (<HTMLParagraphElement>document.querySelector('#proteincontout')).innerHTML = `<p class="text-warning">The length of the sequence must be a multiple of 3</p>`;
             //count
             (<HTMLParagraphElement>document.querySelector('#f_count')).innerText = '';
             (<HTMLParagraphElement>document.querySelector('#l_count')).innerText = '';
@@ -350,13 +348,12 @@
         } else {
             const translatedRna: string = proteinTranslation(RNA);
             proteinPerc(translatedRna);
-            (<HTMLParagraphElement>document.querySelector('#proteincontout')).innerText = '';
         }
     } else if (select === 'DNA') {
         const DNA: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
         const RNA: string = Dnatranscription(DNA);
         if (RNA === '') {
-            (<HTMLParagraphElement>document.querySelector('#proteincontout')).innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+            (<HTMLInputElement>document.querySelector('#sequence')).focus();
             //count
             (<HTMLParagraphElement>document.querySelector('#f_count')).innerText = '';
             (<HTMLParagraphElement>document.querySelector('#l_count')).innerText = '';
@@ -404,7 +401,6 @@
             (<HTMLParagraphElement>document.querySelector('#w_perc')).innerText = '';
             (<HTMLParagraphElement>document.querySelector('#x_perc')).innerText = '';
         } else if (RNA.length % 3 !== 0) {
-            (<HTMLParagraphElement>document.querySelector('#proteincontout')).innerHTML = `<p class="text-warning">The length of the sequence must be a multiple of 3</p>`;
             //count
             (<HTMLParagraphElement>document.querySelector('#f_count')).innerText = '';
             (<HTMLParagraphElement>document.querySelector('#l_count')).innerText = '';
@@ -454,7 +450,6 @@
         } else {
             const translatedDna: string = proteinTranslation(RNA);
             proteinPerc(translatedDna);
-            (<HTMLParagraphElement>document.querySelector('#proteincontout')).innerText = '';
         }
     }
 });
@@ -507,5 +502,4 @@
     (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = '';
     (<HTMLParagraphElement>document.querySelector('#w_perc')).innerText = '';
     (<HTMLParagraphElement>document.querySelector('#x_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#proteincontout')).innerText = '';
 });

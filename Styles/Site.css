@@ -56,6 +56,14 @@ textarea.form-control:focus {
 select.form-select > option {
     color: hsl(0, 0%, 0%) !important;
 }
+.input-dark {
+    background-color: transparent !important;
+    color: hsl(0, 0%, 100%) !important;
+}
+.form-control.input-dark::selection {
+    background-color: hsl(0, 0%, 100%) !important;
+    color: hsl(0, 0%, 0%) !important;
+}
 hr {
     border: 2px solid hsl(354, 70%, 54%);
     border-radius: 3px;

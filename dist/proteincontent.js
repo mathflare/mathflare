@@ -197,7 +197,7 @@ document.querySelector('#proteincontcalc').addEventListener('click', (event) => 
     if (select === 'Protein') {
         const Protein = document.querySelector('#sequence').value.replace(/\s/g, '').toUpperCase();
         if (Protein === '') {
-            document.querySelector('#proteincontout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+            document.querySelector('#sequence').focus();
             document.querySelector('#f_count').innerText = '';
             document.querySelector('#l_count').innerText = '';
             document.querySelector('#i_count').innerText = '';
@@ -245,13 +245,12 @@ document.querySelector('#proteincontcalc').addEventListener('click', (event) => 
         }
         else {
             proteinPerc(Protein);
-            document.querySelector('#proteincontout').innerText = '';
         }
     }
     else if (select === 'RNA') {
         const RNA = document.querySelector('#sequence').value.replace(/\s/g, '').toUpperCase();
         if (RNA === '') {
-            document.querySelector('#proteincontout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+            document.querySelector('#sequence').focus();
             document.querySelector('#f_count').innerText = '';
             document.querySelector('#l_count').innerText = '';
             document.querySelector('#i_count').innerText = '';
@@ -298,7 +297,6 @@ document.querySelector('#proteincontcalc').addEventListener('click', (event) => 
             document.querySelector('#x_perc').innerText = '';
         }
         else if (RNA.length % 3 !== 0) {
-            document.querySelector('#proteincontout').innerHTML = `<p class="text-warning">The length of the sequence must be a multiple of 3</p>`;
             document.querySelector('#f_count').innerText = '';
             document.querySelector('#l_count').innerText = '';
             document.querySelector('#i_count').innerText = '';
@@ -347,14 +345,13 @@ document.querySelector('#proteincontcalc').addEventListener('click', (event) => 
         else {
             const translatedRna = proteinTranslation(RNA);
             proteinPerc(translatedRna);
-            document.querySelector('#proteincontout').innerText = '';
         }
     }
     else if (select === 'DNA') {
         const DNA = document.querySelector('#sequence').value.replace(/\s/g, '').toUpperCase();
         const RNA = Dnatranscription(DNA);
         if (RNA === '') {
-            document.querySelector('#proteincontout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+            document.querySelector('#sequence').focus();
             document.querySelector('#f_count').innerText = '';
             document.querySelector('#l_count').innerText = '';
             document.querySelector('#i_count').innerText = '';
@@ -401,7 +398,6 @@ document.querySelector('#proteincontcalc').addEventListener('click', (event) => 
             document.querySelector('#x_perc').innerText = '';
         }
         else if (RNA.length % 3 !== 0) {
-            document.querySelector('#proteincontout').innerHTML = `<p class="text-warning">The length of the sequence must be a multiple of 3</p>`;
             document.querySelector('#f_count').innerText = '';
             document.querySelector('#l_count').innerText = '';
             document.querySelector('#i_count').innerText = '';
@@ -450,7 +446,6 @@ document.querySelector('#proteincontcalc').addEventListener('click', (event) => 
         else {
             const translatedDna = proteinTranslation(RNA);
             proteinPerc(translatedDna);
-            document.querySelector('#proteincontout').innerText = '';
         }
     }
 });
@@ -501,5 +496,4 @@ document.querySelector('#clearbtn').addEventListener('click', (event) => {
     document.querySelector('#g_perc').innerText = '';
     document.querySelector('#w_perc').innerText = '';
     document.querySelector('#x_perc').innerText = '';
-    document.querySelector('#proteincontout').innerText = '';
 });

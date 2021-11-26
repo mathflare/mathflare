@@ -65,32 +65,28 @@
                 </div>
             </div>
             <br />
-            <div class="center-form">
+            <div class="btn-group">
                 <input type="submit" id="proteintodnarnacalc" class="btn btn-success btn-lg" value="Translate">
+                <button type="button" onclick="printTable()" class="btn btn-warning btn-lg">Print Results</button>
             </div>
-            <div class="my-4">
-                <a href="https://duckduckgo.com/?q=Protein+to+DNA/RNA" target="_blank" rel="noopener"
-                    class="btn btn-outline-light">Find information on the web</a>
-            </div>
-            <p class="p-0 m-0"><span class="text-warning">X</span> means that a character you entered in the sequence is
-                not
-                valid.</p>
-            <p><span class="text-warning">For end codons in Protein sequence Please use</span> *</p>
-            <div class="mt-3" style="max-height: 1em;">
-                <p class="text-success text-break" id="proteintodnarnout"></p>
+            <p class="my-3 px-3"><span class="text-warning">For end codons in protein sequence please use </span>*</p>
+            <div id="table-container">
+                <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+                    <thead>
+                        <tr>
+                            <th width="30%">Amino Acid</th>
+                            <th>Possible Codons</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablebody">
+                    </tbody>
+                </table>
             </div>
             <br />
-            <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
-                <thead>
-                    <tr>
-                        <th>Amino Acid</th>
-                        <th>Possible Codons</th>
-                    </tr>
-                </thead>
-                <tbody id="tablebody">
-
-                </tbody>
-            </table>
+            <h5>Sample Random Translated Sequence</h5>
+            <div class="center-form">
+                <textarea id="sample-seq" class="form-control input-dark" readonly></textarea>
+            </div>
         </form>
         <br />
     </div>

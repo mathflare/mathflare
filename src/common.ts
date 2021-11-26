@@ -234,6 +234,20 @@ document.addEventListener('keydown', (e: any) => {
     }
 });
 
+const printTable: () => void = () => {
+    const table: string = (<HTMLDivElement>document.querySelector('#table-container')).innerHTML!;
+    const printWindow: Window | null = window.open('', '', 'height=400,width=600');
+    if (printWindow) {
+        printWindow.document.write(table);
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.print();
+        printWindow.close();
+    } else {
+        alert('Please allow popups in order to print.');
+    }
+}
+
 document.oncontextmenu = (clickEvent: Event) => {
     console.log(clickEvent);
     //to do: create a custom context menu

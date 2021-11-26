@@ -65,48 +65,50 @@
                 </div>
             </div>
             <br />
-            <div class="center-form">
+            <div class="btn-group">
                 <input type="submit" id="dnarnacalc" class="btn btn-success btn-lg" value="Calculate">
+                <button type="button" onclick="printTable()" class="btn btn-warning btn-lg">Print Results</button>
             </div>
             <br />
-            <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
-                <thead>
-                    <tr>
-                        <th>Base</th>
-                        <th>Count</th>
-                        <th>&#37;</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>A</td>
-                        <td id="a_count"></td>
-                        <td id="a_perc"></td>
-                    </tr>
-                    <tr>
-                        <td id="base_t">T</td>
-                        <td id="t_count"></td>
-                        <td id="t_perc"></td>
-                    </tr>
-                    <tr>
-                        <td>G</td>
-                        <td id="g_count"></td>
-                        <td id="g_perc"></td>
-                    </tr>
-                    <tr>
-                        <td>C</td>
-                        <td id="c_count"></td>
-                        <td id="c_perc"></td>
-                    </tr>
-                    <tr>
-                        <td><span class="text-warning">X</span></td>
-                        <td id="error_count"></td>
-                        <td id="error_perc"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="p-2"><span class="text-warning">X</span> means that a character you entered in the sequence is not
-                valid.</p>
+            <br />
+            <div id="table-container">
+                <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+                    <thead>
+                        <tr>
+                            <th width="30%">Base</th>
+                            <th width="35%">Count</th>
+                            <th width="35%">&#37;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A</td>
+                            <td id="a_count"></td>
+                            <td id="a_perc"></td>
+                        </tr>
+                        <tr>
+                            <td id="base_t">T</td>
+                            <td id="t_count"></td>
+                            <td id="t_perc"></td>
+                        </tr>
+                        <tr>
+                            <td>G</td>
+                            <td id="g_count"></td>
+                            <td id="g_perc"></td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td id="c_count"></td>
+                            <td id="c_perc"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="text-warning">X</span> (invalid character)</td>
+                            <td id="error_count"></td>
+                            <td id="error_perc"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </form>
         <div style="max-height: 1em;">
             <p class="text-success text-break" id="drnaout"></p>
