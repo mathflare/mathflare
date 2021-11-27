@@ -51,8 +51,8 @@
         <form autocomplete="off" spellcheck="false">
             <div class="center-form">
                 <select class="form-select center-form" id="select">
-                    <option value="DNA">DNA output sequence</option>
-                    <option value="RNA">RNA output sequence</option>
+                    <option value="DNA">DNA coding output sequence</option>
+                    <option value="RNA">mRNA output sequence</option>
                 </select>
             </div>
             <br />
@@ -69,7 +69,7 @@
                 <input type="submit" id="proteintodnarnacalc" class="btn btn-success btn-lg" value="Translate">
                 <button type="button" onclick="printTable()" class="btn btn-warning btn-lg">Print Results</button>
             </div>
-            <p class="my-3 px-3"><span class="text-warning">For end codons in protein sequence please use </span>*</p>
+            <p class="my-3 px-3"><span class="text-warning">For stop codons in protein sequence please use </span>*</p>
             <div id="table-container">
                 <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
                     <thead>
