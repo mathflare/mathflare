@@ -74,8 +74,80 @@
             }
         }
     };
-    const proteintoDNA: (sequence: string) => void = (sequence: string) => {
-        const DNAdict: { [key: string]: string } = {
+    const proteintoDNAtempl: (sequence: string) => void = (sequence: string) => {
+        const DNAtempldict: { [key: string]: string } = {
+            F: "AAA AAG",
+            L: "GAA GAG AAT GAT AAC GAC",
+            I: "TAA TAG TAT",
+            V: "CAA CAG CAT CAC",
+            M: "TAC",
+            S: "AGA AGG AGT AGC TCA TCG",
+            P: "GGA GGG GGT GGC",
+            T: "TGA TGG TGT TGC",
+            A: "CGA CGG CGT CGC",
+            Y: "ATA ATG",
+            H: "GTA GTG",
+            N: "TTA TTG",
+            D: "CTA CTG",
+            END: "ATT ATC ACT",
+            Q: "GTT GTC",
+            K: "TTT TTC",
+            E: "CTT CTC",
+            C: "ACA ACG",
+            R: "GCA GCG GCT TCT GCC TCC",
+            G: "CCA CCG CCT CCC",
+            W: "ACC"
+        };
+        for (let i: number = 0; i < sequence.length; i++) {
+            if (sequence[i] === '*') {
+                const tr: HTMLTableRowElement = document.createElement('tr');
+                const td1: HTMLTableCellElement = document.createElement('td');
+                const td2: HTMLTableCellElement = document.createElement('td');
+                td1.innerHTML = sequence[i];
+                td2.innerHTML = DNAtempldict['END'];
+                td2.classList.add('text-success');
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
+            } else if (DNAtempldict[sequence[i]] === undefined) {
+                const tr: HTMLTableRowElement = document.createElement('tr');
+                const td1: HTMLTableCellElement = document.createElement('td');
+                const td2: HTMLTableCellElement = document.createElement('td');
+                td1.innerHTML = 'X';
+                td2.innerHTML = 'Error!';
+                td1.classList.add('text-warning');
+                td2.classList.add('text-warning');
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
+            } else {
+                const tr: HTMLTableRowElement = document.createElement('tr');
+                const td1: HTMLTableCellElement = document.createElement('td');
+                const td2: HTMLTableCellElement = document.createElement('td');
+                td1.innerHTML = sequence[i];
+                td2.innerHTML = DNAtempldict[sequence[i]];
+                td2.classList.add('text-success');
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
+            }
+        };
+        for (let i: number = 0; i < sequence.length; i++) {
+            if (sequence[i] === '*') {
+                let temp: String[] = DNAtempldict['END'].split(' ');
+                const rand: number = Math.floor(Math.random() * temp.length);
+                (<HTMLTextAreaElement>document.querySelector('#sample-seq')).value += temp[rand];
+            } else if (DNAtempldict[sequence[i]] === undefined) {
+                (<HTMLTextAreaElement>document.querySelector('#sample-seq')).value += 'X';
+            } else {
+                let temp: String[] = DNAtempldict[sequence[i]].split(' ');
+                const rand: number = Math.floor(Math.random() * temp.length);
+                (<HTMLTextAreaElement>document.querySelector('#sample-seq')).value += temp[rand];
+            }
+        }
+    };
+    const proteintoDNAcod: (sequence: string) => void = (sequence: string) => {
+        const DNAcoddict: { [key: string]: string } = {
             F: "TTT TTC",
             L: "CTT CTC TTA CTA TTG CTG",
             I: "ATT ATC ATA",
@@ -104,12 +176,12 @@
                 const td1: HTMLTableCellElement = document.createElement('td');
                 const td2: HTMLTableCellElement = document.createElement('td');
                 td1.innerHTML = sequence[i];
-                td2.innerHTML = DNAdict['END'];
+                td2.innerHTML = DNAcoddict['END'];
                 td2.classList.add('text-success');
                 tr.appendChild(td1);
                 tr.appendChild(td2);
                 (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
-            } else if (DNAdict[sequence[i]] === undefined) {
+            } else if (DNAcoddict[sequence[i]] === undefined) {
                 const tr: HTMLTableRowElement = document.createElement('tr');
                 const td1: HTMLTableCellElement = document.createElement('td');
                 const td2: HTMLTableCellElement = document.createElement('td');
@@ -125,7 +197,7 @@
                 const td1: HTMLTableCellElement = document.createElement('td');
                 const td2: HTMLTableCellElement = document.createElement('td');
                 td1.innerHTML = sequence[i];
-                td2.innerHTML = DNAdict[sequence[i]];
+                td2.innerHTML = DNAcoddict[sequence[i]];
                 td2.classList.add('text-success');
                 tr.appendChild(td1);
                 tr.appendChild(td2);
@@ -134,13 +206,13 @@
         };
         for (let i: number = 0; i < sequence.length; i++) {
             if (sequence[i] === '*') {
-                let temp: String[] = DNAdict['END'].split(' ');
+                let temp: String[] = DNAcoddict['END'].split(' ');
                 const rand: number = Math.floor(Math.random() * temp.length);
                 (<HTMLTextAreaElement>document.querySelector('#sample-seq')).value += temp[rand];
-            } else if (DNAdict[sequence[i]] === undefined) {
+            } else if (DNAcoddict[sequence[i]] === undefined) {
                 (<HTMLTextAreaElement>document.querySelector('#sample-seq')).value += 'X';
             } else {
-                let temp: String[] = DNAdict[sequence[i]].split(' ');
+                let temp: String[] = DNAcoddict[sequence[i]].split(' ');
                 const rand: number = Math.floor(Math.random() * temp.length);
                 (<HTMLTextAreaElement>document.querySelector('#sample-seq')).value += temp[rand];
             }
@@ -158,10 +230,14 @@
             (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
             (<HTMLTextAreaElement>document.querySelector('#sample-seq')).value = '';
             proteintoRNA(protein);
-        } else if (select === 'DNA') {
+        } else if (select === 'DNAcod') {
             (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
             (<HTMLTextAreaElement>document.querySelector('#sample-seq')).value = '';
-            proteintoDNA(protein);
+            proteintoDNAcod(protein);
+        } else if (select === 'DNAtempl') {
+            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            (<HTMLTextAreaElement>document.querySelector('#sample-seq')).value = '';
+            proteintoDNAtempl(protein);
         }
     }
 });

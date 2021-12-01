@@ -80,8 +80,85 @@ document.querySelector('#proteintodnarnacalc').addEventListener('click', (event)
             }
         }
     };
-    const proteintoDNA = (sequence) => {
-        const DNAdict = {
+    const proteintoDNAtempl = (sequence) => {
+        const DNAtempldict = {
+            F: "AAA AAG",
+            L: "GAA GAG AAT GAT AAC GAC",
+            I: "TAA TAG TAT",
+            V: "CAA CAG CAT CAC",
+            M: "TAC",
+            S: "AGA AGG AGT AGC TCA TCG",
+            P: "GGA GGG GGT GGC",
+            T: "TGA TGG TGT TGC",
+            A: "CGA CGG CGT CGC",
+            Y: "ATA ATG",
+            H: "GTA GTG",
+            N: "TTA TTG",
+            D: "CTA CTG",
+            END: "ATT ATC ACT",
+            Q: "GTT GTC",
+            K: "TTT TTC",
+            E: "CTT CTC",
+            C: "ACA ACG",
+            R: "GCA GCG GCT TCT GCC TCC",
+            G: "CCA CCG CCT CCC",
+            W: "ACC"
+        };
+        for (let i = 0; i < sequence.length; i++) {
+            if (sequence[i] === '*') {
+                const tr = document.createElement('tr');
+                const td1 = document.createElement('td');
+                const td2 = document.createElement('td');
+                td1.innerHTML = sequence[i];
+                td2.innerHTML = DNAtempldict['END'];
+                td2.classList.add('text-success');
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                document.querySelector('#tablebody').appendChild(tr);
+            }
+            else if (DNAtempldict[sequence[i]] === undefined) {
+                const tr = document.createElement('tr');
+                const td1 = document.createElement('td');
+                const td2 = document.createElement('td');
+                td1.innerHTML = 'X';
+                td2.innerHTML = 'Error!';
+                td1.classList.add('text-warning');
+                td2.classList.add('text-warning');
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                document.querySelector('#tablebody').appendChild(tr);
+            }
+            else {
+                const tr = document.createElement('tr');
+                const td1 = document.createElement('td');
+                const td2 = document.createElement('td');
+                td1.innerHTML = sequence[i];
+                td2.innerHTML = DNAtempldict[sequence[i]];
+                td2.classList.add('text-success');
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                document.querySelector('#tablebody').appendChild(tr);
+            }
+        }
+        ;
+        for (let i = 0; i < sequence.length; i++) {
+            if (sequence[i] === '*') {
+                let temp = DNAtempldict['END'].split(' ');
+                const rand = Math.floor(Math.random() * temp.length);
+                document.querySelector('#sample-seq').value += temp[rand];
+            }
+            else if (DNAtempldict[sequence[i]] === undefined) {
+                document.querySelector('#sample-seq').value += 'X';
+            }
+            else {
+                let temp = DNAtempldict[sequence[i]].split(' ');
+                const rand = Math.floor(Math.random() * temp.length);
+                document.querySelector('#sample-seq').value += temp[rand];
+            }
+        }
+    };
+    const proteintoDNAcod = (sequence) => {
+        const DNAcoddict = {
             F: "TTT TTC",
             L: "CTT CTC TTA CTA TTG CTG",
             I: "ATT ATC ATA",
@@ -110,13 +187,13 @@ document.querySelector('#proteintodnarnacalc').addEventListener('click', (event)
                 const td1 = document.createElement('td');
                 const td2 = document.createElement('td');
                 td1.innerHTML = sequence[i];
-                td2.innerHTML = DNAdict['END'];
+                td2.innerHTML = DNAcoddict['END'];
                 td2.classList.add('text-success');
                 tr.appendChild(td1);
                 tr.appendChild(td2);
                 document.querySelector('#tablebody').appendChild(tr);
             }
-            else if (DNAdict[sequence[i]] === undefined) {
+            else if (DNAcoddict[sequence[i]] === undefined) {
                 const tr = document.createElement('tr');
                 const td1 = document.createElement('td');
                 const td2 = document.createElement('td');
@@ -133,7 +210,7 @@ document.querySelector('#proteintodnarnacalc').addEventListener('click', (event)
                 const td1 = document.createElement('td');
                 const td2 = document.createElement('td');
                 td1.innerHTML = sequence[i];
-                td2.innerHTML = DNAdict[sequence[i]];
+                td2.innerHTML = DNAcoddict[sequence[i]];
                 td2.classList.add('text-success');
                 tr.appendChild(td1);
                 tr.appendChild(td2);
@@ -143,15 +220,15 @@ document.querySelector('#proteintodnarnacalc').addEventListener('click', (event)
         ;
         for (let i = 0; i < sequence.length; i++) {
             if (sequence[i] === '*') {
-                let temp = DNAdict['END'].split(' ');
+                let temp = DNAcoddict['END'].split(' ');
                 const rand = Math.floor(Math.random() * temp.length);
                 document.querySelector('#sample-seq').value += temp[rand];
             }
-            else if (DNAdict[sequence[i]] === undefined) {
+            else if (DNAcoddict[sequence[i]] === undefined) {
                 document.querySelector('#sample-seq').value += 'X';
             }
             else {
-                let temp = DNAdict[sequence[i]].split(' ');
+                let temp = DNAcoddict[sequence[i]].split(' ');
                 const rand = Math.floor(Math.random() * temp.length);
                 document.querySelector('#sample-seq').value += temp[rand];
             }
@@ -171,10 +248,15 @@ document.querySelector('#proteintodnarnacalc').addEventListener('click', (event)
             document.querySelector('#sample-seq').value = '';
             proteintoRNA(protein);
         }
-        else if (select === 'DNA') {
+        else if (select === 'DNAcod') {
             document.querySelector('#tablebody').innerText = '';
             document.querySelector('#sample-seq').value = '';
-            proteintoDNA(protein);
+            proteintoDNAcod(protein);
+        }
+        else if (select === 'DNAtempl') {
+            document.querySelector('#tablebody').innerText = '';
+            document.querySelector('#sample-seq').value = '';
+            proteintoDNAtempl(protein);
         }
     }
 });
