@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- SEO -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathFlare - RNA to DNA Generator</title>
+    <meta name="title" content="MathFlare - RNA to DNA Generator">
+    <meta name="og:title" content="MathFlare - RNA to DNA Generator" />
+    <meta name="twitter:title" content="MathFlare - RNA to DNA Generator" />
+    <meta name="keywords" content="rna, transcription, rna to dna, rna, biology, genetics, mathflare, math flare">
+    <meta name="description" content="Convert RNA to DNA." />
+    <meta name="og:description" content="Convert RNA to DNA." />
+    <meta name="twitter:description" content="Convert RNA to DNA." />
+    <meta name="author" content="MathFlare.xyz" />
+    <meta name="og:url" content="https://www.mathflare.xyz/rnatodna" />
+    <link rel="canonical" href="https://www.mathflare.xyz/rnatodna">
+    <meta name="og:image" content="https://www.mathflare.xyz/Assets/logo.png" />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://www.mathflare.xyz/Assets/logo.png">
+    <link rel="home" href="https://www.mathflare.xyz">
+    <!-- STYLES / ICONS -->
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="Styles/Scrollbar.css" rel="stylesheet" />
+    <link href="Styles/Site.css" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="Assets/android-chrome-192x192.png" sizes=192x192>
+    <link rel="icon" type="image/png" href="Assets/android-chrome-512x512.png" sizes=512x512>
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/apple-touch-icon.png">
+    <!-- SCRIPTS -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="dist/jquery.min.js" defer></script>
+    <script src="dist/bootstrap.min.js" defer></script>
+    <script src="dist/navbar.js" defer></script>
+    <script src="dist/common.js" defer></script>
+    <script src="dist/main.js" defer></script>
+</head>
+
+<body>
+    <!-- NAVBAR START -->
+    <div id="nav-container"></div>
+    <!-- NAVBAR END -->
+    <div class="center">
+        <h1 class="text-white px-4">RNA to DNA Generator</h1>
+        <hr class="bg-danger" style="width: 60%;" />
+        <form autocomplete="off" spellcheck="false">
+            <div class="center-form">
+                <select class="form-select center-form" id="select">
+                    <option value="comp">Complement</option>
+                    <option value="rev-comp">Reverse Complement</option>
+                </select>
+            </div>
+            <br />
+            <h4 class="text-white">Enter the RNA sequence</h4>
+            <div class="center-form">
+                <div class="input-group">
+                    <textarea id="rnastring" placeholder="eg. AUUGC" class="form-control input-group-item message"
+                        required></textarea>
+                    <button type="reset" class="btn btn-danger" id="clearbtn">Clear</button>
+                </div>
+            </div>
+            <br />
+            <div class="center-form">
+                <input type="submit" id="rnatodnacalc" class="btn btn-success btn-lg" value="Generate">
+            </div>
+            <div class="my-4">
+                <a href="https://duckduckgo.com/?q=RNA+to+DNA" target="_blank" rel="noopener"
+                    class="btn btn-outline-light">Find information on the web</a>
+            </div>
+            <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+                <thead>
+                    <tr>
+                        <th width="30%">Base</th>
+                        <th width="35%">Count</th>
+                        <th width="35%">&#37;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td id="a_count"></td>
+                        <td id="a_perc"></td>
+                    </tr>
+                    <tr>
+                        <td>T</td>
+                        <td id="t_count"></td>
+                        <td id="t_perc"></td>
+                    </tr>
+                    <tr>
+                        <td>G</td>
+                        <td id="g_count"></td>
+                        <td id="g_perc"></td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td id="c_count"></td>
+                        <td id="c_perc"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="text-warning">X</span></td>
+                        <td id="error_count"></td>
+                        <td id="error_perc"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="mt-1 mb-3 px-3"><span class="text-warning">X</span> means that a character you entered in the
+                sequence is not
+                valid.</p>
+        </form>
+        <div style="max-height: 1em;">
+            <p class="text-success text-break" id="rnatodnaout"></p>
+        </div>
+        <br />
+    </div>
+    <!-- SCRIPTS START -->
+    <script src="dist/rnatodna.js"></script>
+    <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
+    <!-- SCRIPT END -->
+</body>
+
+</html>

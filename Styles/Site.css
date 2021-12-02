@@ -345,7 +345,8 @@ var {
 #proteinout,
 #drnaout,
 #proteincontout,
-#proteintodnarnout {
+#proteintodnarnout,
+#rnatodnaout {
     font-size: 20px !important;
     line-height: 24px !important;
     padding-left: 3em !important;
