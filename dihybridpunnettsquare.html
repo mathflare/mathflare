@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- SEO -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathFlare - Dihybrid Punnett Square Calculator</title>
+    <meta name="title" content="MathFlare -  Dihybrid Punnett Square Calculator">
+    <meta name="og:title" content="MathFlare -  Dihybrid Punnett Square Calculator" />
+    <meta name="twitter:title" content="MathFlare -  Dihybrid Punnett Square Calculator" />
+    <meta name="keywords"
+        content="dihybrid punnett square, calculator, biology, allele, genotype, mathflare, math flare">
+    <meta name="description" content="Easily calculate dihybrid punnett square" />
+    <meta name="og:description" content="Easily calculate dihybrid punnett square" />
+    <meta name="twitter:description" content="Easily calculate dihybrid punnett square" />
+    <meta name="author" content="MathFlare.xyz" />
+    <meta name="og:url" content="https://www.mathflare.xyz/dihybridpunnettsquare" />
+    <link rel="canonical" href="https://www.mathflare.xyz/dihybridpunnettsquare">
+    <meta name="og:image" content="https://www.mathflare.xyz/Assets/logo.png" />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://www.mathflare.xyz/Assets/logo.png">
+    <link rel="home" href="https://www.mathflare.xyz">
+    <!-- STYLES / ICONS -->
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="Styles/Scrollbar.css" rel="stylesheet" />
+    <link href="Styles/Site.css" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="Assets/android-chrome-192x192.png" sizes=192x192>
+    <link rel="icon" type="image/png" href="Assets/android-chrome-512x512.png" sizes=512x512>
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/apple-touch-icon.png">
+    <!-- SCRIPTS -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="dist/jquery.min.js" defer></script>
+    <script src="dist/bootstrap.min.js" defer></script>
+    <script src="dist/navbar.js" defer></script>
+    <script src="dist/common.js" defer></script>
+    <script src="dist/main.js" defer></script>
+</head>
+
+<body>
+    <!-- NAVBAR START -->
+    <div id="nav-container"></div>
+    <!-- NAVBAR END -->
+    <div class="center">
+        <h1 class="text-white px-4">Dihybrid Punnett Square</h1>
+        <hr class="bg-danger" style="width: 60%;" />
+        <form autocomplete="off">
+            <h4 class="text-white">Father's genotype</h4>
+            <div class=" center-form">
+                <div class="input-group">
+                    <select class="form-select" id="fatherselectA">
+                        <option value="AA">AA</option>
+                        <option value="Aa">Aa</option>
+                        <option value="aa">aa</option>
+                    </select>
+                    <select class="form-select" id="fatherselectB">
+                        <option value="BB">BB</option>
+                        <option value="Bb">Bb</option>
+                        <option value="bb">bb</option>
+                    </select>
+                </div>
+            </div>
+            <br />
+            <h4 class="text-white">Mother's genotype</h4>
+            <div class=" center-form">
+                <div class="input-group">
+                    <select class="form-select" id="motherselectA">
+                        <option value="AA">AA</option>
+                        <option value="Aa">Aa</option>
+                        <option value="aa">aa</option>
+                    </select>
+                    <select class="form-select" id="motherselectB">
+                        <option value="BB">BB</option>
+                        <option value="Bb">Bb</option>
+                        <option value="bb">bb</option>
+                    </select>
+                </div>
+            </div>
+            <br />
+            <div class="btn-group">
+                <input type="submit" id="dihpscalc" class="btn btn-success btn-lg" value="Calculate">
+                <button type="button" onclick="printTable()" class="btn btn-warning btn-lg">Print Results</button>
+            </div>
+            <div class="my-4">
+                <a href="https://duckduckgo.com/?q=find+punnett+square" target="_blank" rel="noopener"
+                    class="btn btn-outline-light">Find information on the web</a>
+            </div>
+        </form>
+        <p>**A,B: Dominant alleles | a,b: Recessive alleles**</p>
+        <br />
+        <div id="table-container">
+            <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 20%"><sup><i class="bi bi-gender-male"></i></sup>&frasl;<sub><i
+                                    class="bi bi-gender-female"></i></sub></th>
+                        <th id="Fgamet1">ΑB</th>
+                        <th id="Fgamet2">ΑB</th>
+                        <th id="Fgamet3">ΑB</th>
+                        <th id="Fgamet4">ΑB</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="Mgamet1" scope="row">ΑB</th>
+                        <td id="Fline1">ΑΑBB</td>
+                        <td id="Fline2">ΑΑBB</td>
+                        <td id="Fline3">ΑΑBB</td>
+                        <td id="Fline4">ΑΑBB</td>
+                    </tr>
+                    <tr>
+                        <th id="Mgamet2" scope="row">ΑB</th>
+                        <td id="Sline1">ΑΑBB</td>
+                        <td id="Sline2">ΑΑBB</td>
+                        <td id="Sline3">ΑΑBB</td>
+                        <td id="Sline4">ΑΑBB</td>
+                    </tr>
+                    <tr>
+                        <th id="Mgamet3" scope="row">ΑB</th>
+                        <td id="Tline1">ΑΑBB</td>
+                        <td id="Tline2">ΑΑBB</td>
+                        <td id="Tline3">ΑΑBB</td>
+                        <td id="Tline4">ΑΑBB</td>
+                    </tr>
+                    <tr>
+                        <th id="Mgamet4" scope="row">ΑB</th>
+                        <td id="Qline1">ΑΑBB</td>
+                        <td id="Qline2">ΑΑBB</td>
+                        <td id="Qline3">ΑΑBB</td>
+                        <td id="Qline4">ΑΑBB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--<p>Chances:</p>
+        <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+            <thead>
+                <tr>
+                    <th id="Genotype" width="30%">Genotype</th>
+                    <th id="Genpercent" width="20%">&#37;</th>
+                    <th id="Phenotype" width="30%">Phenotype</th>
+                    <th id="Phenpercent" width="20%">&#37;</th>
+                </tr>
+            </thead>
+            <tbody id="chancestablebody">
+
+            </tbody>
+        </table>
+
+
+        <br />-->
+    </div>
+    <!-- SCRIPTS START -->
+
+    <script src="dist/dihybridpunnettsquare.js"></script>
+    <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
+    <!-- SCRIPT END -->
+</body>
+
+</html>
