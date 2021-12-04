@@ -86,12 +86,11 @@
                 <button type="button" onclick="printTable()" class="btn btn-warning btn-lg">Print Results</button>
             </div>
             <div class="my-4">
-                <a href="https://duckduckgo.com/?q=find+punnett+square" target="_blank" rel="noopener"
+                <a href="https://duckduckgo.com/?q=generate+dihybrid+punnett+square" target="_blank" rel="noopener"
                     class="btn btn-outline-light">Find information on the web</a>
             </div>
         </form>
-        <p>**A,B: Dominant alleles | a,b: Recessive alleles**</p>
-        <br />
+        <p>A,B: Dominant alleles | a,b: Recessive alleles</p>
         <div id="table-container">
             <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
                 <thead>
@@ -136,23 +135,82 @@
                 </tbody>
             </table>
         </div>
-        <!--<p>Chances:</p>
-        <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
-            <thead>
-                <tr>
-                    <th id="Genotype" width="30%">Genotype</th>
-                    <th id="Genpercent" width="20%">&#37;</th>
-                    <th id="Phenotype" width="30%">Phenotype</th>
-                    <th id="Phenpercent" width="20%">&#37;</th>
-                </tr>
-            </thead>
-            <tbody id="chancestablebody">
-
-            </tbody>
-        </table>
-
-
-        <br />-->
+        <p class="mb-2">Chances:</p>
+        <div>
+            <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+                <thead>
+                    <tr>
+                        <th id="Genotype" width="30%">Genotype</th>
+                        <th id="Genpercent" width="20%">&#37;</th>
+                    </tr>
+                </thead>
+                <tbody id="genotypetablebody">
+                    <tr>
+                        <td>AABB</td>
+                        <td id="AABB">100.00</td>
+                    </tr>
+                    <tr>
+                        <td>AABb</td>
+                        <td id="AABb">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>AAbb</td>
+                        <td id="AAbb">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>AaBB</td>
+                        <td id="AaBB">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>AaBb</td>
+                        <td id="AaBb">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Aabb</td>
+                        <td id="Aabb">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>aaBB</td>
+                        <td id="aaBB">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>aaBb</td>
+                        <td id="aaBb">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>aabb</td>
+                        <td id="aabb">0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+                <thead>
+                    <tr>
+                        <th id="Phenotype" width="30%">Phenotype</th>
+                        <th id="Phenpercent" width="20%">&#37;</th>
+                    </tr>
+                </thead>
+                <tbody id="phenotypetablebody">
+                    <tr>
+                        <td>AB</td>
+                        <td id="AB">100.00</td>
+                    </tr>
+                    <tr>
+                        <td>Ab</td>
+                        <td id="Ab">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>aB</td>
+                        <td id="aB">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>ab</td>
+                        <td id="ab">0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br />
     </div>
     <!-- SCRIPTS START -->
 

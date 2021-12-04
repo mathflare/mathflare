@@ -57,7 +57,8 @@ const searcCalc = () => {
         ['protein content calculator', 'proteincontent'],
         ['protein to dna/rna translator', 'proteintodnarna'],
         ['rna complement generator', 'complementaryrna'],
-        ['rna to dna generator', 'rnatodna']
+        ['rna to dna generator', 'rnatodna'],
+        ['dihybrid punnett square', 'dihybridpunnettsquare']
     ];
     searchBox.addEventListener("input", () => {
         const search = searchBox.value.toLowerCase();
