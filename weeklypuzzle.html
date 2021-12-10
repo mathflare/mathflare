@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- SEO -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathFlare - Weekly Puzzle</title>
+    <meta name="title" content="MathFlare - Weekly Puzzle">
+    <meta name="og:title" content="MathFlare - Weekly Puzzle" />
+    <meta name="twitter:title" content="MathFlare - Weekly Puzzle" />
+    <meta name="keywords" content="weekly puzzle, weekly, puzzle, mathflare, math flare">
+    <meta name="description" content="Solve our weekly puzzle." />
+    <meta name="og:description" content="Solve our weekly puzzle." />
+    <meta name="twitter:description" content="Solve our weekly puzzle." />
+    <meta name="author" content="MathFlare.xyz" />
+    <meta name="og:url" content="https://www.mathflare.xyz/weeklypuzzle" />
+    <link rel="canonical" href="https://www.mathflare.xyz/weeklypuzzle">
+    <meta name="og:image" content="https://www.mathflare.xyz/Assets/logo.png" />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://www.mathflare.xyz/Assets/logo.png">
+    <link rel="home" href="https://www.mathflare.xyz">
+    <!-- STYLES / ICONS -->
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="Styles/Scrollbar.css" rel="stylesheet" />
+    <link href="Styles/Site.css" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="Assets/android-chrome-192x192.png" sizes=192x192>
+    <link rel="icon" type="image/png" href="Assets/android-chrome-512x512.png" sizes=512x512>
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/apple-touch-icon.png">
+    <!-- SCRIPTS -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="dist/jquery.min.js" defer></script>
+    <script src="dist/bootstrap.min.js" defer></script>
+    <script src="dist/navbar.js" defer></script>
+    <script src="dist/common.js" defer></script>
+    <script src="dist/main.js" defer></script>
+</head>
+
+<body>
+    <!-- NAVBAR START -->
+    <div id="nav-container"></div>
+    <!-- NAVBAR END -->
+    <div class="center">
+        <h1 class="text-white px-4">Puzzle</h1>
+        <hr class="bg-danger" style="width: 60%;" />
+        <form autocomplete="off">
+            <h3>1 + 2 = 7</h3>
+            <h3>2 + 3 = 32</h3>
+            <h3>3 + 4 = 87</h3>
+            <h3>4 + 5 = ?</h3>
+            <div class="center-form">
+                <input type="number" id="answer" placeholder="answer" class="form-control mb-0" />
+            </div>
+            <br />
+            <div class="btn-group">
+                <input type="submit" id="puzzlecalc" class="btn btn-success btn-lg" value="Check your answer">
+                <input type="reset" id="clearbtn" class="btn btn-danger btn-lg" value="Clear">
+            </div>
+            <br />
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p id="puzzleoutput"></p>
+        </div>
+    </div>
+    <!-- SCRIPTS START -->
+
+    <script src="dist/weeklypuzzle.js"></script>
+    <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
+    <!-- SCRIPT END -->
+</body>
+
+</html>
