@@ -41,6 +41,11 @@ select.form-select,
 textarea.form-control {
     transition: all ease-in-out 0.28s !important;
 }
+input.form-control,
+select.form-select,
+textarea.form-control {
+    transition: all ease-in-out 0.28s !important;
+}
 input.form-control:hover,
 select.form-select:hover,
 textarea.form-control:hover {

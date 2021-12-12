@@ -45,7 +45,7 @@
     <div id="nav-container"></div>
     <!-- NAVBAR END -->
     <div class="center">
-        <h1 class="text-white px-4">Puzzle</h1>
+        <h1 class="text-white px-4"><i class="bi bi-patch-question"></i> Weekly Puzzle</h1>
         <hr class="bg-danger" style="width: 60%;" />
         <form autocomplete="off">
             <h3>1 + 2 = 7</h3>
@@ -53,7 +53,11 @@
             <h3>3 + 4 = 87</h3>
             <h3>4 + 5 = ?</h3>
             <div class="center-form">
-                <input type="number" id="answer" placeholder="answer" class="form-control mb-0" />
+                <input type="email" id="email" placeholder="enter your email" class="form-control mb-0" required />
+            </div>
+            <br />
+            <div class="center-form">
+                <input type="text" id="guess" placeholder="place your guess here!" class="form-control mb-0" required />
             </div>
             <br />
             <div class="btn-group">
@@ -63,12 +67,14 @@
             <br />
         </form>
         <br />
-        <div style="max-height: 1em;">
+        <div class="mb-5" style="max-height: 1em;">
             <p id="puzzleoutput"></p>
         </div>
     </div>
     <!-- SCRIPTS START -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+        integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="dist/weeklypuzzle.js"></script>
     <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
     <!-- SCRIPT END -->
