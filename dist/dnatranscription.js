@@ -129,7 +129,6 @@ document.querySelector('#comprnacalc').addEventListener('click', (event) => {
     }
 });
 document.querySelector('#clearbtn').addEventListener('click', (event) => {
-    event.preventDefault();
     document.querySelector('#rnastring').value = '';
     document.querySelector('#a_count').innerText = '';
     document.querySelector('#a_perc').innerText = '';

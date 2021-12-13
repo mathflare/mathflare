@@ -105,7 +105,6 @@
     }
 });
 (<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event: Event) => {
-    event.preventDefault();
     (<HTMLInputElement>document.querySelector('#sequence')).value = '';
     (<HTMLParagraphElement>document.querySelector('#proteinout')).innerText = '';
 });

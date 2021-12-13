@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- SEO -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathFlare - Electronic Structure of Atoms Calculator</title>
+    <meta name="title" content="MathFlare - Electronic Structure of Atoms Calculator">
+    <meta name="og:title" content="MathFlare - Electronic Structure of Atoms Calculator" />
+    <meta name="twitter:title" content="MathFlare - Electronic Structure of Atoms Calculator" />
+    <meta name="keywords" content="electron, shell, electronic structure, mathflare, math flare">
+    <meta name="description" content="Calculate the electron shell structure of a chemical element." />
+    <meta name="og:description" content="Calculate the electron shell structure of a chemical element." />
+    <meta name="twitter:description" content="Calculate the electron shell structure of a chemical element." />
+    <meta name="author" content="MathFlare.xyz" />
+    <meta name="og:url" content="https://www.mathflare.xyz/electronicstructureofatoms" />
+    <link rel="canonical" href="https://www.mathflare.xyz/electronicstructureofatoms">
+    <meta name="og:image" content="https://www.mathflare.xyz/Assets/logo.png" />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://www.mathflare.xyz/Assets/logo.png">
+    <link rel="home" href="https://www.mathflare.xyz">
+    <!-- STYLES / ICONS -->
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="Styles/Scrollbar.css" rel="stylesheet" />
+    <link href="Styles/Site.css" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="Assets/android-chrome-192x192.png" sizes=192x192>
+    <link rel="icon" type="image/png" href="Assets/android-chrome-512x512.png" sizes=512x512>
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/apple-touch-icon.png">
+    <!-- SCRIPTS -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="dist/jquery.min.js" defer></script>
+    <script src="dist/bootstrap.min.js" defer></script>
+    <script src="dist/navbar.js" defer></script>
+    <script src="dist/common.js" defer></script>
+    <script src="dist/main.js" defer></script>
+</head>
+
+<body>
+    <!-- NAVBAR START -->
+    <div id="nav-container"></div>
+    <!-- NAVBAR END -->
+    <div class="center">
+        <h1 class="text-white px-4">Electronic Structure of Atoms</h1>
+        <hr class="bg-danger" style="width: 60%;" />
+        <form autocomplete="off">
+            <h4>Enter the Element's Atomic Number</h4>
+            <div class="center-form">
+                <input type="number" id="atomicnum" placeholder="z" class="form-control mb-0" />
+            </div>
+            <br />
+            <div class="btn-group">
+                <input type="submit" id="electroncalc" class="btn btn-success btn-lg" value="Calculate">
+                <input type="reset" id="clearbtn" class="btn btn-danger btn-lg" value="Clear">
+            </div>
+            <br />
+        </form>
+        <br />
+        <div class="mb-5" style="max-height: 1em;">
+            <p id="electronout"></p>
+        </div>
+    </div>
+    <!-- SCRIPTS START -->
+    <script src="dist/electronicstructureofatoms.js"></script>
+    <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
+    <!-- SCRIPT END -->
+</body>
+
+</html>

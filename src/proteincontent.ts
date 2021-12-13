@@ -454,7 +454,6 @@
     }
 });
 (<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event: Event) => {
-    event.preventDefault();
     (<HTMLInputElement>document.querySelector('#sequence')).value = '';
     //count
     (<HTMLParagraphElement>document.querySelector('#f_count')).innerText = '';

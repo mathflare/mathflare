@@ -113,7 +113,6 @@ document.querySelector('#proteincalc').addEventListener('click', (event) => {
     }
 });
 document.querySelector('#clearbtn').addEventListener('click', (event) => {
-    event.preventDefault();
     document.querySelector('#sequence').value = '';
     document.querySelector('#proteinout').innerText = '';
 });

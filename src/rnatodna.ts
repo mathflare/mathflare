@@ -106,7 +106,6 @@
     }
 });
 (<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event: Event) => {
-    event.preventDefault();
     (<HTMLInputElement>document.querySelector('#rnastring')).value = '';
     (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
     (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = '';

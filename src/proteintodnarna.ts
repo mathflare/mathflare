@@ -242,7 +242,6 @@
     }
 });
 (<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event: Event) => {
-    event.preventDefault();
     (<HTMLInputElement>document.querySelector('#sequence')).value = '';
     (<HTMLTextAreaElement>document.querySelector('#sample-seq')).value = '';
     (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';

@@ -58,7 +58,8 @@ const searcCalc = () => {
         ['protein to dna/rna translator', 'proteintodnarna'],
         ['rna complement generator', 'complementaryrna'],
         ['rna to dna generator', 'rnatodna'],
-        ['dihybrid punnett square', 'dihybridpunnettsquare']
+        ['dihybrid punnett square', 'dihybridpunnettsquare'],
+        ['electronic structure of atoms', 'electronicstructureofatoms']
     ];
     searchBox.addEventListener("input", () => {
         const search = searchBox.value.toLowerCase();

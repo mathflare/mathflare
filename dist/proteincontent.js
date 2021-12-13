@@ -450,7 +450,6 @@ document.querySelector('#proteincontcalc').addEventListener('click', (event) => 
     }
 });
 document.querySelector('#clearbtn').addEventListener('click', (event) => {
-    event.preventDefault();
     document.querySelector('#sequence').value = '';
     document.querySelector('#f_count').innerText = '';
     document.querySelector('#l_count').innerText = '';
