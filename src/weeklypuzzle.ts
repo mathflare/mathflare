@@ -37,6 +37,7 @@
 });
 (<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event: Event) => {
     event.preventDefault();
-    ((<HTMLInputElement>document.querySelector('#answer')).value) = '';
+    (<HTMLInputElement>document.querySelector('#guess')).value = '';
+    (<HTMLInputElement>document.querySelector('#email')).value = '';
     (<HTMLParagraphElement>document.querySelector('#puzzleoutput')).innerText = '';
 });

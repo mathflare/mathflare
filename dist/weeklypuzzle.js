@@ -49,6 +49,7 @@ document.querySelector('#puzzlecalc').addEventListener('click', (event) => __awa
 }));
 document.querySelector('#clearbtn').addEventListener('click', (event) => {
     event.preventDefault();
-    (document.querySelector('#answer').value) = '';
+    document.querySelector('#guess').value = '';
+    document.querySelector('#email').value = '';
     document.querySelector('#puzzleoutput').innerText = '';
 });
