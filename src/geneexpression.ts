@@ -226,7 +226,7 @@
     } else if (templdna.length % 3 !== 0) {
         (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
         const tr: HTMLTableRowElement = document.createElement('tr');
-        tr.innerHTML = '<td colspan="3">The sequence must be a multiple of 3</td>';
+        tr.innerHTML = '<td colspan="3">The sequence length must be a multiple of 3</td>';
         tr.classList.add('text-warning');
         (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
     } else {
