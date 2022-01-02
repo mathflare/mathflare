@@ -233,7 +233,11 @@
         (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
         const mrna: string = Dnatranscription(templdna);
         const protein: string = Translation(mrna);
-        (<HTMLParagraphElement>document.querySelector('#expressionout')).innerHTML = `<p><span class="text-warning">Protein: </span>${protein.replace(/X/g, '<span class="text-warning">X</span>')}<br/><br/><span class="text-warning">DNA Coding Strand: </span>${mrna.replace(/U/g, 'T').replace(/X/g, '<span class="text-warning">X</span>')}<br/><br/><span class="text-warning">mRNA Strand: </span>${mrna.replace(/X/g, '<span class="text-warning">X</span>')}<br/><br/><span class="text-warning">tRNA Anticodons: </span>${Anticodons(mrna).replace(/X/g, '<span class="text-warning">X</span>')}</p>`;
+        (<HTMLTableCellElement>document.querySelector('#protein-out')).innerHTML = protein.replace(/X/g, '<span class="text-warning">X</span>');
+        (<HTMLTableCellElement>document.querySelector('#dna-out')).innerHTML = mrna.replace(/U/g, 'T').replace(/X/g, '<span class="text-warning">X</span>');
+        (<HTMLTableCellElement>document.querySelector('#mrna-out')).innerHTML = mrna.replace(/X/g, '<span class="text-warning">X</span>');
+        (<HTMLTableCellElement>document.querySelector('#trna-out')).innerHTML = Anticodons(mrna).replace(/X/g, '<span class="text-warning">X</span>');
+        //(<HTMLParagraphElement>document.querySelector('#expressionout')).innerHTML = `<p><span class="text-warning">Protein: </span>${protein.replace(/X/g, '<span class="text-warning">X</span>')}<br/><br/><span class="text-warning">DNA Coding Strand: </span>${mrna.replace(/U/g, 'T').replace(/X/g, '<span class="text-warning">X</span>')}<br/><br/><span class="text-warning">mRNA Strand: </span>${mrna.replace(/X/g, '<span class="text-warning">X</span>')}<br/><br/><span class="text-warning">tRNA Anticodons: </span>${Anticodons(mrna).replace(/X/g, '<span class="text-warning">X</span>')}</p>`;
         proteinPercent(protein);
     }
 });

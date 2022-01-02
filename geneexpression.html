@@ -11,7 +11,7 @@
     <meta name="og:title" content="MathFlare -  Expression of Genetic Information" />
     <meta name="twitter:title" content="MathFlare -  Expression of Genetic Information" />
     <meta name="keywords"
-        content="expression of genetic information, expression, biology, genetic information, mathflare, math flare">
+        content="expression of genetic information, genetic expression, biology, genetic information, mathflare, math flare">
     <meta name="description" content="Easily express the genetic information." />
     <meta name="og:description" content="Easily express the genetic information." />
     <meta name="twitter:description" content="Easily express the genetic information." />
@@ -49,7 +49,7 @@
         <h1 class="text-white px-4">Expression of Genetic Information</h1>
         <hr class="bg-danger" style="width: 60%;" />
         <form autocomplete="off">
-            <h4 class="text-white">Enter the sequence of DNA template strand</h4>
+            <h4 class="text-white">Enter a sequence of a DNA template strand</h4>
             <div class="center-form">
                 <div class="input-group">
                     <textarea id="sequence" placeholder="eg. AGC" class="form-control message input-group-item"
@@ -68,7 +68,7 @@
             <p class="p-0 m-0"><span class="text-warning">X</span> means that a character you entered in the sequence is
                 not
                 valid.</p>
-            <p class="mb-3 mt-1"><span class="text-success">*</span> means stop codon</p>
+            <p class="mb-3 mt-1"><span class="text-success">*</span> indicates a stop codon.</p>
         </form>
         <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
             <thead>
@@ -81,14 +81,30 @@
             <tbody id="tablebody">
             </tbody>
         </table>
-        <div class="mt-3" style="max-height: 1em;">
-            <p class="text-success text-break" id="expressionout"></p>
-        </div>
-        <!-- SCRIPTS START -->
-
+        <br />
+        <table class="table table-bordered text-white mx-auto" style="cursor: crosshair">
+            <tbody>
+                <tr>
+                    <th width="35%">Protein</th>
+                    <td id="protein-out"></td>
+                </tr>
+                <tr>
+                    <th width="35%">DNA Strand</th>
+                    <td id="dna-out"></td>
+                </tr>
+                <tr>
+                    <th width="35%">mRNA Strand</th>
+                    <td id="mrna-out"></td>
+                </tr>
+                <tr>
+                    <th width="35%">tRNA Anticodons</th>
+                    <td id="trna-out"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
         <script src="dist/geneexpression.js"></script>
         <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
-        <!-- SCRIPT END -->
 </body>
 
 </html>
