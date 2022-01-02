@@ -353,7 +353,8 @@ var {
 #proteintodnarnout,
 #rnatodnaout,
 #puzzleoutput,
-#electronout {
+#electronout,
+#expressionout {
     font-size: 20px !important;
     line-height: 24px !important;
     padding-left: 3em !important;

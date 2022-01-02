@@ -58,7 +58,8 @@ const searcCalc: () => void = () => {
         ['rna complement generator', 'complementaryrna'],
         ['rna to dna generator', 'rnatodna'],
         ['dihybrid punnett square', 'dihybridpunnettsquare'],
-        ['electronic structure of atoms', 'electronicstructureofatoms']
+        ['electronic structure of atoms', 'electronicstructureofatoms'],
+        ['expression of genetic information', 'geneexpression']
     ];
     searchBox.addEventListener("input", () => {
         const search: string = searchBox.value.toLowerCase();
