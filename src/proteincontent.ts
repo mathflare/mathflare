@@ -74,7 +74,7 @@
             if (Dictionary[curr] === 'STOP') {
                 protein += '*';
             } else {
-                if (typeof Dictionary[curr] !== 'undefined') {
+                if (Dictionary[curr] !== undefined) {
                     protein += Dictionary[curr];
                 } else {
                     protein += 'X';
@@ -83,7 +83,7 @@
         }
         return protein;
     };
-    const proteinPerc: (sequence: string) => void = (sequence: string) => {
+    const proteinPercent: (sequence: string) => void = (sequence: string) => {
         const percent: { [key: string]: number } = {
             F: 0,
             L: 0,
@@ -105,7 +105,8 @@
             C: 0,
             R: 0,
             G: 0,
-            W: 0
+            W: 0,
+            X: 0
         };
         const count: { [key: string]: number } = {
             F: 0,
@@ -128,377 +129,129 @@
             C: 0,
             R: 0,
             G: 0,
-            W: 0
+            W: 0,
+            X: 0
         };
-        let error_perc: number = 0;
-        let error_count: number = 0;
+        let protein: string = "";
         for (let i: number = 0; i < sequence.length; i++) {
             if (sequence[i] === '*') {
+                protein += sequence[i];
                 percent['END'] += 1 / sequence.length * 100;
                 count['END']++;
             } else if (percent[sequence[i]] === undefined) {
-                error_perc += 1 / sequence.length * 100;
-                error_count++;
+                protein += 'X';
+                percent['X'] += 1 / sequence.length * 100;
+                count['X']++;
             } else {
+                protein += sequence[i];
                 percent[sequence[i]] += 1 / sequence.length * 100;
                 count[sequence[i]]++;
             }
         }
-
-        //count
-        (<HTMLParagraphElement>document.querySelector('#f_count')).innerText = `${count['F']}`;
-        (<HTMLParagraphElement>document.querySelector('#l_count')).innerText = `${count['L']}`;
-        (<HTMLParagraphElement>document.querySelector('#i_count')).innerText = `${count['I']}`;
-        (<HTMLParagraphElement>document.querySelector('#v_count')).innerText = `${count['V']}`;
-        (<HTMLParagraphElement>document.querySelector('#m_count')).innerText = `${count['M']}`;
-        (<HTMLParagraphElement>document.querySelector('#s_count')).innerText = `${count['S']}`;
-        (<HTMLParagraphElement>document.querySelector('#p_count')).innerText = `${count['P']}`;
-        (<HTMLParagraphElement>document.querySelector('#t_count')).innerText = `${count['T']}`;
-        (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = `${count['A']}`;
-        (<HTMLParagraphElement>document.querySelector('#y_count')).innerText = `${count['Y']}`;
-        (<HTMLParagraphElement>document.querySelector('#h_count')).innerText = `${count['H']}`;
-        (<HTMLParagraphElement>document.querySelector('#n_count')).innerText = `${count['N']}`;
-        (<HTMLParagraphElement>document.querySelector('#d_count')).innerText = `${count['D']}`;
-        (<HTMLParagraphElement>document.querySelector('#end_count')).innerText = `${count['END']}`;
-        (<HTMLParagraphElement>document.querySelector('#q_count')).innerText = `${count['Q']}`;
-        (<HTMLParagraphElement>document.querySelector('#k_count')).innerText = `${count['K']}`;
-        (<HTMLParagraphElement>document.querySelector('#e_count')).innerText = `${count['E']}`;
-        (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = `${count['C']}`;
-        (<HTMLParagraphElement>document.querySelector('#r_count')).innerText = `${count['R']}`;
-        (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = `${count['G']}`;
-        (<HTMLParagraphElement>document.querySelector('#w_count')).innerText = `${count['W']}`;
-        (<HTMLParagraphElement>document.querySelector('#x_count')).innerText = `${error_count}`;
-
-        //percentage
-        (<HTMLParagraphElement>document.querySelector('#f_perc')).innerText = `${percent['F'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#l_perc')).innerText = `${percent['L'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#i_perc')).innerText = `${percent['I'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#v_perc')).innerText = `${percent['V'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#m_perc')).innerText = `${percent['M'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#s_perc')).innerText = `${percent['S'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#p_perc')).innerText = `${percent['P'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#t_perc')).innerText = `${percent['T'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = `${percent['A'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#y_perc')).innerText = `${percent['Y'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#h_perc')).innerText = `${percent['H'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#n_perc')).innerText = `${percent['N'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#d_perc')).innerText = `${percent['D'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#end_perc')).innerText = `${percent['END'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#q_perc')).innerText = `${percent['Q'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#k_perc')).innerText = `${percent['K'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#e_perc')).innerText = `${percent['E'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = `${percent['C'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#r_perc')).innerText = `${percent['R'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = `${percent['G'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#w_perc')).innerText = `${percent['W'].toFixed(2)}`;
-        (<HTMLParagraphElement>document.querySelector('#x_perc')).innerText = `${error_perc.toFixed(2)}`;
-
+        let aminoacid: string = "";
+        for (let i: number = 0; i < protein.length; i++) {
+            if (!(aminoacid.includes(protein[i]))) {
+                aminoacid += protein[i];
+            }
+        }
+        for (let i: number = 0; i < aminoacid.length; i++) {
+            if (aminoacid[i] === '*') {
+                const tr: HTMLTableRowElement = document.createElement('tr');
+                const td1: HTMLTableCellElement = document.createElement('td');
+                const td2: HTMLTableCellElement = document.createElement('td');
+                const td3: HTMLTableCellElement = document.createElement('td');
+                td1.innerHTML = `*(stop codon)`;
+                td2.innerHTML = `${count['END']}`;
+                td3.innerHTML = `${percent['END'].toFixed(2)}`;
+                td1.classList.add('text-success');
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
+            } else if (aminoacid[i] === 'X') {
+                const tr: HTMLTableRowElement = document.createElement('tr');
+                const td1: HTMLTableCellElement = document.createElement('td');
+                const td2: HTMLTableCellElement = document.createElement('td');
+                const td3: HTMLTableCellElement = document.createElement('td');
+                td1.innerHTML = `X(Error)`;
+                td2.innerHTML = `${count['X']}`;
+                td3.innerHTML = `${percent['X'].toFixed(2)}`;
+                td1.classList.add('text-warning');
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
+            } else {
+                const tr: HTMLTableRowElement = document.createElement('tr');
+                const td1: HTMLTableCellElement = document.createElement('td');
+                const td2: HTMLTableCellElement = document.createElement('td');
+                const td3: HTMLTableCellElement = document.createElement('td');
+                td1.innerHTML = aminoacid[i];
+                td2.innerHTML = `${count[aminoacid[i]]}`;
+                td3.innerHTML = `${percent[aminoacid[i]].toFixed(2)}`;
+                td1.classList.add('text-success');
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
+            }
+        }
     };
     if (select === 'Protein') {
         const Protein: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
         if (Protein === '') {
-            (<HTMLInputElement>document.querySelector('#sequence')).focus();
-            //count
-            (<HTMLParagraphElement>document.querySelector('#f_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#l_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#i_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#v_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#m_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#s_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#p_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#t_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#y_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#h_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#n_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#d_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#end_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#q_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#k_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#e_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#r_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#w_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#x_count')).innerText = '';
-            //percentage
-            (<HTMLParagraphElement>document.querySelector('#f_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#l_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#i_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#v_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#m_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#s_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#p_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#t_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#y_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#h_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#n_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#d_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#end_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#q_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#k_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#e_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#r_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#w_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#x_perc')).innerText = '';
+            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            const tr: HTMLTableRowElement = document.createElement('tr');
+            tr.innerHTML = '<td colspan="3">Please enter a valid value</td>';
+            tr.classList.add('text-warning');
+            (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
         } else {
-            proteinPerc(Protein);
+            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            proteinPercent(Protein);
         }
     }
     else if (select === 'RNA') {
         const RNA: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
         if (RNA === '') {
-            (<HTMLInputElement>document.querySelector('#sequence')).focus();
-            //count
-            (<HTMLParagraphElement>document.querySelector('#f_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#l_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#i_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#v_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#m_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#s_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#p_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#t_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#y_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#h_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#n_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#d_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#end_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#q_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#k_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#e_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#r_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#w_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#x_count')).innerText = '';
-            //percentage
-            (<HTMLParagraphElement>document.querySelector('#f_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#l_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#i_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#v_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#m_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#s_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#p_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#t_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#y_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#h_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#n_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#d_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#end_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#q_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#k_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#e_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#r_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#w_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#x_perc')).innerText = '';
+            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            const tr: HTMLTableRowElement = document.createElement('tr');
+            tr.innerHTML = '<td colspan="3">Please enter a valid value</td>';
+            tr.classList.add('text-warning');
+            (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
         } else if (RNA.length % 3 !== 0) {
-            //count
-            (<HTMLParagraphElement>document.querySelector('#f_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#l_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#i_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#v_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#m_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#s_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#p_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#t_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#y_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#h_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#n_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#d_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#end_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#q_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#k_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#e_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#r_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#w_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#x_count')).innerText = '';
-            //percentage
-            (<HTMLParagraphElement>document.querySelector('#f_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#l_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#i_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#v_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#m_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#s_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#p_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#t_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#y_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#h_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#n_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#d_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#end_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#q_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#k_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#e_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#r_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#w_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#x_perc')).innerText = '';
+            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            const tr: HTMLTableRowElement = document.createElement('tr');
+            tr.innerHTML = '<td colspan="3">The sequence must be a multiple of 3</td>';
+            tr.classList.add('text-warning');
+            (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
         } else {
+            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
             const translatedRna: string = proteinTranslation(RNA);
-            proteinPerc(translatedRna);
+            proteinPercent(translatedRna);
         }
     } else if (select === 'DNA') {
         const DNA: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
-        const RNA: string = Dnatranscription(DNA);
-        if (RNA === '') {
-            (<HTMLInputElement>document.querySelector('#sequence')).focus();
-            //count
-            (<HTMLParagraphElement>document.querySelector('#f_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#l_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#i_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#v_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#m_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#s_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#p_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#t_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#y_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#h_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#n_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#d_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#end_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#q_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#k_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#e_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#r_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#w_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#x_count')).innerText = '';
-            //percentage
-            (<HTMLParagraphElement>document.querySelector('#f_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#l_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#i_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#v_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#m_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#s_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#p_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#t_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#y_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#h_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#n_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#d_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#end_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#q_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#k_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#e_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#r_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#w_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#x_perc')).innerText = '';
-        } else if (RNA.length % 3 !== 0) {
-            //count
-            (<HTMLParagraphElement>document.querySelector('#f_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#l_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#i_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#v_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#m_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#s_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#p_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#t_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#y_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#h_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#n_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#d_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#end_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#q_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#k_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#e_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#r_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#w_count')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#x_count')).innerText = '';
-            //percentage
-            (<HTMLParagraphElement>document.querySelector('#f_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#l_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#i_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#v_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#m_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#s_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#p_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#t_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#y_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#h_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#n_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#d_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#end_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#q_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#k_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#e_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#r_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#w_perc')).innerText = '';
-            (<HTMLParagraphElement>document.querySelector('#x_perc')).innerText = '';
+        if (DNA === '') {
+            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            const tr: HTMLTableRowElement = document.createElement('tr');
+            tr.innerHTML = '<td colspan="3">Please enter a valid value</td>';
+            tr.classList.add('text-warning');
+            (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
+        } else if (DNA.length % 3 !== 0) {
+            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            const tr: HTMLTableRowElement = document.createElement('tr');
+            tr.innerHTML = '<td colspan="3">The sequence must be a multiple of 3</td>';
+            tr.classList.add('text-warning');
+            (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
         } else {
-            const translatedDna: string = proteinTranslation(RNA);
-            proteinPerc(translatedDna);
+            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            const RNA: string = Dnatranscription(DNA);
+            const translatedRna: string = proteinTranslation(RNA);
+            proteinPercent(translatedRna);
         }
     }
 });
 (<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event: Event) => {
     (<HTMLInputElement>document.querySelector('#sequence')).value = '';
-    //count
-    (<HTMLParagraphElement>document.querySelector('#f_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#l_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#i_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#v_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#m_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#s_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#p_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#t_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#a_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#y_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#h_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#n_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#d_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#end_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#q_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#k_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#e_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#c_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#r_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#g_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#w_count')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#x_count')).innerText = '';
-    //percentage
-    (<HTMLParagraphElement>document.querySelector('#f_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#l_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#i_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#v_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#m_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#s_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#p_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#t_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#a_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#y_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#h_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#n_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#d_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#end_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#q_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#k_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#e_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#c_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#r_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#g_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#w_perc')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#x_perc')).innerText = '';
+    (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
 });

@@ -225,17 +225,23 @@ document.querySelector('#expressioncalc').addEventListener('click', (event) => {
     };
     if (templdna === '') {
         document.querySelector('#tablebody').innerText = '';
-        document.querySelector('#expressionout').innerHTML = `<p class="text-warning">Please enter a valid value</p>`;
+        const tr = document.createElement('tr');
+        tr.innerHTML = '<td colspan="3">Please enter a valid value</td>';
+        tr.classList.add('text-warning');
+        document.querySelector('#tablebody').appendChild(tr);
     }
     else if (templdna.length % 3 !== 0) {
         document.querySelector('#tablebody').innerText = '';
-        document.querySelector('#expressionout').innerHTML = `<p class="text-warning">The sequence must be a multiple of 3</p>`;
+        const tr = document.createElement('tr');
+        tr.innerHTML = '<td colspan="3">The sequence must be a multiple of 3</td>';
+        tr.classList.add('text-warning');
+        document.querySelector('#tablebody').appendChild(tr);
     }
     else {
         document.querySelector('#tablebody').innerText = '';
         const mrna = Dnatranscription(templdna);
         const protein = Translation(mrna);
-        document.querySelector('#expressionout').innerHTML = `<p><span class="text-warning">DNA Coding Strand: </span>${mrna.replace(/U/g, 'T').replace(/X/g, '<span class="text-warning">X</span>')}<br/><br/><span class="text-warning">mRNA Strand: </span>${mrna.replace(/X/g, '<span class="text-warning">X</span>')}<br/><br/><span class="text-warning">tRNA Anticodons: </span>${Anticodons(mrna).replace(/X/g, '<span class="text-warning">X</span>')}<br/><br/><span class="text-warning">Protein: </span>${protein.replace(/X/g, '<span class="text-warning">X</span>')}</p>`;
+        document.querySelector('#expressionout').innerHTML = `<p><span class="text-warning">Protein: </span>${protein.replace(/X/g, '<span class="text-warning">X</span>')}<br/><br/><span class="text-warning">DNA Coding Strand: </span>${mrna.replace(/U/g, 'T').replace(/X/g, '<span class="text-warning">X</span>')}<br/><br/><span class="text-warning">mRNA Strand: </span>${mrna.replace(/X/g, '<span class="text-warning">X</span>')}<br/><br/><span class="text-warning">tRNA Anticodons: </span>${Anticodons(mrna).replace(/X/g, '<span class="text-warning">X</span>')}</p>`;
         proteinPercent(protein);
     }
 });
