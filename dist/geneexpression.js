@@ -251,5 +251,8 @@ document.querySelector('#expressioncalc').addEventListener('click', (event) => {
 document.querySelector('#clearbtn').addEventListener('click', (event) => {
     document.querySelector('#sequence').value = '';
     document.querySelector('#tablebody').innerText = '';
-    document.querySelector('#expressionout').innerText = '';
+    document.querySelector('#dna-out').innerText = '';
+    document.querySelector('#mrna-out').innerText = '';
+    document.querySelector('#trna-out').innerText = '';
+    document.querySelector('#protein-out').innerText = '';
 });

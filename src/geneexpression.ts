@@ -218,19 +218,19 @@
         }
     };
     if (templdna === '') {
-        (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+        (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
         const tr: HTMLTableRowElement = document.createElement('tr');
         tr.innerHTML = '<td colspan="3">Please enter a valid value</td>';
         tr.classList.add('text-warning');
         (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
     } else if (templdna.length % 3 !== 0) {
-        (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+        (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
         const tr: HTMLTableRowElement = document.createElement('tr');
         tr.innerHTML = '<td colspan="3">The sequence length must be a multiple of 3</td>';
         tr.classList.add('text-warning');
         (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
     } else {
-        (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+        (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
         const mrna: string = Dnatranscription(templdna);
         const protein: string = Translation(mrna);
         (<HTMLTableCellElement>document.querySelector('#protein-out')).innerHTML = protein.replace(/X/g, '<span class="text-warning">X</span>');
@@ -243,6 +243,10 @@
 });
 (<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event: Event) => {
     (<HTMLInputElement>document.querySelector('#sequence')).value = '';
-    (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
-    (<HTMLParagraphElement>document.querySelector('#expressionout')).innerText = '';
+    (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
+    (<HTMLTableCellElement>document.querySelector('#dna-out')).innerText = '';
+    (<HTMLTableCellElement>document.querySelector('#mrna-out')).innerText = '';
+    (<HTMLTableCellElement>document.querySelector('#trna-out')).innerText = '';
+    (<HTMLTableCellElement>document.querySelector('#protein-out')).innerText = '';
+    // (<HTMLParagraphElement>document.querySelector('#expressionout')).innerText = '';
 });

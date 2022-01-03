@@ -200,51 +200,51 @@
     if (select === 'Protein') {
         const Protein: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
         if (Protein === '') {
-            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
             const tr: HTMLTableRowElement = document.createElement('tr');
             tr.innerHTML = '<td colspan="3">Please enter a valid value</td>';
             tr.classList.add('text-warning');
             (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
         } else {
-            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
             proteinPercent(Protein);
         }
     }
     else if (select === 'RNA') {
         const RNA: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
         if (RNA === '') {
-            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
             const tr: HTMLTableRowElement = document.createElement('tr');
             tr.innerHTML = '<td colspan="3">Please enter a valid value</td>';
             tr.classList.add('text-warning');
             (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
         } else if (RNA.length % 3 !== 0) {
-            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
             const tr: HTMLTableRowElement = document.createElement('tr');
             tr.innerHTML = '<td colspan="3">The sequence length must be a multiple of 3</td>';
             tr.classList.add('text-warning');
             (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
         } else {
-            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
             const translatedRna: string = proteinTranslation(RNA);
             proteinPercent(translatedRna);
         }
     } else if (select === 'DNA') {
         const DNA: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
         if (DNA === '') {
-            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
             const tr: HTMLTableRowElement = document.createElement('tr');
             tr.innerHTML = '<td colspan="3">Please enter a valid value</td>';
             tr.classList.add('text-warning');
             (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
         } else if (DNA.length % 3 !== 0) {
-            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
             const tr: HTMLTableRowElement = document.createElement('tr');
             tr.innerHTML = '<td colspan="3">The sequence length must be a multiple of 3</td>';
             tr.classList.add('text-warning');
             (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
         } else {
-            (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
             const RNA: string = Dnatranscription(DNA);
             const translatedRna: string = proteinTranslation(RNA);
             proteinPercent(translatedRna);
@@ -253,5 +253,5 @@
 });
 (<HTMLButtonElement>document.querySelector('#clearbtn')).addEventListener('click', (event: Event) => {
     (<HTMLInputElement>document.querySelector('#sequence')).value = '';
-    (<HTMLParagraphElement>document.querySelector('#tablebody')).innerText = '';
+    (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
 });
