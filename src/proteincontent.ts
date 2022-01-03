@@ -209,27 +209,7 @@
             (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
             proteinPercent(Protein);
         }
-    }
-    else if (select === 'RNA') {
-        const RNA: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
-        if (RNA === '') {
-            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
-            const tr: HTMLTableRowElement = document.createElement('tr');
-            tr.innerHTML = '<td colspan="3">Please enter a valid value</td>';
-            tr.classList.add('text-warning');
-            (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
-        } else if (RNA.length % 3 !== 0) {
-            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
-            const tr: HTMLTableRowElement = document.createElement('tr');
-            tr.innerHTML = '<td colspan="3">The sequence length must be a multiple of 3</td>';
-            tr.classList.add('text-warning');
-            (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
-        } else {
-            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
-            const translatedRna: string = proteinTranslation(RNA);
-            proteinPercent(translatedRna);
-        }
-    } else if (select === 'DNA') {
+    } else if (select === 'DNAtemp') {
         const DNA: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
         if (DNA === '') {
             (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
@@ -246,6 +226,45 @@
         } else {
             (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
             const RNA: string = Dnatranscription(DNA);
+            const translatedRna: string = proteinTranslation(RNA);
+            proteinPercent(translatedRna);
+        }
+    } else if (select === 'DNAcod') {
+        const DNA: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
+        if (DNA === '') {
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
+            const tr: HTMLTableRowElement = document.createElement('tr');
+            tr.innerHTML = '<td colspan="3">Please enter a valid value</td>';
+            tr.classList.add('text-warning');
+            (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
+        } else if (DNA.length % 3 !== 0) {
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
+            const tr: HTMLTableRowElement = document.createElement('tr');
+            tr.innerHTML = '<td colspan="3">The sequence length must be a multiple of 3</td>';
+            tr.classList.add('text-warning');
+            (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
+        } else {
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
+            const RNA: string = DNA.replace(/T/g, 'U');
+            const translatedRna: string = proteinTranslation(RNA);
+            proteinPercent(translatedRna);
+        }
+    } else if (select === 'RNA') {
+        const RNA: string = (<HTMLInputElement>document.querySelector('#sequence')).value.replace(/\s/g, '').toUpperCase()!;
+        if (RNA === '') {
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
+            const tr: HTMLTableRowElement = document.createElement('tr');
+            tr.innerHTML = '<td colspan="3">Please enter a valid value</td>';
+            tr.classList.add('text-warning');
+            (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
+        } else if (RNA.length % 3 !== 0) {
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
+            const tr: HTMLTableRowElement = document.createElement('tr');
+            tr.innerHTML = '<td colspan="3">The sequence length must be a multiple of 3</td>';
+            tr.classList.add('text-warning');
+            (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
+        } else {
+            (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
             const translatedRna: string = proteinTranslation(RNA);
             proteinPercent(translatedRna);
         }
