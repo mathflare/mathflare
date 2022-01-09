@@ -27,7 +27,7 @@
     } else if (num > 100000) {
         (<HTMLTableElement>document.querySelector('#tablebody')).innerText = '';
         const tr: HTMLTableRowElement = document.createElement('tr');
-        tr.innerHTML = `<td colspan="1">The number is too big(it must be <= 100000</td>`;
+        tr.innerHTML = `<td colspan="1">The number is too big(it must be <= 100000)</td>`;
         tr.classList.add('text-warning');
         (<HTMLTableElement>document.querySelector('#tablebody')).appendChild(tr);
     } else if (num % 2 !== 0) {

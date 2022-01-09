@@ -26,7 +26,7 @@ document.querySelector('#natnumbercalc').addEventListener('click', (event) => {
     else if (num > 100000) {
         document.querySelector('#tablebody').innerText = '';
         const tr = document.createElement('tr');
-        tr.innerHTML = `<td colspan="1">The number is too big(it must be <= 100000</td>`;
+        tr.innerHTML = `<td colspan="1">The number is too big(it must be <= 100000)</td>`;
         tr.classList.add('text-warning');
         document.querySelector('#tablebody').appendChild(tr);
     }
