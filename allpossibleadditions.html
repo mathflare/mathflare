@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- SEO -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathFlare - All the Additions for a Νatural Νumber</title>
+    <meta name="title" content="MathFlare - All Additions for a Νatural Νumber">
+    <meta name="og:title" content="MathFlare - All the Additions for a Νatural Νumber" />
+    <meta name="twitter:title" content="MathFlare - All the Additions for a Νatural Νumber" />
+    <meta name="keywords" content="all  additions, natural number, algebra, math, mathflare, math flare">
+    <meta name="description" content="Find all the additions for a natural number" />
+    <meta name="og:description" content="Find all the additions for a natural number" />
+    <meta name="twitter:description" content="Find all the additions for a natural number" />
+    <meta name="author" content="MathFlare.xyz" />
+    <meta name="og:url" content="https://www.mathflare.xyz/alladditions" />
+    <link rel="canonical" href="https://www.mathflare.xyz/alladditions">
+    <meta name="og:image" content="https://www.mathflare.xyz/Assets/logo.png" />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://www.mathflare.xyz/Assets/logo.png">
+    <link rel="home" href="https://www.mathflare.xyz">
+    <!-- STYLES / ICONS -->
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="Styles/Scrollbar.css" rel="stylesheet" />
+    <link href="Styles/Site.css" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="Assets/android-chrome-192x192.png" sizes=192x192>
+    <link rel="icon" type="image/png" href="Assets/android-chrome-512x512.png" sizes=512x512>
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/apple-touch-icon.png">
+    <!-- SCRIPTS -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="dist/jquery.min.js" defer></script>
+    <script src="dist/bootstrap.min.js" defer></script>
+    <script src="dist/navbar.js" defer></script>
+    <script src="dist/common.js" defer></script>
+    <script src="dist/main.js" defer></script>
+</head>
+
+<body>
+    <!-- NAVBAR START -->
+    <div id="nav-container"></div>
+    <!-- NAVBAR END -->
+    <div class="center">
+        <h1 class="text-white px-4">All the Additions for a Νatural Νumber</h1>
+        <hr class="bg-danger" style="width: 60%;" />
+        <form autocomplete="off">
+            <h4 class="text-white">Enter a Νatural Νumber</h4>
+            <div class="center-form">
+                <input type="number" id="num" placeholder="eg. 5" class="form-control mb-0" required />
+            </div>
+            <br />
+            <div class="btn-group">
+                <input type="submit" id="natnumbercalc" class="btn btn-success btn-lg" value="Calculate">
+                <input type="reset" id="clearbtn" class="btn btn-danger btn-lg" value="Clear">
+            </div>
+        </form>
+        <br />
+        <div style="max-height: 1em;">
+            <p class="text-success" id="natnumberout"></p>
+        </div>
+        <br />
+        <table class="table table-bordered text-white mx-auto" style="cursor: crosshair;">
+            <thead>
+                <tr>
+                    <th>All Additions</th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+            </tbody>
+        </table>
+    </div>
+    <!-- SCRIPTS START -->
+
+    <script src="dist/allpossibleadditions.js"></script>
+    <noscript><strong class="noscript">You have to enable JavaScript to run this app.</strong></noscript>
+    <!-- SCRIPT END -->
+</body>
+
+</html>
